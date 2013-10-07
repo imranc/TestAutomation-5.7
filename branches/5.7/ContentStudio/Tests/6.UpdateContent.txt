@@ -1,0 +1,18 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+
+Documentation  Update all types of contents
+
+**Test cases**
+Update Article Content
+	Create Content In Section  NewArticles
+	Update Content  article
+	Preview Content  Simple
+	#Check If Exists  UpdatedContentTitle
+
+Update Image Content 
+	Create Image In Section  Home
+	Update Content  image
+	Preview Content  All
+	Close Browser

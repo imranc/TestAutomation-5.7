@@ -1,0 +1,12 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+
+Documentation  A test case for Previewing all types of contents
+
+**Test cases**
+Preview all types of contents
+	Create Content In Section  NewArticles
+	Preview Content  simple
+	Create Image In Section  NewArticles
+	Preview Content  simple

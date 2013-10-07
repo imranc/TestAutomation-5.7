@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.1 (Jython 2.5.3 on java1.7.0_15)" generated="20131007 11:22:50.709">
+<suite source="C:\Test-automation\ContentStudio\Tests\3.ResearchPanels.txt" id="s1" name="3.ResearchPanels">
+<test id="s1-t1" name="Configure and review RSS Feed panel">
+<kw type="kw" name="ContentStudio.Create Rss Feedpanel">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20131007 11:22:56.546" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20131007 11:23:36.238" level="INFO">[log] App.focus Escenic Content Studio trunk-SNAPSHOT(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] Ctrl+TYPE "8"
+[log] CLICK on (385,136)
+[log] CLICK on (681,255)
+[log] CLICK on (832,417)
+[log] Ctrl+TYPE "4"
+[log] Ctrl+TYPE "4"</msg>
+<msg timestamp="20131007 11:23:36.251" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20131007 11:23:36.248" starttime="20131007 11:22:56.543"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Verify Research Panel">
+<doc></doc>
+<arguments>
+<arg>RSS/ATOM</arg>
+</arguments>
+<msg timestamp="20131007 11:23:36.385" level="TRACE">Arguments: [ u'RSS/ATOM' ]</msg>
+<msg timestamp="20131007 11:23:48.750" level="INFO">PASS: BBC feed panel reviewd</msg>
+<msg timestamp="20131007 11:23:48.753" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20131007 11:23:48.752" starttime="20131007 11:23:36.384"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Remove Research Panel">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20131007 11:23:48.758" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20131007 11:24:03.744" level="INFO">[log] Ctrl+TYPE "8"
+[log] CLICK on (835,511)</msg>
+<msg timestamp="20131007 11:24:03.749" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20131007 11:24:03.747" starttime="20131007 11:23:48.757"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" critical="yes" endtime="20131007 11:24:03.752" starttime="20131007 11:22:56.531"></status>
+</test>
+<test id="s1-t2" name="Configure and review Search Panel">
+<kw type="kw" name="ContentStudio.Create Search Panel">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20131007 11:24:03.768" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20131007 11:24:51.116" level="INFO">[log] App.focus Escenic Content Studio trunk-SNAPSHOT(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] Ctrl+TYPE "8"
+[log] CLICK on (662,262)
+[log] TYPE ""
+[log] TYPE "
+"
+[log] CLICK on (835,539)
+[log] Ctrl+TYPE "4"
+[log] Ctrl+TYPE "4"</msg>
+<msg timestamp="20131007 11:24:51.120" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20131007 11:24:51.119" starttime="20131007 11:24:03.767"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Verify Research Panel">
+<doc></doc>
+<arguments>
+<arg>SEARCH</arg>
+</arguments>
+<msg timestamp="20131007 11:24:51.123" level="TRACE">Arguments: [ u'SEARCH' ]</msg>
+<msg timestamp="20131007 11:25:08.534" level="INFO">PASS: Escenic Search Panel reviewed</msg>
+<msg timestamp="20131007 11:25:08.537" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20131007 11:25:08.536" starttime="20131007 11:24:51.121"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Remove Research Panel">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20131007 11:25:08.539" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20131007 11:25:19.178" level="INFO">[log] Ctrl+TYPE "8"
+[log] CLICK on (835,539)</msg>
+<msg timestamp="20131007 11:25:19.180" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20131007 11:25:19.180" starttime="20131007 11:25:08.538"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" critical="yes" endtime="20131007 11:25:19.183" starttime="20131007 11:24:03.757"></status>
+</test>
+<doc>A test case for Configuring and reviewing Research Panels</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20131007 11:25:19.199" starttime="20131007 11:22:50.729"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" id="s1" fail="0" name="3.ResearchPanels">3.ResearchPanels</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,11 @@
+***Settings***
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SikuliCS  WITH NAME  SikuliCS
+
+Documentation  A test case for Start and Logging into ContentStudio
+
+**Test cases**
+Start content studio and log in
+	Start Content Studio
+	Close All Open Tabs
+	Print version
