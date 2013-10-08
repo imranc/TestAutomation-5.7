@@ -9,6 +9,3 @@ Documentation  A test case for Adding a content to different/multiple sections
 **Test cases**
 demo
 	Close All Open Tabs
-	Clean Up Clipboard
-	Create Content In Section  Home
-	Check Clipboard
