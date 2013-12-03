@@ -1,0 +1,23 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Web Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to WebStudio
+    Open Browser To Escenic WebStudio
+    Input Environment Variable  userId  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Click For Multiple Cookies
+	Check if Log off Link Exists
+
+Log off
+    Click Link  Log off
+    Page Should Contain Button  Log in
+
+
+    Close Browser

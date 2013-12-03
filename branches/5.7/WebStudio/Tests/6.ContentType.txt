@@ -1,0 +1,32 @@
+*** Settings ***
+
+Documentation  A test case for Content type, Template, Feature displays 
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Check Content Type
+	Open Browser To Escenic WebStudio
+    	Input Environment Variable  userId  ECE_UserName
+    	Input Environment Variable  password  ECE_Password
+    	Submit Credentials
+    	Click For Multiple Cookies
+	Go To Link  /escenic/publication/viewArticleTypes.do
+		#Assertion Check
+		Page Should Contain  The title of the article
+		#Page Should Contain  The summary text of the article.
+		Page Should Contain  The body text of the article.
+
+Check Template
+	Go To Link  /escenic/publication/viewTemplates.do
+		Page Should Contain  Layoutgroups 
+
+Check Feature
+	Go To Link  /escenic/publication/viewFeatures.do
+		Page Should Contain  multimedia.image.virtualVersions
+
+	Close Browser
+
+	

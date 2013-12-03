@@ -1,0 +1,27 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+
+Documentation  A test case for Adding a content to different/multiple sections
+
+**Test cases**
+demo
+	#Check Search
+	#Wait For  20
+	#Check If Exists  Lock
+	Delete List  NewArticles  NewsList
+	Create New List  NewArticles  NewsList
+	Close All Open Tabs
+	Clean Up Clipboard
+	Create Content In Section  NewArticles
+	Drag Content  clipboard_to_list  NewsList
+
+Drag a story/picture from the list to the Clipboard.
+	Close All Open Tabs
+	Create Content In Section  NewArticles
+	Add Content To List  NewArticles
+	Clean Up Clipboard
+	Drag Content  list_to_clipboard  NewsList
+	Delete List  NewArticles  NewsList

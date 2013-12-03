@@ -1,0 +1,17 @@
+*** Settings ***
+
+Documentation  A test case to Create User and Assign roles to user
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+
+
+
+
+Assign roles to user
+	Login To Web Studio
+	Assign All Section Roles  joe
+	Assign All Global Roles  joe
+	Close Browser

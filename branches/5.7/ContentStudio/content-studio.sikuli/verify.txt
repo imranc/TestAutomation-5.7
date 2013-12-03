@@ -1,0 +1,5 @@
+***Settings***
+Library content-studio.py 
+***Test cases***
+StartContentStudio
+	StartContentStudio
