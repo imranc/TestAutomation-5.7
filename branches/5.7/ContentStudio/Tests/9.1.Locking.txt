@@ -2,6 +2,7 @@
 Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
 Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
 Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
 
 Documentation  Check locking mechanism where two users try to edit the same content.
 
