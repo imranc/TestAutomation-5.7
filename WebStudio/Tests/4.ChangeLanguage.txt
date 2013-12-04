@@ -1,0 +1,30 @@
+*** Settings ***
+
+Documentation  A test case for changine password from Escenic Web Studio
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Change Language
+    Open Browser To Escenic WebStudio
+    Input Environment Variable  userId  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Click For Multiple Cookies
+    Go To Change Language Page
+    ###Change Language to Norwegian(No)
+    Select From List  xpath=//*[@name='locale']  no
+    Click Button  xpath=//*[@value='Change']
+	#Check if Cancel Link exists in Norwegian
+	Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
+	Page Should Contain Element  xpath=//*[@value='Avbryt']
+ 
+    ###Change Language back to Englis(EN)
+    Select From List  xpath=//*[@name='locale']  en
+    Click Button  xpath=//*[@value='Endre']
+	#Check if Cancel Link exists in English
+	Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
+	Page Should Contain Element  xpath=//*[@value='Cancel']
+     
+    Close Browser

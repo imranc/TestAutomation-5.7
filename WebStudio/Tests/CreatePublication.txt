@@ -1,0 +1,37 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Web Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create Publication
+	Open Browser EscenicAdmin
+	Maximize Browser Window
+	Click Link  New publications
+	Choose File  resourceFile  ${JENKINS URL}/job/eceAdminParent/ws/demo-temp-dev.war
+		
+	Click Button  Upload
+	Click Link  create a publication
+	Input Text  name  Viz24
+	Input Text  adminPassword  admin
+	Input Text  adminPasswordConfirm  admin
+	Click Button  Submit
+		Page Should Contain  Viz24_admin
+	
+
+Delete Publication
+	Click Link  List publications
+	Select Checkbox  xpath=//td[contains(text(),'Viz24')]/preceding::td[1]/input[@type='checkbox']
+	Click Link  Delete	
+	Click Link  Confirm
+
+	Close Browser
+	
+	
+	
+	
+
+	
