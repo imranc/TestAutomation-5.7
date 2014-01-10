@@ -28,13 +28,13 @@ Open Browser To Login Page
     Open Browser  ${LOGIN URL}  ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed  ${DELAY}
-    Title Should Be  Escenic Web Studio -
+    Title Should Be  Escenic Web Studio
 
 Open Browser To Escenic WebStudio
     Open Browser WebStudio
     Maximize Browser Window
     Set Selenium Speed  ${DELAY}
-    Title Should Be  Escenic Web Studio -
+    	Title Should Be  Escenic Web Studio -
 
 Go To Login Page
     Go To  ${LOGIN URL}
@@ -87,6 +87,9 @@ Create User  [Arguments]  ${userName}
 	##Click Search button and check if new user exists
 	Page Should Contain Button  Search
 	Click Element  xpath=//*[@value='Search']
+	Wait Until Page Contains  View person  10  error=None
+	Click Element  xpath=//*[@value='Search']
+	Wait Until Page Contains  View person  10  error=None
 	Page Should Contain  View person
 
 Create Section  [Arguments]  ${sectionName}

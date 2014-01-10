@@ -211,16 +211,19 @@ class ContentStudio(object):
                       #  click("SectionTab.png")
                       #  if exists("HomeSection.png"):
                       #          click("HomeSection.png")
-                ContentStudio.close_allopen_tabs(self)
+                #ContentStudio.close_allopen_tabs(self)
                 
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         rightClick(Pattern(SectionImageName).similar(0.95))
                 else:
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
-                        corner=find(Pattern("ListsTab.png").targetOffset(0,-19))
-                        drop_point = corner.getTarget().offset(50, 200)
+                        corner=find(Pattern("ListsTab.png").targetOffset(0,-21))
+                        drop_point = corner.getTarget().offset(50, 250)
                         dragDrop(corner, drop_point)
+
+                        while exists(Pattern("ExpansionIcon.png").similar(0.90)):
+                                click("ExpansionIcon.png")
                         
                         if exists(Pattern(SectionImageName).similar(0.95)):
                                 rightClick(Pattern(SectionImageName).similar(0.95))
@@ -254,7 +257,7 @@ class ContentStudio(object):
                 type("This is the Body of an Article -- By Automated smoke tests")
                 wait(3)
                 click("SaveButton.png")
-                wait(5)
+                wait(10)
                 #wait_for("ContentUrl.png",30)
                 
                 if exists("PublishButton.png"):
@@ -450,11 +453,16 @@ class ContentStudio(object):
         def close_allopen_tabs(self):
                 ContentStudio.switch_to_content_studio(self)
                 maximize_content_studio_window()
+                count=0
                 
-                while exists("CloseTabs.png"):
+                while exists(Pattern("CloseTabs.png").similar(0.80)):
                         click("CloseTabs.png")
                         wait(1)
-                        
+                        if count>50:
+                                ImageName=capture_CS_screenshot()
+                                raise AssertionError("Something went wrong while closing open tabs. Screenshot: "+ImageName)
+                                break
+                        count +=1
                         if exists("DontSaveButton.png", 1):
                                 click("DontSaveButton.png")
                                 wait(3)
@@ -675,25 +683,32 @@ class ContentStudio(object):
                 type(Key.ENTER)
 
         def preview_content(self, *args):
-                if exists("PreviewButton.png"):
-                        click(Pattern("PreviewButton.png").targetOffset(40,0))
-                elif exists(Pattern("PreviewButton.png").similar(0.60)):
-                        click(Pattern("PreviewButton.png").similar(0.60))
-                        
+                #if exists("PreviewButton.png"):
+                #        click(Pattern("PreviewButton.png").targetOffset(40,0))
+                #elif exists(Pattern("PreviewButton.png").similar(0.60)):
+                #        click(Pattern("PreviewButton.png").similar(0.60))
+                ContentStudio.switch_to_content_studio(self)
+                click("PreviewTab.png")
                 wait(2)
+
                 if args[0] == "All":
                         type(Key.DOWN)
-                type(Key.ENTER)
+                        click(Pattern("PreviewAll.png").targetOffset(-30, 0))
+
+                click(Pattern("OpenInBrowser.png"))
+                #type(Key.ENTER)
                 wait(5)
                 #while not exists(Pattern("InboxesPagesListsTab.png").similar(0.60)):
-                #        ContentStudio.switch_to_content_studio(self)
+                ContentStudio.switch_to_content_studio(self)
+                click("DeskTab.png")
+                wait(2)
 
         def update_content(self, *args):
                 ContentStudio.switch_to_content_studio(self)
                 wait(2)
                 if args[0] == "Article" or args[0] == "article":
-                        #type(Key.TAB,KeyModifier.SHIFT)
-                        #type(Key.TAB,KeyModifier.SHIFT)
+                        click("ListsTab.png")
+                        wait(2)
                         click("Title:")
                         
                 type("a", KEY_CTRL)
