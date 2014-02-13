@@ -230,6 +230,7 @@ class ContentStudio(object):
                         else:
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError(SectionName+' Section does not exist. Screenshot: '+ImageName)
+                wait(2)
         
         def create_content_in_section(self, SectionName):
                 #***This Keyword creates an Article in the specified section***#
@@ -290,7 +291,7 @@ class ContentStudio(object):
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError("Content Url was not created. Check Content Studio. Screenshot: "+ImageName)
                         
-                wait(5)
+                wait(10)
                 
                 #while not exists("InboxesTab.png"):
                         #type("7", KeyModifier.CTRL)
@@ -401,8 +402,8 @@ class ContentStudio(object):
                         dragDrop(Pattern('FirstContentOfInbox.png').targetOffset(-1,67),'ContentArea.png')
                         
                 wait(Pattern("SaveButton.png").similar(0.65),10)
-                if exists(Pattern("PublishButton.png").similar(0.65)):
-                        click(Pattern("PublishButton.png").similar(0.65))
+                if exists(Pattern("PublishButton.png")):
+                        click(Pattern("PublishButton.png"))
                 elif exists(Pattern("PublishButtonSimple.png")):
                         click(Pattern("PublishButtonSimple.png"))
                 
@@ -675,11 +676,13 @@ class ContentStudio(object):
                         print("Do nothing")
 
                 click("ListsTab.png")
+                wait(2)
                 
                 if exists(Pattern("NewsList.png").similar(0.90)):
                         click(Pattern("NewsList.png").similar(0.90))
                         
                 type(Key.DELETE)
+                wait(2)
                 type(Key.ENTER)
 
         def preview_content(self, *args):
@@ -700,7 +703,10 @@ class ContentStudio(object):
                 wait(5)
                 #while not exists(Pattern("InboxesPagesListsTab.png").similar(0.60)):
                 ContentStudio.switch_to_content_studio(self)
-                click("DeskTab.png")
+                if exists("EditorTab.png"):
+                        click("EditorTab.png")
+                else:
+                        click("DeskTab.png")
                 wait(2)
 
         def update_content(self, *args):
