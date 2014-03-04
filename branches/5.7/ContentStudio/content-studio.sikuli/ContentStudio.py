@@ -213,6 +213,7 @@ class ContentStudio(object):
                       #          click("HomeSection.png")
                 #ContentStudio.close_allopen_tabs(self)
                 
+                        
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         rightClick(Pattern(SectionImageName).similar(0.95))
                 else:
@@ -628,7 +629,7 @@ class ContentStudio(object):
 
                 ###Assertion check
                 #wait(Pattern("ListAssertion.png"), 50)
-                wait(5)
+                wait(10)
                 if exists(Pattern("ListAssertion.png")):
                         print("Select The content's list was successful")
                 else:
@@ -669,6 +670,10 @@ class ContentStudio(object):
                 ContentStudio.open_section_panel(self)
                 
                 SectionImageName=sectionName+'Section.png'
+
+                if exists("HomeSection.png"):
+                        click("HomeSection.png")
+
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         click(Pattern(SectionImageName).similar(0.95))
                         wait(5)

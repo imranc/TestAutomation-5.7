@@ -6,5 +6,5 @@ Library  SearchContent.SearchContent  WITH NAME  SearchContent
 Documentation  This test suite checks content studio events with a newly created user
 
 **Test cases**
-Locking
+Create content with a new user
 	Create Content In Section  NewArticles
