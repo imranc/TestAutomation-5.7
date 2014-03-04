@@ -753,6 +753,8 @@ class ContentStudio(object):
                 wait(2)
 
         def achieve_lock(self):
+                ContentStudio.switch_to_content_studio(self)
+                wait(2)
                 click('Title:')
                 type(Key.SPACE)
 
