@@ -63,6 +63,7 @@ class ContentStudio(object):
                 
                 ContentStudio.close_browser(self)
                 switchApp("Escenic Content Studio")
+                maximize_content_studio_window()
                 
                 ##Assertion: Check if Section Tab or Search Tab exists
                 wait_for("SearchTab.png", 100)
@@ -629,7 +630,7 @@ class ContentStudio(object):
 
                 ###Assertion check
                 #wait(Pattern("ListAssertion.png"), 50)
-                wait(10)
+                wait(15)
                 if exists(Pattern("ListAssertion.png")):
                         print("Select The content's list was successful")
                 else:
