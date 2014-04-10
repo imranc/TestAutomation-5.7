@@ -27,6 +27,8 @@ def wait_for(*args):
                 raise AssertionError("Something went wrong while waiting for " + str(args[0])+". Check screenshot "+ImageName)
             else:
                 wait(1)
+    elif len(args) == 1:
+        wait(int(args[0]))
     else:
         for x in range(0,1000):
             if exists(args[0]):

@@ -1,0 +1,35 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Relate an External Data source with teaser widget
+
+**Test cases**
+Relate an External Data source with teaser widget
+	Create Content In Section  NewArticles
+	#Create Image In Section  NewArticles
+	Create Widget Content Type  TeaserWidgetContent
+	Type Text  TeaserWidget (Created by automated test)
+	Click Element  DataSourceTab
+	Click Element  EmbeddedDataSource
+	Click Element  ExternalDataSource
+	Click Element If Exists  UndockRelatedContentIcon  UndockRelatedContentIcon
+	Search And Select First Item  DataSource
+	Drag And Drop Element  InboxItemSelected  RelatedDatasource
+	Click Element If Exists  DockRelatedContentIcon  DockRelatedContentIcon
+	Click Element  DefaultTab
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Click Element  Title
+	Save And Publish
+	Open Section In Content Studio  FrontpageTemplate
+	Wait for  5
+	Drag And Drop Element  TeaserWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple

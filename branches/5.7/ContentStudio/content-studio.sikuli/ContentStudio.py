@@ -173,11 +173,11 @@ class ContentStudio(object):
                 eceAppName=eceAppName+eceVersion
                 switchApp(eceAppName)
 
-        def maximize_content_studio_window(self):
-                #***This Keyword Maximized Escenic Content Studio****#
-                #Full screent content studio with SPACE+ALT+X
-                type(Key.SPACE, KeyModifier.ALT)
-                type('x')
+##        def maximize_content_studio_window(self):
+##                #***This Keyword Maximized Escenic Content Studio****#
+##                #Full screent content studio with SPACE+ALT+X
+##                type(Key.SPACE, KeyModifier.ALT)
+##                type('x')
 
         def open_section_panel(self):
                 #***This Keyword makes section panel visible ***#
@@ -605,11 +605,11 @@ class ContentStudio(object):
                         raise AssertionError("A list named NewsList should be created first. Screenshot: "+ImageName)
                 
                 type(Key.ESC)
-                click(sectionName+'Section.png')
-                click(Pattern(sectionListsInboxImage).targetOffset(0, 0))
+                #click(sectionName+'Section.png')
+                #click(Pattern(sectionListsInboxImage).targetOffset(0, 0))
                 wait(2)
-                if exists("InboxSelect.png"):
-                        click("InboxSelect.png")
+                #if exists("InboxSelect.png"):
+                #        click("InboxSelect.png")
                 type(Key.ESC)
                 
 
@@ -647,6 +647,8 @@ class ContentStudio(object):
                         
                 doubleClick("HomeSection.png")
                 SectionImageName=SectionName+'Section.png'
+
+                wait(2)
                 
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         click(Pattern(SectionImageName).similar(0.95))
@@ -661,6 +663,8 @@ class ContentStudio(object):
                 
                 if exists("ListAssertion.png"):
                         click("ListAssertion.png")
+                        type(Key.DELETE)
+                        
                 while exists("ListAssertion.png") or exists("InboxItemSelected.png"):
                         type(Key.DELETE)
 

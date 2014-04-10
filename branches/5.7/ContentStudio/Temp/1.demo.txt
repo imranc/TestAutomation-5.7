@@ -7,12 +7,8 @@ Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
 Resource       common_resource.txt
 
-Documentation  Create a Teaser Widget with Data source query by Relation
-**Test cases**
-Copy, Paste, Cut
-	Delete List  NewArticles  NewsList
-		
-		
-		
+Documentation  A test case for Adding a content to different/multiple sections
 
-	
+**Test cases**
+demo
+	Start Content Studio  joe  joe

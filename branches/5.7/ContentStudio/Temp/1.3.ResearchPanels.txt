@@ -1,0 +1,16 @@
+***Settings***
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+
+Documentation  A test case for Configuring and reviewing Research Panels
+
+**Test cases**
+Configure and review RSS Feed panel
+	Remove Research Panel
+	Create Rss Feedpanel
+	Verify Research Panel  RSS/ATOM
+	Remove Research Panel
+
+Configure and review Search Panel
+	Create Search Panel
+	Verify Research Panel  SEARCH
+	Remove Research Panel

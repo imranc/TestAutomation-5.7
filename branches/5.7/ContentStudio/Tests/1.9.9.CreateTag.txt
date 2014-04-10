@@ -7,12 +7,18 @@ Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
 Resource       common_resource.txt
 
-Documentation  Create a Teaser Widget with Data source query by Relation
+Documentation  Create a Tag and check if that can be used.
 **Test cases**
-Copy, Paste, Cut
-	Delete List  NewArticles  NewsList
-		
-		
-		
+Create a Teaser Widget with Data source query by section Relation
 
+	###Create content with a tag###
+		Switch To Content Studio
+		Close Allopen Tabs
+		Create Content In Section  NewArticles
+		Switch To Content Studio
+		Create Tag  widget  Widget
+		Wait For  60
+		Tag Content  widget
+		Save And Publish
+	
 	
