@@ -1,0 +1,103 @@
+Jan 08, 2014 8:00:55 AM org.openqa.grid.selenium.GridLauncher main
+INFO: Launching a standalone server
+08:00:56.704 INFO - Java: Oracle Corporation 24.45-b08
+08:00:56.705 INFO - OS: Windows 7 6.1 x86
+08:00:56.729 INFO - v2.33.0, with Core v2.33.0. Built from revision 4e90c97
+08:00:57.262 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+08:00:57.265 INFO - Version Jetty/5.1.x
+08:00:57.267 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+08:00:57.270 INFO - Started HttpContext[/selenium-server,/selenium-server]
+08:00:57.270 INFO - Started HttpContext[/,/]
+08:00:57.395 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@19302fb
+08:00:57.395 INFO - Started HttpContext[/wd,/wd]
+08:00:57.405 INFO - Started SocketListener on 0.0.0.0:4444
+08:00:57.405 INFO - Started org.openqa.jetty.jetty.Server@5ed853
+08:00:57.853 INFO - Checking Resource aliases
+08:00:57.860 INFO - Checking Resource aliases
+08:00:57.874 INFO - Command request: getNewBrowserSession[*firefox, http://10.211.20.85:8080/escenic, , addCustomRequestHeaders=true] on session null
+08:00:57.881 INFO - creating new remote session
+08:00:57.953 INFO - Allocated session 85f600e18a064c5dadd95ba0a672b821 for http://10.211.20.85:8080/escenic, launching...
+08:00:57.956 WARN - It looks like your baseUrl (http://10.211.20.85:8080/escenic) is pointing to a file, not a directory (it doesn't end with a /).  We're going to have to strip off the last part of the pathname.
+jar:file:/C:/Python27/Lib/site-packages/SeleniumLibrary/lib/selenium-server.jar!/customProfileDirCUSTFFCHROME
+08:00:58.327 INFO - Preparing Firefox profile...
+08:01:00.302 INFO - Launching Firefox...
+08:01:09.770 INFO - Got result: OK,85f600e18a064c5dadd95ba0a672b821 on session 85f600e18a064c5dadd95ba0a672b821
+08:01:09.853 INFO - Command request: setTimeout[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:09.878 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:09.891 INFO - Command request: open[http://10.211.20.85:8080/escenic, True] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.198 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.236 INFO - Command request: windowMaximize[, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.313 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.325 INFO - Command request: getSpeed[, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.325 INFO - Got result: OK,0 on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.338 INFO - Command request: setSpeed[1000, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.352 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:10.364 INFO - Command request: getTitle[, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:11.429 INFO - Got result: OK,Escenic Web Studio - on session 85f600e18a064c5dadd95ba0a672b821
+08:01:11.445 INFO - Command request: type[userId, qa_admin] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:12.507 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:12.531 INFO - Command request: type[password, admin] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:13.728 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:13.774 INFO - Command request: getLocation[, ] on session 85f600e18a064c5dadd95ba0a672b821
+jar:file:/C:/Python27/Lib/site-packages/SeleniumLibrary/lib/selenium-server.jar!/sslSupport
+08:01:14.881 INFO - Got result: OK,http://10.211.20.85:8080/escenic/ on session 85f600e18a064c5dadd95ba0a672b821
+08:01:14.960 INFO - Command request: click[xpath=//input[@id="Log in" or @name="Log in" or @value="Log in" or @src="Log in" or @src="http://10.211.20.85:8080/escenic/Log in"], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:16.176 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:16.262 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:17.341 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:17.409 INFO - Command request: isElementPresent[xpath=//*[@value='I have had technical problems and want to continue working where I left off'], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:18.479 INFO - Got result: OK,true on session 85f600e18a064c5dadd95ba0a672b821
+08:01:18.527 INFO - Command request: click[xpath=//*[@value='I have had technical problems and want to continue working where I left off'], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:19.617 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:19.910 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:20.978 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:21.038 INFO - Command request: click[xpath=//*[@href='javascript:submitForm("main-menu")'], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:22.163 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:22.332 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:23.390 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:23.469 INFO - Command request: click[xpath=//*[@href="/escenic/user/new.do"], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:24.434 INFO - Started SocketListener on 0.0.0.0:63087
+08:01:24.636 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:24.868 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:25.895 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:25.908 INFO - Command request: type[firstName, joe] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:26.967 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:26.989 INFO - Command request: type[surName, joe] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:28.020 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:28.057 INFO - Command request: type[userName, joe] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:29.100 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:29.119 INFO - Command request: type[newPassword, joe] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:30.135 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:30.163 INFO - Command request: type[confirmPassword, joe] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:31.193 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:31.213 INFO - Command request: click[xpath=//*[@value='Save'], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:32.318 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:32.399 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:33.431 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:33.463 INFO - Command request: getLocation[, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:34.485 INFO - Got result: OK,http://10.211.20.85:8080/escenic/person/new/dispatch.do on session 85f600e18a064c5dadd95ba0a672b821
+08:01:34.502 INFO - Command request: isElementPresent[xpath=//input[@id="Search" or @name="Search" or @value="Search" or @src="Search" or @src="http://10.211.20.85:8080/escenic/person/new/Search"], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:35.516 INFO - Got result: OK,true on session 85f600e18a064c5dadd95ba0a672b821
+08:01:35.535 INFO - Command request: click[xpath=//*[@value='Search'], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:36.611 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:36.872 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:37.894 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:37.911 INFO - Command request: isTextPresent[View person, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:39.001 INFO - Got result: OK,true on session 85f600e18a064c5dadd95ba0a672b821
+08:01:39.042 INFO - Command request: click[xpath=//*[@value='Search'], ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:40.111 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:40.153 INFO - Command request: waitForPageToLoad[5000.0, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:41.223 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:41.260 INFO - Command request: isTextPresent[View person, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:42.367 INFO - Got result: OK,true on session 85f600e18a064c5dadd95ba0a672b821
+08:01:42.382 INFO - Command request: isTextPresent[View person, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:43.454 INFO - Got result: OK,true on session 85f600e18a064c5dadd95ba0a672b821
+08:01:43.469 INFO - Command request: close[, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:44.643 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:44.655 INFO - Command request: testComplete[, ] on session 85f600e18a064c5dadd95ba0a672b821
+08:01:44.655 INFO - Killing Firefox...
+08:01:44.886 INFO - Got result: OK on session 85f600e18a064c5dadd95ba0a672b821
+08:01:45.098 INFO - Command request: shutDownSeleniumServer[, ] on session null
+08:01:45.098 INFO - Shutdown command received
+08:01:45.105 INFO - Got result: OK on session null
+08:01:45.142 INFO - initiating shutdown

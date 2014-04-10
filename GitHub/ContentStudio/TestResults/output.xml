@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.1 (Jython 2.5.3 on java1.7.0_51)" generated="20140409 11:37:07.974">
+<suite source="C:\Test-automation\ContentStudio\Tests\Demo.txt" id="s1" name="Demo">
+<test id="s1-t1" name="Copy, Paste, Cut">
+<kw type="kw" name="ContentStudio.Delete List">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+<arg>NewsList</arg>
+</arguments>
+<msg timestamp="20140409 11:37:09.261" level="TRACE">Arguments: [ u'NewArticles' | u'NewsList' ]</msg>
+<msg timestamp="20140409 11:37:32.938" level="INFO">Do nothing</msg>
+<msg timestamp="20140409 11:37:32.942" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140409 11:37:32.939" starttime="20140409 11:37:09.259"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" critical="yes" endtime="20140409 11:37:32.945" starttime="20140409 11:37:09.250"></status>
+</test>
+<doc>Create a Teaser Widget with Data source query by Relation</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20140409 11:37:32.951" starttime="20140409 11:37:07.979"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" id="s1" fail="0" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,12 @@
+*** Settings ***
+
+Documentation  A test case for opening publication in browser
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+
+
+Open publication
+	Open Browser  http://miranda.qa.local 

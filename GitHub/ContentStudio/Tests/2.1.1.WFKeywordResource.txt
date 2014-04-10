@@ -1,0 +1,73 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Relate an External Data source with teaser widget
+
+**Keywords**
+Create New Other Content Type  [Arguments]  ${ContentType}
+	Right Click Section  Config
+	Click Element  NewContent  100  0
+	Click Element  OthersContent  -45  0
+	Click Element  ${ContentType}
+	Wait For  2
+
+Create Widget Content Type  [Arguments]  ${ContentType}
+	Right Click Section  Config
+	Click Element  NewContent  100  0
+	Click Element  WidgetsContent
+	Click Element  ${ContentType}
+	Wait For  2
+
+Save And Publish
+	Wait For  2
+	Click Element  SaveButton
+	Wait For  7
+	Click Element  PublishButton
+	Wait For  5
+	
+Search And Select First Item  [Arguments]  ${SearchPattern}
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  60
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Type Text  ${SearchPattern}
+	Type Key  ENTER
+	Click Element  ClipboardTab  20  120
+
+Open Section In Content Studio  [Arguments]  ${SectionName}
+	Click Element If Exists  SectionsTab  SectionsTab
+	Click Element  HomeSection
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Right Click Section  ${SectionName}
+	Type Key  ENTER
+	Wait For  5
+
+Select From Dropdown  [Arguments]  ${Pattern}
+	Type Text  ${Pattern}
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+Tag Content  [Arguments]  ${TagName}
+	Click Element  AddButton
+	Type Text  ${TagName}
+	Wait For  2
+	Type Key  ENTER
+
+Create Tag  [Arguments]  ${TagName}  ${TagStructure}
+	Click Element  Tools
+	Click Element  ManageTags  -25  0
+	Click Element  ${TagStructure}
+	Click Element  AddSubTags
+	Type Text  ${TagName}
+	Type Key  ENTER 
+	Type Key  ESC
+	

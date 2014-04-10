@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140108 08:00:56.089" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\Test-automation\WebStudio\Tests\1.CreateUser.txt" id="s1" name="1.CreateUser">
+<test id="s1-t1" name="Create User">
+<kw type="kw" name="html_resource.Open Browser To Escenic WebStudio">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SeleniumLibrary.Open Browser Webstudio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20140108 08:01:10.201" level="INFO">Opening browser 'firefox' to base url 'http://10.211.20.85:8080/escenic'</msg>
+<status status="PASS" endtime="20140108 08:01:10.202" starttime="20140108 08:00:56.555"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140108 08:01:10.317" starttime="20140108 08:01:10.202"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Set Selenium Speed">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20140108 08:01:10.355" starttime="20140108 08:01:10.317"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Escenic Web Studio -</arg>
+</arguments>
+<msg timestamp="20140108 08:01:11.434" level="INFO">Page title is 'Escenic Web Studio -'.</msg>
+<status status="PASS" endtime="20140108 08:01:11.434" starttime="20140108 08:01:10.356"></status>
+</kw>
+<status status="PASS" endtime="20140108 08:01:11.435" starttime="20140108 08:00:56.553"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Environment Variable">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>userId</arg>
+<arg>ECE_UserName</arg>
+</arguments>
+<msg timestamp="20140108 08:01:12.511" level="INFO">Typing text 'ECE_UserName' into text field 'userId'</msg>
+<status status="PASS" endtime="20140108 08:01:12.511" starttime="20140108 08:01:11.436"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Environment Variable">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>ECE_Password</arg>
+</arguments>
+<msg timestamp="20140108 08:01:13.732" level="INFO">Typing text 'ECE_Password' into text field 'password'</msg>
+<status status="PASS" endtime="20140108 08:01:13.733" starttime="20140108 08:01:12.512"></status>
+</kw>
+<kw type="kw" name="html_resource.Submit Credentials">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SeleniumLibrary.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Log in</arg>
+</arguments>
+<msg timestamp="20140108 08:01:17.345" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" endtime="20140108 08:01:17.345" starttime="20140108 08:01:13.736"></status>
+</kw>
+<status status="PASS" endtime="20140108 08:01:17.346" starttime="20140108 08:01:13.734"></status>
+</kw>
+<kw type="kw" name="html_resource.Click For Multiple Cookies">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SeleniumLibrary.Click Button If Exists">
+<doc></doc>
+<arguments>
+<arg>xpath=//*[@value='I have had technical problems and want to continue working where I left off']</arg>
+</arguments>
+<status status="PASS" endtime="20140108 08:01:20.982" starttime="20140108 08:01:17.349"></status>
+</kw>
+<status status="PASS" endtime="20140108 08:01:20.982" starttime="20140108 08:01:17.346"></status>
+</kw>
+<kw type="kw" name="html_resource.Create User">
+<doc></doc>
+<arguments>
+<arg>joe</arg>
+</arguments>
+<kw type="kw" name="html_resource.Go To Link">
+<doc></doc>
+<arguments>
+<arg>javascript:submitForm("main-menu")</arg>
+</arguments>
+<kw type="kw" name="SeleniumLibrary.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>xpath=//*[@href='${url}']</arg>
+</arguments>
+<msg timestamp="20140108 08:01:23.395" level="INFO">Clicking link 'xpath=//*[@href='javascript:submitForm("main-menu")']'.</msg>
+<status status="PASS" endtime="20140108 08:01:23.395" starttime="20140108 08:01:20.987"></status>
+</kw>
+<status status="PASS" endtime="20140108 08:01:23.395" starttime="20140108 08:01:20.985"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@href="/escenic/user/new.do"]</arg>
+</arguments>
+<msg timestamp="20140108 08:01:25.899" level="INFO">Clicking element 'xpath=//*[@href="/escenic/user/new.do"]'.</msg>
+<status status="PASS" endtime="20140108 08:01:25.899" starttime="20140108 08:01:23.396"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>firstName</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20140108 08:01:26.970" level="INFO">Typing text 'joe' into text field 'firstName'</msg>
+<status status="PASS" endtime="20140108 08:01:26.970" starttime="20140108 08:01:25.901"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>surName</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20140108 08:01:28.025" level="INFO">Typing text 'joe' into text field 'surName'</msg>
+<status status="PASS" endtime="20140108 08:01:28.025" starttime="20140108 08:01:26.971"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>userName</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20140108 08:01:29.105" level="INFO">Typing text 'joe' into text field 'userName'</msg>
+<status status="PASS" endtime="20140108 08:01:29.106" starttime="20140108 08:01:28.026"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>newPassword</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20140108 08:01:30.139" level="INFO">Typing text 'joe' into text field 'newPassword'</msg>
+<status status="PASS" endtime="20140108 08:01:30.139" starttime="20140108 08:01:29.106"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>confirmPassword</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20140108 08:01:31.202" level="INFO">Typing text 'joe' into text field 'confirmPassword'</msg>
+<status status="PASS" endtime="20140108 08:01:31.202" starttime="20140108 08:01:30.140"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@value='Save']</arg>
+</arguments>
+<msg timestamp="20140108 08:01:33.435" level="INFO">Clicking element 'xpath=//*[@value='Save']'.</msg>
+<status status="PASS" endtime="20140108 08:01:33.436" starttime="20140108 08:01:31.202"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Page Should Contain Button">
+<doc>Verifies button identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20140108 08:01:35.519" level="INFO">Current page contains input 'Search'.</msg>
+<status status="PASS" endtime="20140108 08:01:35.519" starttime="20140108 08:01:33.436"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@value='Search']</arg>
+</arguments>
+<msg timestamp="20140108 08:01:37.897" level="INFO">Clicking element 'xpath=//*[@value='Search']'.</msg>
+<status status="PASS" endtime="20140108 08:01:37.898" starttime="20140108 08:01:35.520"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>View person</arg>
+<arg>10</arg>
+<arg>error=None</arg>
+</arguments>
+<status status="PASS" endtime="20140108 08:01:39.004" starttime="20140108 08:01:37.898"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@value='Search']</arg>
+</arguments>
+<msg timestamp="20140108 08:01:41.237" level="INFO">Clicking element 'xpath=//*[@value='Search']'.</msg>
+<status status="PASS" endtime="20140108 08:01:41.238" starttime="20140108 08:01:39.005"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>View person</arg>
+<arg>10</arg>
+<arg>error=None</arg>
+</arguments>
+<status status="PASS" endtime="20140108 08:01:42.370" starttime="20140108 08:01:41.239"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>View person</arg>
+</arguments>
+<msg timestamp="20140108 08:01:43.458" level="INFO">Current page contains text 'View person'.</msg>
+<status status="PASS" endtime="20140108 08:01:43.459" starttime="20140108 08:01:42.370"></status>
+</kw>
+<status status="PASS" endtime="20140108 08:01:43.459" starttime="20140108 08:01:20.983"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140108 08:01:44.890" starttime="20140108 08:01:43.460"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20140108 08:01:44.890" critical="yes" starttime="20140108 08:00:56.549"></status>
+</test>
+<doc>A test case to Create User and Assign roles to user</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20140108 08:01:44.892" starttime="20140108 08:00:56.092"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="1.CreateUser">1.CreateUser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

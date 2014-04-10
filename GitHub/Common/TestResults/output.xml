@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20130830 12:40:46.100" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\Test-automation\Common\Tests" id="s1" name="Tests">
+<suite source="C:\Test-automation\Common\Tests\CreatePublication.txt" id="s1-s1" name="CreatePublication">
+<test id="s1-s1-t1" name="Create Publication">
+<kw type="kw" name="SeleniumLibrary.Open Browser EscenicAdmin">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20130830 12:40:50.473" level="INFO">Opening browser 'firefox' to base url 'http://172.24.202.126:8080/escenic-admin'</msg>
+<status status="PASS" endtime="20130830 12:40:50.473" starttime="20130830 12:40:46.220"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20130830 12:40:50.528" starttime="20130830 12:40:50.474"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>New publications</arg>
+</arguments>
+<msg timestamp="20130830 12:40:50.710" level="INFO">Clicking link 'New publications'.</msg>
+<status status="PASS" endtime="20130830 12:40:50.710" starttime="20130830 12:40:50.529"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Choose File">
+<doc>Inputs the `file_path` into file input field found by `identifier`.</doc>
+<arguments>
+<arg>resourceFile</arg>
+<arg>${JENKINS URL}/job/eceAdminParent/ws/demo-temp-dev.war</arg>
+</arguments>
+<status status="PASS" endtime="20130830 12:40:50.761" starttime="20130830 12:40:50.710"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Upload</arg>
+</arguments>
+<msg timestamp="20130830 12:40:50.960" level="INFO">Clicking button 'Upload'.</msg>
+<status status="PASS" endtime="20130830 12:40:50.962" starttime="20130830 12:40:50.761"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>create a publication</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.073" level="INFO">Clicking link 'create a publication'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.073" starttime="20130830 12:40:50.962"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name</arg>
+<arg>Viz24</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.118" level="INFO">Typing text 'Viz24' into text field 'name'</msg>
+<status status="PASS" endtime="20130830 12:40:51.118" starttime="20130830 12:40:51.074"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>adminPassword</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.141" level="INFO">Typing text 'admin' into text field 'adminPassword'</msg>
+<status status="PASS" endtime="20130830 12:40:51.141" starttime="20130830 12:40:51.118"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>adminPasswordConfirm</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.157" level="INFO">Typing text 'admin' into text field 'adminPasswordConfirm'</msg>
+<status status="PASS" endtime="20130830 12:40:51.157" starttime="20130830 12:40:51.141"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.432" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.432" starttime="20130830 12:40:51.157"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Viz24_admin</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.450" level="INFO">Current page contains text 'Viz24_admin'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.450" starttime="20130830 12:40:51.432"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20130830 12:40:51.450" critical="yes" starttime="20130830 12:40:46.219"></status>
+</test>
+<test id="s1-s1-t2" name="Delete Publication">
+<kw type="kw" name="html_resource.Delete Publication">
+<doc></doc>
+<arguments>
+<arg>Viz24</arg>
+</arguments>
+<kw type="kw" name="SeleniumLibrary.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>List publications</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.603" level="INFO">Clicking link 'List publications'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.603" starttime="20130830 12:40:51.452"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//td[contains(text(),'${PublicationName}')]/preceding::td[1]/input[@type='checkbox']</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.635" level="INFO">Selecting checkbox 'xpath=//td[contains(text(),'Viz24')]/preceding::td[1]/input[@type='checkbox']'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.635" starttime="20130830 12:40:51.603"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Delete</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.734" level="INFO">Clicking link 'Delete'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.734" starttime="20130830 12:40:51.635"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Confirm</arg>
+</arguments>
+<msg timestamp="20130830 12:40:51.951" level="INFO">Clicking link 'Confirm'.</msg>
+<status status="PASS" endtime="20130830 12:40:51.951" starttime="20130830 12:40:51.734"></status>
+</kw>
+<status status="PASS" endtime="20130830 12:40:51.951" starttime="20130830 12:40:51.451"></status>
+</kw>
+<kw type="kw" name="SeleniumLibrary.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20130830 12:40:52.138" starttime="20130830 12:40:51.951"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20130830 12:40:52.138" critical="yes" starttime="20130830 12:40:51.451"></status>
+</test>
+<doc>A test case to Login to Escenic Web Studio</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20130830 12:40:52.138" starttime="20130830 12:40:46.143"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20130830 12:40:52.141" starttime="20130830 12:40:46.101"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="2" id="s1" name="Tests">Tests</stat>
+<stat fail="0" pass="2" id="s1-s1" name="CreatePublication">Tests.CreatePublication</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

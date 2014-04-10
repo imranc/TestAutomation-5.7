@@ -1,0 +1,50 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+
+Documentation  More Clipboard TC from ET
+
+**Test cases**
+Drag article into clipboard
+	Create Content In Section  NewArticles
+	Clean Up Clipboard
+	Drag  CurrentTab  EmptyClipboard
+	Check If Exists  InboxItemSelected
+	Close Browser
+
+Use Open Selected
+	Clean Up Clipboard
+	Create Content In Section  NewArticles
+	Go To Clipboard
+	Close All Open Tabs
+	Select Item From Clipboard
+	Open Selected
+	Check If Exists  PublishedContent
+
+
+Undo and Redo
+	Clean Up Clipboard
+	Create Content In Section  NewArticles
+	Go To Clipboard
+	Select Item From Clipboard
+	Clean Up Clipboard
+	Undo From Menu
+	Select Item From Clipboard
+	Check If Exists  InboxItemSelected
+	#redo 
+	Redo From Menu
+	Check If Exists  EmptyClipboard
+
+Copy, Paste, Cut
+	Clean Up Clipboard
+	Create Content In Section  NewArticles
+	Go To Clipboard
+	Select Item From Clipboard
+	Copy From Menu
+	Clean Up Clipboard
+	Paste From Menu
+	Check If Exists  InboxItemSelected
+	Cut From Menu
+	#Check If Exists  EmptyClipboard
+	Paste From Menu
+	
