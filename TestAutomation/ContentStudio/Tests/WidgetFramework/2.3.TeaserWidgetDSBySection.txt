@@ -10,9 +10,6 @@ Resource       common_resource.txt
 Documentation  Create a Teaser Widget with Data source query by section
 **Test cases**
 Create a Teaser Widget with Data source query by section
-	#Create Content In Section  NewArticles
-	#Create Image In Section  NewArticles
-	
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Widget Content Type  TeaserWidgetContent
