@@ -29,7 +29,7 @@ Create a Teaser Widget with Data source query by tag
 
 	###Create teaser widget with data source by tag###
 		Create Widget Content Type  TeaserWidgetContent
-		Type Text  TeaserWidget DS by tag(Created by automated test)
+		Type Text  TeaserWidget DS by Sharedtag(Created by automated test)
 		Click Element  DataSourceTab
 		Click Element  Add
 		Wait For  2

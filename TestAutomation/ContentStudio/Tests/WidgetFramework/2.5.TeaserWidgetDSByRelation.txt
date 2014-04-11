@@ -26,7 +26,7 @@ Create a Teaser Widget with Data source query by section Relation
 	Type Text  TeaserWidget (Created by automated test)
 	Click Element  DataSourceTab
 	Click Element  Add
-	Wait For  2
+	Wait For  5
 	Click Element  DSByRelation  -55  0
 	Click Element  DataSourceRelationGroups  -10  15
 
