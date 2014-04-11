@@ -7,18 +7,18 @@ Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
 Resource       common_resource.txt
 
-Documentation  Create a Tag
+Documentation  Create a Tag and check if that can be used.
 **Test cases**
-Create tag
-	###Remove teaser widget###
-		Open Section In Content Studio  SportsPageTemplate
-		Wait for  5
-		Click Element  TopContentArea
-		Type Key  DOWN
-		Type Key  DELETE
-		Click Element  PublishButtonSimple
-		
-		
-		
+Create a Teaser Widget with Data source query by section Relation
 
+	###Create content with a tag###
+		Switch To Content Studio
+		Close Allopen Tabs
+		Create Content In Section  NewArticles
+		Switch To Content Studio
+		Create Tag  widget  Widget
+		Wait For  60
+		Tag Content  widget
+		Save And Publish
+	
 	

@@ -45,6 +45,8 @@ class eceSikuli(object):
                         type(Key.ENTER)
                 elif args[0] == 'ESC':
                         type(Key.ESC)
+                elif args[0] == 'DELETE':
+                        type(Key.DELETE)
 
 
         def click_element_if_exists(self, *args):
