@@ -1,0 +1,56 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a content "Title" widget and 
+Relate a content "Title" widget with article page
+**Test cases**
+Create a content "Title" widget
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Content In Section  NewArticles  Article created for content field widget test
+	Create Widget Content Type  ContentFieldWidget
+	Type Text  Title Widget
+	Click Element  DefaultTab
+	Click Element  FieldCollectionBox  -15  15
+	Select From Dropdown  Title
+	Save And Publish
+
+	###Assertion###
+	Search And Select First Item  Title Widget
+	Check If Exists  InboxItemSelected
+
+Relate a content "Title" widget with article page
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Drag And Drop Element  TitleWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Search And Select First Item  Article created for content field widget test
+	Type Key  ENTER
+	Click Element   ContentUrl  12  10
+	Wait For  10
+	Maximize Content Studio Window
+	Wait For  2
+	Check If Exists  ContentFieldWidgetAssertion
+	Close Browser
+
+	###Remove widget from article page template###
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Click Element  TopContentArea
+	Type Key  DOWN
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+
+	
+
+	

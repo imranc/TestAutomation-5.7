@@ -48,6 +48,9 @@ class ContentStudio(object):
                         type("\n")
                 wait(30)
                 #ContentStudio.switch_to_content_studio(self)
+                if exists("JavaWarning.png"):
+                        type(Key.ENTER)
+                        
                 wait(Pattern("login_content_studio.png").targetOffset(-248,1),500)
                 
                 if len(args) == 0:
@@ -234,11 +237,13 @@ class ContentStudio(object):
                                 raise AssertionError(SectionName+' Section does not exist. Screenshot: '+ImageName)
                 wait(2)
         
-        def create_content_in_section(self, SectionName):
+        def create_content_in_section(self, *args):
                 #***This Keyword creates an Article in the specified section***#
                 #***Create Content In Section SectionName***#
 
                 ContentStudio.switch_to_content_studio(self)
+
+                SectionName=args[0]
                 
                 if not exists("InboxesTab.png"):
                         click("SectionsTab.png")
@@ -252,12 +257,22 @@ class ContentStudio(object):
                 elif exists("NewsContent.png"):
                         click("NewsContent.png")
                 wait(3)
-                #type("TEST")
-                type("This is the Title of an Article -- By Automated smoke tests")
-                type(Key.TAB)
-                type("This is the Summary of an Article -- By Automated smoke tests")
-                type(Key.TAB)
-                type("This is the Body of an Article -- By Automated smoke tests")
+
+                if len(args) > 1:
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                else: 
+                        type("This is the Title of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Summary of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Body of an Article -- By Automated smoke tests")
+                        
                 wait(3)
                 click("SaveButton.png")
                 wait(10)
@@ -299,10 +314,12 @@ class ContentStudio(object):
                         #type("7", KeyModifier.CTRL)
                         #ContentStudio.switch_to_content_studio(self)
 
-        def create_image_in_section(self, SectionName):
+        def create_image_in_section(self, *args):
                 #***This Keyword creates an Image in the specified section***#
                 #***Create Image In Section  SectionName***#
                 ContentStudio.switch_to_content_studio(self)
+
+                SectionName=args[0]
 
                 if not exists("InboxesTab.png"):
                         click("SectionsTab.png")
@@ -318,7 +335,12 @@ class ContentStudio(object):
                 #wait(Pattern("ContentUrl.png").similar(0.90),20)
                 wait(10)
                 type("a", KEY_CTRL)
-                type("This image is created by automated smoke test BOT")
+
+                if len(args)>1:
+                        type(args[1])
+                else:
+                        type("This image is created by automated smoke test BOT")
+                        
                 wait(2)
                 wait(Pattern("SaveButton.png").similar(0.65),20)
                 
