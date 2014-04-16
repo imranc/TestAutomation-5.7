@@ -16,6 +16,7 @@ import os
 import time
 import socket
 import urlparse
+import datetime
 try:
     import subprocess
 except ImportError:
@@ -522,5 +523,8 @@ class _NameGenerator(object):
     def __init__(self):
         self._index = 0
     def next(self):
+        imageName=(os.environ['BuildNumber'])
+        currentTime=datetime.datetime.now().strftime("%B-%d-%H-%M-%S")
+        imageName = imageName+ '.' + currentTime + '.png'
         self._index += 1
-        return 'selenium-screenshot-%d.png' % self._index
+        return 'Screenshots/'+imageName

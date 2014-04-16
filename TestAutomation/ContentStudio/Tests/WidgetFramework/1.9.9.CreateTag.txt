@@ -17,6 +17,7 @@ Create a Teaser Widget with Data source query by section Relation
 		Create Content In Section  NewArticles
 		Switch To Content Studio
 		Create Tag  widget  Widget
+		Type Key  ESC
 		Wait For  60
 		Tag Content  widget
 		Save And Publish

@@ -11,6 +11,7 @@ Documentation  Create a Data source
 
 **Test cases**
 Create an External Data source
+	Type Key  ESC
 	Create New Other Content Type  DataSourceContent
 	Type Text  DataSource created by automated test
 	Click Element  Add

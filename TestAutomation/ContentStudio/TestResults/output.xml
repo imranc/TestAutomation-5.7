@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 2.8.1 (Jython 2.5.3 on java1.7.0_51)" generated="20140415 14:43:02.880">
-<suite source="C:\Test-automation\ContentStudio\Tests\WidgetFramework\3.1.3.CotentBodyWidget.txt" id="s1" name="3.1.3.CotentBodyWidget">
-<test id="s1-t1" name="Create a content Body Widget displaying &quot;inline content&quot; and &quot;whole body content&quot;">
-<kw type="kw" name="ContentStudio.Switch To Content Studio">
+<robot generator="Robot 2.8.1 (Jython 2.5.3 on java1.7.0_51)" generated="20140416 07:15:30.324">
+<suite id="s1" name="2.1.DataSourceBySection &amp; 2.3.TeaserWidgetDSBySection &amp; 2.4.TeaserWidgetDSBySectionPageGroup">
+<suite source="C:\Test-automation\ContentStudio\Tests\WidgetFramework\2.1.DataSourceBySection.txt" id="s1-s1" name="2.1.DataSourceBySection">
+<test id="s1-s1-t1" name="Create an External Data source">
+<kw type="kw" name="eceSikuli.Type Key">
 <doc></doc>
 <arguments>
+<arg>ESC</arg>
 </arguments>
-<msg timestamp="20140415 14:43:04.875" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:43:04.923" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
-<msg timestamp="20140415 14:43:04.925" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:43:04.924" starttime="20140415 14:43:04.874"></status>
+<msg timestamp="20140416 07:15:31.859" level="TRACE">Arguments: [ u'ESC' ]</msg>
+<msg timestamp="20140416 07:15:31.976" level="INFO">[log] TYPE ""</msg>
+<msg timestamp="20140416 07:15:31.977" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:15:31.977" starttime="20140416 07:15:31.857"></status>
 </kw>
-<kw type="kw" name="ContentStudio.Close Allopen Tabs">
+<kw type="kw" name="2.1.1.WFKeywordResource.Create New Other Content Type">
 <doc></doc>
 <arguments>
+<arg>DataSourceContent</arg>
 </arguments>
-<msg timestamp="20140415 14:43:04.941" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:43:29.520" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
-[log] Alt+TYPE " "
-[log] TYPE "x"
-[log] CLICK on (1182,55)
-[log] CLICK on (1497,515)
-[log] CLICK on (1019,55)
-[log] CLICK on (1019,55)</msg>
-<msg timestamp="20140415 14:43:29.525" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:43:29.521" starttime="20140415 14:43:04.939"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Create Widget Content Type">
-<doc></doc>
-<arguments>
-<arg>ContentBodyWidget</arg>
-</arguments>
-<msg timestamp="20140415 14:43:29.531" level="TRACE">Arguments: [ ${ContentType}=u'ContentBodyWidget' ]</msg>
+<msg timestamp="20140416 07:15:31.982" level="TRACE">Arguments: [ ${ContentType}=u'DataSourceContent' ]</msg>
 <kw type="kw" name="ContentStudio.Right Click Section">
 <doc></doc>
 <arguments>
 <arg>Config</arg>
 </arguments>
-<msg timestamp="20140415 14:43:29.533" level="TRACE">Arguments: [ u'Config' ]</msg>
-<msg timestamp="20140415 14:43:53.148" level="INFO">Do nothing</msg>
-<msg timestamp="20140415 14:43:53.149" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:43:53.149" starttime="20140415 14:43:29.532"></status>
+<msg timestamp="20140416 07:15:31.984" level="TRACE">Arguments: [ u'Config' ]</msg>
+<msg timestamp="20140416 07:15:43.507" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] CLICK on (58,82)
+[log] CLICK on (57,50)
+[log] RIGHT CLICK on (96,194)</msg>
+<msg timestamp="20140416 07:15:43.511" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:15:43.510" starttime="20140416 07:15:31.983"></status>
 </kw>
 <kw type="kw" name="eceSikuli.Click Element">
 <doc></doc>
@@ -49,10 +41,139 @@
 <arg>100</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20140415 14:43:53.155" level="TRACE">Arguments: [ u'NewContent' | u'100' | u'0' ]</msg>
-<msg timestamp="20140415 14:44:01.246" level="INFO">[log] CLICK on (307,207)</msg>
-<msg timestamp="20140415 14:44:01.248" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:01.247" starttime="20140415 14:43:53.154"></status>
+<msg timestamp="20140416 07:15:43.514" level="TRACE">Arguments: [ u'NewContent' | u'100' | u'0' ]</msg>
+<msg timestamp="20140416 07:15:51.299" level="INFO">[log] CLICK on (307,207)</msg>
+<msg timestamp="20140416 07:15:51.300" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:15:51.300" starttime="20140416 07:15:43.513"></status>
+</kw>
+<kw type="kw" name="eceSikuli.Click Element">
+<doc></doc>
+<arguments>
+<arg>OthersContent</arg>
+<arg>-45</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20140416 07:15:51.303" level="TRACE">Arguments: [ u'OthersContent' | u'-45' | u'0' ]</msg>
+<msg timestamp="20140416 07:15:56.999" level="INFO">[log] CLICK on (324,468)</msg>
+<msg timestamp="20140416 07:15:57.000" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:15:57.000" starttime="20140416 07:15:51.302"></status>
+</kw>
+<kw type="kw" name="eceSikuli.Click Element">
+<doc></doc>
+<arguments>
+<arg>${ContentType}</arg>
+</arguments>
+<msg timestamp="20140416 07:15:57.003" level="TRACE">Arguments: [ u'DataSourceContent' ]</msg>
+<msg timestamp="20140416 07:16:02.839" level="INFO">[log] CLICK on (375,438)</msg>
+<msg timestamp="20140416 07:16:02.840" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:02.840" starttime="20140416 07:15:57.002"></status>
+</kw>
+<kw type="kw" name="SikuliCS.Wait For">
+<doc></doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140416 07:16:02.842" level="TRACE">Arguments: [ u'2' ]</msg>
+<msg timestamp="20140416 07:16:04.843" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:04.843" starttime="20140416 07:16:02.841"></status>
+</kw>
+<msg timestamp="20140416 07:16:04.845" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:04.845" starttime="20140416 07:15:31.979"></status>
+</kw>
+<kw type="kw" name="eceSikuli.Type Text">
+<doc></doc>
+<arguments>
+<arg>DataSource created by automated test</arg>
+</arguments>
+<msg timestamp="20140416 07:16:04.847" level="TRACE">Arguments: [ u'DataSource created by automated test' ]</msg>
+<msg timestamp="20140416 07:16:06.764" level="INFO">[log] TYPE "DataSource created by automated test"</msg>
+<msg timestamp="20140416 07:16:06.765" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:06.764" starttime="20140416 07:16:04.846"></status>
+</kw>
+<kw type="kw" name="eceSikuli.Click Element">
+<doc></doc>
+<arguments>
+<arg>Add</arg>
+</arguments>
+<msg timestamp="20140416 07:16:06.770" level="TRACE">Arguments: [ u'Add' ]</msg>
+<msg timestamp="20140416 07:16:13.173" level="INFO">[log] App.focus Java Console - Content Studio(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
+<msg timestamp="20140416 07:16:13.178" level="FAIL">Add does not exist. Screenshot: 42.April-16-07-16-12.png</msg>
+<msg timestamp="20140416 07:16:13.179" level="DEBUG">Traceback (most recent call last):
+  File "C:\Test-automation\ContentStudio\content-studio.sikuli\eceSikuli.py", line 34, in click_element
+    raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)</msg>
+<status status="FAIL" endtime="20140416 07:16:13.182" starttime="20140416 07:16:06.766"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20140416 07:16:13.184" starttime="20140416 07:15:31.850">Add does not exist. Screenshot: 42.April-16-07-16-12.png</status>
+</test>
+<doc>Create a Data source</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20140416 07:16:13.193" starttime="20140416 07:15:30.705"></status>
+</suite>
+<suite source="C:\Test-automation\ContentStudio\Tests\WidgetFramework\2.3.TeaserWidgetDSBySection.txt" id="s1-s2" name="2.3.TeaserWidgetDSBySection">
+<test id="s1-s2-t1" name="Create a Teaser Widget with Data source query by section">
+<kw type="kw" name="ContentStudio.Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20140416 07:16:13.338" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20140416 07:16:13.341" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
+<msg timestamp="20140416 07:16:13.342" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:13.342" starttime="20140416 07:16:13.337"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Close Allopen Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20140416 07:16:13.345" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20140416 07:16:34.240" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] CLICK on (1345,55)
+[log] CLICK on (1497,515)
+[log] CLICK on (1182,55)
+[log] CLICK on (1019,55)</msg>
+<msg timestamp="20140416 07:16:34.242" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:34.241" starttime="20140416 07:16:13.344"></status>
+</kw>
+<kw type="kw" name="2.1.1.WFKeywordResource.Create Widget Content Type">
+<doc></doc>
+<arguments>
+<arg>TeaserWidgetContent</arg>
+</arguments>
+<msg timestamp="20140416 07:16:34.248" level="TRACE">Arguments: [ ${ContentType}=u'TeaserWidgetContent' ]</msg>
+<kw type="kw" name="ContentStudio.Right Click Section">
+<doc></doc>
+<arguments>
+<arg>Config</arg>
+</arguments>
+<msg timestamp="20140416 07:16:34.250" level="TRACE">Arguments: [ u'Config' ]</msg>
+<msg timestamp="20140416 07:16:44.883" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] CLICK on (58,194)
+[log] CLICK on (57,50)
+[log] RIGHT CLICK on (96,194)</msg>
+<msg timestamp="20140416 07:16:44.885" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:44.885" starttime="20140416 07:16:34.249"></status>
+</kw>
+<kw type="kw" name="eceSikuli.Click Element">
+<doc></doc>
+<arguments>
+<arg>NewContent</arg>
+<arg>100</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20140416 07:16:44.888" level="TRACE">Arguments: [ u'NewContent' | u'100' | u'0' ]</msg>
+<msg timestamp="20140416 07:16:52.806" level="INFO">[log] CLICK on (307,207)</msg>
+<msg timestamp="20140416 07:16:52.807" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:52.807" starttime="20140416 07:16:44.886"></status>
 </kw>
 <kw type="kw" name="eceSikuli.Click Element">
 <doc></doc>
@@ -61,733 +182,172 @@
 <arg>80</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20140415 14:44:01.250" level="TRACE">Arguments: [ u'WidgetsContent' | u'80' | u'0' ]</msg>
-<msg timestamp="20140415 14:44:07.147" level="INFO">[log] CLICK on (443,459)</msg>
-<msg timestamp="20140415 14:44:07.149" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:07.148" starttime="20140415 14:44:01.249"></status>
+<msg timestamp="20140416 07:16:52.813" level="TRACE">Arguments: [ u'WidgetsContent' | u'80' | u'0' ]</msg>
+<msg timestamp="20140416 07:16:58.554" level="INFO">[log] CLICK on (443,415)</msg>
+<msg timestamp="20140416 07:16:58.555" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:16:58.554" starttime="20140416 07:16:52.810"></status>
 </kw>
 <kw type="kw" name="eceSikuli.Click Element">
 <doc></doc>
 <arguments>
 <arg>${ContentType}</arg>
 </arguments>
-<msg timestamp="20140415 14:44:07.152" level="TRACE">Arguments: [ u'ContentBodyWidget' ]</msg>
-<msg timestamp="20140415 14:44:13.137" level="INFO">[log] CLICK on (592,569)</msg>
-<msg timestamp="20140415 14:44:13.139" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:13.138" starttime="20140415 14:44:07.150"></status>
+<msg timestamp="20140416 07:16:58.561" level="TRACE">Arguments: [ u'TeaserWidgetContent' ]</msg>
+<msg timestamp="20140416 07:17:04.737" level="INFO">[log] App.focus Java Console - Content Studio(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
+<msg timestamp="20140416 07:17:04.739" level="FAIL">TeaserWidgetContent does not exist. Screenshot: 42.April-16-07-17-03.png</msg>
+<msg timestamp="20140416 07:17:04.739" level="DEBUG">Traceback (most recent call last):
+  File "C:\Test-automation\ContentStudio\content-studio.sikuli\eceSikuli.py", line 34, in click_element
+    raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)</msg>
+<status status="FAIL" endtime="20140416 07:17:04.740" starttime="20140416 07:16:58.556"></status>
 </kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20140415 14:44:13.141" level="TRACE">Arguments: [ u'2' ]</msg>
-<msg timestamp="20140415 14:44:15.142" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:15.142" starttime="20140415 14:44:13.140"></status>
-</kw>
-<msg timestamp="20140415 14:44:15.144" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:15.144" starttime="20140415 14:43:29.526"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>Body Widget</arg>
-</arguments>
-<msg timestamp="20140415 14:44:15.146" level="TRACE">Arguments: [ u'Body Widget' ]</msg>
-<msg timestamp="20140415 14:44:16.046" level="INFO">[log] TYPE "Body Widget"</msg>
-<msg timestamp="20140415 14:44:16.051" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:16.048" starttime="20140415 14:44:15.145"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>DefaultTab</arg>
-</arguments>
-<msg timestamp="20140415 14:44:16.060" level="TRACE">Arguments: [ u'DefaultTab' ]</msg>
-<msg timestamp="20140415 14:44:22.205" level="INFO">[log] CLICK on (912,117)</msg>
-<msg timestamp="20140415 14:44:22.207" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:22.206" starttime="20140415 14:44:16.056"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>ParagraphMaximumField</arg>
-<arg>85</arg>
-<arg>0</arg>
-</arguments>
-<msg timestamp="20140415 14:44:22.210" level="TRACE">Arguments: [ u'ParagraphMaximumField' | u'85' | u'0' ]</msg>
-<msg timestamp="20140415 14:44:28.429" level="INFO">[log] CLICK on (992,207)</msg>
-<msg timestamp="20140415 14:44:28.431" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:28.430" starttime="20140415 14:44:22.208"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20140415 14:44:28.433" level="TRACE">Arguments: [ u'5' ]</msg>
-<msg timestamp="20140415 14:44:28.506" level="INFO">[log] TYPE "5"</msg>
-<msg timestamp="20140415 14:44:28.510" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:28.510" starttime="20140415 14:44:28.432"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Save And Publish">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:44:28.516" level="TRACE">Arguments: [  ]</msg>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20140415 14:44:28.517" level="TRACE">Arguments: [ u'2' ]</msg>
-<msg timestamp="20140415 14:44:30.548" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:30.542" starttime="20140415 14:44:28.517"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>SaveButton</arg>
-</arguments>
-<msg timestamp="20140415 14:44:30.552" level="TRACE">Arguments: [ u'SaveButton' ]</msg>
-<msg timestamp="20140415 14:44:36.882" level="INFO">[log] CLICK on (1662,842)</msg>
-<msg timestamp="20140415 14:44:36.884" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:36.883" starttime="20140415 14:44:30.550"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20140415 14:44:36.885" level="TRACE">Arguments: [ u'10' ]</msg>
-<msg timestamp="20140415 14:44:46.890" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:46.887" starttime="20140415 14:44:36.885"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>PublishButton</arg>
-</arguments>
-<msg timestamp="20140415 14:44:46.892" level="TRACE">Arguments: [ u'PublishButton' ]</msg>
-<msg timestamp="20140415 14:44:54.634" level="INFO">[log] CLICK on (1761,842)</msg>
-<msg timestamp="20140415 14:44:54.635" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:54.635" starttime="20140415 14:44:46.891"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20140415 14:44:54.637" level="TRACE">Arguments: [ u'5' ]</msg>
-<msg timestamp="20140415 14:44:59.640" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:59.639" starttime="20140415 14:44:54.636"></status>
-</kw>
-<msg timestamp="20140415 14:44:59.644" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:44:59.643" starttime="20140415 14:44:28.513"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Search And Select First Item">
-<doc></doc>
-<arguments>
-<arg>Author Widget</arg>
-</arguments>
-<msg timestamp="20140415 14:44:59.648" level="TRACE">Arguments: [ ${SearchPattern}=u'Author Widget' ]</msg>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>SearchTab</arg>
-<arg>SearchTab</arg>
-</arguments>
-<msg timestamp="20140415 14:44:59.653" level="TRACE">Arguments: [ u'SearchTab' | u'SearchTab' ]</msg>
-<msg timestamp="20140415 14:45:08.641" level="INFO">[log] CLICK on (13,57)</msg>
-<msg timestamp="20140415 14:45:08.643" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:45:08.642" starttime="20140415 14:44:59.652"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>60</arg>
-</arguments>
-<msg timestamp="20140415 14:45:08.646" level="TRACE">Arguments: [ u'60' ]</msg>
-<msg timestamp="20140415 14:46:08.639" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:08.638" starttime="20140415 14:45:08.644"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>FindTextBox</arg>
-<arg>20</arg>
-<arg>0</arg>
-</arguments>
-<msg timestamp="20140415 14:46:08.646" level="TRACE">Arguments: [ u'FindTextBox' | u'20' | u'0' ]</msg>
-<msg timestamp="20140415 14:46:14.648" level="INFO">[log] CLICK on (67,86)</msg>
-<msg timestamp="20140415 14:46:14.648" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:14.648" starttime="20140415 14:46:08.644"></status>
-</kw>
-<kw type="kw" name="SearchContent.Clear Search">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:46:14.651" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:46:16.747" level="INFO">[log] TYPE ""</msg>
-<msg timestamp="20140415 14:46:16.748" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:16.747" starttime="20140415 14:46:14.651"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>${SearchPattern}</arg>
-</arguments>
-<msg timestamp="20140415 14:46:16.751" level="TRACE">Arguments: [ u'Author Widget' ]</msg>
-<msg timestamp="20140415 14:46:17.468" level="INFO">[log] TYPE "Author Widget"</msg>
-<msg timestamp="20140415 14:46:17.470" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:17.469" starttime="20140415 14:46:16.749"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:46:17.472" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:46:17.513" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:46:17.514" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:17.514" starttime="20140415 14:46:17.471"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>ClipboardTab</arg>
-<arg>20</arg>
-<arg>120</arg>
-</arguments>
-<msg timestamp="20140415 14:46:17.517" level="TRACE">Arguments: [ u'ClipboardTab' | u'20' | u'120' ]</msg>
-<msg timestamp="20140415 14:46:23.391" level="INFO">[log] CLICK on (34,242)</msg>
-<msg timestamp="20140415 14:46:23.393" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:23.392" starttime="20140415 14:46:17.515"></status>
-</kw>
-<msg timestamp="20140415 14:46:23.394" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:23.393" starttime="20140415 14:44:59.645"></status>
-</kw>
-<kw type="kw" name="ContentStudioClipboard.Check If Exists">
-<doc></doc>
-<arguments>
-<arg>InboxItemSelected</arg>
-</arguments>
-<msg timestamp="20140415 14:46:23.396" level="TRACE">Arguments: [ u'InboxItemSelected' ]</msg>
-<msg timestamp="20140415 14:46:29.851" level="INFO">Exists</msg>
-<msg timestamp="20140415 14:46:29.852" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:46:29.852" starttime="20140415 14:46:23.395"></status>
+<status status="FAIL" endtime="20140416 07:17:04.749" starttime="20140416 07:16:34.243"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="PASS" critical="yes" endtime="20140415 14:46:29.854" starttime="20140415 14:43:04.865"></status>
+<status status="FAIL" critical="yes" endtime="20140416 07:17:04.750" starttime="20140416 07:16:13.328">TeaserWidgetContent does not exist. Screenshot: 42.April-16-07-17-03.png</status>
 </test>
-<test id="s1-t2" name="Relate a content Body widget with article page">
-<kw type="kw" name="ContentStudio.Create Image In Section">
-<doc></doc>
-<arguments>
-<arg>NewArticles</arg>
-<arg>Image created for content body widget test</arg>
-</arguments>
-<msg timestamp="20140415 14:46:29.863" level="TRACE">Arguments: [ u'NewArticles' | u'Image created for content body widget test' ]</msg>
-<msg timestamp="20140415 14:47:41.939" level="INFO">Do nothing
-Content was successfully created</msg>
-<msg timestamp="20140415 14:47:41.941" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:47:41.940" starttime="20140415 14:46:29.861"></status>
-</kw>
+<doc>Create a Teaser Widget with Data source query by section</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20140416 07:17:04.755" starttime="20140416 07:16:13.204"></status>
+</suite>
+<suite source="C:\Test-automation\ContentStudio\Tests\WidgetFramework\2.4.TeaserWidgetDSBySectionPageGroup.txt" id="s1-s3" name="2.4.TeaserWidgetDSBySectionPageGroup">
+<test id="s1-s3-t1" name="Create a Teaser Widget with Data source query by section page group">
 <kw type="kw" name="ContentStudio.Switch To Content Studio">
 <doc></doc>
 <arguments>
 </arguments>
-<msg timestamp="20140415 14:47:41.945" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:47:41.947" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
-<msg timestamp="20140415 14:47:41.947" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:47:41.947" starttime="20140415 14:47:41.945"></status>
+<msg timestamp="20140416 07:17:04.904" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20140416 07:17:04.906" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
+<msg timestamp="20140416 07:17:04.906" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:17:04.906" starttime="20140416 07:17:04.904"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Close Allopen Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20140416 07:17:04.908" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20140416 07:17:08.688" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"</msg>
+<msg timestamp="20140416 07:17:08.690" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:17:08.689" starttime="20140416 07:17:04.908"></status>
+</kw>
+<kw type="kw" name="ContentStudio.Clean Up Inbox">
+<doc></doc>
+<arguments>
+<arg>News</arg>
+</arguments>
+<msg timestamp="20140416 07:17:08.694" level="TRACE">Arguments: [ u'News' ]</msg>
+<msg timestamp="20140416 07:17:33.040" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] CLICK on (77,210)
+[log] CLICK on (57,50)
+[log] CLICK on (97,83)
+[log] CLICK on (64,665)
+[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] Alt+TYPE " "
+[log] TYPE "x"
+[log] CLICK on (49,756)</msg>
+<msg timestamp="20140416 07:17:33.046" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20140416 07:17:33.045" starttime="20140416 07:17:08.693"></status>
 </kw>
 <kw type="kw" name="ContentStudio.Create Content In Section">
 <doc></doc>
 <arguments>
-<arg>NewArticles</arg>
-<arg>Article created for content body widget test</arg>
+<arg>News</arg>
 </arguments>
-<msg timestamp="20140415 14:47:41.950" level="TRACE">Arguments: [ u'NewArticles' | u'Article created for content body widget test' ]</msg>
-<msg timestamp="20140415 14:48:52.611" level="INFO">Do nothing
-Content was successfully created</msg>
-<msg timestamp="20140415 14:48:52.626" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:48:52.612" starttime="20140415 14:47:41.949"></status>
-</kw>
-<kw type="kw" name="ContentStudio.Switch To Content Studio">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:48:52.629" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:48:52.637" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
-<msg timestamp="20140415 14:48:52.638" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:48:52.637" starttime="20140415 14:48:52.628"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>BodyField</arg>
-</arguments>
-<msg timestamp="20140415 14:48:52.643" level="TRACE">Arguments: [ u'BodyField' ]</msg>
-<msg timestamp="20140415 14:48:59.893" level="INFO">[log] CLICK on (867,350)</msg>
-<msg timestamp="20140415 14:48:59.894" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:48:59.894" starttime="20140415 14:48:52.641"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:48:59.896" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:48:59.939" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:48:59.940" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:48:59.940" starttime="20140415 14:48:59.896"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>Paragraph2</arg>
-</arguments>
-<msg timestamp="20140415 14:48:59.944" level="TRACE">Arguments: [ u'Paragraph2' ]</msg>
-<msg timestamp="20140415 14:49:00.606" level="INFO">[log] TYPE "Paragraph2"</msg>
-<msg timestamp="20140415 14:49:00.607" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:00.607" starttime="20140415 14:48:59.941"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:49:00.610" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:49:00.696" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:49:00.697" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:00.697" starttime="20140415 14:49:00.609"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>Paragraph3</arg>
-</arguments>
-<msg timestamp="20140415 14:49:00.698" level="TRACE">Arguments: [ u'Paragraph3' ]</msg>
-<msg timestamp="20140415 14:49:01.366" level="INFO">[log] TYPE "Paragraph3"</msg>
-<msg timestamp="20140415 14:49:01.369" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:01.368" starttime="20140415 14:49:00.697"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:49:01.371" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:49:01.515" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:49:01.516" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:01.516" starttime="20140415 14:49:01.370"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>Paragraph4</arg>
-</arguments>
-<msg timestamp="20140415 14:49:01.519" level="TRACE">Arguments: [ u'Paragraph4' ]</msg>
-<msg timestamp="20140415 14:49:02.267" level="INFO">[log] TYPE "Paragraph4"</msg>
-<msg timestamp="20140415 14:49:02.268" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:02.267" starttime="20140415 14:49:01.518"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:49:02.271" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:49:02.339" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:49:02.342" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:02.342" starttime="20140415 14:49:02.269"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>Paragraph5</arg>
-</arguments>
-<msg timestamp="20140415 14:49:02.344" level="TRACE">Arguments: [ u'Paragraph5' ]</msg>
-<msg timestamp="20140415 14:49:03.152" level="INFO">[log] TYPE "Paragraph5"</msg>
-<msg timestamp="20140415 14:49:03.154" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:03.153" starttime="20140415 14:49:02.343"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Save And Publish">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:49:03.164" level="TRACE">Arguments: [  ]</msg>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20140415 14:49:03.167" level="TRACE">Arguments: [ u'2' ]</msg>
-<msg timestamp="20140415 14:49:05.170" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:05.169" starttime="20140415 14:49:03.165"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>SaveButton</arg>
-</arguments>
-<msg timestamp="20140415 14:49:05.172" level="TRACE">Arguments: [ u'SaveButton' ]</msg>
-<msg timestamp="20140415 14:49:11.991" level="INFO">[log] CLICK on (1655,842)</msg>
-<msg timestamp="20140415 14:49:11.992" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:11.992" starttime="20140415 14:49:05.171"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20140415 14:49:11.995" level="TRACE">Arguments: [ u'10' ]</msg>
-<msg timestamp="20140415 14:49:21.995" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:21.995" starttime="20140415 14:49:11.994"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>PublishButton</arg>
-</arguments>
-<msg timestamp="20140415 14:49:21.997" level="TRACE">Arguments: [ u'PublishButton' ]</msg>
-<msg timestamp="20140415 14:49:29.656" level="INFO">[log] CLICK on (1754,842)</msg>
-<msg timestamp="20140415 14:49:29.657" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:29.657" starttime="20140415 14:49:21.997"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20140415 14:49:29.660" level="TRACE">Arguments: [ u'5' ]</msg>
-<msg timestamp="20140415 14:49:34.661" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:34.661" starttime="20140415 14:49:29.658"></status>
-</kw>
-<msg timestamp="20140415 14:49:34.663" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:34.663" starttime="20140415 14:49:03.157"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Search And Select First Item">
-<doc></doc>
-<arguments>
-<arg>Image created for content body widget test</arg>
-</arguments>
-<msg timestamp="20140415 14:49:34.667" level="TRACE">Arguments: [ ${SearchPattern}=u'Image created for content body widget test' ]</msg>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>SearchTab</arg>
-<arg>SearchTab</arg>
-</arguments>
-<msg timestamp="20140415 14:49:34.669" level="TRACE">Arguments: [ u'SearchTab' | u'SearchTab' ]</msg>
-<msg timestamp="20140415 14:49:43.289" level="INFO">[log] CLICK on (13,57)</msg>
-<msg timestamp="20140415 14:49:43.290" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:49:43.290" starttime="20140415 14:49:34.668"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>60</arg>
-</arguments>
-<msg timestamp="20140415 14:49:43.292" level="TRACE">Arguments: [ u'60' ]</msg>
-<msg timestamp="20140415 14:50:43.290" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:50:43.288" starttime="20140415 14:49:43.292"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>FindTextBox</arg>
-<arg>20</arg>
-<arg>0</arg>
-</arguments>
-<msg timestamp="20140415 14:50:43.305" level="TRACE">Arguments: [ u'FindTextBox' | u'20' | u'0' ]</msg>
-<msg timestamp="20140415 14:50:50.845" level="INFO">[log] CLICK on (67,86)</msg>
-<msg timestamp="20140415 14:50:50.850" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:50:50.848" starttime="20140415 14:50:43.301"></status>
-</kw>
-<kw type="kw" name="SearchContent.Clear Search">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:50:50.854" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:50:53.255" level="INFO">[log] TYPE ""</msg>
-<msg timestamp="20140415 14:50:53.500" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:50:53.256" starttime="20140415 14:50:50.852"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Text">
-<doc></doc>
-<arguments>
-<arg>${SearchPattern}</arg>
-</arguments>
-<msg timestamp="20140415 14:50:53.512" level="TRACE">Arguments: [ u'Image created for content body widget test' ]</msg>
-<msg timestamp="20140415 14:50:56.759" level="INFO">[log] TYPE "Image created for content body widget test"</msg>
-<msg timestamp="20140415 14:50:56.759" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:50:56.759" starttime="20140415 14:50:53.504"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:50:56.761" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:50:56.807" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:50:56.811" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:50:56.810" starttime="20140415 14:50:56.760"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>ClipboardTab</arg>
-<arg>20</arg>
-<arg>120</arg>
-</arguments>
-<msg timestamp="20140415 14:50:56.889" level="TRACE">Arguments: [ u'ClipboardTab' | u'20' | u'120' ]</msg>
-<msg timestamp="20140415 14:51:04.098" level="INFO">[log] CLICK on (34,242)</msg>
-<msg timestamp="20140415 14:51:04.099" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:04.099" starttime="20140415 14:50:56.885"></status>
-</kw>
-<msg timestamp="20140415 14:51:04.103" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:04.101" starttime="20140415 14:49:34.664"></status>
-</kw>
-<kw type="kw" name="ContentStudio.Copy From Menu">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:51:04.104" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:51:04.594" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:51:04.596" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:04.596" starttime="20140415 14:51:04.104"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>BodyField</arg>
-</arguments>
-<msg timestamp="20140415 14:51:04.600" level="TRACE">Arguments: [ u'BodyField' ]</msg>
-<msg timestamp="20140415 14:51:12.244" level="INFO">[log] CLICK on (867,350)</msg>
-<msg timestamp="20140415 14:51:12.248" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:12.246" starttime="20140415 14:51:04.598"></status>
-</kw>
-<kw type="kw" name="ContentStudio.Paste From Menu">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:51:12.255" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20140415 14:51:13.138" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:51:13.140" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:13.139" starttime="20140415 14:51:12.251"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Save And Publish">
-<doc></doc>
-<arguments>
-</arguments>
-<msg timestamp="20140415 14:51:13.173" level="TRACE">Arguments: [  ]</msg>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20140415 14:51:13.219" level="TRACE">Arguments: [ u'2' ]</msg>
-<msg timestamp="20140415 14:51:15.231" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:15.226" starttime="20140415 14:51:13.215"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>SaveButton</arg>
-</arguments>
-<msg timestamp="20140415 14:51:15.235" level="TRACE">Arguments: [ u'SaveButton' ]</msg>
-<msg timestamp="20140415 14:51:21.661" level="INFO">[log] CLICK on (1655,842)</msg>
-<msg timestamp="20140415 14:51:21.667" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:21.666" starttime="20140415 14:51:15.233"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20140415 14:51:21.672" level="TRACE">Arguments: [ u'10' ]</msg>
-<msg timestamp="20140415 14:51:31.679" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:31.679" starttime="20140415 14:51:21.670"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>PublishButton</arg>
-</arguments>
-<msg timestamp="20140415 14:51:31.682" level="TRACE">Arguments: [ u'PublishButton' ]</msg>
-<msg timestamp="20140415 14:51:40.819" level="INFO">[log] CLICK on (1754,842)</msg>
-<msg timestamp="20140415 14:51:40.821" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:40.820" starttime="20140415 14:51:31.682"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20140415 14:51:40.823" level="TRACE">Arguments: [ u'5' ]</msg>
-<msg timestamp="20140415 14:51:45.824" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:45.824" starttime="20140415 14:51:40.822"></status>
-</kw>
-<msg timestamp="20140415 14:51:45.826" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:45.826" starttime="20140415 14:51:13.168"></status>
-</kw>
-<kw type="kw" name="2.1.1.WFKeywordResource.Open Section In Content Studio">
-<doc></doc>
-<arguments>
-<arg>StoryPageTemplate</arg>
-</arguments>
-<msg timestamp="20140415 14:51:45.832" level="TRACE">Arguments: [ ${SectionName}=u'StoryPageTemplate' ]</msg>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>SectionsTab</arg>
-<arg>SectionsTab</arg>
-</arguments>
-<msg timestamp="20140415 14:51:45.834" level="TRACE">Arguments: [ u'SectionsTab' | u'SectionsTab' ]</msg>
-<msg timestamp="20140415 14:51:54.864" level="INFO">[log] CLICK on (16,90)</msg>
-<msg timestamp="20140415 14:51:54.867" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:51:54.866" starttime="20140415 14:51:45.833"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element">
-<doc></doc>
-<arguments>
-<arg>HomeSection</arg>
-</arguments>
-<msg timestamp="20140415 14:51:54.868" level="TRACE">Arguments: [ u'HomeSection' ]</msg>
-<msg timestamp="20140415 14:52:00.987" level="INFO">[log] CLICK on (57,50)</msg>
-<msg timestamp="20140415 14:52:00.988" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:00.988" starttime="20140415 14:51:54.868"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>ExpansionIcon</arg>
-<arg>ExpansionIcon</arg>
-</arguments>
-<msg timestamp="20140415 14:52:00.991" level="TRACE">Arguments: [ u'ExpansionIcon' | u'ExpansionIcon' ]</msg>
-<msg timestamp="20140415 14:52:06.431" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:06.430" starttime="20140415 14:52:00.990"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>ExpansionIcon</arg>
-<arg>ExpansionIcon</arg>
-</arguments>
-<msg timestamp="20140415 14:52:06.434" level="TRACE">Arguments: [ u'ExpansionIcon' | u'ExpansionIcon' ]</msg>
-<msg timestamp="20140415 14:52:12.064" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:12.062" starttime="20140415 14:52:06.433"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>ExpansionIcon</arg>
-<arg>ExpansionIcon</arg>
-</arguments>
-<msg timestamp="20140415 14:52:12.073" level="TRACE">Arguments: [ u'ExpansionIcon' | u'ExpansionIcon' ]</msg>
-<msg timestamp="20140415 14:52:18.000" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:17.999" starttime="20140415 14:52:12.069"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Click Element If Exists">
-<doc></doc>
-<arguments>
-<arg>ExpansionIcon</arg>
-<arg>ExpansionIcon</arg>
-</arguments>
-<msg timestamp="20140415 14:52:18.003" level="TRACE">Arguments: [ u'ExpansionIcon' | u'ExpansionIcon' ]</msg>
-<msg timestamp="20140415 14:52:23.490" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:23.485" starttime="20140415 14:52:18.002"></status>
-</kw>
-<kw type="kw" name="ContentStudio.Right Click Section">
-<doc></doc>
-<arguments>
-<arg>${SectionName}</arg>
-</arguments>
-<msg timestamp="20140415 14:52:23.494" level="TRACE">Arguments: [ u'StoryPageTemplate' ]</msg>
-<msg timestamp="20140415 14:52:34.427" level="INFO">Do nothing</msg>
-<msg timestamp="20140415 14:52:34.428" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:34.427" starttime="20140415 14:52:23.492"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Type Key">
-<doc></doc>
-<arguments>
-<arg>ENTER</arg>
-</arguments>
-<msg timestamp="20140415 14:52:34.430" level="TRACE">Arguments: [ u'ENTER' ]</msg>
-<msg timestamp="20140415 14:52:34.472" level="INFO">[log] TYPE "
-"</msg>
-<msg timestamp="20140415 14:52:34.472" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:34.472" starttime="20140415 14:52:34.429"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20140415 14:52:34.475" level="TRACE">Arguments: [ u'5' ]</msg>
-<msg timestamp="20140415 14:52:39.476" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:39.476" starttime="20140415 14:52:34.474"></status>
-</kw>
-<msg timestamp="20140415 14:52:39.478" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:39.477" starttime="20140415 14:51:45.827"></status>
-</kw>
-<kw type="kw" name="SikuliCS.Wait For">
-<doc></doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20140415 14:52:39.480" level="TRACE">Arguments: [ u'5' ]</msg>
-<msg timestamp="20140415 14:52:44.481" level="TRACE">Return: None</msg>
-<status status="PASS" endtime="20140415 14:52:44.481" starttime="20140415 14:52:39.479"></status>
-</kw>
-<kw type="kw" name="eceSikuli.Drag And Drop Element">
-<doc></doc>
-<arguments>
-<arg>BodyWidgetTab</arg>
-<arg>TopContentArea</arg>
-</arguments>
-<msg timestamp="20140415 14:52:44.484" level="TRACE">Arguments: [ u'BodyWidgetTab' | u'TopContentArea' ]</msg>
-<msg timestamp="20140415 14:52:56.433" level="INFO">[log] App.focus Java Console - Content Studio(0) #0
+<msg timestamp="20140416 07:17:33.051" level="TRACE">Arguments: [ u'News' ]</msg>
+<msg timestamp="20140416 07:18:29.219" level="INFO">[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
+[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0
 [log] Alt+TYPE " "
 [log] TYPE "x"
-[log] App.focus Escenic Content Studio 5.7.0.149872(0) #0</msg>
-<msg timestamp="20140415 14:52:56.459" level="FAIL">Either drag source or drop destination images showing some problems..</msg>
-<msg timestamp="20140415 14:52:56.463" level="DEBUG">Traceback (most recent call last):
-  File "C:\Test-automation\ContentStudio\content-studio.sikuli\eceSikuli.py", line 76, in drag_and_drop_element
-    raise AssertionError("Either drag source or drop destination images showing some problems..")</msg>
-<status status="FAIL" endtime="20140415 14:52:56.466" starttime="20140415 14:52:44.483"></status>
+[log] CLICK on (96,274)
+[log] CLICK on (57,50)
+[log] RIGHT CLICK on (97,83)
+[log] CLICK on (308,96)
+[log] CLICK on (368,239)
+[log] TYPE "This is the Title of an Article -- By Automated smoke tests"
+[log] TYPE "	"
+[log] TYPE "This is the Summary of an Article -- By Automated smoke tests"
+[log] TYPE "	"
+[log] TYPE "This is the Body of an Article -- By Automated smoke tests"
+[log] CLICK on (1662,842)</msg>
+<msg timestamp="20140416 07:18:29.341" level="FAIL">FindFailed: can not find Pattern("ContentStatesList.png").similar(0.7).targetOffset(65,0) on the screen.</msg>
+<msg timestamp="20140416 07:18:29.341" level="DEBUG">FindFailed: 
+Line ?, in File ?
+	at org.sikuli.script.Region.handleFindFailed(Region.java:420)
+	at org.sikuli.script.Region.wait(Region.java:511)
+	at sikuli.Region$py.wait$5(C:\Program Files\Sikuli X\sikuli-script.jar\Lib\sikuli\Region.py:102)
+	at sikuli.Region$py.call_function(C:\Program Files\Sikuli X\sikuli-script.jar\Lib\sikuli\Region.py)
+	at org.sikuli.script.Region.find(Region.java:381)
+	at org.sikuli.script.Region.getLocationFromPSRML(Region.java:1129)
+	at org.sikuli.script.Region.click(Region.java:606)
+	at org.sikuli.script.Region.click(Region.java:593)
+	at ContentStudio$py.create_content_in_section$11(C:\Test-automation\ContentStudio\content-studio.sikuli\ContentStudio.py:311)
+	at ContentStudio$py.call_function(C:\Test-automation\ContentStudio\content-studio.sikuli\ContentStudio.py)
+	at robot.model.testcase$py.visit$7(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\testcase.py:65)
+	at robot.model.testcase$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\testcase.py)
+	at robot.model.itemlist$py.visit$9(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\itemlist.py:54)
+	at robot.model.itemlist$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\visitor.py:22)
+	at robot.model.visitor$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\visitor.py)
+	at robot.model.testsuite$py.visit$19(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\testsuite.py:152)
+	at robot.model.testsuite$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\testsuite.py)
+	at robot.model.itemlist$py.visit$9(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\itemlist.py:54)
+	at robot.model.itemlist$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\visitor.py:22)
+	at robot.model.visitor$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\visitor.py)
+	at robot.model.testsuite$py.visit$19(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\testsuite.py:152)
+	at robot.model.testsuite$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\model\testsuite.py)
+	at robot.run$py.main$3(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\run.py:391)
+	at robot.run$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\run.py)
+	at robot.utils.application$py._execute$10(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\utils\application.py:88)
+	at robot.utils.application$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\utils\application.py)
+	at robot.utils.application$py.execute_cli$5(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\utils\application.py:45)
+	at robot.utils.application$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\utils\application.py)
+	at robot.run$py.run_cli$7(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\run.py:415)
+	at robot.run$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\run.py)
+	at robot.jarrunner$py._run$3(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\jarrunner.py:60)
+	at robot.jarrunner$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\jarrunner.py)
+	at robot.jarrunner$py.run$2(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\jarrunner.py:53)
+	at robot.jarrunner$py.call_function(C:\workspace\robotframework\tmp-jar-dir\Lib\robot\jarrunner.py)
+	at org.robotframework.RobotFramework.run(RobotFramework.java:62)
+	at org.robotframework.RobotFramework.main(RobotFramework.java:37)</msg>
+<status status="FAIL" endtime="20140416 07:18:29.355" starttime="20140416 07:17:33.049"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" critical="yes" endtime="20140415 14:52:56.471" starttime="20140415 14:46:29.857">Either drag source or drop destination images showing some problems..</status>
+<status status="FAIL" critical="yes" endtime="20140416 07:18:29.363" starttime="20140416 07:17:04.894">FindFailed: can not find Pattern("ContentStatesList.png").similar(0.7).targetOffset(65,0) on the screen.</status>
 </test>
-<doc>Create a content Body Widget displaying "inline content" and "whole body content"</doc>
+<doc>Create a Teaser Widget with Data source query by section page group</doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20140415 14:52:56.519" starttime="20140415 14:43:02.885"></status>
+<status status="FAIL" endtime="20140416 07:18:29.368" starttime="20140416 07:17:04.765"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20140416 07:18:29.388" starttime="20140416 07:15:30.328"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" id="s1" fail="1" name="3.1.3.CotentBodyWidget">3.1.3.CotentBodyWidget</stat>
+<stat pass="0" id="s1" fail="3" name="2.1.DataSourceBySection &amp; 2.3.TeaserWidgetDSBySection &amp; 2.4.TeaserWidgetDSBySectionPageGroup">2.1.DataSourceBySection &amp; 2.3.TeaserWidgetDSBySection &amp; 2.4.TeaserWidgetDSBySectionPageGroup</stat>
+<stat pass="0" id="s1-s1" fail="1" name="2.1.DataSourceBySection">2.1.DataSourceBySection &amp; 2.3.TeaserWidgetDSBySection &amp; 2.4.TeaserWidgetDSBySectionPageGroup.2.1.DataSourceBySection</stat>
+<stat pass="0" id="s1-s2" fail="1" name="2.3.TeaserWidgetDSBySection">2.1.DataSourceBySection &amp; 2.3.TeaserWidgetDSBySection &amp; 2.4.TeaserWidgetDSBySectionPageGroup.2.3.TeaserWidgetDSBySection</stat>
+<stat pass="0" id="s1-s3" fail="1" name="2.4.TeaserWidgetDSBySectionPageGroup">2.1.DataSourceBySection &amp; 2.3.TeaserWidgetDSBySection &amp; 2.4.TeaserWidgetDSBySectionPageGroup.2.4.TeaserWidgetDSBySectionPageGroup</stat>
 </suite>
 </statistics>
 <errors>
