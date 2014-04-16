@@ -18,14 +18,14 @@ Create New Other Content Type  [Arguments]  ${ContentType}
 Create Widget Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
-	Click Element  WidgetsContent
+	Click Element  WidgetsContent  80  0
 	Click Element  ${ContentType}
 	Wait For  2
 
 Save And Publish
 	Wait For  2
 	Click Element  SaveButton
-	Wait For  7
+	Wait For  10
 	Click Element  PublishButton
 	Wait For  5
 	
@@ -70,4 +70,5 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Type Text  ${TagName}
 	Type Key  ENTER 
 	Type Key  ESC
+
 	
