@@ -18,7 +18,7 @@ Create New Other Content Type  [Arguments]  ${ContentType}
 Create Widget Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
-	Click Element  WidgetsContent  80  0
+	Click Element  WidgetsContent  60  0
 	Click Element  ${ContentType}
 	Wait For  2
 
