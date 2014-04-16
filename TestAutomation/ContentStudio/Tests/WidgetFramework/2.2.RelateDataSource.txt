@@ -16,7 +16,7 @@ Relate an External Data source with teaser widget
 	Create Widget Content Type  TeaserWidgetContent
 	Type Text  TeaserWidget (Created by automated test)
 	Click Element  DataSourceTab
-	Click Element  EmbeddedDataSource
+	Click Element  Use  0  20
 	Click Element  ExternalDataSource
 	Click Element If Exists  UndockRelatedContentIcon  UndockRelatedContentIcon
 	Search And Select First Item  DataSource
