@@ -49,6 +49,9 @@ class ContentStudio(object):
                 wait(30)
                 #ContentStudio.switch_to_content_studio(self)
                 if exists("JavaWarning.png"):
+                        if exists("CheckBox.png"):
+                                click("CheckBox.png")
+                        
                         type(Key.ENTER)
                         
                 wait(Pattern("login_content_studio.png").targetOffset(-248,1),500)
@@ -76,7 +79,7 @@ class ContentStudio(object):
                         print("Log in successful")
                 else:
                         ImageName=capture_CS_screenshot()
-                        raise AssertionError('Actual and expected results are different! Screenshot: '+ImageName)
+                        raise AssertionError('Login Failed! Screenshot: '+ImageName)
 
         
                                       
