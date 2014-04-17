@@ -27,7 +27,7 @@ Create an External Data source
 	Type Key  DOWN
 	Type Key  ENTER
 	Click Element  SaveButton
-	Wait For  2
+	Wait For  5
 	Click Element  PublishButton
 	Search And Select First Item  DataSource
 		Check If Exists  InboxItemSelected

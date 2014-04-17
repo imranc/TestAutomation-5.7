@@ -33,3 +33,12 @@ Relate an External Data source with teaser widget
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
+
+	###Remove widget from article page template###
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element  TopContentArea
+	Type Key  DOWN
+	Type Key  DELETE
+	Click Element  PublishButtonSimple

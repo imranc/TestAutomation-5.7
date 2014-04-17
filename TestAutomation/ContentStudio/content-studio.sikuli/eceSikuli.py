@@ -32,7 +32,7 @@ class eceSikuli(object):
                 else:
                         ScreenShot=capture_CS_screenshot()
                         raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)
-                wait(2)
+                wait(5)
 
         def type_text(self, stringToType):
                 type(stringToType)
@@ -47,6 +47,10 @@ class eceSikuli(object):
                         type(Key.ESC)
                 elif args[0] == 'DELETE':
                         type(Key.DELETE)
+                elif args[0] == 'TAB':
+                        type(Key.TAB)
+                elif args[0] == 'SPACE':
+                        type(Key.SPACE)
 
 
         def click_element_if_exists(self, *args):
@@ -101,6 +105,7 @@ class eceSikuli(object):
                         url = os.environ['publication']
                         url = url+args[0]
                         eceSikuli.open_browser(self, url)
+                wait(5)
 
         def open_browser(self, *args):
                 if len(args) == 0:

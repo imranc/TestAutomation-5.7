@@ -1,0 +1,54 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Breadcrumb widget displaying content item and Relate a Breadcrum widget
+**Test cases**
+Create a Breadcrumb widget displaying content item
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Widget Content Type  BreadcrumbWidget
+	Type Text  Breadcrumb Widget
+	Click Element  DefaultTab
+	Type Text  main
+	Type Key  TAB
+	Type Key  SPACE
+	Click Element  Advanced
+	Type Key  SPACE
+	Save And Publish
+
+	###Assertion###
+	Search And Select First Item  Breadcrumb Widget
+	Check If Exists  InboxItemSelected
+
+Relate a Breadcrum widget displaying content item
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Drag And Drop Element  BreadcrumbWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Create Content In Section  Sports  Article created for Breadcrumb widget test
+	Wait For  5
+	Check If Exists  BreadcrumbWidgetAssertion
+	Close Browser
+
+	###Remove widget from article page template###
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Click Element  TopContentArea
+	Type Key  DOWN
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	
