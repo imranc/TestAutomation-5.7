@@ -13,23 +13,24 @@ Create a Breadcrumb widget displaying content item
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Widget Content Type  BreadcrumbWidget
-	Type Text  Breadcrumb Widget
+	Type Text  TestAutomation Widget (Breadcrumb Widget)
 	Click Element  DefaultTab
 	Type Text  main
+	Wait For  2
 	Type Key  TAB
 	Type Key  SPACE
 	Click Element  Advanced
 	Type Key  SPACE
 	Save And Publish
 
-	###Assertion###
-	Search And Select First Item  Breadcrumb Widget
+	### Assertion ###
+	Search And Select First Item  TestAutomation Widget (Breadcrumb Widget)
 	Check If Exists  InboxItemSelected
 
-Relate a Breadcrum widget displaying content item
+	### Relate a Breadcrum widget displaying content item ###
 	Open Section In Content Studio  StoryPageTemplate
-	Wait for  5
-	Drag And Drop Element  BreadcrumbWidgetTab  TopContentArea
+	Wait For  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
@@ -40,11 +41,11 @@ Relate a Breadcrum widget displaying content item
 	Check If Exists  BreadcrumbWidgetAssertion
 	Close Browser
 
-	###Remove widget from article page template###
+Remove widget from article page template
+	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Click Element  TopContentArea
-	Type Key  DOWN
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
 	

@@ -15,20 +15,20 @@ Create a content "Title" widget
 	Close Allopen Tabs
 	Create Content In Section  NewArticles  Article created for content field widget test
 	Create Widget Content Type  ContentFieldWidget
-	Type Text  Title Widget
+	Type Text  TestAutomation Widget (Title Widget)
 	Click Element  DefaultTab
 	Click Element  FieldCollectionBox  -15  15
 	Select From Dropdown  Title
 	Save And Publish
 
 	###Assertion###
-	Search And Select First Item  Title Widget
+	Search And Select First Item  TestAutomation Widget (Title Widget)
 	Check If Exists  InboxItemSelected
 
-Relate a content "Title" widget with article page
+	### Relate a content "Title" widget with article page ###
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Drag And Drop Element  TitleWidgetTab  TopContentArea
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
@@ -43,11 +43,11 @@ Relate a content "Title" widget with article page
 	Check If Exists  ContentFieldWidgetAssertion
 	Close Browser
 
-	###Remove widget from article page template###
+Remove widget from article page template
+	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Click Element  TopContentArea
-	Type Key  DOWN
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
 

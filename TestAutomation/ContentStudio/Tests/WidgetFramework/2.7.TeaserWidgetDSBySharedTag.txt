@@ -29,7 +29,7 @@ Create a Teaser Widget with Data source query by tag
 
 	###Create teaser widget with data source by tag###
 		Create Widget Content Type  TeaserWidgetContent
-		Type Text  TeaserWidget DS by Sharedtag(Created by automated test)
+		Type Text  TestAutomation Widget (TeaserWidget_DS_by_Sharedtag)
 		Click Element  DataSourceTab
 		Click Element  Add
 		Wait For  2
@@ -46,10 +46,10 @@ Create a Teaser Widget with Data source query by tag
 		Type Key  ENTER
 		Save And Publish
 
-	###Drag created teaser widget and drop into sports page top section###
+	###Drag created teaser widget and drop into story page top section###
 		Open Section In Content Studio  StoryPageTemplate
 		Wait for  5
-		Drag And Drop Element  TeaserWidgetTab  TopContentArea
+		Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 		Click Element  SaveButton
 		Wait For  5
 		Click Element  PublishButtonSimple
@@ -64,6 +64,12 @@ Create a Teaser Widget with Data source query by tag
 		Check If Exists  DSAssertion
 		Close Browser
 		
+Remove teaser widget
+		Open Section In Content Studio  StoryPageTemplate
+		Wait for  5
+		Click Element If Exists  WidgetListView  WidgetListView
+		Type Key  DELETE
+		Click Element  PublishButtonSimple
 		
 		
 

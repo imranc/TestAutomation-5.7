@@ -13,17 +13,17 @@ Create a content Body Widget displaying "inline content" and "whole body content
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Widget Content Type  ContentBodyWidget
-	Type Text  Body Widget
+	Type Text  TestAutomation Widget (Body Widget)
 	Click Element  DefaultTab
 	Click Element  ParagraphMaximumField  85  0
 	Type Text  5
 	Save And Publish
 
 	###Assertion###
-	Search And Select First Item  Author Widget
+	Search And Select First Item  TestAutomation Widget (Body Widget)
 	Check If Exists  InboxItemSelected
 
-Relate a content Body widget with article page
+	### Relate a content Body widget with article page ###
 	### a content need to be created which has body fields with 5 paragraphs, 1 inline content(story/image), 1 dateline###
 	Create Image In Section  NewArticles  Image created for content body widget test
 	Switch To Content Studio
@@ -49,7 +49,7 @@ Relate a content Body widget with article page
 	###Relate widget to story page template###
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Drag And Drop Element  BodyWidgetTab  TopContentArea
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
@@ -66,10 +66,10 @@ Relate a content Body widget with article page
 	Close Browser
 
 	###Remove widget from article page template###
+	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Click Element  TopContentArea
-	Type Key  DOWN
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
 	

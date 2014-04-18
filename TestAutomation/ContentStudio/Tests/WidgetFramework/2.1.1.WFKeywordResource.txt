@@ -19,6 +19,7 @@ Create Widget Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
 	Click Element  WidgetsContent  60  0
+	Mouse Over  WidgetsContent  100  0
 	Click Element  ${ContentType}
 	Wait For  2
 

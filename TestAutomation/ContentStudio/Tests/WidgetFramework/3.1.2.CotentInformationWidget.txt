@@ -14,18 +14,18 @@ Create a content information widget showing "Author"
 	Close Allopen Tabs
 	Create Content In Section  NewArticles  Article created for content information widget test
 	Create Widget Content Type  ContentInformationWidget
-	Type Text  Author Widget
+	Type Text  TestAutomation Widget (Author Widget)
 	Click Element  DefaultTab
 	Save And Publish
 
 	###Assertion###
-	Search And Select First Item  Author Widget
+	Search And Select First Item  TestAutomation Widget (Author Widget)
 	Check If Exists  InboxItemSelected
 
-Relate a content information widget showing "Author" with article page
+	### Relate a content information widget showing "Author" with article page ###
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Drag And Drop Element  AuthorWidgetTab  TopContentArea
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
@@ -41,11 +41,11 @@ Relate a content information widget showing "Author" with article page
 	Check If Exists  ContentInformationWidgetAssertion
 	Close Browser
 
-	###Remove widget from article page template###
+Remove widget from article page template
+	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Click Element  TopContentArea
-	Type Key  DOWN
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
 	

@@ -34,6 +34,23 @@ class eceSikuli(object):
                         raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)
                 wait(5)
 
+        def mouse_over(self, *args):
+                wait(2)
+                uiElement=args[0]
+                #raise AssertionError(len(args))
+                uiElementImageName=uiElement+'.png'
+                if exists(Pattern(uiElementImageName).similar(0.80)):
+                        if len(args) == 1:
+                                mouseMove(Pattern(uiElementImageName).similar(0.80))
+                        elif len(args) == 3:
+                                mouseMove(Pattern(uiElementImageName).similar(0.80).targetOffset(int(args[1]), int(args[2])))
+                        else:
+                                raise AssertionError('Please follow the proper argument passing')
+                else:
+                        ScreenShot=capture_CS_screenshot()
+                        raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)
+                wait(5)
+
         def type_text(self, stringToType):
                 type(stringToType)
 

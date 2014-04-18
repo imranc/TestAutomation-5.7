@@ -23,7 +23,7 @@ Create a Teaser Widget with Data source query by section Relation
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Widget Content Type  TeaserWidgetContent
-	Type Text  TeaserWidget (Created by automated test)
+	Type Text  TestAutomation Widget (TeaserWidget_DS_by_Relation)
 	Click Element  DataSourceTab
 	Click Element  Add
 	Wait For  7
@@ -47,7 +47,7 @@ Create a Teaser Widget with Data source query by section Relation
 
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
-	Drag And Drop Element  TeaserWidgetTab  TopContentArea
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
@@ -62,3 +62,11 @@ Create a Teaser Widget with Data source query by section Relation
 	Wait For  2
 	Check If Exists  DSAssertion
 	Close Browser
+
+Remove teaser widget
+		Open Section In Content Studio  StoryPageTemplate
+		Wait for  5
+		Click Element If Exists  WidgetListView  WidgetListView
+		Type Key  DELETE
+		Click Element  PublishButtonSimple
+		

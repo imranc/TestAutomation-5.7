@@ -13,6 +13,7 @@ Documentation  Relate an External Data source with teaser widget
 Relate an External Data source with teaser widget
 	Create Content In Section  NewArticles
 	#Create Image In Section  NewArticles
+	Close Allopen Tabs
 	Create Widget Content Type  TeaserWidgetContent
 	Type Text  TeaserWidget (Created by automated test)
 	Click Element  DataSourceTab

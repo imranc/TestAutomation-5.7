@@ -22,7 +22,7 @@ Create a Teaser Widget with Data source query by tag
 
 	###Create teaser widget with data source by tag###
 		Create Widget Content Type  TeaserWidgetContent
-		Type Text  TeaserWidget DS by Analysis(Created by automated test)
+		Type Text  TestAutomation Widget (TeaserWidget_DS_by_Analysis)
 		Click Element  DataSourceTab
 		Click Element  Add
 		Wait For  2
@@ -44,7 +44,7 @@ Create a Teaser Widget with Data source query by tag
 	###Drag created teaser widget and drop into sports page top section###
 		Open Section In Content Studio  SportsPageTemplate
 		Wait for  5
-		Drag And Drop Element  TeaserWidgetTab  TopContentArea
+		Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 		Click Element  SaveButton
 		Wait For  5
 		Click Element  PublishButtonSimple
@@ -54,11 +54,10 @@ Create a Teaser Widget with Data source query by tag
 		Check If Exists  DSAssertion
 		Close Browser
 
-	###Remove teaser widget###
+Remove teaser widget
 		Open Section In Content Studio  SportsPageTemplate
 		Wait for  5
-		Click Element  TopContentArea
-		Type Key  DOWN
+		Click Element If Exists  WidgetListView  WidgetListView
 		Type Key  DELETE
 		Click Element  PublishButtonSimple
 		

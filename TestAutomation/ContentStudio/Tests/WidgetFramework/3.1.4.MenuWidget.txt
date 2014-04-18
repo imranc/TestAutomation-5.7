@@ -7,13 +7,13 @@ Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
 Resource       common_resource.txt
 
-Documentation  Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
+Documentation  Create a Menu Widget showing "Dropdown" and relate with frontpage under navbar area
 **Test cases**
 Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Widget Content Type  MenuWidget
-	Type Text  Menu Widget
+	Type Text  TestAutomation Widget (Menu Widget)
 	Type Key  TAB
 	Type Text  main
 	Click Element  DefaultTab
@@ -27,10 +27,10 @@ Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
 	Search And Select First Item  Menu Widget
 	Check If Exists  InboxItemSelected
 
-Relate a Menu Widget showing "Dropdown" with frontpage under navbar area
+	###Relate a Menu Widget showing "Dropdown" with frontpage under navbar area###
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
-	Drag And Drop Element  MenuWidgetTab  TopContentArea
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
@@ -40,12 +40,11 @@ Relate a Menu Widget showing "Dropdown" with frontpage under navbar area
 	Check If Exists  MenuWidgetAssertion
 	Close Browser
 
-	###Remove widget from article page template###
+Remove widget from article page template
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
-	Click Element  TopContentArea
-	Type Key  DOWN
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
 	
