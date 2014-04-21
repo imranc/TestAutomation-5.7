@@ -23,6 +23,12 @@ Create Widget Content Type  [Arguments]  ${ContentType}
 	Click Element  ${ContentType}
 	Wait For  2
 
+Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
+	Right Click Section  ${SectionName}
+	Click Element  NewContent  100  0
+	Click Element  ${ContentType}
+	Wait For  2
+
 Save And Publish
 	Wait For  2
 	Click Element  SaveButton
@@ -37,6 +43,7 @@ Search And Select First Item  [Arguments]  ${SearchPattern}
 	Clear Search
 	Type Text  ${SearchPattern}
 	Type Key  ENTER
+	Wait For  5
 	Click Element  ClipboardTab  20  120
 
 Open Section In Content Studio  [Arguments]  ${SectionName}
