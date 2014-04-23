@@ -45,7 +45,7 @@ Create a View picker widget displaying Deligating related view
 	Click Element If Exists  DockRelatedContentIcon  DockRelatedContentIcon	
 
 	Click Element  DefaultTab
-	Clicke Element  RenderingMode  -15  15
+	Click Element  RenderingMode  -15  15
 	Type Text  Iterate
 	Search And Select First Item  Teaser view for ViewPicker widget with timestamp
 	Click Element If Exists  UndockRelatedContentIcon  UndockRelatedContentIcon
