@@ -8,5 +8,6 @@ java -cp "robotframework-2.8.1.jar;%sikuli_jar%" ^
 org.robotframework.RobotFramework ^
 --pythonpath=content-studio.sikuli ^
 --outputdir=TestResults ^
+--noncritical non-critical ^
 --loglevel=TRACE ^
 %*

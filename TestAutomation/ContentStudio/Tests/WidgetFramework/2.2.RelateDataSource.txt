@@ -1,54 +1,51 @@
-***Settings***
-Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
-Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
-Library  SearchContent.SearchContent  WITH NAME  SearchContent
-Library  SikuliCS  WITH NAME  SikuliCS
-Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+*** Settings ***
+Documentation     Relate an External Data source with teaser widget
+Library           ContentStudioClipboard.ContentStudioClipboard    WITH NAME    ContentStudioClipboard
+Library           ContentStudio.ContentStudio    WITH NAME    ContentStudio
+Library           SearchContent.SearchContent    WITH NAME    SearchContent
+Library           SikuliCS    WITH NAME    SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+Resource          common_resource.txt
 
-Resource       common_resource.txt
+*** Test cases ***
+Relate an External Data source with teaser widget  -c
+    #Create Content In Section    NewArticles
+    Create Image In Section    NewArticles
+    Close Allopen Tabs
+    Create Widget Content Type    TeaserWidgetContent
+    Type Text    TeaserWidget (Created by automated test)
+    Click Element    DataSourceTab
+    Click Element    Use    0    20
+    Click Element    ExternalDataSource
+    Click Element If Exists    UndockRelatedContentIcon    UndockRelatedContentIcon
+    Wait For    10
+    Search And Select First Item    DataSource
+    Drag And Drop Element    InboxItemSelected    RelatedDatasource
+    Click Element If Exists    DockRelatedContentIcon    DockRelatedContentIcon
+    Wait For    2
+    ##Click Element If Exists    DockRelatedContentIcon    DockRelatedContentIcon
+    Click Element    DefaultTab
+    Click Element    WidgetBodyElementSettings    -30    40
+    Click Element    WidgetSpecifyElements
+    Type Text    M
+    Type Key    ENTER
+    Save And Publish
+    Open Section In Content Studio    FrontpageTemplate
+    Wait for    5
+    Drag And Drop Element    TeaserWidgetTab    TopContentArea
+    Click Element    SaveButton
+    Wait For    5
+    Click Element    PublishButtonSimple
+    ###Assertion###
+    Open Browser To Publication
+    Check If Exists    DSAssertion
+    Close Browser
 
-Documentation  Relate an External Data source with teaser widget
-
-**Test cases**
-Relate an External Data source with teaser widget
-	#Create Content In Section  NewArticles  
-	Create Image In Section  NewArticles
-	Close Allopen Tabs
-	Create Widget Content Type  TeaserWidgetContent
-	Type Text  TeaserWidget (Created by automated test)
-	Click Element  DataSourceTab
-	Click Element  Use  0  20
-	Click Element  ExternalDataSource
-	Click Element If Exists  UndockRelatedContentIcon  UndockRelatedContentIcon
-	Wait For  10
-	Search And Select First Item  DataSource
-	Drag And Drop Element  InboxItemSelected  RelatedDatasource
-	Click Element If Exists  DockRelatedContentIcon  DockRelatedContentIcon
-	Wait For  2
-	Click Element If Exists  DockRelatedContentIcon  DockRelatedContentIcon
-	Click Element  DefaultTab
-	Click Element  WidgetBodyElementSettings  -30  40
-	Click Element  WidgetSpecifyElements
-	Type Text  M
-	Type Key  ENTER
-	Save And Publish
-	Open Section In Content Studio  FrontpageTemplate
-	Wait for  5
-	Drag And Drop Element  TeaserWidgetTab  TopContentArea
-	Click Element  SaveButton
-	Wait For  5
-	Click Element  PublishButtonSimple
-
-	###Assertion###
-		Open Browser To Publication    
-		Check If Exists  DSAssertion
-		Close Browser
-
-Remove widget from front page template
-	Close Allopen Tabs
-	Open Section In Content Studio  FrontPageTemplate
-	Wait for  5
-	Click Element  TopContentArea
-	Type Key  DOWN
-	Type Key  DELETE
-	Click Element  PublishButtonSimple
+Remove widget from front page template  -n
+    Close Allopen Tabs
+    Open Section In Content Studio    FrontPageTemplate
+    Wait for    5
+    Click Element    TopContentArea
+    Type Key    DOWN
+    Type Key    DELETE
+    Click Element    PublishButtonSimple

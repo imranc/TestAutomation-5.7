@@ -136,6 +136,6 @@ class eceSikuli(object):
                         paste(args[0])
                         wait(5)
                         type(Key.ENTER)
-                        wait(2)
+                        wait(5)
                 else:
                         raise AssertionError("Too many arguments")

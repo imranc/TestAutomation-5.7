@@ -47,7 +47,7 @@ Create a Teaser Widget with Data source query by tag
 		Save And Publish
 
 	###Drag created teaser widget and drop into story page top section###
-		Open Section In Content Studio  StoryPageTemplate
+		Open Section In Content Studio  SearchPageTemplate
 		Wait for  5
 		Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 		Click Element  SaveButton
