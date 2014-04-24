@@ -17,13 +17,14 @@ Relate an External Data source with teaser widget
     Click Element    DataSourceTab
     Click Element    Use    0    20
     Click Element    ExternalDataSource
-    Click Element If Exists    UndockRelatedContentIcon    UndockRelatedContentIcon
+    Click Element If Exists    RelatedDatasource    RelatedContent
+    Click Element If Exists    RelatedContent    RelatedContent
     Wait For    10
     Search And Select First Item    DataSource by section created by automated test
     Drag And Drop Element    InboxItemSelected    RelatedDatasource
-    Click Element If Exists    DockRelatedContentIcon    DockRelatedContentIcon
-    Wait For    2
-    ##Click Element If Exists    DockRelatedContentIcon    DockRelatedContentIcon
+    Click Element If Exists    RelatedContent    RelatedContent
+    Wait For  2
+    
     Click Element    DefaultTab
     Click Element    WidgetBodyElementSettings    -30    40
     Click Element    WidgetSpecifyElements
