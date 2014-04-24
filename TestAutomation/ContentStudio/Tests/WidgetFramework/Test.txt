@@ -1,0 +1,17 @@
+*** Settings ***
+Documentation     Relate an External Data source with teaser widget
+Library           ContentStudioClipboard.ContentStudioClipboard    WITH NAME    ContentStudioClipboard
+Library           ContentStudio.ContentStudio    WITH NAME    ContentStudio
+Library           SearchContent.SearchContent    WITH NAME    SearchContent
+Library           SikuliCS    WITH NAME    SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+Resource          common_resource.txt
+Default Tags   critical  non-critical
+
+*** Test cases ***
+Relate an External Data source with teaser widget
+    Click Element    Add
+test
+    Set Tags  crit
+    Click Element    Add
+

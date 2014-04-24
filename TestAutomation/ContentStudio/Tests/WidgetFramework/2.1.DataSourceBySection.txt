@@ -13,7 +13,7 @@ Documentation  Create a Data source
 Create an External Data source
 	Type Key  ESC
 	Create New Other Content Type  DataSourceContent
-	Type Text  DataSource created by automated test
+	Type Text  DataSource by section created by automated test
 	Click Element  Add
 	Click Element  DataSourceBySection  -70  0
 	Click Element  DataSourceSectionBox  -10  15
@@ -27,6 +27,6 @@ Create an External Data source
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButton
-	Search And Select First Item  DataSource
+	Search And Select First Item  DataSource by section created by automated test
 		Check If Exists  InboxItemSelected
 	
