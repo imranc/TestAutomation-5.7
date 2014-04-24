@@ -14,10 +14,11 @@ Create a Teaser Widget with Data source query by section Relation
 	Switch To Content Studio
 	Create Content In Section  NewArticles
 	Switch To Content Studio
-	Click Element If Exists  UndockRelatedContentIcon  UndockRelatedContentIcon
+	Click Element If Exists  Related  RelatedContent
+	Click Element If Exists  RelatedContent  RelatedContent
 	Search And Select First Item  image
-	Drag And Drop Element  InboxItemSelected  RelatedContent
-	Click Element If Exists  DockRelatedContentIcon  DockRelatedContentIcon 
+	Drag And Drop Element  InboxItemSelected  Related
+	Click Element If Exists  RelatedContent  RelatedContent 
   	Save And Publish	
 
 	Switch To Content Studio
