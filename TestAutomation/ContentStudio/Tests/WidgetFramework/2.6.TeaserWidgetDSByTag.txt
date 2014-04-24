@@ -54,13 +54,13 @@ Create a Teaser Widget with Data source query by tag
 		Check If Exists  DSAssertion
 		Close Browser
 		
-
-	###Remove teaser widget###
-		Open Section In Content Studio  SportsPageTemplate
-		Wait for  5
-		Click Element If Exists  WidgetListView  WidgetListView
-		Type Key  DELETE
-		Click Element  PublishButtonSimple
+Remove teaser widget
+	Set Tags  non-critical
+	Open Section In Content Studio  SportsPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
 		
 		
 

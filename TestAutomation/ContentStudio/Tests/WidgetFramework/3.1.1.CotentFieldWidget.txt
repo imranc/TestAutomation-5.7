@@ -44,6 +44,7 @@ Create a content "Title" widget
 	Close Browser
 
 Remove widget from article page template
+	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5

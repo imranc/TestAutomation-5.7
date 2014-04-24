@@ -39,7 +39,8 @@ Create a Breadcrumb widget displaying content item
 	Check If Exists  HeadingWidgetAssertion
 	Close Browser
 
-Remove widget from article page template
+Remove widget from front page template
+	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5

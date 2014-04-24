@@ -45,7 +45,8 @@ Create a Search Config widget for fetching the search result
 	Check If Exists  SearchConfigWidgetAssertion
 	Close Browser
 
-Remove widget from article page template
+Remove widget from search page template
+	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  SearchPageTemplate
 	Wait for  5

@@ -40,7 +40,8 @@ Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
 	Check If Exists  MenuWidgetAssertion
 	Close Browser
 
-Remove widget from article page template
+Remove widget from Front page template
+	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5

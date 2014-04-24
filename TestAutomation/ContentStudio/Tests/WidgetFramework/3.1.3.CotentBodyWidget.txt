@@ -65,7 +65,8 @@ Create a content Body Widget displaying "inline content" and "whole body content
 	Check If Exists  ContentBodyWidgetAssertion
 	Close Browser
 
-	###Remove widget from article page template###
+Remove widget from story page template
+	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5

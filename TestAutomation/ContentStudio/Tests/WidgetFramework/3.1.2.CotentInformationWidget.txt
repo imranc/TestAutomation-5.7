@@ -41,7 +41,8 @@ Create a content information widget showing "Author"
 	Check If Exists  ContentInformationWidgetAssertion
 	Close Browser
 
-Remove widget from article page template
+Remove widget from story page template
+	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
