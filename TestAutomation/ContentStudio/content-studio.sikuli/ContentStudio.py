@@ -86,8 +86,13 @@ class ContentStudio(object):
         def getCsAddress(self):
                 #***This keyword returns Content Studio url with the variables passed from Jenkins***#
                 ece_host= os.environ['ECE_EDITORIAL_HOST']
-                ece_port= os.environ['ECE_EDITORIAL_PORT']
-                ece_Cs_address= 'http://'+ece_host+':'+ece_port+'/studio/Studio.jnlp'
+                
+                if "ECE_EDITORIAL_PORT" in os.environ:
+                        ece_port= os.environ['ECE_EDITORIAL_PORT']
+                        ece_Cs_address= 'http://'+ece_host+':'+ece_port+'/studio/Studio.jnlp'
+                        
+                else:
+                        ece_Cs_address= 'http://'+ece_host+'/studio/Studio.jnlp'
                 return ece_Cs_address
         
         def create_rss_feedpanel(self):
