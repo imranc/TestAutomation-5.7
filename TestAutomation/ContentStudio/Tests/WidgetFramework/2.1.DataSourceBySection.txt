@@ -14,6 +14,7 @@ Create an External Data source
 	Type Key  ESC
 	Create New Other Content Type  DataSourceContent
 	Type Text  DataSource by section created by automated test
+	Click Element If Exists  Related  RelatedContent
 	Click Element  Add
 	Click Element  DataSourceBySection  -70  0
 	Click Element  DataSourceSectionBox  -10  15
