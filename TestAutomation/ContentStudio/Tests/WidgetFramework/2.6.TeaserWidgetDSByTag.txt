@@ -26,7 +26,7 @@ Create a Teaser Widget with Data source query by tag
 		Click Element  DataSourceTab
 		Click Element  Add
 		Wait For  5
-		Click Element  DSByTag  -37  0
+		Click Element  DSByTag  -35  0
 		Click Element  DSTagInclude  0  15
 		Select From Dropdown  widget
 		Click Element  DataSourceSectionBox  -10  15
