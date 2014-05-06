@@ -13,7 +13,7 @@ Locking
 	Create Content In Section  NewArticles
 	Achieve Lock
 	Close Browser
-	Start Content Studio  simen  simen
+	Start Content Studio  joe  joe
 	Check Search
 	Wait For  20
 	Check If Exists  Lock
