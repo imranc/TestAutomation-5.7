@@ -9,7 +9,7 @@ Resource       common_resource.txt
 
 Documentation  Create a Tag and check if that can be used.
 **Test cases**
-Create a Teaser Widget with Data source query by section Relation
+Create a Tag and check if that can be used
 
 	###Create content with a tag###
 		Switch To Content Studio
