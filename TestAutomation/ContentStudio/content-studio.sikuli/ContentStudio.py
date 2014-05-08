@@ -279,6 +279,8 @@ class ContentStudio(object):
                         type(Key.TAB)
                         type("This is the Summary of an Article -- By Automated smoke tests")
                         type(Key.TAB)
+                        type("This is the Lead text of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
                         type("This is the Body of an Article -- By Automated smoke tests")
                         
                 wait(3)
