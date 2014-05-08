@@ -277,7 +277,7 @@ class ContentStudio(object):
                 else: 
                         type("This is the Title of an Article -- By Automated smoke tests")
                         type(Key.TAB)
-                        type("This is the Summary of an Article -- By Automated smoke tests")
+                        type("This is the Subtitle of an Article -- By Automated smoke tests")
                         type(Key.TAB)
                         type("This is the Lead text of an Article -- By Automated smoke tests")
                         type(Key.TAB)
