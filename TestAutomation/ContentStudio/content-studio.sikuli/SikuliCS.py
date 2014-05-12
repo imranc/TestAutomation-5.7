@@ -11,6 +11,7 @@ import datetime
 ScreenShot=0
 addImagePath("content-studio.sikuli\gfx")
 
+
 def wait_for(*args):
     ##This function works same as wait(pattern object, time in seconds)
 
@@ -20,7 +21,7 @@ def wait_for(*args):
         for x in range(0,args[1]):
             if exists(args[0]):
                 break
-                raise AssertionError('test')
+                #raise AssertionError('test')
             elif x == wait_time:
                 #ScreenShotImageName='ScreenShot-'+str(ScreenShot)
                 ImageName=capture_CS_screenshot()
@@ -28,7 +29,10 @@ def wait_for(*args):
             else:
                 wait(1)
     elif len(args) == 1:
-        wait(int(args[0]))
+        wait_time=args[0]
+        for x in range(0,int(args[0])):
+            wait(1)
+        #raise AssertionError(args[0])
     else:
         for x in range(0,1000):
             if exists(args[0]):
@@ -44,7 +48,7 @@ def capture_CS_screenshot(*args):
     else:
         imageName=args[0]
         
-    screenshotsDir = "TestResults\Screenshots"
+    screenshotsDir = "C:/Test-automation/ContentStudio/TestResults/Screenshots"
     img = capture(App.focusedWindow())
     shutil.move(img, os.path.join(screenshotsDir, imageName+".png"))
     capture_java_console_screenshot()
@@ -55,9 +59,9 @@ def capture_java_console_screenshot():
     #C.start()
     imageName=(os.environ['BuildNumber'])
     currentTime=datetime.datetime.now().strftime("%B-%d-%H-%M-%S")
-    imageName = imageName + '.JAVA_CONSOLE' + '-' + currentTime
+    imageName = imageName + '.JAVA_CONSOLE' +  '-' + currentTime
         
-    screenshotsDir = "TestResults\Screenshots"
+    screenshotsDir = "C:/Test-automation/ContentStudio/TestResults/Screenshots"
     switchApp("Java Console - Content Studio")
     type(Key.SPACE, KeyModifier.ALT)
     type('x')
@@ -79,5 +83,4 @@ def restore_content_studio_window():
     type('r')
 
 def print_version():
-    sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". Version: " + os.environ['ECE_Version'])
-    
+    sys.stderr.write("Testing Content Studio Version: " + os.environ['ECE_Version'])

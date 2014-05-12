@@ -1,0 +1,15 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+
+Documentation  A test case for Selecting/Unselecting Content's inbox
+
+**Test cases**
+Select / Unselect the content's inbox
+	Clean Up Inbox  NewArticles
+	Close All Open Tabs
+	Create Content In Section  NewArticles
+	Deselect Contents Inbox
+		Check If Not Exists  InboxItemSelected
+	Select Contents Inbox
+		Check If Exists  InboxItemSelected

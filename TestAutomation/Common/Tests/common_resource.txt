@@ -13,6 +13,6 @@ Library        SeleniumLibrary
 ${SUT}           html
 ${SERVER}        localhost:7272
 ${BROWSER}       chrome
-${DELAY}         3
+${DELAY}         20
 ${VALID USER}    demo-temp-dev_admin
 ${VALID PASSWD}  escenic

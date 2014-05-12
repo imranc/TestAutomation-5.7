@@ -8,15 +8,12 @@ class ContentStudioClipboard(object):
         def go_to_clipboard(self):
                 csInstance = ContentStudio()
                 ContentStudio.switch_to_content_studio(csInstance)
-                if exists(Pattern("ClipboardTab.png").similar(0.70)):
+                
+                if exists(Pattern("ClipboardTab.png").similar(1.00)):
                         click("ClipboardTab.png")
-                elif exists("SectionsTab.png"):
-                        click("SectionsTab.png")
+                else:
+                        click("SectionTab.png")
                         click("ClipboardTab.png")
-                elif exists("SectionsTabSelected.png"):
-                        click("SectionsTabSelected.png")
-                        click("ClipboardTab.png")
-                        raise AssertionError("1")
         
         def clean_up_clipboard(self):
                 csInstance = ContentStudio()
@@ -25,26 +22,24 @@ class ContentStudioClipboard(object):
 
                 if exists(Pattern("FirstContentOfClipboard.png").similar(0.90)):
                         click(Pattern("FirstContentOfClipboard.png").similar(0.90))
-                elif exists("ClipboardTab.png"):
+                else:
                         click(Pattern("ClipboardTab.png").targetOffset(25, -25))
-                elif exists("ClipboardTabSelected.png"):
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
                 
                 while exists(Pattern("InboxItemSelected.png").similar(0.90)):
                         type(Key.DELETE)
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
+                        click(Pattern("ClipboardTab.png").targetOffset(25, -25))
 
         def check_clipboard(self):
                 csInstance = ContentStudio()
                 ContentStudio.switch_to_content_studio(csInstance)
                 ContentStudioClipboard.go_to_clipboard(self)
                 
-                if exists(Pattern("FirstContentOfClipboard.png").similar(0.80)):
+                if exists(Pattern("FirstContentOfClipboard.png").similar(0.90)):
                         logging.info("At least one content available in clipboard")
-                        doubleClick(Pattern("FirstContentOfClipboard.png").similar(0.80))
-                elif exists(Pattern("InboxItemSelected.png").similar(0.80)):
+                        doubleClick(Pattern("FirstContentOfClipboard.png").similar(0.90))
+                elif exists(Pattern("InboxItemSelected.png").similar(0.90)):
                         logging.info("At least one content available in clipboard")
-                        doubleClick(Pattern("InboxItemSelected.png").similar(0.80))
+                        doubleClick(Pattern("InboxItemSelected.png").similar(0.90))
                 else:
                         ImageName=capture_CS_screenshot()
                         raise AssertionError("Clipboard is EMPTY. Screenshot: "+ImageName)
@@ -58,7 +53,7 @@ class ContentStudioClipboard(object):
                 ListImageName=ListName+'.png'
                 
                 if not exists("InboxesTab.png"):
-                        click("SectionsTab.png")
+                        click("SectionTab.png")
 
                 if exists("ListsTab.png"):
                         click("ListsTab.png")
@@ -74,19 +69,16 @@ class ContentStudioClipboard(object):
                         raise AssertionError(ListName+' does not exist in the section content was created. Screeshot: '+ImageName)
                 
                 ContentStudioClipboard.go_to_clipboard(self)
-                if exists("ClipboardTab.png"):
-                        click(Pattern("ClipboardTab.png").targetOffset(25, -25))
-                elif exists("ClipboardTabSelected.png"):
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
+                click(Pattern("ClipboardTab.png").targetOffset(25, -25))
                 
                 if DragDirection == 'clipboard_to_list':
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
+                        click(Pattern("ClipboardTab.png").targetOffset(25, -25))
                         dragDrop(Pattern('InboxItemSelected.png').targetOffset(-1,67),Pattern('ListIcon.png').targetOffset(-15,30))
                         click(Pattern('ListIcon.png').targetOffset(-15,30))
                 else:
                         click(Pattern('ListIcon.png').targetOffset(-15,30))
                         dragDrop(Pattern('ListIcon.png').targetOffset(-15,30),Pattern('EmptyClipboard.png').similar(0.90))
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
+                        click(Pattern("ClipboardTab.png").targetOffset(25, -25))
 
                 ##Assertion Check: If the drag was successful then there should be a content selected.
 
@@ -101,10 +93,8 @@ class ContentStudioClipboard(object):
                 DragEndImage=args[1]+'.png'
                 
                 dragDrop(DragStartImage, DragEndImage)
-                if exists("ClipboardTab.png"):
-                        click(Pattern("ClipboardTab.png").targetOffset(25, -25))
-                elif exists("ClipboardTabSelected.png"):
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
+                click(Pattern("ClipboardTab.png").targetOffset(25, -25))
+                
                 
                 
 
@@ -135,10 +125,8 @@ class ContentStudioClipboard(object):
                         ContentStudio.switch_to_content_studio(csInstance)
                 
         def select_item_from_clipboard(self):
-                if exists(Pattern('ClipboardTab.png').similar(0.80)):
+                if not exists(Pattern('ClipboardTab.png').similar(0.80)):
                         click(Pattern("ClipboardTab.png").targetOffset(25, -25))
-                elif exists(Pattern('ClipboardTabSelected.png')):
-                        click(Pattern("ClipboardTabSelected.png").targetOffset(25, -25))
                 else:
                         ContentStudioClipboard.go_to_clipboard(self)
                         click(Pattern("ClipboardTab.png").targetOffset(25, -25))

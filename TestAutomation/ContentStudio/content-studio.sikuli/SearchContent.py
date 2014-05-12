@@ -21,12 +21,12 @@ class SearchContent(object):
 
                 ##Assertion: Check if exists a content for a minute ago
                 
-                for x in range(0,10):
+                for x in range(0,5):
                         wait(10)
                         click("ExecuteSearch.png")
                         if exists(Pattern("CreatedOneMinAgo.png").similar(0.50)):
                             break
-                        elif x==10:
+                        elif x==4:
                             ImageName=capture_CS_screenshot()
                             raise AssertionError("Problem with search. Screenshot: "+ImageName)
 
@@ -43,8 +43,8 @@ class SearchContent(object):
                 ContentStudio.switch_to_content_studio(csInstance)
                 
                 SearchContent.search(self, 'simple')
-                click(Pattern("ClipboardTab.png").targetOffset(25, 100))
-                
+                wait(5)
+                click(Pattern("ClipboardTab.png").targetOffset(25, -20))
                 if exists(Pattern("FirstContentOfClipboard.png").similar(0.90)):
                         logging.info("At least one content available in clipboard")
                         doubleClick(Pattern("FirstContentOfClipboard.png").similar(0.90))
@@ -55,6 +55,7 @@ class SearchContent(object):
                         ImageName=capture_CS_screenshot()
                         raise AssertionError("Clipboard is EMPTY. Screenshot: "+ImageName)
 
+                wait(5)
 
         def clear_search(self):
                 wait(2)
