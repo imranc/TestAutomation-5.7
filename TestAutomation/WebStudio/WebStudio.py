@@ -35,7 +35,6 @@ import os
 import sys
 from tempfile import TemporaryFile
 from subprocess import Popen, call, STDOUT
-import os, sys, inspect
 
 try:
     import SeleniumLibrary

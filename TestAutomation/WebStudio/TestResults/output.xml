@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20140416 09:11:12.618" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
-<suite source="C:\Test-automation\WebStudio\Tests\1.Login.txt" id="s1" name="1.Login">
+<robot generated="20131015 12:01:24.046" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\Test-automation\WebStudio\Tests\demo.txt" id="s1" name="Demo">
 <test id="s1-t1" name="Login to WebStudio">
 <kw type="kw" name="html_resource.Open Browser To Escenic WebStudio">
 <doc></doc>
@@ -10,49 +10,49 @@
 <doc></doc>
 <arguments>
 </arguments>
-<msg timestamp="20140416 09:11:19.004" level="INFO">Opening browser 'firefox' to base url 'http://10.211.20.87:8080/escenic'</msg>
-<status status="PASS" endtime="20140416 09:11:19.004" starttime="20140416 09:11:12.792"></status>
+<msg timestamp="20131015 12:01:29.154" level="INFO">Opening browser 'firefox' to base url 'http://172.24.202.124:8080/escenic'</msg>
+<status status="PASS" endtime="20131015 12:01:29.154" starttime="20131015 12:01:24.202"></status>
 </kw>
 <kw type="kw" name="SeleniumLibrary.Maximize Browser Window">
 <doc>Maximizes current browser window.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20140416 09:11:19.069" starttime="20140416 09:11:19.004"></status>
+<status status="PASS" endtime="20131015 12:01:29.201" starttime="20131015 12:01:29.154"></status>
 </kw>
 <kw type="kw" name="SeleniumLibrary.Set Selenium Speed">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20140416 09:11:19.085" starttime="20140416 09:11:19.069"></status>
+<status status="PASS" endtime="20131015 12:01:29.218" starttime="20131015 12:01:29.201"></status>
 </kw>
 <kw type="kw" name="SeleniumLibrary.Title Should Be">
 <doc>Verifies that current page title equals `title`.</doc>
 <arguments>
 <arg>Escenic Web Studio -</arg>
 </arguments>
-<msg timestamp="20140416 09:11:20.096" level="INFO">Page title is 'Escenic Web Studio -'.</msg>
-<status status="PASS" endtime="20140416 09:11:20.096" starttime="20140416 09:11:19.085"></status>
+<msg timestamp="20131015 12:01:30.229" level="INFO">Page title is 'Escenic Web Studio -'.</msg>
+<status status="PASS" endtime="20131015 12:01:30.229" starttime="20131015 12:01:29.218"></status>
 </kw>
-<status status="PASS" endtime="20140416 09:11:20.096" starttime="20140416 09:11:12.792"></status>
+<status status="PASS" endtime="20131015 12:01:30.229" starttime="20131015 12:01:24.202"></status>
 </kw>
-<kw type="kw" name="SeleniumLibrary.Input Environment Variable">
+<kw type="kw" name="SeleniumLibrary.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>userId</arg>
-<arg>ECE_UserName</arg>
+<arg>qa_admin</arg>
 </arguments>
-<msg timestamp="20140416 09:11:21.117" level="INFO">Typing text 'ECE_UserName' into text field 'userId'</msg>
-<status status="PASS" endtime="20140416 09:11:21.117" starttime="20140416 09:11:20.097"></status>
+<msg timestamp="20131015 12:01:31.243" level="INFO">Typing text 'qa_admin' into text field 'userId'</msg>
+<status status="PASS" endtime="20131015 12:01:31.243" starttime="20131015 12:01:30.229"></status>
 </kw>
-<kw type="kw" name="SeleniumLibrary.Input Environment Variable">
+<kw type="kw" name="SeleniumLibrary.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>password</arg>
-<arg>ECE_Password</arg>
+<arg>admin</arg>
 </arguments>
-<msg timestamp="20140416 09:11:22.152" level="INFO">Typing text 'ECE_Password' into text field 'password'</msg>
-<status status="PASS" endtime="20140416 09:11:22.152" starttime="20140416 09:11:21.118"></status>
+<msg timestamp="20131015 12:01:32.254" level="INFO">Typing text 'admin' into text field 'password'</msg>
+<status status="PASS" endtime="20131015 12:01:32.254" starttime="20131015 12:01:31.243"></status>
 </kw>
 <kw type="kw" name="html_resource.Submit Credentials">
 <doc></doc>
@@ -63,522 +63,30 @@
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20140416 09:11:25.352" level="INFO">Clicking button 'Log in'.</msg>
-<status status="PASS" endtime="20140416 09:11:25.352" starttime="20140416 09:11:22.153"></status>
+<msg timestamp="20131015 12:01:35.890" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" endtime="20131015 12:01:35.890" starttime="20131015 12:01:32.255"></status>
 </kw>
-<status status="PASS" endtime="20140416 09:11:25.352" starttime="20140416 09:11:22.153"></status>
-</kw>
-<kw type="kw" name="html_resource.Click For Multiple Cookies">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="SeleniumLibrary.Click Button If Exists">
-<doc></doc>
-<arguments>
-<arg>xpath=//*[@value='I have had technical problems and want to continue working where I left off']</arg>
-</arguments>
-<status status="PASS" endtime="20140416 09:11:26.377" starttime="20140416 09:11:25.354"></status>
-</kw>
-<status status="PASS" endtime="20140416 09:11:26.377" starttime="20140416 09:11:25.353"></status>
-</kw>
-<kw type="kw" name="html_resource.Check if Log off Link Exists">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="SeleniumLibrary.Page Should Contain Link">
-<doc>Verifies link identified by `locator` is found from current page.</doc>
-<arguments>
-<arg>xpath=//*[@href='/escenic/logoff.do']</arg>
-</arguments>
-<msg timestamp="20140416 09:11:29.183" level="INFO">&lt;head&gt;&lt;script language="JavaScript1.2"&gt;&lt;!-- 
-  function unlock(id,type){
-
-    if(confirm("Users editing this object will lose their changes. Are you still sure you want to unlock this object?")){
-      forwardUrl = "action:/base/breakLock.do?id="+id+"&amp;type="+type; 
-      submitForm(forwardUrl);
-    }
-  }
-  // --&gt;
-&lt;/script&gt;
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;!--
-  Several tasks are available.
-  For the task "/foo/bar/baz" the following classes are available
-  task-foo
-  task-foo-bar
-  task-foo-bar-baz
- --&gt;
-
-
-
-
- 
-
-
-
-
-
-&lt;!-- Frame begins --&gt;
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt; 
-  &lt;meta http-equiv="Expires" content="0"&gt;
-  &lt;meta http-equiv="Pragma" content="no-cache"&gt;
-  &lt;title&gt;
-
- 
-
-
-
-
-
-
-Escenic Web Studio -
-
-
-
-
-
-&lt;/title&gt;
-&lt;!--
-  &lt;style&gt;
-    div { border: 1px solid green; margin: 2px; padding: 2px; }
-    table { border: 1px solid red; margin: 2px; padding: 2px; }
-    td { border: 1px dotted red; margin: 2px; padding: 2px; }
-  &lt;/style&gt;
---&gt;
-  &lt;link rel="stylesheet" href="/escenic/css/global.css" type="text/css"&gt;
-  &lt;link rel="stylesheet" href="/escenic/css/empty.css" type="text/css"&gt;
-
-  &lt;link rel="SHORTCUT ICON" href="/escenic/images/escenic-content-engine-fav.png"&gt;
-  
-
- 
-
-
-
-
-
-
-
-&lt;script language="JavaScript1.2" type="text/javascript"&gt;
-  /* Pop up the forward. */
-  var currentpopup = null;
-  function popupcallback() {
-    alert("default pop-up callback -- no handler for the pop-up was installed.");
-  }
-
-  function popup(forward,callback) {
-    if (forward &amp;&amp; forward != 'null') {
-      var name = forward.replace(/[^a-zA-Z0-9]/g,"_");
-      var uri = forward.substring(1);
-      if (getWorkItemName) {
-        var delim = '?';
-        if (uri.indexOf('?') != -1) delim = '&amp;';
-        uri = uri + delim + 'parentWorkItemName=' + getWorkItemName();
-      }
-      currentpopup = window.open('/escenic/' + uri, name, 'toolbar=no,statusbar=no,scrollbars=yes,resizable=yes,location=no,width=650,height=500');
-      if (currentpopup.focus) {
-        currentpopup.focus();
-      }
-      if (callback) {
-        popupcallback = callback;
-      }
-    }
-  }
-
-&lt;/script&gt;
-&lt;script language="JavaScript1.2" type="text/javascript"&gt;&lt;!--
-  function submitForm(button,anchor) {
-    if(callHooks('beforeSubmit')){
-      if(document.forms[0]) {
-        if(document.forms[0].submitButton) {
-          document.forms[0].submitButton.value=button;
-          if (anchor &amp;&amp; anchor != 'null') {
-            document.forms[0].action=document.forms[0].action + '#' + anchor;
-          }
-          document.forms[0].submit();
-        } else {
-          window.location.href='/escenic/base/forward.do?forward=' + button;
-        }
-      } else {
-        window.location.href='/escenic/base/forward.do?forward=' + button;
-      }
-    }
-  }
-
-  function globalSearch(searchWord) {
-    alert("Global search has not been implemented yet.  I'm not sure what to do if you click Go. What do you think?  Tell me about it; mogsie@escenic.com");
-   /*
-    if (document.forms[0]) {
-      document.forms[0].globalSearchWord.value=searchWord;
-      document.forms[0].submitButton.value='action:/base/globalSearch.do';
-      document.forms[0].submit();
-    } else {
-      alert('unable to search for "' + searchWord + '"!');
-    }*/
-  }
-  var eventHooks = new Object();
-  function registerHook(where,fn) {
-    if (!eventHooks[where]) {
-      eventHooks[where] = new Array()
-    }
-    eventHooks[where][eventHooks[where].length] = fn;
-  }
-
-  function callHooks(where) {
-    if (eventHooks[where]) {
-      for (var i = 0; i &lt; eventHooks[where].length; i++) {
-        var fn = eventHooks[where][i];
-        result = fn();
-        if (! result) {
-          
-          return false;
-        }
-      }
-    } else {
-    }
-    return true;
-  }
-        
-  var enterHooks = new Array();
-  function registerEnterHook(fn) {
-    enterHooks[enterHooks.length]=fn;
-  }
-        
-  function handleKey(e){
-    var code;
-    if (!e) var e = window.event;
-    code = e.keyCode;
-    if(code==0){
-      code = e.which;
-    }
-    if(code==13){
-      if(document.forms[0]["enterAction"]&amp;&amp;document.forms[0]["enterAction"].value!=""){
-        submitForm(document.forms[0]["enterAction"].value);
-      }else if(enterHooks.length&gt;0){
-        for (var i = 0; i &lt; enterHooks.length; i++) {
-          var fn = enterHooks[i];
-          fn();
-        }
-      }
-    }      
-   }
-  //checks if the form has a duplicate relation of some type. Parameters are:
-  //relationType: type of relation, for instance topic
-  //objectType: the type of object to be added
-  //objectId: the id of the object to be added
-  //numberOfRelations: the highest key stored. This is calculated by using relations(relationType).getNextKey()
-  function hasDuplicateRelation(relationType,objectType,objectId,numberOfRelations){
-    for(var k=0;k&lt;numberOfRelations;k++){
-      var index = ''+k;
-      for(j=index.length;j&lt;4;j++){
-        index = "0"+index;
-      }
-      idField = getFieldElement("relations("+relationType+").item("+index+").id");
-      typeField = getFieldElement("relations("+relationType+").item("+index+").type");
-      if(idField){
-        tmpId = idField.value;
-        tmpType = typeField.value;
-        if(tmpId==objectId&amp;&amp;tmpType==objectType){//already added
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
-  function getFieldElement(field){
-    for (var i=0; i &lt; document.forms[0].elements.length; i++) {
-      if (document.forms[0].elements[i].name == field){
-        return document.forms[0].elements[i];
-      }
-    }
-    return "";
-  }
-        
-   document.onkeypress = handleKey;
-  // --&gt;
-&lt;/script&gt;
-
-&lt;script language="JavaScript1.2" type="text/javascript" src="/escenic/script/roundedbox.js"&gt;&lt;/script&gt;
-&lt;script language="JavaScript1.2" type="text/javascript" src="/escenic/script/menu.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="/escenic/script/minmax.js"&gt;&lt;/script&gt;
-
-
-&lt;script&gt;
-registerHook("afterLoad",
-  function() {
-    var body = document.getElementById('body');
-    if(!body){
-      body = document.getElementsByName('body')[0];
-    }
-    if(!body){
-      body = document.getElementsByTagName('body')[0];
-    }
-    morphclass(body,'invisible','');
-    return true;
-  }
-);
-&lt;/script&gt;
-
-
-
- 
-
-
-
-
-
-
-&lt;/head&gt;
-
-
-
-
-&lt;body id="body" class="login-background invisible" topmargin="0" leftmargin="0" onload="callHooks('onLoad'); callHooks('afterLoad');" marginheight="0" marginwidth="0"&gt;
-&lt;div id="body-container"&gt;
-
-
-
-&lt;form name="neo.phoenix.logon.LogonForm" method="post" action="/escenic/logon.do" enctype="application/x-www-form-urlencoded" onsubmit="callHooks('onSubmit');"&gt;
-
-
-
-
- 
-
-
-
-&lt;!-- inside logon-content.jsp --&gt;
-
-
-
-
-
-&lt;script language="JavaScript1.2" src="/escenic/script/browserdetect.js"&gt;
-&lt;/script&gt;
-
-
-&lt;script type="text/javascript" language="JavaScript"&gt;
-
-function initFocus() {
-  /* only invoke the 'focus' if the field is rendered, and it is not
-   * actually a hidden field!  IE6 chokes on focus()'ing a hidden field
-   */
-  if (document.forms[0])
-  if (document.forms[0].userId)
-  if (document.forms[0].userId.type)
-  if (document.forms[0].userId.type != 'hidden')
-    document.forms[0].userId.focus();
-  return true;
-}
-registerHook('afterLoad',initFocus);
-
-  	var _ie = (is_ie &amp;&amp; is_win32);
-	var _ns = (is_nav &amp;&amp; (is_linux || is_sun || is_win32));
-
-	// Special case for NT 3.5: No plugin.
-	if (_ns &amp;&amp; is_win32 &amp;&amp; java.lang.System.getProperty("os.version").indexOf("3.5") &gt;= 0)
-	{
-		_ns = false;
-	};
-  
-  function continueWorking(){
-    document.getElementById("hijack").value="true";      
-    submitForm("submit");
-  }
-
-  function doNotcontinueWorking(){
-    document.getElementById("hijack").value="false";
-    submitForm("submit");
-  }
-  
-&lt;/script&gt;
-
-&lt;div class="login-content"&gt;
-  &lt;div class="lots-of-space-after"&gt;
-    &lt;img src="/escenic/images/default/topLogo-f7f7f7.gif"&gt;
-    &lt;p&gt;Escenic Web Studio v. 5.7.0.149872&lt;/p&gt;
-  &lt;/div&gt;
-
-&lt;table&gt;
-&lt;tbody&gt;&lt;tr&gt;
- &lt;td align="center" valign="middle"&gt;
-
-	&lt;table border="0"&gt;
- &lt;tbody&gt;&lt;tr&gt;
-  &lt;td&gt;&lt;label for="userId"&gt;User name&lt;/label&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;input name="userId" size="18" value="qa_admin" id="userId" class="loginFields input-text" type="text"&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;span class="fielderror error"&gt;&lt;/span&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-  &lt;td&gt;&lt;label for="password"&gt;Password&lt;/label&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;input name="password" size="18" value="admin1" id="password" class="loginFields input-password" type="password"&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;span class="fielderror error"&gt;&lt;/span&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-  &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-  &lt;td&gt;
-
-   &lt;table border="0" cellpadding="0" cellspacing="0"&gt;
-   &lt;tbody&gt;&lt;tr&gt;
-    &lt;td&gt;&lt;span class="importantbutton-bordermargin-box"&gt;&lt;span class="importantbutton-bordermargin-bg"&gt;&lt;span class="importantbutton-bordermargin-tl"&gt;&lt;span class="importantbutton-bordermargin-tr"&gt;&lt;span class="importantbutton-bordermargin-bl"&gt;&lt;span class="importantbutton-bordermargin-br"&gt;&lt;input onclick="submitForm('submit')" class=" input-button" value="Log in" type="button"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-   &lt;/tr&gt;
-   &lt;/tbody&gt;&lt;/table&gt;
-
-  &lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-	 &lt;td colspan="2"&gt;&lt;br&gt;
-	  
-      &lt;span class="error"&gt;&lt;span class="error"&gt;Log in failed&lt;/span&gt;&lt;/span&gt;
-    &lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;&lt;/table&gt;
-  &lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-
-
-
-
-  &lt;input name="submitButton" value="" type="hidden"&gt;
-  &lt;input name="hijackSession" value="" id="hijack" type="hidden"&gt;
-
-&lt;script type="text/javascript" language="JavaScript"&gt;
-&lt;!--//
- var isNetscape_frame = false;
- var isIE_frame = false;
- var isWhoKnows_frame = false;
- //This determines which browser the user is using
- if (parseInt(navigator.appVersion) &gt;= 4) {
-     if(navigator.appName == "Netscape") {
-     isNetscape_frame = true;
-   } else if (navigator.appName == "Microsoft Internet Explorer"){
-     isIE_frame = true;
-   } else {
-     isWhoKnows_frame = true;
-   }
- }
- //This stuff captures the events of the user
-if(isNetscape_frame) {
-   document.captureEvents(Event.KEYUP);
- }
- document.onkeyup = checkValue_frame;
-
-function checkValue_frame(evt){
-var theButtonPressed;
- if (isNetscape_frame) {
-   theButtonPressed = evt.which;
- } else if(isIE_frame) {
-    theButtonPressed = window.event.keyCode;
- } else if(isWhoKnows_frame) {
-   // silently ignore events for other browsers.
- } if (theButtonPressed == 13) {
-   if (document.forms[0].userId.value == '') document.forms[0].userId.focus();
-   else if (document.forms[0].password.value == '') document.forms[0].password.focus();
-   else document.forms[0].submit();
- }
-}
-//--&gt;
-&lt;/script&gt;
-&lt;!-- finishing logon-content.jsp --&gt;
-
-
-
-
-
-
-
-&lt;/div&gt;&lt;/form&gt;
-
-
-
-&lt;/div&gt;&lt;/body&gt;</msg>
-<msg timestamp="20140416 09:11:29.183" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/76.April-16-09-11-29.png"&gt;&lt;img src="Screenshots/76.April-16-09-11-29.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20140416 09:11:29.185" level="FAIL">Page should have contained link 'xpath=//*[@href='/escenic/logoff.do']' but did not</msg>
-<status status="FAIL" endtime="20140416 09:11:29.185" starttime="20140416 09:11:26.378"></status>
-</kw>
-<status status="FAIL" endtime="20140416 09:11:29.185" starttime="20140416 09:11:26.377"></status>
+<status status="PASS" endtime="20131015 12:01:35.890" starttime="20131015 12:01:32.254"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20140416 09:11:29.185" critical="yes" starttime="20140416 09:11:12.791">Page should have contained link 'xpath=//*[@href='/escenic/logoff.do']' but did not</status>
-</test>
-<test id="s1-t2" name="Log off">
-<kw type="kw" name="SeleniumLibrary.Click Link">
-<doc>Clicks a link identified by locator.</doc>
-<arguments>
-<arg>Log off</arg>
-</arguments>
-<msg timestamp="20140416 09:11:32.688" level="INFO">Clicking link 'Log off'.</msg>
-<msg timestamp="20140416 09:11:32.688" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/76.April-16-09-11-32.png"&gt;&lt;img src="Screenshots/76.April-16-09-11-32.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20140416 09:11:32.690" level="FAIL">ERROR: Element link=Log off not found</msg>
-<status status="FAIL" endtime="20140416 09:11:32.690" starttime="20140416 09:11:29.186"></status>
-</kw>
-<doc></doc>
-<tags>
-</tags>
-<status status="FAIL" endtime="20140416 09:11:32.690" critical="yes" starttime="20140416 09:11:29.186">ERROR: Element link=Log off not found</status>
+<status status="PASS" endtime="20131015 12:01:35.891" critical="yes" starttime="20131015 12:01:24.201"></status>
 </test>
 <doc>A test case to Login to Escenic Web Studio</doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20140416 09:11:32.691" starttime="20140416 09:11:12.618"></status>
+<status status="PASS" endtime="20131015 12:01:35.891" starttime="20131015 12:01:24.046"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="2" pass="0">Critical Tests</stat>
-<stat fail="2" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="2" pass="0" id="s1" name="1.Login">1.Login</stat>
+<stat fail="0" pass="1" id="s1" name="Demo">Demo</stat>
 </suite>
 </statistics>
 <errors>

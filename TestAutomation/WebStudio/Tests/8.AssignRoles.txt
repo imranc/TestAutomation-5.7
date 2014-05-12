@@ -13,5 +13,5 @@ Resource       common_resource.txt
 Assign roles to user
 	Login To Web Studio
 	Assign All Section Roles  joe
-	Assign All Global Roles  joe
+
 	Close Browser

@@ -87,15 +87,6 @@ class Browser(RunOnFailure):
                     % self._selenium.sessionId)
         return index
 
-    def open_browser_to_url_variable(self, url_variable, browser='firefox', alias=None):
-        url=os.environ[url_variable]
-        self._selenium = self._create_browser_session(browser, url)
-        index = self._cache.register(self._selenium, alias)
-        self._selenium.open(url, ignoreResponseCode=True)
-        self._debug('Opened browser with Selenium session id %s'
-                    % self._selenium.sessionId)
-        return index
-
     def open_browser_escenicAdmin(self, browser='firefox', alias=None): 
         url=Browser.getEscenicAdminAddress(self)
         self._selenium = self._create_browser_session(browser, url)
