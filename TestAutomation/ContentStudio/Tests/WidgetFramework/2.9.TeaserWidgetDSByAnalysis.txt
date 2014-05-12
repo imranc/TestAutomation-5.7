@@ -10,7 +10,8 @@ Resource       common_resource.txt
 Documentation  Create a Teaser Widget with Data source query by Relation
 **Test cases**
 Create a Teaser Widget with Data source query by tag
-
+	
+	Set Tags  non-critical
 	###Create two contents and tag it###
 		Switch To Content Studio
 		Close Allopen Tabs
