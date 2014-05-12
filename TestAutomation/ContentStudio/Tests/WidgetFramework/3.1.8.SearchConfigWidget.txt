@@ -55,6 +55,6 @@ Remove widget from search page template
 	Click Element  PublishButtonSimple
 	
 
-	
+	Test 5.6 branch
 
 	
