@@ -101,6 +101,7 @@ Create Section  [Arguments]  ${sectionName}
 	Input Text  name  ${sectionName}
 	Input Text  uniqueName  ece_${sectionName}
 	Click Element  xpath=//*[@value='Save']
+		Wait Until Page Contains  Search  500  error=None
 		#Assertion Check
 		Page Should Contain Button  Search
 		Click Element  xpath=//*[@value='Search']
