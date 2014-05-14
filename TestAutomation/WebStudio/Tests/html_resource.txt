@@ -146,8 +146,6 @@ Assign All Global Roles  [Arguments]  ${userName}
 	Select Checkbox   xpath=//*[@name="globalRole(editor)"]
 	Select Checkbox   xpath=//*[@name="globalRole(journalist)"]
 	Select Checkbox   xpath=//*[@name="globalRole(reader)"]
-	Select Checkbox   xpath=//*[@name="globalRole(articleWithContentTypeReader)"]
-	Select Checkbox   xpath=//*[@name="globalRole(articleWithContentTypeWriter)"]
 	Select Checkbox   xpath=//*[@name="globalRole(dashboard-administrator)"]
 	Select Checkbox   xpath=//*[@name="globalRole(content-moderator)"]
 	Click Element  xpath=//*[@value='Save']
