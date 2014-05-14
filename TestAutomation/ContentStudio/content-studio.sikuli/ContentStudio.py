@@ -255,7 +255,7 @@ class ContentStudio(object):
                 
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
-                else:
+                elif exists("ContentStatesList.png"):
                         click(Pattern("ContentStatesList.png").targetOffset(65,0))
                         wait(2)
                         click(Pattern("PublishButton.png").similar(0.50))
