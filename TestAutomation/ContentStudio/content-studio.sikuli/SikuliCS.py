@@ -48,7 +48,7 @@ def capture_CS_screenshot(*args):
     else:
         imageName=args[0]
         
-    screenshotsDir = "C:/Test-automation/ContentStudio/TestResults/Screenshots"
+    screenshotsDir = "TestResults\Screenshots"
     img = capture(App.focusedWindow())
     shutil.move(img, os.path.join(screenshotsDir, imageName+".png"))
     capture_java_console_screenshot()
@@ -61,7 +61,7 @@ def capture_java_console_screenshot():
     currentTime=datetime.datetime.now().strftime("%B-%d-%H-%M-%S")
     imageName = imageName + '.JAVA_CONSOLE' +  '-' + currentTime
         
-    screenshotsDir = "C:/Test-automation/ContentStudio/TestResults/Screenshots"
+    screenshotsDir = "TestResults\Screenshots"
     switchApp("Java Console - Content Studio")
     type(Key.SPACE, KeyModifier.ALT)
     type('x')
