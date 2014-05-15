@@ -695,7 +695,7 @@ class ContentStudio(object):
                 
                 if exists("DeleteButton.png"):
                         click("DeleteButton.png")
-                elif exists("DeletedButton.png"):
+                elif exists(Pattern("DeletedButton.png").similar(0.80)):
                         click("DeletedButton.png")
                         click("SaveButton.png")
                         
