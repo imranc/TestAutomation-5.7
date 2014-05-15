@@ -319,7 +319,7 @@ class ContentStudio(object):
                         wait(3)
                 #elif exists(Pattern("PublishButtonSimple.png")):
                  #       click(Pattern("PublishButtonSimple.png"))
-                else:
+                elif exists(Pattern("ContentStatesList.png").targetOffset(65,0)):
                         click(Pattern("ContentStatesList.png").targetOffset(65,0))
                         wait(2)
                         click(Pattern("PublishButton.png").similar(0.50))
