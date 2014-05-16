@@ -310,7 +310,7 @@ class ContentStudio(object):
                 type("a", KEY_CTRL)
                 type("This image is created by automated smoke test BOT")
                 wait(2)
-                wait(Pattern("SaveButton.png").similar(0.65),20)
+                #wait(Pattern("SaveButton.png").similar(0.65),20)
                 wait(10)
                 
                 if exists("PublishButton.png"):
