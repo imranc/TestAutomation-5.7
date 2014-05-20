@@ -11,3 +11,5 @@ org.robotframework.RobotFramework ^
 --noncritical non-critical ^
 --loglevel=TRACE ^
 %*
+
+xcopy %tmp%\hs_err_pid*.log TestResults\Logs
