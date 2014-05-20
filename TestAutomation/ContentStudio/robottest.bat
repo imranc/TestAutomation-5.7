@@ -10,3 +10,5 @@ org.robotframework.RobotFramework ^
 --outputdir=TestResults ^
 --loglevel=TRACE ^
 %*
+
+xcopy %tmp%\hs_err_pid*.log TestResults\Logs
