@@ -253,7 +253,7 @@ class ContentStudio(object):
 
                 SectionName=args[0]
                 
-                if not exists("InboxesTab.png"):
+                if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
                         
                 ContentStudio.right_click_section(self, SectionName)
@@ -331,7 +331,7 @@ class ContentStudio(object):
 
                 SectionName=args[0]
 
-                if not exists("InboxesTab.png"):
+                if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
                 
                 ContentStudio.right_click_section(self, SectionName)
