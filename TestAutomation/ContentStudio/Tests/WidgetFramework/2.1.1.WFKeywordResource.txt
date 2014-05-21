@@ -43,7 +43,7 @@ Search And Select First Item  [Arguments]  ${SearchPattern}
 	Clear Search
 	Type Text  ${SearchPattern}
 	Type Key  ENTER
-	Wait For  5
+	Wait For  15
 	Click Element  ClipboardTab  20  120
 
 Open Section In Content Studio  [Arguments]  ${SectionName}
