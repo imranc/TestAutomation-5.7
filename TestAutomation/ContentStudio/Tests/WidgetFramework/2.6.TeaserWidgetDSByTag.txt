@@ -21,6 +21,7 @@ Create a Teaser Widget with Data source query by tag
 
 
 	###Create teaser widget with data source by tag###
+		Close Allopen Tabs
 		Create Widget Content Type  TeaserWidgetContent
 		Type Text  TestAutomation Widget (TeaserWidget_DS_by_tag)
 		Click Element  DataSourceTab
