@@ -15,7 +15,7 @@ Create a Teaser Widget with Data source query by section page group
 	Close Allopen Tabs
 	
 	Clean Up Inbox  News
-	Create Image In Section  News  Article created for DS By Section PageGroup test
+	Create Image In Section  News  Image created for DS By Section PageGroup test
 	Switch To Content Studio
 	Open Section In Content Studio  News
 	Search And Select First Item  Article created for DS By Section PageGroup test
