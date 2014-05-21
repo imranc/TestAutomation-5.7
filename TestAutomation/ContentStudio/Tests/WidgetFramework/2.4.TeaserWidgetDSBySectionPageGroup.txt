@@ -18,7 +18,7 @@ Create a Teaser Widget with Data source query by section page group
 	Create Image In Section  News  Image created for DS By Section PageGroup test
 	Switch To Content Studio
 	Open Section In Content Studio  News
-	Search And Select First Item  Article created for DS By Section PageGroup test
+	Search And Select First Item  Image created for DS By Section PageGroup test
 	Drag And Drop Element  InboxItemSelected  TopStoriesGroup
 	Click Element  PublishButtonSimple
 	
