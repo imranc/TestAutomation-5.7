@@ -9,6 +9,7 @@ Resource       common_resource.txt
 
 Login to WebStudio
     Open Browser To Escenic WebStudio
+    Wait Until Page Contains  Escenic Web Studio  5000  error=None
     Input Environment Variable  userId  ECE_UserName
     Input Environment Variable  password  ECE_Password
     Submit Credentials
