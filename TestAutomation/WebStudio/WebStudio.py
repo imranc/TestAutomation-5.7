@@ -38,10 +38,10 @@ from subprocess import Popen, call, STDOUT
 import os, sys, inspect
 
 try:
-    import Selenium2Library
+    import SeleniumLibrary
 except ImportError:
-    print 'Importing Selenium2Library module failed.'
-    print 'Please make sure you have Selenium2Library installed.'
+    print 'Importing SeleniumLibrary module failed.'
+    print 'Please make sure you have SeleniumLibrary installed.'
     sys.exit(1)
 
 
@@ -50,11 +50,11 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 def run_tests(args):
-    #start_selenium_server()
+    start_selenium_server()
     #start_demo_application()
     call(['pybot'] + args, shell=(os.sep == '\\'))
     #stop_demo_application()
-    #stop_selenium_server()
+    stop_selenium_server()
 
 def start_demo_application():
     Popen(['python', DEMOAPP, 'start'], stdout=TemporaryFile(), stderr=STDOUT)
@@ -62,12 +62,12 @@ def start_demo_application():
 def stop_demo_application():
     call(['python', DEMOAPP, 'stop'], stdout=TemporaryFile(), stderr=STDOUT)
 
-#def start_selenium_server():
-#    logfile = open(os.path.join(ROOT, 'selenium_log.txt'), 'w')
-#    SeleniumLibrary.start_selenium_server(logfile)
+def start_selenium_server():
+    logfile = open(os.path.join(ROOT, 'selenium_log.txt'), 'w')
+    SeleniumLibrary.start_selenium_server(logfile)
 
-#def stop_selenium_server():
-#    SeleniumLibrary.shut_down_selenium_server()
+def stop_selenium_server():
+    SeleniumLibrary.shut_down_selenium_server()
 
 def print_help():
     print __doc__
@@ -82,8 +82,8 @@ def print_usage():
 if __name__ == '__main__':
     action = {'demoapp-start': start_demo_application,
               'demoapp-stop': stop_demo_application,
-              #'selenium-start': start_selenium_server,
-              #'selenium-stop': stop_selenium_server,
+              'selenium-start': start_selenium_server,
+              'selenium-stop': stop_selenium_server,
               'help': print_help,
               '': print_usage}.get('-'.join(sys.argv[1:]))
     if action:
