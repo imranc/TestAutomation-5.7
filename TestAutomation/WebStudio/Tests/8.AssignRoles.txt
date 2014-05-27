@@ -14,4 +14,6 @@ Assign roles to user
 	Login To Web Studio
 	Assign All Section Roles  joe
 	Assign All Global Roles  joe
-	Close All Browsers
+        Click Element  Close 	
+	Wait Until Page Contains  Person archive  10000  error=None
+	Close Browser

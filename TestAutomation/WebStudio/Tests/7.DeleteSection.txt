@@ -16,5 +16,5 @@ Delete Section
 	Delete Section  International
 
 
-	#Close Browser
+	Close Browser
 	

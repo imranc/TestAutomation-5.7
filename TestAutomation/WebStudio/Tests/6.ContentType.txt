@@ -27,6 +27,6 @@ Check Feature
 	Go To Link  /escenic/publication/viewFeatures.do
 		Page Should Contain  multimedia.image.virtualVersions
 
-	#Close Browser
+	Close Browser
 
 	
