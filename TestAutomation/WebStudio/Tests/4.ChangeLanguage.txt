@@ -27,4 +27,4 @@ Change Language
 	Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
 	Page Should Contain Element  xpath=//*[@value='Cancel']
      
-    Close Browser
+    #Close Browser

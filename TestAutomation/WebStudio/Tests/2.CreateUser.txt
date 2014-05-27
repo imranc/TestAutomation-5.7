@@ -6,7 +6,10 @@ Resource       common_resource.txt
 
 *** Test Cases ***
 
-
+Delete User if exists
+	Login To Web Studio
+	Delete User  joe joe
+	#Close Browser
 
 Create User
 	Open Browser To Escenic WebStudio
@@ -16,4 +19,4 @@ Create User
     	Click For Multiple Cookies
 	Create User  joe
 
-	Close Browser
+	#Close Browser
