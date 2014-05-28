@@ -70,7 +70,7 @@ Login Should Have Failed
     Title Should Be  Error Page
 
 Click For Multiple Cookies
-    Click Element If Exists  css=button[class='hijack']
+    Click Element If Exists  css=input[value='I have had technical problems and want to continue working where I left off']
 
 Check if Log off Link Exists
     Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
