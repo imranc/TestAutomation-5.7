@@ -70,7 +70,7 @@ Login Should Have Failed
     Title Should Be  Error Page
 
 Click For Multiple Cookies
-    Click Button If Exists  xpath=//*[@value='I have had technical problems and want to continue working where I left off']
+    Click Element If Exists  css=button[class='hijack']
 
 Check if Log off Link Exists
     Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
@@ -84,8 +84,11 @@ Create User  [Arguments]  ${userName}
     Input Text  newPassword  ${userName}
     Input Text  confirmPassword  ${userName}
     Click Element  xpath=//*[@value='Save']
+	Alert Should Not Be Present
 	##Click Search button and check if new user exists
-	Wait Until Page Contains  Person archive  5000  error=None
+	#Go To WebStudio HomePage
+	#Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Wait Until Page Contains  Person archive  50  error=None
 	Page Should Contain Button  Search
 	Click Element  xpath=//*[@value='Search']
 	Wait Until Page Contains  View person  50  error=None
@@ -101,11 +104,12 @@ Create Section  [Arguments]  ${sectionName}
 	Input Text  name  ${sectionName}
 	Input Text  uniqueName  ece_${sectionName}
 	Click Element  xpath=//*[@value='Save']
-		Wait Until Page Contains  Search  10000  error=None
+		Alert Should Not Be Present
 		#Assertion Check
 		Page Should Contain Button  Search
 		Click Element  xpath=//*[@value='Search']
-		Page Should Contain  ${sectionName} (ID:
+		Wait Until Page Contains  ${sectionName}  10  error=None
+		Page Should Contain  ${sectionName}
 
 Delete Section  [Arguments]  ${sectionName}
 	Go To Link  javascript:submitForm("section-archive")
@@ -146,6 +150,8 @@ Assign All Global Roles  [Arguments]  ${userName}
 	Select Checkbox   xpath=//*[@name="globalRole(editor)"]
 	Select Checkbox   xpath=//*[@name="globalRole(journalist)"]
 	Select Checkbox   xpath=//*[@name="globalRole(reader)"]
+	Select Checkbox   xpath=//*[@name="globalRole(articleWithContentTypeReader)"]
+	Select Checkbox   xpath=//*[@name="globalRole(articleWithContentTypeWriter)"]
 	Select Checkbox   xpath=//*[@name="globalRole(dashboard-administrator)"]
 	Select Checkbox   xpath=//*[@name="globalRole(content-moderator)"]
 	Click Element  xpath=//*[@value='Save']
@@ -163,6 +169,14 @@ Assign All Section Roles  [Arguments]  ${userName}
 	Click Element  xpath=//*[@value='Save']
 
 	
-
-
+Delete User  [Arguments]  ${userName}
+	Go To WebStudio HomePage
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Input Text  searchWord  ${userName}
+	Click Button  Search
+	Click Element If Exists  css=input[value='on']
+	Click Element If Exists  css=a[href='javascript: confirmDelete()']
+	Close Alert If Exists
+	Click Link If Exists  Delete all objects
+	Page Should Not Contain  These items could not be deleted
 

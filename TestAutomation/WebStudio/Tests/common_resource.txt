@@ -5,7 +5,7 @@ Documentation  A resource file with variables common to both HTML and Flex
 ...            is imported based on ${SUT} variable. SeleniumLibrary is also
 ...            imported here so that no other file needs to import it.
 Resource       ${SUT}_resource.txt
-Library        SeleniumLibrary
+Library        Selenium2Library
 
 
 *** Variables ***
@@ -13,6 +13,6 @@ Library        SeleniumLibrary
 ${SUT}           html
 ${SERVER}        localhost:7272
 ${BROWSER}       chrome
-${DELAY}         0
+${DELAY}         1
 ${VALID USER}    demo-temp-dev_admin
 ${VALID PASSWD}  escenic

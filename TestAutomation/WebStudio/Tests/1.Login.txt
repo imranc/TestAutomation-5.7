@@ -8,6 +8,7 @@ Resource       common_resource.txt
 *** Test Cases ***
 
 Login to WebStudio
+    Close All Browsers
     Open Browser To Escenic WebStudio
     Input Environment Variable  userId  ECE_UserName
     Input Environment Variable  password  ECE_Password
@@ -20,4 +21,4 @@ Log off
     Page Should Contain Button  Log in
 
 
-    Close Browser
+    #Close Browser
