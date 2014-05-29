@@ -25,7 +25,7 @@ Create a Teaser Widget with Data source query by tag
 		Create Widget Content Type  TeaserWidgetContent
 		Type Text  TestAutomation Widget (TeaserWidget_DS_by_Analysis)
 		Click Element  DataSourceTab
-		Click Element  Add
+		Click Element  AddQuery
 		Wait For  2
 		Click Element  DSByAnalysis  -50  0
 		Click Element  DataSourceContentTypes  -10  15

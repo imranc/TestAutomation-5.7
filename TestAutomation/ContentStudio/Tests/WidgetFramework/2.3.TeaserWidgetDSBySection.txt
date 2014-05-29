@@ -15,7 +15,7 @@ Create a Teaser Widget with Data source query by section
 	Create Widget Content Type  TeaserWidgetContent
 	Type Text  TestAutomation Widget (TeaserWidget_DS_by_Section)
 	Click Element  DataSourceTab
-	Click Element  Add
+	Click Element  AddQuery
 	Wait For  2
 	Click Element  DataSourceBySection  -70  0
 	Click Element  DataSourceSectionBox  -10  15

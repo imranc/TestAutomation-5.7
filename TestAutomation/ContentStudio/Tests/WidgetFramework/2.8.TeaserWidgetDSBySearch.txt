@@ -9,7 +9,7 @@ Resource       common_resource.txt
 
 Documentation  Create a Teaser Widget with Data source query by Relation
 **Test cases**
-Create a Teaser Widget with Data source query by search
+Create a Teaser Widget with Data source query by tag
 
 	###Create two contents and tag it###
 		Switch To Content Studio
@@ -24,7 +24,7 @@ Create a Teaser Widget with Data source query by search
 		Create Widget Content Type  TeaserWidgetContent
 		Type Text  TestAutomation Widget (TeaserWidget_DS_by_Search)
 		Click Element  DataSourceTab
-		Click Element  Add
+		Click Element  AddQuery
 		Wait For  2
 		Click Element  DSBySearch  -50  0
 		Click Element  AllTheseWords  -50  25

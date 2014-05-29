@@ -25,7 +25,7 @@ Create a Teaser Widget with Data source query by section page group
 	Create Widget Content Type  TeaserWidgetContent
 	Type Text  TestAutomation Widget (TeaserWidget_DS_by_SectionPageGroup)
 	Click Element  DataSourceTab
-	Click Element  Add
+	Click Element  AddQuery
 	Wait For  2
 	Click Element  DSBySectioPageGroup  -90  0
 	Click Element  DataSourceSectionBox  -10  15
