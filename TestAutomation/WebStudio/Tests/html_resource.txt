@@ -177,6 +177,6 @@ Delete User  [Arguments]  ${userName}
 	Click Element If Exists  css=input[value='on']
 	Click Element If Exists  css=a[href='javascript: confirmDelete()']
 	Close Alert If Exists
-	Click Link If Exists  Delete all objects
+	Click Link If Exists  css=a[href^="/escenic/person/search/deletePersons.do?deletePossible=true"]
 	Page Should Not Contain  These items could not be deleted
 
