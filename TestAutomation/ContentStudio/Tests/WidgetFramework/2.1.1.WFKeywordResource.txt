@@ -44,7 +44,7 @@ Search And Select First Item  [Arguments]  ${SearchPattern}
 	Type Text  ${SearchPattern}
 	Type Key  ENTER
 	Wait For  15
-	Click Element  ClipboardTab  20  120
+	Click Element  ClipboardTab  20  150
 
 Open Section In Content Studio  [Arguments]  ${SectionName}
 	Click Element If Exists  SectionsTab  SectionsTab
