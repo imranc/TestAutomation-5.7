@@ -819,12 +819,12 @@ class ContentStudio(object):
         def close_browser(self):
                 if os.environ['browser']=='firefox':
                         switchApp("Mozilla Firefox")
-                        closeApp("Mozilla Firefox")
+                        #closeApp("Mozilla Firefox")
                 else:
                         switchApp("Internet Explorer")
-                        closeApp("Internet Explorer")
+                        #closeApp("Internet Explorer")
                 wait(5)
-                #type(Key.F4,KEY_ALT)
+                type(Key.F4,KEY_ALT)
                 if exists("CloseTabsFirefox.png"):
                         type(Key.ENTER)
 
