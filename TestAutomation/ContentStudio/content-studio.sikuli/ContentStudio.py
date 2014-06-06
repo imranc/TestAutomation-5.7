@@ -817,16 +817,17 @@ class ContentStudio(object):
                 type(Key.F10 + Key.RIGHT + Key.DOWN + Key.DOWN + Key.DOWN + Key.ENTER)
 
         def close_browser(self):
-                if os.environ['browser']=='firefox':
-                        switchApp("Mozilla Firefox")
-                        #closeApp("Mozilla Firefox")
-                else:
-                        switchApp("Internet Explorer")
-                        #closeApp("Internet Explorer")
-                wait(5)
-                type(Key.F4,KEY_ALT)
-                if exists("CloseTabsFirefox.png"):
-                        type(Key.ENTER)
+            if os.environ['browser']=='firefox':
+                switchApp("Mozilla Firefox")
+                #closeApp("Mozilla Firefox")
+            else:
+                switchApp("Internet Explorer")
+                #closeApp("Internet Explorer")
+            wait(5)
+            type(Key.F4,KEY_ALT)
+            wait(5)
+            if exists("CloseTabsFirefox.png"):
+                click("CloseTabsFirefox.png")
 
         def check_if_exists_text(self, *args):
                 region=Region(0,0,2000,2000)
