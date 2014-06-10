@@ -34,7 +34,8 @@ class ContentStudio(object):
                         BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                         BrowserApp=App.open(BrowserPath)
                         switchApp("Mozilla Firefox")
-                        if exists("FirefoxStoppedWorking.png"):
+                        while exists("FirefoxStoppedWorking.png"):
+                                switchApp("Firefox")
                                 click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
                                 BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                                 BrowserApp=App.open(BrowserPath)
