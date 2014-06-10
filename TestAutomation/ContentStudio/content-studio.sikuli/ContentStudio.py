@@ -34,6 +34,11 @@ class ContentStudio(object):
                         BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                         BrowserApp=App.open(BrowserPath)
                         switchApp("Mozilla Firefox")
+                        if exists("FirefoxStoppedWorking.png"):
+                                click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                                BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
+                                BrowserApp=App.open(BrowserPath)
+                                switchApp("Mozilla Firefox")
                         wait(10)
                         type("l",KeyModifier.CTRL)
         
@@ -46,7 +51,7 @@ class ContentStudio(object):
                 if exists("FirefoxOpenWithJavaws.png"):
                         wait(2)
                         type("\n")
-                wait(30)
+                wait(60)
                 #ContentStudio.switch_to_content_studio(self)
                 if exists("JavaWarning.png"):
                         if exists("CheckBox.png"):
@@ -817,17 +822,20 @@ class ContentStudio(object):
                 type(Key.F10 + Key.RIGHT + Key.DOWN + Key.DOWN + Key.DOWN + Key.ENTER)
 
         def close_browser(self):
-            if os.environ['browser']=='firefox':
-                switchApp("Mozilla Firefox")
-                #closeApp("Mozilla Firefox")
-            else:
-                switchApp("Internet Explorer")
-                #closeApp("Internet Explorer")
-            wait(5)
-            type(Key.F4,KEY_ALT)
-            wait(5)
-            if exists("CloseTabsFirefox.png"):
-                click("CloseTabsFirefox.png")
+                if exists("FirefoxStoppedWorking.png"):
+                        click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                        
+                if os.environ['browser']=='firefox':
+                        switchApp("Mozilla Firefox")
+                        #closeApp("Mozilla Firefox")
+                else:
+                        switchApp("Internet Explorer")
+                        #closeApp("Internet Explorer")
+                wait(5)
+                type(Key.F4,KEY_ALT)
+                wait(5)
+                if exists("CloseTabsFirefox.png"):
+                        click("CloseTabsFirefox.png")
 
         def check_if_exists_text(self, *args):
                 region=Region(0,0,2000,2000)
