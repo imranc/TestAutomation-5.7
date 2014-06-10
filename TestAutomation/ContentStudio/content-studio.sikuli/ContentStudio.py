@@ -836,7 +836,7 @@ class ContentStudio(object):
                 wait(5)
                 type(Key.F4,KEY_ALT)
                 wait(5)
-                if exists("CloseTabsFirefox.png"):
+                while exists("CloseTabsFirefox.png"):
                         switchApp("Firefox")
                         click("CloseTabsFirefox.png")
 
