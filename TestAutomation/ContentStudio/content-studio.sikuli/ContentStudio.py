@@ -824,6 +824,7 @@ class ContentStudio(object):
 
         def close_browser(self):
                 if exists("FirefoxStoppedWorking.png"):
+                        switchApp("Firefox")
                         click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
                         
                 if os.environ['browser']=='firefox':
@@ -836,6 +837,7 @@ class ContentStudio(object):
                 type(Key.F4,KEY_ALT)
                 wait(5)
                 if exists("CloseTabsFirefox.png"):
+                        switchApp("Firefox")
                         click("CloseTabsFirefox.png")
 
         def check_if_exists_text(self, *args):
