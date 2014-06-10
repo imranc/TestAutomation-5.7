@@ -3,6 +3,8 @@ import os
 from SikuliCS import *
 from time import gmtime, strftime
 import datetime
+from org.sikuli.script.natives import Vision
+
 
 addImagePath("content-studio.sikuli\gfx")
 
@@ -32,6 +34,11 @@ class ContentStudio(object):
                         BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                         BrowserApp=App.open(BrowserPath)
                         switchApp("Mozilla Firefox")
+                        if exists("FirefoxStoppedWorking.png"):
+                                click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                                BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
+                                BrowserApp=App.open(BrowserPath)
+                                switchApp("Mozilla Firefox")
                         wait(10)
                         type("l",KeyModifier.CTRL)
         
@@ -44,8 +51,14 @@ class ContentStudio(object):
                 if exists("FirefoxOpenWithJavaws.png"):
                         wait(2)
                         type("\n")
-                wait(30)
+                wait(60)
                 #ContentStudio.switch_to_content_studio(self)
+                if exists("JavaWarning.png"):
+                        if exists("CheckBox.png"):
+                                click("CheckBox.png")
+                        
+                        type(Key.ENTER)
+                        
                 wait(Pattern("login_content_studio.png").targetOffset(-248,1),500)
                 
                 if len(args) == 0:
@@ -61,24 +74,30 @@ class ContentStudio(object):
                 
                 ContentStudio.close_browser(self)
                 switchApp("Escenic Content Studio")
+                maximize_content_studio_window()
                 
                 ##Assertion: Check if Section Tab or Search Tab exists
-                wait_for("SectionTab.png", 100)
+                wait_for("SearchTab.png", 100)
                 
-                if exists(Pattern("SearchTab.png")) or exists(Pattern("SectionTab.png")):
+                if exists(Pattern("SearchTab.png")) or exists(Pattern("SectionTab.png")) or exists(Pattern("SectionsTabSelected.png")):
                         wait(2)
                         print("Log in successful")
                 else:
                         ImageName=capture_CS_screenshot()
-                        raise AssertionError('Actual and expected results are different! Screenshot: '+ImageName)
+                        raise AssertionError('Login Failed! Screenshot: '+ImageName)
 
         
                                       
         def getCsAddress(self):
                 #***This keyword returns Content Studio url with the variables passed from Jenkins***#
                 ece_host= os.environ['ECE_EDITORIAL_HOST']
-                ece_port= os.environ['ECE_EDITORIAL_PORT']
-                ece_Cs_address= 'http://'+ece_host+':'+ece_port+'/studio/Studio.jnlp'
+                
+                if "ECE_EDITORIAL_PORT" in os.environ:
+                        ece_port= os.environ['ECE_EDITORIAL_PORT']
+                        ece_Cs_address= 'http://'+ece_host+':'+ece_port+'/studio/Studio.jnlp'
+                        
+                else:
+                        ece_Cs_address= 'http://'+ece_host+'/studio/Studio.jnlp'
                 return ece_Cs_address
         
         def create_rss_feedpanel(self):
@@ -128,9 +147,9 @@ class ContentStudio(object):
                 wait(5)
 
                 #Open created RSS feed Panel (CTRL+4) and close panel (CTRL+4)
-                type("4", KeyModifier.CTRL)
-                wait(10)
-                type("4", KeyModifier.CTRL)
+                #type("4", KeyModifier.CTRL)
+                #wait(10)
+                #type("4", KeyModifier.CTRL)
 
         def verify_research_panel(self, ResearchPanelType):
                 #***This Keyword is the Assertion for creating resarch panel
@@ -141,7 +160,7 @@ class ContentStudio(object):
                 type("4", KeyModifier.CTRL)
                 
                 wait(10)
-                if exists("bbc_rss_feed_read.png") and ResearchPanelType == 'RSS/ATOM':
+                if exists("bbc_rss_feed_read.png")  and ResearchPanelType == 'RSS/ATOM':
                     print("PASS: BBC feed panel reviewd")
                 elif exists("SearchResearchPanelAssertion.png") and ResearchPanelType == 'SEARCH':
                     print("PASS: Escenic Search Panel reviewed")
@@ -156,24 +175,25 @@ class ContentStudio(object):
         def remove_research_panel(self):
                 #***This Keyword removes Last created research panel***#
                 type("8",KeyModifier.CTRL)
-                if (exists("remove_panel.png")):
-                     click("remove_panel.png")
-                wait(2)
-                if exists(Pattern("OK_button.png").similar(0.60)):
-                    click(Pattern("OK_button.png").similar(0.60))
+                while (exists("remove_panel.png")):
+                        click("remove_panel.png")
+                        wait(2)
+                click(Pattern("OK_button.png").similar(0.60))
 
         def switch_to_content_studio(self):
                 #***This Keyword switches focus to Escenic Content Studio***#
+                #Vision.setParameter("MinTargetSize", 6)
                 eceAppName="Escenic Content Studio "
+                ScreenHighlighter.closeAll()
                 eceVersion=os.environ['ECE_Version']
-                eceAppName=eceAppName + eceVersion
+                eceAppName=eceAppName+eceVersion
                 switchApp(eceAppName)
 
-        def maximize_content_studio_window(self):
-                #***This Keyword Maximized Escenic Content Studio****#
-                #Full screent content studio with SPACE+ALT+X
-                type(Key.SPACE, KeyModifier.ALT)
-                type('x')
+##        def maximize_content_studio_window(self):
+##                #***This Keyword Maximized Escenic Content Studio****#
+##                #Full screent content studio with SPACE+ALT+X
+##                type(Key.SPACE, KeyModifier.ALT)
+##                type('x')
 
         def open_section_panel(self):
                 #***This Keyword makes section panel visible ***#
@@ -208,30 +228,37 @@ class ContentStudio(object):
                       #  click("SectionTab.png")
                       #  if exists("HomeSection.png"):
                       #          click("HomeSection.png")
-                ContentStudio.close_allopen_tabs(self)
+                #ContentStudio.close_allopen_tabs(self)
                 
+                        
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         rightClick(Pattern(SectionImageName).similar(0.95))
                 else:
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
-                        corner=find(Pattern("ListsTab.png").targetOffset(0,-12))
-                        drop_point = corner.getTarget().offset(50, 200)
+                        corner=find(Pattern("ListsTab.png").targetOffset(0,-21))
+                        drop_point = corner.getTarget().offset(50, 250)
                         dragDrop(corner, drop_point)
+
+                        while exists(Pattern("ExpansionIcon.png").similar(0.90)):
+                                click("ExpansionIcon.png")
                         
                         if exists(Pattern(SectionImageName).similar(0.95)):
                                 rightClick(Pattern(SectionImageName).similar(0.95))
                         else:
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError(SectionName+' Section does not exist. Screenshot: '+ImageName)
+                wait(2)
         
-        def create_content_in_section(self, SectionName):
-                #***This Kyword creates an Article in the specified section***#
+        def create_content_in_section(self, *args):
+                #***This Keyword creates an Article in the specified section***#
                 #***Create Content In Section SectionName***#
 
                 ContentStudio.switch_to_content_studio(self)
+
+                SectionName=args[0]
                 
-                if not exists("InboxesTab.png"):
+                if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
                         
                 ContentStudio.right_click_section(self, SectionName)
@@ -243,19 +270,32 @@ class ContentStudio(object):
                 elif exists("NewsContent.png"):
                         click("NewsContent.png")
                 wait(3)
-                type("This is the Title of an Article -- By Automated smoke tests")
-                type(Key.TAB)
-                type("This is the Summary of an Article -- By Automated smoke tests")
-                type(Key.TAB)
-                type("This is the Body of an Article -- By Automated smoke tests")
+
+                if len(args) > 1:
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                else: 
+                        type("This is the Title of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Subtitle of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Lead text of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Body of an Article -- By Automated smoke tests")
+                        
                 wait(3)
                 click("SaveButton.png")
-                #wait_for("ContentUrl.png",30)
                 wait(10)
+                #wait_for("ContentUrl.png",30)
                 
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
-                elif exists("ContentStatesList.png"):
+                elif exists(Pattern("ContentStatesList.png").targetOffset(65,0)):
                         click(Pattern("ContentStatesList.png").targetOffset(65,0))
                         wait(2)
                         click(Pattern("PublishButton.png").similar(0.50))
@@ -283,18 +323,20 @@ class ContentStudio(object):
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError("Content Url was not created. Check Content Studio. Screenshot: "+ImageName)
                         
-                wait(5)
+                wait(10)
                 
                 #while not exists("InboxesTab.png"):
                         #type("7", KeyModifier.CTRL)
                         #ContentStudio.switch_to_content_studio(self)
 
-        def create_image_in_section(self, SectionName):
+        def create_image_in_section(self, *args):
                 #***This Keyword creates an Image in the specified section***#
                 #***Create Image In Section  SectionName***#
                 ContentStudio.switch_to_content_studio(self)
 
-                if not exists("InboxesTab.png"):
+                SectionName=args[0]
+
+                if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
                 
                 ContentStudio.right_click_section(self, SectionName)
@@ -308,25 +350,25 @@ class ContentStudio(object):
                 #wait(Pattern("ContentUrl.png").similar(0.90),20)
                 wait(10)
                 type("a", KEY_CTRL)
-                type("This image is created by automated smoke test BOT")
+
+                if len(args)>1:
+                        type(args[1])
+                else:
+                        type("This image is created by automated smoke test BOT")
+                        
                 wait(2)
-                #wait(Pattern("SaveButton.png").similar(0.65),20)
-                wait(10)
+                wait(Pattern("SaveButton.png").similar(0.65),20)
                 
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
-                        #wait_for("ContentUrl.png",30)
-                        wait(3)
-                #elif exists(Pattern("PublishButtonSimple.png")):
-                 #       click(Pattern("PublishButtonSimple.png"))
-                elif exists(Pattern("ContentStatesList.png").targetOffset(65,0)):
+                elif exists(Pattern("PublishButtonSimple.png")):
+                        click(Pattern("PublishButtonSimple.png"))
+                else:
                         click(Pattern("ContentStatesList.png").targetOffset(65,0))
                         wait(2)
                         click(Pattern("PublishButton.png").similar(0.50))
                         wait(1)
                         click("SaveButton.png")
-                        wait(3)
-                        #wait_for("ContentUrl.png",30)
                 
                         
                 type("7", KeyModifier.CTRL)
@@ -373,6 +415,10 @@ class ContentStudio(object):
                 wait(Pattern(destinationSectionImageName),10)
                 wait(Pattern(inboxSectionImageName),10)
                 doubleClick(Pattern(destinationSectionImageName).similar(0.95))
+
+                if exists("HomeSection.png"):
+                        click("HomeSection.png")
+
                 click(Pattern(inboxSectionImageName).similar(0.95))
 
                 click("InboxesTab.png")
@@ -395,8 +441,8 @@ class ContentStudio(object):
                         dragDrop(Pattern('FirstContentOfInbox.png').targetOffset(-1,67),'ContentArea.png')
                         
                 wait(Pattern("SaveButton.png").similar(0.65),10)
-                if exists(Pattern("PublishButton.png").similar(0.65)):
-                        click(Pattern("PublishButton.png").similar(0.65))
+                if exists(Pattern("PublishButton.png")):
+                        click(Pattern("PublishButton.png"))
                 elif exists(Pattern("PublishButtonSimple.png")):
                         click(Pattern("PublishButtonSimple.png"))
                 
@@ -447,21 +493,28 @@ class ContentStudio(object):
         def close_allopen_tabs(self):
                 ContentStudio.switch_to_content_studio(self)
                 maximize_content_studio_window()
+                count=0
                 
                 while exists(Pattern("CloseTabs.png").similar(0.80)):
                         click("CloseTabs.png")
                         wait(1)
-                        
+                        if count>50:
+                                ImageName=capture_CS_screenshot()
+                                raise AssertionError("Something went wrong while closing open tabs. Screenshot: "+ImageName)
+                                break
+                        count +=1
                         if exists("DontSaveButton.png", 1):
                                 click("DontSaveButton.png")
                                 wait(3)
 
         def deselect_contents_inbox(self):
+                ##"Clean Up Inbox" and "Create Content In Section" before running this keyword
                 ContentStudio.switch_to_content_studio(self)
                 maximize_content_studio_window()
                 click("InboxesTab.png")
                 if exists(Pattern("InboxDeselectDropDown.png").similar(0.90)):
                         click(Pattern("InboxDeselectDropDown.png").similar(0.90).targetOffset(25,0))
+                        wait(1)
                         click("InboxDeselect.png")
                         type(Key.ESC)
                         wait(Pattern("SaveButton.png").similar(0.65),10)
@@ -478,9 +531,9 @@ class ContentStudio(object):
                                 raise AssertionError("Create A Content Before Deselecting inbox or May be content is already Deselected from Inbox. Screenshot: "+ImageName)
 
                 ##Check if content exists in the inbox
-                wait(15)
+                wait(20)
                 
-                click(Pattern("FirstContentOfInbox.png").similar(0.80))
+                click(Pattern("FirstContentOfInbox.png").similar(0.70))
                 if exists(Pattern("InboxItemSelected.png").similar(0.90)):
                         ImageName=capture_CS_screenshot()
                         raise AssertionError("Deselect was not successful. Screenshot: "+ImageName)
@@ -488,6 +541,7 @@ class ContentStudio(object):
                         print("Successful deselection")
 
         def select_contents_inbox(self):
+                ContentStudio.switch_to_content_studio(self)
                 maximize_content_studio_window()
                 click("InboxesTab.png")
                 if exists(Pattern("InboxSelectDropDown.png").similar(0.90)):
@@ -566,11 +620,20 @@ class ContentStudio(object):
 
         def add_content_to_list(self, sectionName):
                 ContentStudio.switch_to_content_studio(self)
-                
-                if sectionName == "Home":
+                sectionListsInboxImage = sectionName + 'ListsInbox.png'
+                if sectionName == "Home" and exists(Pattern("ListsDropDown.png").similar(1.00)):
                         click(Pattern("ListsDropDown.png").similar(1.00).targetOffset(-15,0))
-                else:
+                elif exists(Pattern("ListsDropDownHomeSection.png")):
                         click(Pattern("ListsDropDownHomeSection.png").targetOffset(-14,0))
+                else:
+                        #Uncheck from inbox
+                        click(Pattern(sectionListsInboxImage).targetOffset(30, 0))
+                        wait(2)
+                        click("InboxDeselect.png")
+                        type(Key.ESC)
+                        click("HomeSection.png")
+                        click(Pattern(sectionListsInboxImage).similar(0.80).targetOffset(98, 1))
+                        wait(2)
                         
                 if exists(Pattern("NewsListCheckbox.png").similar(0.90)):
                         click(Pattern("NewsListCheckbox.png").similar(0.90))
@@ -579,6 +642,13 @@ class ContentStudio(object):
                         raise AssertionError("A list named NewsList should be created first. Screenshot: "+ImageName)
                 
                 type(Key.ESC)
+                #click(sectionName+'Section.png')
+                #click(Pattern(sectionListsInboxImage).targetOffset(0, 0))
+                wait(2)
+                #if exists("InboxSelect.png"):
+                #        click("InboxSelect.png")
+                type(Key.ESC)
+                
 
                 if exists(Pattern("PublishButton.png").similar(0.80)):
                         click(Pattern("PublishButton.png").similar(0.80))
@@ -597,7 +667,7 @@ class ContentStudio(object):
 
                 ###Assertion check
                 #wait(Pattern("ListAssertion.png"), 50)
-                wait(5)
+                wait(15)
                 if exists(Pattern("ListAssertion.png")):
                         print("Select The content's list was successful")
                 else:
@@ -614,6 +684,8 @@ class ContentStudio(object):
                         
                 doubleClick("HomeSection.png")
                 SectionImageName=SectionName+'Section.png'
+
+                wait(2)
                 
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         click(Pattern(SectionImageName).similar(0.95))
@@ -628,6 +700,8 @@ class ContentStudio(object):
                 
                 if exists("ListAssertion.png"):
                         click("ListAssertion.png")
+                        type(Key.DELETE)
+                        
                 while exists("ListAssertion.png") or exists("InboxItemSelected.png"):
                         type(Key.DELETE)
 
@@ -638,6 +712,10 @@ class ContentStudio(object):
                 ContentStudio.open_section_panel(self)
                 
                 SectionImageName=sectionName+'Section.png'
+
+                if exists("HomeSection.png"):
+                        click("HomeSection.png")
+
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         click(Pattern(SectionImageName).similar(0.95))
                         wait(5)
@@ -645,33 +723,47 @@ class ContentStudio(object):
                         print("Do nothing")
 
                 click("ListsTab.png")
+                wait(2)
                 
                 if exists(Pattern("NewsList.png").similar(0.90)):
                         click(Pattern("NewsList.png").similar(0.90))
                         
                 type(Key.DELETE)
+                wait(2)
                 type(Key.ENTER)
 
         def preview_content(self, *args):
-                if exists("PreviewButton.png"):
-                        click(Pattern("PreviewButton.png").targetOffset(40,0))
-                elif exists(Pattern("PreviewButton.png").similar(0.60)):
-                        click(Pattern("PreviewButton.png").similar(0.60))
-                        
+                #if exists("PreviewButton.png"):
+                #        click(Pattern("PreviewButton.png").targetOffset(40,0))
+                #elif exists(Pattern("PreviewButton.png").similar(0.60)):
+                #        click(Pattern("PreviewButton.png").similar(0.60))
+                ContentStudio.switch_to_content_studio(self)
+                click("PreviewTab.png")
                 wait(2)
+
                 if args[0] == "All":
                         type(Key.DOWN)
-                type(Key.ENTER)
+                        click(Pattern("PreviewAll.png").targetOffset(-30, 0))
+
+                click(Pattern("OpenInBrowser.png"))
+                #type(Key.ENTER)
                 wait(5)
                 #while not exists(Pattern("InboxesPagesListsTab.png").similar(0.60)):
-                #        ContentStudio.switch_to_content_studio(self)
+                ContentStudio.switch_to_content_studio(self)
+                if exists("EditorTab.png"):
+                        click("EditorTab.png")
+                else:
+                        click("DeskTab.png")
+                wait(2)
 
         def update_content(self, *args):
                 ContentStudio.switch_to_content_studio(self)
                 wait(2)
                 if args[0] == "Article" or args[0] == "article":
-                        type(Key.TAB,KeyModifier.SHIFT)
-                        type(Key.TAB,KeyModifier.SHIFT)
+                        click("ListsTab.png")
+                        wait(2)
+                        click("Title:")
+                        
                 type("a", KEY_CTRL)
                 type("Updated Content Title")
                 if exists("PublishButton.png"):
@@ -680,8 +772,8 @@ class ContentStudio(object):
                         click("SaveButton.png")
                 click(Pattern("ContentUrl.png").targetOffset(12,10))
                 wait(5)
-                while not exists("InboxesTab.png"):
-                        ContentStudio.switch_to_content_studio(self)
+                #while not exists("InboxesTab.png"):
+                #        ContentStudio.switch_to_content_studio(self)
 
         def delete_content(self):
                 ContentStudio.switch_to_content_studio(self)
@@ -695,7 +787,7 @@ class ContentStudio(object):
                 
                 if exists("DeleteButton.png"):
                         click("DeleteButton.png")
-                elif exists(Pattern("DeletedButton.png").similar(0.80)):
+                elif exists("DeletedButton.png"):
                         click("DeletedButton.png")
                         click("SaveButton.png")
                         
@@ -704,6 +796,7 @@ class ContentStudio(object):
 
         def achieve_lock(self):
                 ContentStudio.switch_to_content_studio(self)
+                wait(2)
                 click('Title:')
                 type(Key.SPACE)
 
@@ -729,6 +822,9 @@ class ContentStudio(object):
                 type(Key.F10 + Key.RIGHT + Key.DOWN + Key.DOWN + Key.DOWN + Key.ENTER)
 
         def close_browser(self):
+                if exists("FirefoxStoppedWorking.png"):
+                        click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                        
                 if os.environ['browser']=='firefox':
                         switchApp("Mozilla Firefox")
                         #closeApp("Mozilla Firefox")
