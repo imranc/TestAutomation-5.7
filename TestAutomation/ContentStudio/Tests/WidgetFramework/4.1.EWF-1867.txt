@@ -15,9 +15,9 @@ Image Rendering Problem When Enable Lazy Loading
 	Open Section In Content Studio  FrontpageTemplate
 	Search And Select First Item  Business teasers
 	Drag And Drop Element  InboxItemSelected  TopContentArea
-	#Click Element  LazyLoading  70  0
-	#Type Key  DOWN
-	#Type Key  ENTER
+	Click Element  LazyLoading  70  0
+	Type Key  DOWN
+	Type Key  ENTER
 	Click Element  SaveButton
 	Wait For  5
 	Click Element  PublishButtonSimple
