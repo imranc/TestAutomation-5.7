@@ -63,7 +63,7 @@ def capture_java_console_screenshot():
     type('x')
     img = capture(App.focusedWindow())
     shutil.move(img, os.path.join(screenshotsDir, imageName+".png"))
-    switchApp('Escenic Content Studio '+ os.environ['ECE_Version'])
+    switchApp('Escenic Content Studio ')
     #C.stop()
 
 def maximize_content_studio_window():
