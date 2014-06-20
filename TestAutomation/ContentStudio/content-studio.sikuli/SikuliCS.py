@@ -79,5 +79,6 @@ def restore_content_studio_window():
     type('r')
 
 def print_version():
-    sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". Version: " + os.environ['ECE_Version'])
+    if os.environ.has_key("ECE_Version"):
+        sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". Version: " + os.environ['ECE_Version'])
     
