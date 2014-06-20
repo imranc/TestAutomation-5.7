@@ -79,6 +79,12 @@ def restore_content_studio_window():
     type('r')
 
 def print_version():
-    if os.environ.has_key("ECE_Version"):
-        sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". Version: " + os.environ['ECE_Version'])
+    if os.environ.has_key("ECE_Version") and os.environ.has_key("WF_Version"):
+        sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". Engine: " + os.environ['ECE_Version'] + ". WF: " + os.environ['WF_Version'])
+    elif os.environ.has_key("ECE_Version"):
+        sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". Engine Version: " + os.environ['ECE_Version'])
+    elif os.environ.has_key("WF_Version"):
+        sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'] + ". WF Version: " + os.environ['WF_Version'])
+    else:
+        sys.stderr.write("Testing Content Studio on : "+ os.environ['ECE_EDITORIAL_HOST'])
     
