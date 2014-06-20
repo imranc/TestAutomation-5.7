@@ -186,8 +186,8 @@ class ContentStudio(object):
                 #Vision.setParameter("MinTargetSize", 6)
                 eceAppName="Escenic Content Studio "
                 ScreenHighlighter.closeAll()
-                eceVersion=os.environ['ECE_Version']
-                eceAppName=eceAppName+eceVersion
+                #eceVersion=os.environ['ECE_Version']
+                #eceAppName=eceAppName+eceVersion
                 switchApp(eceAppName)
 
 ##        def maximize_content_studio_window(self):

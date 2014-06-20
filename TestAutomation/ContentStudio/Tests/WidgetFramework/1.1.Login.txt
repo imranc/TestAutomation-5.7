@@ -8,4 +8,3 @@ Documentation  A test case for Start and Logging into ContentStudio
 Start content studio and log in
 	Start Content Studio
 	Close All Open Tabs
-	Print version
