@@ -22,4 +22,6 @@ User object gets locked only once per session
 	Go To WebStudio HomePage
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 		Page Should Contain Element  css=img[title="Unlock"]
+
+	Close All Browsers
 	
