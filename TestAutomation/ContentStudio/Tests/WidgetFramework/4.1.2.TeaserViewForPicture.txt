@@ -1,0 +1,43 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Teaser View for Picture
+**Test cases**
+Create a Teaser View for Picture
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Content Type  Config  TeaserView
+	Type Text  TestAutomation (TeaserView for Picture)
+
+	Click Element  DefaultTab
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Media
+	Type Key  ENTER
+
+	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
+	
+	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Type Text  Picture
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  WidgetMediaImageAspectRatioSettings
+	Type Text  Wide
+	Type Key  ENTER
+
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  80%
+	Type Key  ENTER
+
+	Save And Publish
+
+	###Assertions###
+		Search And Select First Item  TestAutomation (TeaserView for Picture)
+		Check If Exists  InboxItemSelected
