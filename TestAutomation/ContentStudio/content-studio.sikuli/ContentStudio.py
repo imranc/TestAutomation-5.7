@@ -237,7 +237,7 @@ class ContentStudio(object):
                 else:
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
-                        corner=find(Pattern("ListsTab.png").targetOffset(0,-21))
+                        corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
                         drop_point = corner.getTarget().offset(50, 250)
                         dragDrop(corner, drop_point)
 
