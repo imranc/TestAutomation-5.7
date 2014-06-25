@@ -21,7 +21,8 @@ Create a Teaser View for Picture
 	Type Text  Media
 	Type Key  ENTER
 
-	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
+	Scroll Element  TeaserViewScroll  50  250
+		
 	
 	Click Element  WidgetMediaContentTypeSettings  -35  10
 	Type Text  Picture
