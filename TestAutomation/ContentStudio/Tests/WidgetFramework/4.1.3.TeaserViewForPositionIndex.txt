@@ -26,8 +26,8 @@ Create a Teaser View for Position Index[3]
 	Type Text  Lead text
 	Type Key  ENTER
 
-	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
-	
+		
+	Scroll Element  TeaserViewScroll  50  250
 	Click Element  WidgetMediaContentTypeSettings  -35  10
 	Type Text  Picture
 	Wait For  2
@@ -39,7 +39,8 @@ Create a Teaser View for Position Index[3]
 	Wait For  2
 	Type Key  ENTER
 
-	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownToLast
+	
+	Scroll Element  TeaserViewScroll  50  250
 	Click Element  WidgetRelationSourceSettings  50  0
 	Click Element  WidgetRelationSourceSpecifySettings
 	Type Text  Related
