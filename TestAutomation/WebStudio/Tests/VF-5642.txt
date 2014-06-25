@@ -12,14 +12,14 @@ User object gets locked only once per session
 	Click Element  xpath=//a[.='qa Administrator']
 	Go To WebStudio HomePage
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
-		Page Should Contain Element  css=img[title="Unlock"]
-	Click Element  css=img[title="Unlock"]
+		Page Should Contain Element  css=img[title^="Unlock"]
+	Click Element  css=img[title^="Unlock"]
 	Confirm Action
-		Page Should Not Contain  css=img[title="Unlock"]
+		Page Should Not Contain  css=img[title^="Unlock"]
 
 	
 	Click Element  xpath=//a[.='qa Administrator']
 	Go To WebStudio HomePage
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
-		Page Should Contain Element  css=img[title="Unlock"]
+		Page Should Contain Element  css=img[title^="Unlock"]
 	
