@@ -145,3 +145,21 @@ class eceSikuli(object):
                         wait(5)
                 else:
                         raise AssertionError("Too many arguments")
+
+        def scroll_element(self, *args):
+                #***This keyword scroll a element to specified target axis***#
+                                
+                ScrollImageName = args[0]+'.png'
+                                
+                offset_x = int(args[1])
+                                
+                offset_y = int(args[2])
+                                
+                if exists(Pattern(ScrollImageName)):
+                        corner=find(Pattern(ScrollImageName).targetOffset(0,0))
+                        drop_point = corner.getTarget().offset(offset_x, offset_y)
+                        dragDrop(corner, drop_point)
+                                
+                else:
+                        ImageName=capture_CS_screenshot()
+                        raise AssertionError(ScrollImageName+'Image does not exist. Screenshot: '+ImageName)
