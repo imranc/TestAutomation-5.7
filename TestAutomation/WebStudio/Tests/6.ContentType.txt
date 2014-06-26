@@ -28,3 +28,4 @@ Check Feature
 		Page Should Contain  multimedia.image.virtualVersions
 
 	
+	[Teardown]  Close Browser

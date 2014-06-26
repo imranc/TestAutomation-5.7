@@ -19,5 +19,4 @@ Create/Edit Section and actions under "Section Administration"
 		#Page Should Contain  International
 
 
-
-	
+	[Teardown]  Close Browser
