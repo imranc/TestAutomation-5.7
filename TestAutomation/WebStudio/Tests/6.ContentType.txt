@@ -1,7 +1,6 @@
 *** Settings ***
 
 Documentation  A test case for Content type, Template, Feature displays 
-
 Resource       common_resource.txt
 
 
