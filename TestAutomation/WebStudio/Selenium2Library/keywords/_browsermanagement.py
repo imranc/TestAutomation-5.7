@@ -116,7 +116,7 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
-    def open_browser_webstudio(self, browser='firefox', alias=None,remote_url=False,
+    def open_browser_webstudio(self, browser='chrome', alias=None,remote_url=False,
                 desired_capabilities=None,ff_profile_dir='C:/ffProfile'):
         url=_BrowserManagementKeywords.getWsAddress(self)
         if remote_url:

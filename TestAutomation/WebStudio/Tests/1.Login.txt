@@ -21,4 +21,4 @@ Log off
     Page Should Contain Button  Log in
 
 
-    #Close Browser
+    [Teardown]  Close Browser
