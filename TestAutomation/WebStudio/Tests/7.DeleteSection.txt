@@ -15,6 +15,4 @@ Delete Section
     	Click For Multiple Cookies
 	Delete Section  International
 
-
-	[Teardown]  Close Browser
 	

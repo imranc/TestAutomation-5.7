@@ -9,7 +9,6 @@ Resource       common_resource.txt
 Delete User if exists
 	Login To Web Studio
 	Delete User  joe joe
-	[Teardown]  Close Browser
 
 Create User
 	Open Browser To Escenic WebStudio
@@ -18,5 +17,3 @@ Create User
     	Submit Credentials
     	Click For Multiple Cookies
 	Create User  joe
-
-	[Teardown]  Close Browser

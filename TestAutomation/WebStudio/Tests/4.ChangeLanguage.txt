@@ -26,5 +26,3 @@ Change Language
 	#Check if Cancel Link exists in English
 	Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
 	Page Should Contain Element  xpath=//*[@value='Cancel']
-     
-    [Teardown]  Close Browser

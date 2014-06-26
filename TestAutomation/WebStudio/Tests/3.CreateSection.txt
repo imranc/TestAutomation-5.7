@@ -18,8 +18,6 @@ Create/Edit Section and actions under "Section Administration"
 	#Open Browser  http://demo-temp-dev.wfn.com/demo-temp-dev/International
 		#Page Should Contain  International
 
-	[Teardown]  Close Browser
-
 
 
 	
