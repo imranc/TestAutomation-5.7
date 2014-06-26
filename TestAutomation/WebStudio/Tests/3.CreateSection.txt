@@ -14,5 +14,4 @@ Create/Edit Section and actions under "Section Administration"
     	Click For Multiple Cookies
 	Create Section  International
 
-
 	[Teardown]  Close Browser
