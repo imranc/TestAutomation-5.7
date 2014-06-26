@@ -15,8 +15,5 @@ Create/Edit Section and actions under "Section Administration"
     	Click For Multiple Cookies
 	Create Section  International
 
-	#Open Browser  http://demo-temp-dev.wfn.com/demo-temp-dev/International
-		#Page Should Contain  International
-
 
 	[Teardown]  Close Browser
