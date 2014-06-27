@@ -10,3 +10,4 @@ Preview all types of contents
 	Preview Content  simple
 	Create Image In Section  NewArticles
 	Preview Content  simple
+	Close Browser

@@ -20,5 +20,6 @@ Create a Tag and check if that can be used
 		Wait For  60
 		Tag Content  widget
 		Save And Publish
+		Close Browser
 	
 	
