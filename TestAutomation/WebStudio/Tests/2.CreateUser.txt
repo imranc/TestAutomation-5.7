@@ -18,4 +18,4 @@ Create User
     	Click For Multiple Cookies
 	Create User  joe
 
-	[Teardown]  Close Browser
+	Click Link  Log off

@@ -18,7 +18,7 @@ ${JENKINS URL}   http://172.24.201.221:8089
 *** Keywords ***
 
 Login To Web Studio
-	Open Browser To Escenic WebStudio
+	#Open Browser To Escenic WebStudio
     	Input Environment Variable  userId  ECE_UserName
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
