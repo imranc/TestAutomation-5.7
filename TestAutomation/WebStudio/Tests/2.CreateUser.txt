@@ -9,14 +9,14 @@ Resource       common_resource.txt
 Delete User if exists
 	Login To Web Studio
 	Delete User  joe joe
-	[Teardown]  Close Browser
+	Click Link  Log off
 
 Create User
-	Open Browser To Escenic WebStudio
+	#Open Browser To Escenic WebStudio
     	Input Environment Variable  userId  ECE_UserName
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
     	Click For Multiple Cookies
 	Create User  joe
 
-	[Teardown]  Close Browser
+	Click Link  Log off

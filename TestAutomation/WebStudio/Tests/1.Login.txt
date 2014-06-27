@@ -21,4 +21,3 @@ Log off
     Page Should Contain Button  Log in
 
 
-    [Teardown]  Close Browser

@@ -8,7 +8,7 @@ Resource       common_resource.txt
 *** Test Cases ***
 
 Delete Section
-	Open Browser To Escenic WebStudio
+	#Open Browser To Escenic WebStudio
     	Input Environment Variable  userId  ECE_UserName
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
@@ -16,5 +16,5 @@ Delete Section
 	Delete Section  International
 
 
-	[Teardown]  Close Browser
+	Click Link  Log off
 	

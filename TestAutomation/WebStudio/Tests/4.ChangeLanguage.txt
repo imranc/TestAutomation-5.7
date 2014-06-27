@@ -7,7 +7,7 @@ Resource       common_resource.txt
 *** Test Cases ***
 
 Change Language
-    Open Browser To Escenic WebStudio
+    #Open Browser To Escenic WebStudio
     Input Environment Variable  userId  ECE_UserName
     Input Environment Variable  password  ECE_Password
     Submit Credentials
@@ -27,4 +27,4 @@ Change Language
 	Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
 	Page Should Contain Element  xpath=//*[@value='Cancel']
      
-    [Teardown]  Close Browser
+    Click Link  Log off

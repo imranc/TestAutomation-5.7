@@ -8,7 +8,7 @@ Resource       common_resource.txt
 *** Test Cases ***
 
 Check Content Type
-	Open Browser To Escenic WebStudio
+	#Open Browser To Escenic WebStudio
     	Input Environment Variable  userId  ECE_UserName
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
@@ -27,6 +27,6 @@ Check Feature
 	Go To Link  /escenic/publication/viewFeatures.do
 		Page Should Contain  multimedia.image.virtualVersions
 
-	[Teardown]  Close Browser
+	Click Link  Log off
 
 	
