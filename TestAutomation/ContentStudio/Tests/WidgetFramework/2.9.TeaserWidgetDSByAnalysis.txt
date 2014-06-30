@@ -7,9 +7,9 @@ Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
 Resource       common_resource.txt
 
-Documentation  Create a Teaser Widget with Data source query by Relation
+Documentation  Create a Teaser Widget with Data source query by analysis
 **Test cases**
-Create a Teaser Widget with Data source query by tag
+Create a Teaser Widget with Data source query by analysis
 	
 	Set Tags  non-critical
 	###Create two contents and tag it###
