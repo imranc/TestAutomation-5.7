@@ -48,7 +48,7 @@ Create a Search Config widget for fetching the search result
 Remove widget from search page template
 	Set Tags  non-critical
 	Close Allopen Tabs
-	Open Section In Content Studio  SearchPageTemplate
+	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
