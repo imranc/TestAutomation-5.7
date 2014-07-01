@@ -19,6 +19,4 @@ Create/Edit Section and actions under "Section Administration"
 		#Page Should Contain  International
 
 
-Log Off
-	Set Tags  non-critical
 	Click Link  Log off

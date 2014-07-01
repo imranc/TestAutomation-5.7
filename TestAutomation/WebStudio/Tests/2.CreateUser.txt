@@ -18,6 +18,4 @@ Create User
     	Click For Multiple Cookies
 	Create User  joe
 
-Log Off
-	Set Tags  non-critical
 	Click Link  Log off

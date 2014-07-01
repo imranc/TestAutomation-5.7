@@ -15,6 +15,4 @@ Assign roles to user
 	Assign All Section Roles  joe
 	Assign All Global Roles  joe
 
-Log Off
-	Set Tags  non-critical
 	Click Link  Log off

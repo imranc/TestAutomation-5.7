@@ -23,7 +23,5 @@ User object gets locked only once per session
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 		Page Should Contain Element  css=img[title="Unlock"]
 
-Log Off
-	Set Tags  non-critical
 	Click Link  Log off
 	
