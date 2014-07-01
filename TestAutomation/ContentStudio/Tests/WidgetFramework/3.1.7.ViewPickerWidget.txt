@@ -96,7 +96,7 @@ Remove widget from front page template
 	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
-	Wait for  5
+	Wait for  10
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
