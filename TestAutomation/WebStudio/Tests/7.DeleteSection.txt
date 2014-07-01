@@ -15,4 +15,6 @@ Delete Section
     	Click For Multiple Cookies
 	Delete Section  International
 
+Log Off
+	Set Tags  non-critical
 	Click Link  Log off

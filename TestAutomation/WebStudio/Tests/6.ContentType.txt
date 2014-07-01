@@ -28,4 +28,6 @@ Check Feature
 		Page Should Contain  multimedia.image.virtualVersions
 
 	
+Log Off
+	Set Tags  non-critical
 	Click Link  Log off

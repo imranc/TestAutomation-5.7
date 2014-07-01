@@ -27,4 +27,6 @@ Change Language
 	Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
 	Page Should Contain Element  xpath=//*[@value='Cancel']
 
+Log Off
+	Set Tags  non-critical
 	Click Link  Log off
