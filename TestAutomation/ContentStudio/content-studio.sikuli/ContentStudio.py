@@ -563,7 +563,7 @@ class ContentStudio(object):
                         raise AssertionError("Create A Content and Deselect inbox Before Selecting inbox or May be content is already selected. Screenshot: "+ImageName)
 
                 ##Check if content exists in the inbox
-                wait(15)
+                wait(20)
                 
                 click(Pattern("FirstContentOfInbox.png").similar(0.80))
                 if exists(Pattern("InboxItemSelected.png").similar(0.90)):
