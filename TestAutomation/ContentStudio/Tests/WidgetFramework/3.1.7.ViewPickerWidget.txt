@@ -98,6 +98,8 @@ Remove widget from front page template
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
 	
