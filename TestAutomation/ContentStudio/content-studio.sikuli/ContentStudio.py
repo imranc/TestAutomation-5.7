@@ -178,8 +178,9 @@ class ContentStudio(object):
                 type("8",KeyModifier.CTRL)
                 while (exists("remove_panel.png")):
                         click("remove_panel.png")
-                        wait(2)
-                click(Pattern("OK_button.png").similar(0.60))
+                        wait(5)
+                if exists(Pattern("OK_button.png").similar(0.60)):
+                    click(Pattern("OK_button.png").similar(0.60))
 
         def switch_to_content_studio(self):
                 #***This Keyword switches focus to Escenic Content Studio***#
