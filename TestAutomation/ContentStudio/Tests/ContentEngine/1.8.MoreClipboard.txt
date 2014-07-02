@@ -47,5 +47,4 @@ Copy, Paste, Cut
 	Cut From Menu
 	#Check If Exists  EmptyClipboard
 	Paste From Menu
-	Close Browser
 	

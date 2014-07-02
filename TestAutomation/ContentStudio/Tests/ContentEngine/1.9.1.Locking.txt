@@ -12,7 +12,6 @@ Locking
 	Clean Up Clipboard
 	Create Content In Section  NewArticles
 	Achieve Lock
-	Close Browser
 	Start Content Studio  joe  joe
 	Check Search
 	Wait For  20
