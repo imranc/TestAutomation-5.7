@@ -15,4 +15,5 @@ Delete Section
     	Click For Multiple Cookies
 	Delete Section  International
 
+Log off
 	Click Link  Log off

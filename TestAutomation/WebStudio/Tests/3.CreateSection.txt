@@ -8,7 +8,7 @@ Resource       common_resource.txt
 *** Test Cases ***
 
 Create/Edit Section and actions under "Section Administration"
-	#Open Browser To Escenic WebStudio
+	Open Browser To Escenic WebStudio
     	Input Environment Variable  userId  ECE_UserName
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
@@ -19,4 +19,5 @@ Create/Edit Section and actions under "Section Administration"
 		#Page Should Contain  International
 
 
+Log Off
 	Click Link  Log off

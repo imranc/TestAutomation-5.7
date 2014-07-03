@@ -15,4 +15,5 @@ Assign roles to user
 	Assign All Section Roles  joe
 	Assign All Global Roles  joe
 
+Log off
 	Click Link  Log off
