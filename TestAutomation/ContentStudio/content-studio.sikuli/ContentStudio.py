@@ -44,7 +44,13 @@ class ContentStudio(object):
                 if exists("FirefoxOpenWithJavaws.png"):
                         wait(2)
                         type("\n")
-                wait(30)
+                wait(60)
+                #ContentStudio.switch_to_content_studio(self)
+                if exists("JavaWarning.png"):
+                        if exists("CheckBox.png"):
+                                click("CheckBox.png")
+                        
+                        type(Key.ENTER)
                 #ContentStudio.switch_to_content_studio(self)
                 wait(Pattern("login_content_studio.png").targetOffset(-248,1),500)
                 
@@ -165,8 +171,8 @@ class ContentStudio(object):
         def switch_to_content_studio(self):
                 #***This Keyword switches focus to Escenic Content Studio***#
                 eceAppName="Escenic Content Studio "
-                eceVersion=os.environ['ECE_Version']
-                eceAppName=eceAppName + eceVersion
+                #eceVersion=os.environ['ECE_Version']
+                #eceAppName=eceAppName + eceVersion
                 switchApp(eceAppName)
 
         def maximize_content_studio_window(self):
@@ -208,14 +214,14 @@ class ContentStudio(object):
                       #  click("SectionTab.png")
                       #  if exists("HomeSection.png"):
                       #          click("HomeSection.png")
-                ContentStudio.close_allopen_tabs(self)
+                #ContentStudio.close_allopen_tabs(self)
                 
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         rightClick(Pattern(SectionImageName).similar(0.95))
                 else:
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
-                        corner=find(Pattern("ListsTab.png").targetOffset(0,-12))
+                        corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
                         drop_point = corner.getTarget().offset(50, 200)
                         dragDrop(corner, drop_point)
                         
@@ -225,13 +231,15 @@ class ContentStudio(object):
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError(SectionName+' Section does not exist. Screenshot: '+ImageName)
         
-        def create_content_in_section(self, SectionName):
-                #***This Kyword creates an Article in the specified section***#
+        def create_content_in_section(self, *args):
+                #***This Keyword creates an Article in the specified section***#
                 #***Create Content In Section SectionName***#
 
                 ContentStudio.switch_to_content_studio(self)
+
+                SectionName=args[0]
                 
-                if not exists("InboxesTab.png"):
+                if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
                         
                 ContentStudio.right_click_section(self, SectionName)
@@ -243,19 +251,32 @@ class ContentStudio(object):
                 elif exists("NewsContent.png"):
                         click("NewsContent.png")
                 wait(3)
-                type("This is the Title of an Article -- By Automated smoke tests")
-                type(Key.TAB)
-                type("This is the Summary of an Article -- By Automated smoke tests")
-                type(Key.TAB)
-                type("This is the Body of an Article -- By Automated smoke tests")
+
+                if len(args) > 1:
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                        type(Key.TAB)
+                        type(args[1])
+                else: 
+                        type("This is the Title of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Subtitle of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Lead text of an Article -- By Automated smoke tests")
+                        type(Key.TAB)
+                        type("This is the Body of an Article -- By Automated smoke tests")
+                        
                 wait(3)
                 click("SaveButton.png")
-                #wait_for("ContentUrl.png",30)
                 wait(10)
+                #wait_for("ContentUrl.png",30)
                 
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
-                elif exists("ContentStatesList.png"):
+                elif exists(Pattern("ContentStatesList.png").targetOffset(65,0)):
                         click(Pattern("ContentStatesList.png").targetOffset(65,0))
                         wait(2)
                         click(Pattern("PublishButton.png").similar(0.50))
@@ -283,18 +304,20 @@ class ContentStudio(object):
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError("Content Url was not created. Check Content Studio. Screenshot: "+ImageName)
                         
-                wait(5)
+                wait(10)
                 
                 #while not exists("InboxesTab.png"):
                         #type("7", KeyModifier.CTRL)
                         #ContentStudio.switch_to_content_studio(self)
 
-        def create_image_in_section(self, SectionName):
+        def create_image_in_section(self, *args):
                 #***This Keyword creates an Image in the specified section***#
                 #***Create Image In Section  SectionName***#
                 ContentStudio.switch_to_content_studio(self)
 
-                if not exists("InboxesTab.png"):
+                SectionName=args[0]
+
+                if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
                 
                 ContentStudio.right_click_section(self, SectionName)
@@ -308,25 +331,25 @@ class ContentStudio(object):
                 #wait(Pattern("ContentUrl.png").similar(0.90),20)
                 wait(10)
                 type("a", KEY_CTRL)
-                type("This image is created by automated smoke test BOT")
+
+                if len(args)>1:
+                        type(args[1])
+                else:
+                        type("This image is created by automated smoke test BOT")
+                        
                 wait(2)
-                #wait(Pattern("SaveButton.png").similar(0.65),20)
-                wait(10)
+                wait(Pattern("SaveButton.png").similar(0.65),20)
                 
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
-                        #wait_for("ContentUrl.png",30)
-                        wait(3)
-                #elif exists(Pattern("PublishButtonSimple.png")):
-                 #       click(Pattern("PublishButtonSimple.png"))
-                elif exists(Pattern("ContentStatesList.png").targetOffset(65,0)):
+                elif exists(Pattern("PublishButtonSimple.png")):
+                        click(Pattern("PublishButtonSimple.png"))
+                else:
                         click(Pattern("ContentStatesList.png").targetOffset(65,0))
                         wait(2)
                         click(Pattern("PublishButton.png").similar(0.50))
                         wait(1)
                         click("SaveButton.png")
-                        wait(3)
-                        #wait_for("ContentUrl.png",30)
                 
                         
                 type("7", KeyModifier.CTRL)
