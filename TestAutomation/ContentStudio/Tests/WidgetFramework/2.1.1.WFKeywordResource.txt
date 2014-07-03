@@ -55,6 +55,9 @@ Open Section In Content Studio  [Arguments]  ${SectionName}
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Right Click Section  ${SectionName}
 	Type Key  ENTER
 	Wait For  5
