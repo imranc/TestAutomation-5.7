@@ -185,6 +185,11 @@ class ContentStudio(object):
         def switch_to_content_studio(self):
                 #***This Keyword switches focus to Escenic Content Studio***#
                 #Vision.setParameter("MinTargetSize", 6)
+            
+                if exists("FirefoxStoppedWorking.png"):
+                    switchApp("Firefox")
+                    click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                
                 eceAppName="Escenic Content Studio "
                 ScreenHighlighter.closeAll()
                 #eceVersion=os.environ['ECE_Version']
