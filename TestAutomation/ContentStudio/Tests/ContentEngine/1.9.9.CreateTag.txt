@@ -21,5 +21,6 @@ Create a Tag and check if that can be used
 		Tag Content  widget
 		Save And Publish
 		Close Browser
+		Close Browser
 	
 	
