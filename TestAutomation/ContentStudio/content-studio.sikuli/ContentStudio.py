@@ -224,6 +224,9 @@ class ContentStudio(object):
                         corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
                         drop_point = corner.getTarget().offset(50, 200)
                         dragDrop(corner, drop_point)
+                    
+                        while exists(Pattern("ExpansionIcon.png").similar(0.90)):
+                            click("ExpansionIcon.png")
                         
                         if exists(Pattern(SectionImageName).similar(0.95)):
                                 rightClick(Pattern(SectionImageName).similar(0.95))
