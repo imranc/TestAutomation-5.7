@@ -175,11 +175,11 @@ class ContentStudio(object):
                 #eceAppName=eceAppName + eceVersion
                 switchApp(eceAppName)
 
-        def maximize_content_studio_window(self):
+#        def maximize_content_studio_window(self):
                 #***This Keyword Maximized Escenic Content Studio****#
                 #Full screent content studio with SPACE+ALT+X
-                type(Key.SPACE, KeyModifier.ALT)
-                type('x')
+                #type(Key.SPACE, KeyModifier.ALT)
+                #type('x')
 
         def open_section_panel(self):
                 #***This Keyword makes section panel visible ***#
