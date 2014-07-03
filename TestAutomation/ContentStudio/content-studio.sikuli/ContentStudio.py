@@ -226,7 +226,7 @@ class ContentStudio(object):
                         dragDrop(corner, drop_point)
                     
                         while exists(Pattern("ExpansionIcon.png").similar(0.90)):
-                            click("ExpansionIcon.png")
+                                click("ExpansionIcon.png")
                         
                         if exists(Pattern(SectionImageName).similar(0.95)):
                                 rightClick(Pattern(SectionImageName).similar(0.95))
