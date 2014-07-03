@@ -1,0 +1,31 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SikuliCS  WITH NAME  SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+
+Resource          common_resource.txt
+
+Documentation  A test case for post note and check posted note as notification
+
+**Test cases**
+A test case for post note
+	Close All Open Tabs
+	Create Content In Section  NewArticles  This content is created for testing note plugin
+	Switch To Content Studio
+	Post Note  This is Test input for Note to check notification
+	Wait For  3
+	Scroll Element  ScrollBar  0  -200
+	Check If Exists  NoteAssertion
+	Close All Open Tabs
+	Start Content Studio  joe  joe
+	Search And Select First Item  This content is created for testing note plugin
+	Double Click Element  InboxItemSelected
+	Wait For  5
+	Post Note  This is Test input for Note to check notification
+	Close Content Studio
+	Switch To Content Studio
+	Mouse Over  NoteNotification
+	Check If Exists  NoteNotificationOpen
+
+	
