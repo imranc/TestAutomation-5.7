@@ -764,6 +764,11 @@ class ContentStudio(object):
                 if exists("CloseTabsFirefox.png"):
                         click("CloseTabsFirefox.png")
 
+        def close_content_studio(self):
+                ContentStudio.switch_to_content_studio(self)
+                wait(2)
+                type(Key.F4,KEY_ALT)
+
         def check_if_exists_text(self, *args):
                 region=Region(0,0,2000,2000)
                 if exists(args[0]):
