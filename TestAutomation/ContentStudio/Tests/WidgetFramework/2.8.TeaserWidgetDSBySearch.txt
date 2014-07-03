@@ -11,7 +11,6 @@ Documentation  Create a Teaser Widget with Data source query by search
 **Test cases**
 Create a Teaser Widget with Data source query by search
 	
-	Set Tags  non-critical	
 
 	###Create two contents and tag it###
 		Switch To Content Studio
@@ -30,7 +29,7 @@ Create a Teaser Widget with Data source query by search
 		Wait For  2
 		Click Element  DSBySearch  -50  0
 		Click Element  AllTheseWords  -50  25
-		#Type Text  Image
+		Type Text  Image
 		Click Element  DataSourceContentTypes  -10  15
         	Select From Dropdown  Picture
 		Click Element  DataSourceSectionBox  -10  15
