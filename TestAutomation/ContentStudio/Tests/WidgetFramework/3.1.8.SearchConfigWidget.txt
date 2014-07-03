@@ -44,6 +44,7 @@ Create a Search Config widget for fetching the search result
 	Open Browser To Publication  search/?q=search+config+widget+assertion+content
 	Check If Exists  SearchConfigWidgetAssertion
 	Close Browser
+	Close Browser
 
 Remove widget from search page template
 	Set Tags  non-critical
