@@ -44,7 +44,7 @@ class ContentStudio(object):
                 if exists("FirefoxOpenWithJavaws.png"):
                         wait(2)
                         type("\n")
-                wait(60)
+                wait(90)
                 #ContentStudio.switch_to_content_studio(self)
                 if exists("JavaWarning.png"):
                         if exists("CheckBox.png"):
