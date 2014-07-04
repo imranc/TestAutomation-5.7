@@ -19,5 +19,5 @@ Create User
     	Click For Multiple Cookies
 	Create User  joe
 
-Log off
+Log out from webstudio
 	Click Link  Log off
