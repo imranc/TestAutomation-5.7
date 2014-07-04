@@ -6,6 +6,7 @@ Documentation  More Clipboard TC from ET
 
 **Test cases**
 Drag article into clipboard
+	Close All Open Tabs
 	Create Content In Section  NewArticles
 	Clean Up Clipboard
 	Drag  CurrentTab  EmptyClipboard
