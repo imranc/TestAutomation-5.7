@@ -90,11 +90,11 @@ Create User  [Arguments]  ${userName}
 	#Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 	Wait Until Page Contains  Person archive  50  error=None
 	Page Should Contain Button  Search
-	Click Element  xpath=//*[@value='Search']
-	Wait Until Page Contains  View person  50  error=None
-	Click Element  xpath=//*[@value='Search']
-	Wait Until Page Contains  View person  10  error=None
-	Page Should Contain  View person
+	#Click Element  xpath=//*[@value='Search']
+	#Wait Until Page Contains  View person  50  error=None
+	#Click Element  xpath=//*[@value='Search']
+	#Wait Until Page Contains  View person  10  error=None
+	#Page Should Contain  View person
 
 Create Section  [Arguments]  ${sectionName}
 	Go To Link  javascript:submitForm("section-archive")
