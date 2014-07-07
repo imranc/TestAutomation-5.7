@@ -18,7 +18,7 @@ Create a content "Title" widget
 	Type Text  TestAutomation Widget (Title Widget)
 	Click Element  DefaultTab
 	Click Element  FieldCollectionBox  -15  15
-	Select From Dropdown  Title
+	Select Second Item From Dropdown  Title
 	Save And Publish
 
 	###Assertion###
