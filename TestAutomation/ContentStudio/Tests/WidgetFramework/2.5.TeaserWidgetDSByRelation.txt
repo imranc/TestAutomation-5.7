@@ -10,8 +10,10 @@ Resource       common_resource.txt
 Documentation  Create a Teaser Widget with Data source query by Relation
 **Test cases**
 Create a Teaser Widget with Data source query by section Relation
+	Close All Open Tabs
 	Create Image In Section  NewArticles
 	Switch To Content Studio
+	Close All Open Tabs
 	Create Content In Section  NewArticles
 	Switch To Content Studio
 	Click Element If Exists  Related  RelatedContent

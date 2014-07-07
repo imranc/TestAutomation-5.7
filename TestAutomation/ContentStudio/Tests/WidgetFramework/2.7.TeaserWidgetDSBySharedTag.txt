@@ -19,7 +19,8 @@ Create a Teaser Widget with Data source query by tag
 		Switch To Content Studio
 		Tag Content  widget
 		Save And Publish
-
+		
+		Close All Open Tabs
 		Create Image In Section  NewArticles
 		Switch To Content Studio
 		Tag Content  widget

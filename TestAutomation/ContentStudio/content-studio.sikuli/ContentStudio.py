@@ -240,6 +240,9 @@ class ContentStudio(object):
 
                 ContentStudio.switch_to_content_studio(self)
 
+                if exists("HomeSection.png"):
+                        click("HomeSection.png")
+        
                 SectionName=args[0]
                 
                 if not exists(Pattern("InboxesTab.png").similar(0.60)):
@@ -317,6 +320,9 @@ class ContentStudio(object):
                 #***This Keyword creates an Image in the specified section***#
                 #***Create Image In Section  SectionName***#
                 ContentStudio.switch_to_content_studio(self)
+
+                if exists("HomeSection.png"):
+                        click("HomeSection.png")
 
                 SectionName=args[0]
 
