@@ -143,6 +143,8 @@ class eceSikuli(object):
                         wait(5)
                         type(Key.ENTER)
                         wait(5)
+                        type(Key.SPACE, KeyModifier.ALT)
+                        type('x')
                 else:
                         raise AssertionError("Too many arguments")
 

@@ -64,4 +64,7 @@ Remove teaser widget
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Wait For  2
 	Click Element  PublishButtonSimple
