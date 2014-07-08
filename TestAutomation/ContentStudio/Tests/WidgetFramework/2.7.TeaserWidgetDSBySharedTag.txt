@@ -15,7 +15,7 @@ Create a Teaser Widget with Data source query by tag
 		Switch To Content Studio
 		Close Allopen Tabs
 
-		Create Content In Section  NewArticles
+		Create Content In Section  NewArticles  Article created for teaser widget with data source by shared tag
 		Switch To Content Studio
 		Tag Content  widget
 		Save And Publish
@@ -56,7 +56,7 @@ Create a Teaser Widget with Data source query by tag
 		Click Element  PublishButtonSimple
 
 	###Assertion###
-		Search And Select First Item  Article
+		Search And Select First Item  Article created for teaser widget with data source by shared tag
 		Type Key  ENTER
 		Click Element   ContentUrl  12  10
 		Wait For  10

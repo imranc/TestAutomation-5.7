@@ -148,6 +148,11 @@ class eceSikuli(object):
                 else:
                         raise AssertionError("Too many arguments")
 
+        def maximize_browser_window(self):
+                switchApp("Mozilla Firefox")
+                type(Key.SPACE, KeyModifier.ALT)
+                type('x')
+
         def scroll_element(self, *args):
                 #***This keyword scroll a element to specified target axis***#
                                 

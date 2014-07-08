@@ -37,7 +37,7 @@ Save And Publish
 	
 Search And Select First Item  [Arguments]  ${SearchPattern}
 	Click Element If Exists  SectionsTab  SectionsTab
-	Wait For  1
+	Wait For  3
 	Click Element If Exists  SearchTab  SearchTab
 	Wait For  60
 	Click Element  FindTextBox  20  0
