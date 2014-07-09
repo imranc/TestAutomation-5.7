@@ -37,6 +37,7 @@ Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
 	
 	###Assertion###
 	Open Browser To Publication
+	Wait For  5
 	Check If Exists  MenuWidgetAssertion
 	Close Browser
 
@@ -45,6 +46,12 @@ Remove widget from Front page template
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
+	Click Element If Exists  TopContentArea  TopContentArea
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Wait For  2
+	Type Key  DOWN
+	Click Element If Exists  TopContentArea  TopContentArea
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
