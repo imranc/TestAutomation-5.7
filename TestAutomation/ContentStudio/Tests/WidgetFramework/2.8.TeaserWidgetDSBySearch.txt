@@ -32,7 +32,7 @@ Create a Teaser Widget with Data source query by search
 		Click Element  AllTheseWords  -50  25
 		#Type Text  Image
 		Click Element  DataSourceContentTypes  -10  15
-        	Select From Dropdown  Picture
+        	Select Second Item From Dropdown  Picture
 		Click Element  DataSourceSectionBox  -10  15
 		Type Text  New Articl
 		Wait For  5

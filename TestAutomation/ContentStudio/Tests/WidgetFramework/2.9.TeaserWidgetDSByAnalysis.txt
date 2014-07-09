@@ -29,7 +29,7 @@ Create a Teaser Widget with Data source query by analysis
 		Wait For  2
 		Click Element  DSByAnalysis  -50  0
 		Click Element  DataSourceContentTypes  -10  15
-        	Select From Dropdown  Picture
+        	Select Second Item From Dropdown  Picture
 		Click Element  DataSourceSectionBox  -10  15
 		Type Text  New Articl
 		Wait For  5
