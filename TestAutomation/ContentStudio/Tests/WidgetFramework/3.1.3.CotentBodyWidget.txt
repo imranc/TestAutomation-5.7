@@ -70,6 +70,12 @@ Remove widget from story page template
 	Close Allopen Tabs
 	Open Section In Content Studio  StoryPageTemplate
 	Wait for  5
+	Click Element If Exists  TopContentArea  TopContentArea
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Wait For  2
+	Type Key  DOWN
+	Click Element If Exists  TopContentArea  TopContentArea
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  PublishButtonSimple
