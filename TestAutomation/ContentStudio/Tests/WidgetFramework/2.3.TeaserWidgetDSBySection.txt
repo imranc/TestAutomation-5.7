@@ -19,7 +19,7 @@ Create a Teaser Widget with Data source query by section
 	Wait For  2
 	Click Element  DataSourceBySection  -70  0
 	Click Element  DataSourceSectionBox  -10  15
-	Select From Dropdown  New Article
+	Select From Dropdown  New Articl
 	
 	Click Element  DataSourceContentTypes  -10  15
 	Select From Dropdown  Picture
