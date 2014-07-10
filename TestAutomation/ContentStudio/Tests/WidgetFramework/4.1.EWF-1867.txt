@@ -23,6 +23,7 @@ Image Rendering Problem When Enable Lazy Loading
 	Click Element  PublishButtonSimple
 	###Assertion###
 		Open Browser To Publication 
+		Wait For  5
 		Check If Exists  LazyLoadingEnableProblemAssertion(EWF-1867)
 		Close Browser
 Remove buisness teaser widget
