@@ -1,0 +1,62 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Search Config widget for fetching the search result and relate Search Config widget
+**Test cases**
+Create a Search Config widget for fetching the search result
+	Close Allopen Tabs
+	Create Image In Section  News  Search Config Widget assertion content
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Widget Content Type  SearchConfigWidget
+	Type Text  TestAutomation Widget (Search Config widget)
+	Click Element  ContentTypesLabel  65  0
+	Click Element  ContentTypesLabel  80  0
+	Type Text  Picture
+	Wait For  2
+	Type Key  DOWN
+	Type Key  DOWN
+	Type Key  ENTER
+	Click Element  SectionsLabel  90  0
+	Click Element  SectionsLabel  95  0
+	Select From Dropdown  News
+	Save And Publish
+
+	### Assertion ###
+	Search And Select First Item  TestAutomation Widget (Search Config widget)
+	Check If Exists  InboxItemSelected
+
+	### Relate a ViewPicker widget displaying content item ###
+	Open Section In Content Studio  FrontPageTemplate
+	Wait For  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Open Browser To Publication  search/?q=search+config+widget+assertion+content
+	Check If Exists  SearchConfigWidgetAssertion
+	Close Browser
+
+Remove widget from search page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	

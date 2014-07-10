@@ -1,0 +1,109 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a View picker widget displaying Deligating related view and Relate View picker widget
+**Test cases**
+Create a View picker widget displaying Deligating related view
+	Switch To Content Studio
+	
+	##Create teaser view with timestamps ###
+	Create Widget Content Type  TeaserView
+	Type Text  Teaser view for ViewPicker widget with timestamp
+	Click Element  DefaultTab
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  time
+	Type Key  ENTER
+	Save And Publish
+
+	##Create teaser view(Title) ###
+	Create Content Type  NewArticles  TeaserView
+	Type Text  Teaser View (Title)
+	Click Element  DefaultTab
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Title
+	Type Key  ENTER
+	Save And Publish
+
+	Close Allopen Tabs
+	Create Widget Content Type  ViewPickerWidget
+	Type Text  TestAutomation Widget (Featured stories - small view)
+	Click Element  DataSourceTab
+	Click Element  Use  0  20
+	Click Element  ExternalDataSource
+	Click Element If Exists    RelatedDatasource    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Wait For  10
+	Search And Select First Item  Data source Featured
+	Drag And Drop Element  InboxItemSelected  RelatedDatasource
+	Click Element If Exists    RelatedContent    RelatedContent
+
+	Click Element  DefaultTab
+	Click Element  RenderingMode  -15  15
+	Type Text  Iterate
+	Type Key  ENTER
+	Search And Select First Item  Teaser view for ViewPicker widget with timestamp
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Search And Select First Item  Teaser View (Title)
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  RelatedView
+	Click Element  SelectBy  -10  15
+	Type Text  Position
+	Type Key  TAB
+	Type Key  TAB
+	Type Text  1
+	
+	Click Element  RelatedView
+	Type Key  DOWN
+	Click Element  SelectBy  -10  15
+	Type Text  Position
+	Type Key  TAB
+	Type Key  TAB
+	Type Text  2
+
+	Wait For  2
+	Save And Publish
+
+	### Assertion ###
+	Search And Select First Item  TestAutomation Widget (Featured stories - small view)
+	Check If Exists  InboxItemSelected
+
+	### Relate a ViewPicker widget displaying content item ###
+	Open Section In Content Studio  FrontPageTemplate
+	Wait For  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Open Browser To Publication
+	Check If Exists  ViewPickerWidgetAssertion
+	Close Browser
+
+Remove widget from front page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	

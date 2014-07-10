@@ -1,0 +1,54 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Heading widget displaying context section and Relate a Heading widget displaying context section
+**Test cases**
+Create a Breadcrumb widget displaying content item
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Widget Content Type  HeadingWidget
+	Type Text  TestAutomation Widget (Context-section heading Widget)
+	Click Element  DefaultTab
+	Type Text  main
+	Wait For  2
+	Type Text  Context
+	Click Element  Advanced
+	Type Text  h3
+	Save And Publish
+
+	### Assertion ###
+	Search And Select First Item  TestAutomation Widget (Context-section heading Widget)
+	Check If Exists  InboxItemSelected
+
+	### Relate a Breadcrum widget displaying content item ###
+	Open Section In Content Studio  FrontPageTemplate
+	Wait For  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Open Browser To Publication
+	Check If Exists  HeadingWidgetAssertion
+	Close Browser
+
+Remove widget from front page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	

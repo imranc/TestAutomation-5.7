@@ -1,0 +1,56 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a content information widget showing "Author" and Create a content information widget showing "Author"
+**Test cases**
+Create a content information widget showing "Author"
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Content In Section  NewArticles  Article created for content information widget test
+	Create Widget Content Type  ContentInformationWidget
+	Type Text  TestAutomation Widget (Author Widget)
+	Click Element  DefaultTab
+	Save And Publish
+
+	###Assertion###
+	Search And Select First Item  TestAutomation Widget (Author Widget)
+	Check If Exists  InboxItemSelected
+
+	### Relate a content information widget showing "Author" with article page ###
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Search And Select First Item  Article created for content information widget test
+	Type Key  ENTER
+	Wait For  5
+	Click Element   ContentUrl  12  10
+	Wait For  10
+	Maximize Browser Window
+	Wait For  2
+	Check If Exists  ContentInformationWidgetAssertion
+	Close Browser
+
+Remove widget from story page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	
