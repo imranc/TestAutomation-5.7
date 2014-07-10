@@ -39,7 +39,7 @@ Create a Teaser View for Position Index[3]
 	Wait For  2
 	Type Key  ENTER
 
-	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownToLast
+	Drag And Drop Element  TeaserViewScroll  SaveButton
 	Click Element  WidgetRelationSourceSettings  50  0
 	Click Element  WidgetRelationSourceSpecifySettings
 	Type Text  Related
