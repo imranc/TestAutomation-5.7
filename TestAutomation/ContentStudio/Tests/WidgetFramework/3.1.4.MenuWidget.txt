@@ -1,0 +1,62 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Menu Widget showing "Dropdown" and relate with frontpage under navbar area
+**Test cases**
+Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Widget Content Type  MenuWidget
+	Type Text  TestAutomation Widget (Menu Widget)
+	Type Key  TAB
+	Type Text  main
+	Click Element  DefaultTab
+	Type Key  TAB
+	Type Key  SPACE
+	Click Element  Advanced
+	Type Key  SPACE
+	Save And Publish
+
+	###Assertion###
+	Search And Select First Item  Menu Widget
+	Check If Exists  InboxItemSelected
+
+	###Relate a Menu Widget showing "Dropdown" with frontpage under navbar area###
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+	
+	###Assertion###
+	Open Browser To Publication
+	Wait For  5
+	Check If Exists  MenuWidgetAssertion
+	Close Browser
+
+Remove widget from Front page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  TopContentArea  TopContentArea
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Wait For  2
+	Type Key  DOWN
+	Click Element If Exists  TopContentArea  TopContentArea
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	
