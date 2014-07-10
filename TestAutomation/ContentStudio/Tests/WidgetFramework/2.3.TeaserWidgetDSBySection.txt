@@ -19,7 +19,7 @@ Create a Teaser Widget with Data source query by section
 	Wait For  2
 	Click Element  DataSourceBySection  -70  0
 	Click Element  DataSourceSectionBox  -10  15
-	Select From Dropdown  New Article
+	Select From Dropdown  New Articl
 	
 	Click Element  DataSourceContentTypes  -10  15
 	Select From Dropdown  Picture
@@ -29,6 +29,29 @@ Create a Teaser Widget with Data source query by section
 	Click Element  WidgetSpecifyElements
 	Type Text  Media
 	Type Key  ENTER
+	Scroll Element  TeaserViewScroll  50  250
+		
+	
+	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Select Second Item From Dropdown  Picture
+
+	Click Element  WidgetMediaImageAspectRatioSettings
+	Type Text  Wide
+	Type Key  ENTER
+
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  50%
+	Type Key  ENTER
+
+	Drag And Drop Element  TeaserViewScroll  SaveButton
+	Click Element  WidgetRelationSourceSettings  50  0
+	Click Element  WidgetRelationSourceSpecifySettings
+	Select From Dropdown  Related
+
+	Click Element  WidgetRelationContentTypeSettings  50  0
+	Click Element  WidgetRelationContentTypeSpecifySettings
+	Select Second Item From Dropdown  Picture
+
 	Save And Publish
 
 	Open Section In Content Studio  FrontpageTemplate
@@ -40,7 +63,7 @@ Create a Teaser Widget with Data source query by section
 
 	###Assertion###
 		Open Browser To Publication 
-		Check If Exists  DSAssertion
+		Check If Exists  DSBySectionAssertion
 		Close Browser
 
 Remove teaser widget
