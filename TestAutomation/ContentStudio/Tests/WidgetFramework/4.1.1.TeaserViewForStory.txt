@@ -12,7 +12,7 @@ Documentation  Create a Teaser View for Story
 Create a Teaser View for Story
 	Switch To Content Studio
 	Close Allopen Tabs
-	Create Content Type  Config  TeaserView
+	Create New Other Content Type  TeaserView
 	Type Text  TestAutomation (TeaserView for story)
 
 
