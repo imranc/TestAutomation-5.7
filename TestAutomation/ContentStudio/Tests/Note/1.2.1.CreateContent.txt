@@ -19,13 +19,16 @@ A test case for post note
 	Check If Exists  NoteAssertion
 	Close All Open Tabs
 	Start Content Studio  joe  joe
+	Close All Open Tabs
 	Search And Select First Item  This content is created for testing note plugin
 	Double Click Element  InboxItemSelected
 	Wait For  5
 	Post Note  This is Test input for Note to check notification
 	Close Content Studio
+	Wait For  3
 	Switch To Content Studio
+	Wait For  2
 	Mouse Over  NoteNotification
-	Check If Exists  NoteNotificationOpen
+	Check If Exists  NoteNotificationOpen													
 
 	
