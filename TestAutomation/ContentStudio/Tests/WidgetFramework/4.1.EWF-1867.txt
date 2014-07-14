@@ -13,6 +13,8 @@ Image Rendering Problem When Enable Lazy Loading
 	Switch To Content Studio
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontpageTemplate
+	Wait For  2
+	Click Element  NavbarArea  -42  1
 	Search And Select First Item  Business teasers
 	Drag And Drop Element  InboxItemSelected  TopContentArea
 	Click Element  LazyLoading  70  0
@@ -32,4 +34,5 @@ Remove buisness teaser widget
 	Click Element  TopContentArea
 	Type Key  DOWN
 	Type Key  DELETE
+	Click Element  NavbarArea  -42  1
 	Click Element  PublishButtonSimple

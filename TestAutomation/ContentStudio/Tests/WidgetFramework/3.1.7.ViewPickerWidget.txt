@@ -82,6 +82,7 @@ Create a View picker widget displaying Deligating related view
 	### Relate a ViewPicker widget displaying content item ###
 	Open Section In Content Studio  FrontPageTemplate
 	Wait For  5
+	Click Element  NavbarArea  -42  1
 	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
@@ -101,6 +102,7 @@ Remove widget from front page template
 	Click Element If Exists  WidgetListView  WidgetListView
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
+	Click Element  NavbarArea  -42  1
 	Click Element  PublishButtonSimple
 	
 

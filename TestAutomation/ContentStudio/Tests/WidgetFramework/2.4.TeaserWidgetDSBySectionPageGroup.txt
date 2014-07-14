@@ -47,6 +47,7 @@ Create a Teaser Widget with Data source query by section page group
 	Save And Publish
 	Open Section In Content Studio  FrontpageTemplate
 	Wait for  5
+	Click Element  NavbarArea  -42  1
 	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
@@ -63,4 +64,5 @@ Remove teaser widget
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
+	Click Element  NavbarArea  -42  1
 	Click Element  PublishButtonSimple
