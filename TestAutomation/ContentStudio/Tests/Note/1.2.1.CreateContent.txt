@@ -29,6 +29,15 @@ A test case for post note
 	Switch To Content Studio
 	Wait For  2
 	Mouse Over  NoteNotification
-	Check If Exists  NoteNotificationOpen													
+	Check If Exists  NoteNotificationOpen
+	Click Element  NoteNotificationOpen
+	Wait For  2
+	Check If Exists  NotedItem
+	Mouse Over  NotedItem
+	Check If Exists  NotedItemOpen
+	Click Element  NotedItemOpen
+	Wait For  2
+	Check If Exists  NotedItemTab
+														
 
 	
