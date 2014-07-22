@@ -146,6 +146,15 @@ class eceSikuli(object):
                 else:
                         raise AssertionError("Too many arguments")
 
+        def open_browser_to_webstudio(self):
+                eceSikuli.open_browser(self, eceSikuli.getWsAddress(self))
+        
+        def getWsAddress(self):
+                ece_host= os.environ['ECE_EDITORIAL_HOST']
+                ece_port= os.environ['ECE_EDITORIAL_PORT']
+                ece_ws_address= 'http://'+ece_host+':'+ece_port+'/escenic'
+                return ece_ws_address
+
         def scroll_element(self, *args):
                 #***This keyword scroll a element to specified target axis***#
                                 
