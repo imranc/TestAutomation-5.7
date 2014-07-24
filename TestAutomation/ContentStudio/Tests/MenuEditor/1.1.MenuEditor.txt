@@ -1,0 +1,77 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SikuliCS  WITH NAME  SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+
+Resource          common_resource.txt
+
+Documentation  A test case for Login WebStudio and Open MenuEditor
+
+**Test cases**
+Login Escenic Web studio and Open MenuEditor
+	Login WebStudio  qa_admin  admin
+	Wait For  2
+	Check If Exists  MenuEditor
+	Click Element  MenuEditor
+	Wait For  120
+	Click Element  MainMenu
+	Click Element  MainMenuRoot  -34  1
+	Click Element  InsertList
+	Check If Exists  InsertSection
+	Mouse Over  InsertSection
+	Click Element  InsertSectionAdd
+	Click Element  SelectSection
+	Click Element  NameToMenu  0  6
+	Type Text  Section
+	Click Element  SaveInsert
+	Wait For  2
+	Click Element  MainMenu
+	Click Element  InsertList
+	Check If Exists  InsertLink
+	Mouse Over  InsertLink
+	Click Element  InsertLinkAdd
+	Click Element  UrlToLink  80  1
+	Type Text  https://www.google.com/
+	Click Element  NameToMenu  0  6
+	Type Text  Link
+	Click Element  SaveInsert
+	Wait For  2
+	Click Element  MainMenu
+	Click Element  InsertList
+	Check If Exists  InsertSpace
+	Mouse Over  InsertSpace
+	Click Element  InsertSpaceAdd
+	Click Element  NameToMenu  0  6
+	Type Text  Space
+	Click Element  SaveInsert
+	Wait For  2
+	Click Element  MainMenu
+	Click Element  InsertList
+	Check If Exists  InsertArticle
+	Mouse Over  InsertArticle
+	Click Element  InsertArticleAdd
+	Click Element  AddArticleId  99  1
+	Type Text  81
+	Click Element  NameToMenu  0  6
+	Type Text  Article
+	Click Element  SaveInsert
+	Wait For  2
+	Open Browser To Publication
+	Check If Exists  SectionMenu
+	Click Element  SectionMenu
+	Check If Exists  SectionUrl
+	Check If Exists  SpaceMenu
+	Check If Exists  ArticleMenu
+	Click Element  ArticleMenu
+	Check If Exists  ArticleTitle
+	Check If Exists  LinkMenu
+	Click Element  LinkMenu
+	Wait For  18
+	Check If Exists  LinkUrl
+	
+	
+	
+	
+	
+	
