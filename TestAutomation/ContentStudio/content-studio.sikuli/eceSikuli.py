@@ -84,6 +84,22 @@ class eceSikuli(object):
 
                 wait(2)
 
+        def type_text_if_element_exists(self, *args):
+                checkElementExists = args[0]
+                checkElementExistsImageName = checkElementExists+'.png'
+             
+                if exists(Pattern(checkElementExistsImageName).similar(0.80)):
+                        if len(args) == 2:
+                                eceSikuli.click_element(self, checkElementExists, 0, 0)
+                                eceSikuli.type_text(self, args[1])
+                        elif len(args) == 4:
+                                eceSikuli.click_element(self, checkElementExists, args[1], args[2])
+                                eceSikuli.type_text(self, args[3])
+                        else:
+                                raise AssertionError("Image name and a text must be passed as argument.")
+
+                wait(2)
+
         def drag_and_drop_element(self, *args):
                 dragSource = args[0]
                 dragSourceImageName = dragSource+'.png'
