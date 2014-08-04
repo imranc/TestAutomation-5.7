@@ -10,7 +10,8 @@ User object gets locked only once per session
 	Login To Web Studio
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 	Click Element  xpath=//a[.='qa Administrator']
-	Go To WebStudio HomePage
+	Open Browser To Escenic WebStudio
+	Login To Web Studio
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 		Page Should Contain Element  css=img[title="Unlock"]
 	Click Element  css=img[title="Unlock"]
@@ -19,10 +20,10 @@ User object gets locked only once per session
 
 	
 	Click Element  xpath=//a[.='qa Administrator']
-	Go To WebStudio HomePage
+	Open Browser To Escenic WebStudio
+	Login To Web Studio
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 		Page Should Contain Element  css=img[title="Unlock"]
 
-Log off
 	Click Link  Log off
 	
