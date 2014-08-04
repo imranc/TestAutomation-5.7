@@ -1,0 +1,25 @@
+﻿***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a content with UTF-8 characters
+**Test cases**
+Create a content with UTF-8 characters
+
+	###Create content with a tag###
+		Switch To Content Studio
+		Close Allopen Tabs
+		Wait For  2
+		Change Input Language
+		Create Content In Section  NewArticles  Epksj ofv
+		Check If Exists  UTF8-Assertion
+
+Change input keyboard
+		Change Input Language
+	
+	

@@ -171,6 +171,11 @@ class eceSikuli(object):
                 ece_ws_address= 'http://'+ece_host+':'+ece_port+'/escenic'
                 return ece_ws_address
 
+        def change_input_language(self):
+                type(Key.SHIFT, KeyModifier.ALT)
+                wait(2)
+
+
         def scroll_element(self, *args):
                 #***This keyword scroll a element to specified target axis***#
                                 
