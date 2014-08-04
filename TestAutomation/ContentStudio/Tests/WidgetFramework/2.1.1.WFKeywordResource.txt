@@ -44,7 +44,7 @@ Search And Select First Item  [Arguments]  ${SearchPattern}
 	Type Text  ${SearchPattern}
 	Type Key  ENTER
 	Wait For  15
-	Click Element  ClipboardTab  20  120
+	Click Element  Hit  -15  30
 
 Open Section In Content Studio  [Arguments]  ${SectionName}
 	Click Element If Exists  SectionsTab  SectionsTab
@@ -60,6 +60,14 @@ Open Section In Content Studio  [Arguments]  ${SectionName}
 Select From Dropdown  [Arguments]  ${Pattern}
 	Type Text  ${Pattern}
 	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+Select Second Item From Dropdown  [Arguments]  ${Pattern}
+	Type Text  ${Pattern}
+	Wait For  2
+	Type Key  DOWN
 	Type Key  DOWN
 	Wait For  2
 	Type Key  ENTER

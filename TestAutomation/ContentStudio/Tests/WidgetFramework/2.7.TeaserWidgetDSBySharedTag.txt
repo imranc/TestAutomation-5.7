@@ -31,7 +31,7 @@ Create a Teaser Widget with Data source query by tag
 		Create Widget Content Type  TeaserWidgetContent
 		Type Text  TestAutomation Widget (TeaserWidget_DS_by_Sharedtag)
 		Click Element  DataSourceTab
-		Click Element  Add
+		Click Element  AddQuery
 		Wait For  2
 		Click Element  DSBySharedTag  -60  0
 		Click Element  DataSourceSectionBox  -10  15

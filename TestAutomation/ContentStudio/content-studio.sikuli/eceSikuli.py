@@ -84,6 +84,22 @@ class eceSikuli(object):
 
                 wait(2)
 
+        def type_text_if_element_exists(self, *args):
+                checkElementExists = args[0]
+                checkElementExistsImageName = checkElementExists+'.png'
+             
+                if exists(Pattern(checkElementExistsImageName).similar(0.80)):
+                        if len(args) == 2:
+                                eceSikuli.click_element(self, checkElementExists, 0, 0)
+                                eceSikuli.type_text(self, args[1])
+                        elif len(args) == 4:
+                                eceSikuli.click_element(self, checkElementExists, args[1], args[2])
+                                eceSikuli.type_text(self, args[3])
+                        else:
+                                raise AssertionError("Image name and a text must be passed as argument.")
+
+                wait(2)
+
         def drag_and_drop_element(self, *args):
                 dragSource = args[0]
                 dragSourceImageName = dragSource+'.png'
@@ -131,6 +147,12 @@ class eceSikuli(object):
                         BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                         BrowserApp=App.open(BrowserPath)
                         switchApp("Mozilla Firefox")
+                        while exists("FirefoxStoppedWorking.png"):
+                                switchApp("Firefox")
+                                click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                                BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
+                                BrowserApp=App.open(BrowserPath)
+                                switchApp("Mozilla Firefox")
                         wait(10)
                         type("l",KeyModifier.CTRL)
                         paste(args[0])
@@ -139,3 +161,30 @@ class eceSikuli(object):
                         wait(5)
                 else:
                         raise AssertionError("Too many arguments")
+
+        def open_browser_to_webstudio(self):
+                eceSikuli.open_browser(self, eceSikuli.getWsAddress(self))
+        
+        def getWsAddress(self):
+                ece_host= os.environ['ECE_EDITORIAL_HOST']
+                ece_port= os.environ['ECE_EDITORIAL_PORT']
+                ece_ws_address= 'http://'+ece_host+':'+ece_port+'/escenic'
+                return ece_ws_address
+
+        def scroll_element(self, *args):
+                #***This keyword scroll a element to specified target axis***#
+                                
+                ScrollImageName = args[0]+'.png'
+                                
+                offset_x = int(args[1])
+                                
+                offset_y = int(args[2])
+                                
+                if exists(Pattern(ScrollImageName)):
+                        corner=find(Pattern(ScrollImageName).targetOffset(0,0))
+                        drop_point = corner.getTarget().offset(offset_x, offset_y)
+                        dragDrop(corner, drop_point)
+                                
+                else:
+                        ImageName=capture_CS_screenshot()
+                        raise AssertionError(ScrollImageName+'Image does not exist. Screenshot: '+ImageName)

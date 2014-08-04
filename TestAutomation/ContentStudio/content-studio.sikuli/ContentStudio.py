@@ -37,6 +37,7 @@ class ContentStudio(object):
                         while exists("FirefoxStoppedWorking.png"):
                                 switchApp("Firefox")
                                 click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                                wait(5)
                                 BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                                 BrowserApp=App.open(BrowserPath)
                                 switchApp("Mozilla Firefox")
@@ -52,7 +53,7 @@ class ContentStudio(object):
                 if exists("FirefoxOpenWithJavaws.png"):
                         wait(2)
                         type("\n")
-                wait(60)
+                wait(90)
                 #ContentStudio.switch_to_content_studio(self)
                 if exists("JavaWarning.png"):
                         if exists("CheckBox.png"):
@@ -178,12 +179,18 @@ class ContentStudio(object):
                 type("8",KeyModifier.CTRL)
                 while (exists("remove_panel.png")):
                         click("remove_panel.png")
-                        wait(2)
-                click(Pattern("OK_button.png").similar(0.60))
+                        wait(5)
+                if exists(Pattern("OK_button.png").similar(0.60)):
+                    click(Pattern("OK_button.png").similar(0.60))
 
         def switch_to_content_studio(self):
                 #***This Keyword switches focus to Escenic Content Studio***#
                 #Vision.setParameter("MinTargetSize", 6)
+            
+                if exists("FirefoxStoppedWorking.png"):
+                    switchApp("Firefox")
+                    click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                
                 eceAppName="Escenic Content Studio "
                 ScreenHighlighter.closeAll()
                 #eceVersion=os.environ['ECE_Version']
@@ -237,7 +244,7 @@ class ContentStudio(object):
                 else:
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
-                        corner=find(Pattern("ListsTab.png").targetOffset(0,-21))
+                        corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
                         drop_point = corner.getTarget().offset(50, 250)
                         dragDrop(corner, drop_point)
 
@@ -250,7 +257,10 @@ class ContentStudio(object):
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError(SectionName+' Section does not exist. Screenshot: '+ImageName)
                 wait(2)
-        
+
+
+       
+      
         def create_content_in_section(self, *args):
                 #***This Keyword creates an Article in the specified section***#
                 #***Create Content In Section SectionName***#
@@ -560,7 +570,7 @@ class ContentStudio(object):
                         raise AssertionError("Create A Content and Deselect inbox Before Selecting inbox or May be content is already selected. Screenshot: "+ImageName)
 
                 ##Check if content exists in the inbox
-                wait(20)
+                wait(90)
                 
                 click(Pattern("FirstContentOfInbox.png").similar(0.80))
                 if exists(Pattern("InboxItemSelected.png").similar(0.90)):
@@ -839,6 +849,11 @@ class ContentStudio(object):
                 while exists("CloseTabsFirefox.png"):
                         switchApp("Firefox")
                         click("CloseTabsFirefox.png")
+
+        def close_content_studio(self):
+                ContentStudio.switch_to_content_studio(self)
+                wait(2)
+                type(Key.F4,KEY_ALT)
 
         def check_if_exists_text(self, *args):
                 region=Region(0,0,2000,2000)

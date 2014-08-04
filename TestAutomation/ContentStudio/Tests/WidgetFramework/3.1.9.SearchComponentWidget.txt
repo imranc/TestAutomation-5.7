@@ -7,26 +7,26 @@ Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
 Resource       common_resource.txt
 
-Documentation  Create a Heading widget displaying context section and Relate a Heading widget displaying context section
+Documentation  Create a Search Config widget for fetching the search result and relate Search Config widget
 **Test cases**
-Create a Breadcrumb widget displaying content item
+Create a Search Config widget for fetching the search result
 	Switch To Content Studio
 	Close Allopen Tabs
-	Create Widget Content Type  HeadingWidget
-	Type Text  TestAutomation Widget (Context-section heading Widget)
-	Click Element  DefaultTab
-	Type Text  main
-	Wait For  2
-	Type Text  Context
-	Click Element  Advanced
-	Type Text  h3
+	#Create Image In Section  News  Search Config Widget assertion content
+	#Switch To Content Studio
+	#Close Allopen Tabs
+	Create Widget Content Type  SearchComponentWidget
+	Type Text  TestAutomation Widget (Search Component widget)
+	Click Element  SearchBoxTab
+	Select From Dropdown  Search
+
 	Save And Publish
 
 	### Assertion ###
-	Search And Select First Item  TestAutomation Widget (Context-section heading Widget)
+	Search And Select First Item  TestAutomation Widget (Search Component widget)
 	Check If Exists  InboxItemSelected
 
-	### Relate a Breadcrum widget displaying content item ###
+	### Relate a ViewPicker widget displaying content item ###
 	Open Section In Content Studio  FrontPageTemplate
 	Wait For  5
 	Click Element  NavbarArea  -42  1
@@ -37,14 +37,20 @@ Create a Breadcrumb widget displaying content item
 	
 	###Assertion###
 	Open Browser To Publication
-	Check If Exists  HeadingWidgetAssertion
+	Check If Exists  SearchComponentWidgetAssertion
 	Close Browser
 
-Remove widget from front page template
+Remove widget from search page template
 	Set Tags  non-critical
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
+	Click Element If Exists  TopContentArea  TopContentArea
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Wait For  2
+	Type Key  DOWN
+	Click Element If Exists  TopContentArea  TopContentArea
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  NavbarArea  -42  1

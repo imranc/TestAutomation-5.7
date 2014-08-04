@@ -35,6 +35,7 @@ Create a Search Config widget for fetching the search result
 	### Relate a ViewPicker widget displaying content item ###
 	Open Section In Content Studio  FrontPageTemplate
 	Wait For  5
+	Click Element  NavbarArea  -42  1
 	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
@@ -44,6 +45,7 @@ Create a Search Config widget for fetching the search result
 	Open Browser To Publication  search/?q=search+config+widget+assertion+content
 	Check If Exists  SearchConfigWidgetAssertion
 	Close Browser
+	Close Browser
 
 Remove widget from search page template
 	Set Tags  non-critical
@@ -51,7 +53,10 @@ Remove widget from search page template
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
+	Click Element  NavbarArea  -42  1
 	Click Element  PublishButtonSimple
 	
 

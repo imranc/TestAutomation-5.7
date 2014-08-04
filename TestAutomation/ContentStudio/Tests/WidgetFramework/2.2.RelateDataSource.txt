@@ -33,6 +33,7 @@ Relate an External Data source with teaser widget
     Save And Publish
     Open Section In Content Studio    FrontpageTemplate
     Wait for    5
+    Click Element  NavbarArea  -42  1
     Drag And Drop Element    TestAutomationWidgetTab  TopContentArea
     Click Element    SaveButton
     Wait For    5
@@ -51,4 +52,5 @@ Remove widget from front page template
     Click Element    TopContentArea
     Type Key    DOWN
     Type Key    DELETE
+    Click Element  NavbarArea  -42  1
     Click Element    PublishButtonSimple

@@ -18,8 +18,18 @@ Create a Teaser Widget with Data source query by section Relation
 		Switch To Content Studio
 		Create Tag  widget  Widget
 		Type Key  ESC
-		Wait For  60
+		Wait For  90
 		Tag Content  widget
 		Save And Publish
-	
+
+Remove widget from search page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  SearchPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
 	
