@@ -1,0 +1,44 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SikuliCS  WITH NAME  SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+
+Resource          common_resource.txt
+
+Documentation  A test case for Login WebStudio and Open SectionFeed
+
+**Test cases**
+Login Escenic Web studio and Open SectionFeed
+	Login WebStudio  qa_admin  admin
+	Wait For  2
+	Check If Exists  SectionFeed
+	Click Element  SectionFeed
+	Wait For  120
+	Check If Exists  SectionInfo	
+	Click Element  SectionInfo  1  18
+	Click Element  SectionRoot
+	Click Element  InsertSectionElement  39  1
+	Click Element  InsertFeed
+	Click Element  FeedName
+	Type Text  Feed
+	Click Element  InsertSectionElement  39  1
+	Click Element  InsertSource
+	Click Element  ExpandSectionTree  -1  1
+	Click Element  ExpandSourceSub  -29  -1
+	Click Element  SelectSource
+	Click Element  SaveInsert
+	Click Element  Feed
+	Click Element  InsertSectionElement  39  1
+	Click Element  InsertDestination
+	Click Element  ExpandSectionTree  -1  1
+	Click Element  SectionDestination  -34  1
+	Click Element  SectionInboxName  22  0
+	Click Element  DestinationInbox
+	Click Element  SaveInsert
+	
+	
+	
+	
+	
+	
