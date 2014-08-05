@@ -18,6 +18,9 @@ Create a content with UTF-8 characters
 		Change Input Language
 		Create Content In Section  NewArticles  Epksj ofv
 		Check If Exists  UTF8-Assertion
+		Click Element  PreviewTab
+		Wait For  2
+		Check If Exists  UTF8-Assertion  0.60
 
 Change input keyboard
 		Change Input Language
