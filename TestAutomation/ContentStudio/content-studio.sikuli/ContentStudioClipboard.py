@@ -108,10 +108,13 @@ class ContentStudioClipboard(object):
                 
                 
 
-        def check_if_exists(self, uiElement):
+        def check_if_exists(self, *args):
+                uiElement=args[0]
                 uiElementImage=uiElement+'.png'
                 wait(5)
                 if exists(Pattern(uiElementImage).similar(0.90)):
+                        print("Exists")
+                elif len(args) == 2 and exists(Pattern(uiElementImage).similar(float(args[1]))):
                         print("Exists")
                 else:
                         ImageName=capture_CS_screenshot()
