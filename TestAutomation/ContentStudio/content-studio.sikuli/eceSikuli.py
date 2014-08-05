@@ -68,6 +68,8 @@ class eceSikuli(object):
                         type(Key.TAB)
                 elif args[0] == 'SPACE':
                         type(Key.SPACE)
+                elif args[0] == 'f' and args[1] == 'ALT':
+                        type('f',KeyModifier.ALT)
 
 
         def click_element_if_exists(self, *args):
@@ -131,6 +133,18 @@ class eceSikuli(object):
                         raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)
 
 
+        def open_browser_to_studio(self, *args):
+                if len(args) == 0:
+                        csInstance = ContentStudio()
+                        csUrl=ContentStudio.getCsAddress(csInstance)
+                        eceSikuli.open_browser(self, csUrl)
+                elif len(args) == 1:
+                        csInstance = ContentStudio()
+                        csUrl=ContentStudio.getCsAddress(csInstance)
+                        url = csUrl+'?'+args[0]
+                        eceSikuli.open_browser(self, url)
+                wait(5)
+        
         def open_browser_to_publication(self, *args):
                 if len(args) == 0:
                         eceSikuli.open_browser(self, os.environ['publication'])
