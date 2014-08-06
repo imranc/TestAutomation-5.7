@@ -69,8 +69,7 @@ def capture_java_console_screenshot():
 def maximize_content_studio_window():
     #***This Keyword Maximized Escenic Content Studio****#
     #Full screent content studio with SPACE+ALT+X
-    type(Key.SPACE, KeyModifier.ALT)
-    type('x')
+    type(Key.SPACE+"x", KeyModifier.ALT)
 
 def restore_content_studio_window():
     #***This Keyword restores Escenic Content Studio****#
