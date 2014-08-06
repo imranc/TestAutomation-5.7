@@ -1,0 +1,86 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Data source By Section Page Group(News - topStories Group)
+
+**Test cases**
+Create an External Data source By Section Page Group
+	Switch To Content Studio
+	Close Allopen Tabs
+
+	#Clean Up Inbox  News
+	Clean Up Desk  News
+	Create Image In Section  News  ImageCreatedForDSBySectionPageGroupTest
+	Switch To Content Studio
+	Duplicate Item  DuplicateAsPicture  DuplicateVEWSFTY 
+
+	Create Content In Section  News  StoryCreatedForDSBySectionPageGroupTest
+	Switch To Content Studio
+	Duplicate Item  DuplicateAsStory  DuplicateWSDFTYU
+
+	Search And Select First Item  StoryCreatedForDSBySectionPageGroupTest
+	Double Click Element  InboxItemSelected
+	Duplicate Item  DuplicateAsStory  DuplicateQAWSGYH 
+
+	Open Section In Content Studio  News
+	Search And Select Without Waiting  ImageCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  TopStoriesGroup
+	Wait For  2
+
+	Search And Select Without Waiting  DuplicateVEWSFTYImageCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
+	Wait For  2
+
+	Search And Select Without Waiting  StoryCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
+	Wait For  2
+
+	Search And Select Without Waiting  DuplicateWSDFTYUStoryCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
+	Wait For  2
+	Search And Select Without Waiting  DuplicateQAWSGYHStoryCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
+	Wait For  2
+
+	
+	Click Element  PublishButtonSimple
+
+
+	Create New Other Content Type  DataSourceContent
+	Type Text  DataSource by section page group created by automated test
+	Click Element If Exists  Related  RelatedContent
+	Click Element  AddQuery
+	Click Element  DSBySectioPageGroup  -90  0
+	Click Element  DataSourceSectionBox  -10  15
+	Type Text  News
+	Wait For  5
+	Type Key  ENTER
+
+	Click Element  DataSourceGroupField  -10  15
+	Select From Dropdown  topStories
+
+	Click Element  DataSourceContentTypes  -10  15
+	Select From Dropdown  Story
+        Select From Dropdown  Picture
+
+	Click Element  Filter&Sort
+	Wait For  2
+	Click Element  ChooseDataSorting  -15  30
+	Type Text  off
+	Wait for  2
+
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButton
+
+	Search And Select First Item  DataSource by section page group created by automated test
+		Check If Exists  InboxItemSelected
+	
+
+	
