@@ -1,0 +1,123 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Relate a Teaser View With View Picker Widget for Displaying Iterate With Related View
+**Test cases**
+Relate a Teaser View With View Picker Widget for Displaying Iterate With Related View
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Widget Content Type  ViewPickerWidget
+	Type Text  TestAutomation (TeaserView With View Picker - All)
+	Click Element  DataSourceTab
+	Click Element  Use  0  20
+	Click Element  ExternalDataSource
+	Click Element If Exists    RelatedDatasource    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Wait For  10
+
+	Search And Select Without Waiting  DataSource by section page group created by automated test
+	Drag And Drop Element  InboxItemSelected  RelatedDatasource
+	Click Element If Exists    RelatedContent    RelatedContent
+
+	Click Element  DefaultTab
+	Click Element  RenderingMode  -15  15
+	Type Text  Iterate
+	Type Key  ENTER
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforstory) - VGTYUIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  Content
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  ContentTypeNameInContentSummary  0  25
+	Type Text  Story
+	Wait For  2
+	Type Key  ENTER
+	
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPicture) - VBHYUIK
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  Content
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  ContentTypeNameInContentSummary  0  25
+	Type Text  Picture
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPositionIndex[3]) - BNHJUIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  3
+	Wait For  2
+	Type Key  ENTER
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPositionLast) - VFGJKIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  last
+	Wait For  2
+	Type Key  ENTER
+
+	Save And Publish
+
+	Open Section In Content Studio  FrontpageTemplate
+	Wait for  5
+	Drag And Drop Element  TeaserWidgetViewPickerTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+####Assertions####
+
+	Open Browser To Publication
+	Check If Exists  TeaserViewWithViewPickerAssertion
+	Close Browser
+
+Remove teaser widget
+	Set Tags  non-critical
+	Open Section In Content Studio  FrontpageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+		
