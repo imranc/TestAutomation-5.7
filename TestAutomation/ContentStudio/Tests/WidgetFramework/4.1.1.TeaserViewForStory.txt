@@ -13,7 +13,7 @@ Create a Teaser View for Story
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Content Type  Config  TeaserView
-	Type Text  TestAutomation (TeaserView for story)
+	Type Text  TestAutomation (TeaserViewforstory) - VGTYUIO
 
 
 	Click Element  DefaultTab
@@ -32,23 +32,28 @@ Create a Teaser View for Story
     	Type Text    Author
     	Type Key    ENTER
 
-	#Drag Scroll  TeaserViewScroll  50  250
-	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
+	Scroll Element  TeaserViewScroll  50  250
+	#Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
 	
 	Click Element  WidgetMediaContentTypeSettings  -35  10
-	Type Text  Picture
+	Type Text    Picture
 	Wait For  2
-	Type Key  ENTER
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+    	Type Key    ENTER
+	
 
 	Click Element  WidgetMediaSourceSettings  20  0
 	Click Element  WidgetMediaSourceSpecifySettings  0  -13
-	Type Text  Related
-	Wait For  2
-	Type Key  ENTER
-
+	Select From Dropdown  Related
+	
 	Click Element  WidgetMediaImageWidthSettings
 	Type Text  50%
 	Type Key  ENTER
+
+	
 
 	Click Element  WidgetMediaImagePositionSettings
 	Type Text  Left
@@ -57,5 +62,5 @@ Create a Teaser View for Story
 	Save And Publish
 
 	###Assertions###
-		Search And Select First Item  TestAutomation (TeaserView for story)
+		Search And Select First Item  TestAutomation (TeaserViewforstory) - VGTYUIO
 		Check If Exists  InboxItemSelected
