@@ -13,7 +13,7 @@ Create a Teaser View for Position Index[3]
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Content Type  Config  TeaserView
-	Type Text  TestAutomation (TeaserView for Position Index[3])
+	Type Text  TestAutomation (TeaserViewforPositionIndex[3]) - BNHJUIO
 
 	Click Element  DefaultTab
 	Click Element  WidgetTopElementSettings  -30  40
@@ -30,6 +30,10 @@ Create a Teaser View for Position Index[3]
 	Scroll Element  TeaserViewScroll  50  250
 	Click Element  WidgetMediaContentTypeSettings  -35  10
 	Type Text  Picture
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
 	Wait For  2
 	Type Key  ENTER
 
@@ -56,5 +60,5 @@ Create a Teaser View for Position Index[3]
 	Save And Publish
 
 	###Assertions###
-		Search And Select First Item  TestAutomation (TeaserView for Position Index[3])
+		Search And Select First Item  TestAutomation (TeaserViewforPositionIndex[3]) - BNHJUIO
 		Check If Exists  InboxItemSelected
