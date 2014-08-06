@@ -1,4 +1,4 @@
-﻿***Settings***
+***Settings***
 Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
 Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
 Library  SearchContent.SearchContent  WITH NAME  SearchContent
@@ -23,6 +23,7 @@ Create a content with UTF-8 characters
 		Check If Exists  UTF8-Assertion  0.60
 
 Change input keyboard
+		Set Tags  non-critical
 		Change Input Language
 	
 	
