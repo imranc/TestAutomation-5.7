@@ -46,6 +46,16 @@ Search And Select First Item  [Arguments]  ${SearchPattern}
 	Wait For  15
 	Click Element  Hit  -15  30
 
+Search And Select Without Waiting  [Arguments]  ${SearchPattern}
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  10
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Type Text  ${SearchPattern}
+	Type Key  ENTER
+	Wait For  10
+	Click Element  Hit  -15  30
+
 Open Section In Content Studio  [Arguments]  ${SectionName}
 	Click Element If Exists  SectionsTab  SectionsTab
 	Click Element  HomeSection
@@ -86,5 +96,22 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Type Text  ${TagName}
 	Type Key  ENTER 
 	Type Key  ESC
+
+Duplicate Item  [Arguments]  ${DuplicateAs}  ${AppendWith}
+	Wait For  2
+	Click Element  FileMenu
+	Click Element  ${DuplicateAs}
+	wait For  5
+	Type Text  ${AppendWith}
+	Type Text If Element Exists  SubtitleFieldInContent  -20  20  ${AppendWith}
+	Wait For  2
+
+	Type Text If Element Exists  LeadTextFieldInStoryContent  -25  20  ${AppendWith}
+	Wait For  2
+	
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButton
+	Wait For  5
 
 	
