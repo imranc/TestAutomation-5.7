@@ -97,6 +97,16 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Type Key  ENTER 
 	Type Key  ESC
 
+Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
+	Right Click Element  ${Area}
+	Wait For  2
+	Click Element  InsertGroup  65  0
+	Wait For  2
+	Click Element  ${InsertGroupName}
+	Wait For  2
+	Click Element  PublishButtonSimple
+	Wait For  5
+
 Duplicate Item  [Arguments]  ${DuplicateAs}  ${AppendWith}
 	Wait For  2
 	Click Element  FileMenu
