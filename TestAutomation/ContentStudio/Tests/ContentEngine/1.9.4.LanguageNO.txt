@@ -21,5 +21,7 @@ Open a content studio with Norwegian language
 	Wait For  20
 	Type Key  f  ALT
 	Check If Exists  LanguageAssertionNO
+	Close Content Studio
+	
 	
 	
