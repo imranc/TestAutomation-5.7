@@ -88,7 +88,7 @@ class eceSikuli(object):
                 checkElementExists = args[0]
                 checkElementExistsImageName = checkElementExists+'.png'
              
-                if exists(Pattern(checkElementExistsImageName).similar(0.80)):
+                if exists(Pattern(checkElementExistsImageName).similar(0.95)):
                         if len(args) == 2:
                                 eceSikuli.click_element(self, checkElementExists, 0, 0)
                                 eceSikuli.type_text(self, args[1])
@@ -188,3 +188,38 @@ class eceSikuli(object):
                 else:
                         ImageName=capture_CS_screenshot()
                         raise AssertionError(ScrollImageName+'Image does not exist. Screenshot: '+ImageName)
+                
+        def clean_up_desk(self, sectionName):
+                ContentStudio.open_section_panel(self)
+                SectionImageName=sectionName+'Section.png'
+                wait(2)
+                if exists(Pattern(SectionImageName).similar(0.95)):
+                        doubleClick(Pattern(SectionImageName).similar(0.95))
+                        wait(2)		   
+                else:
+                       print("Do nothing")
+                       
+                
+                #setAutoWaitTimeout(10)
+                wait(10)
+                #wait(Pattern("FirstContentOfInbox.png").similar(0.80), 20)
+                #wait(2)
+                
+                if exists(Pattern("FirstContentOfDesk.png").similar(0.70)):
+                        click(Pattern("FirstContentOfDesk.png").targetOffset(10,15).similar(0.70))
+                        wait(2)
+                
+                        while exists(Pattern("DeskItemselected.png").similar(0.90)):
+                        #click(Pattern("FirstContentOfInbox.png").targetOffset(-1,60).similar(0.90))
+                                type(Key.DELETE)
+                                if exists(Pattern("FirstContentOfDesk.png").similar(0.70)):
+                                        click(Pattern("FirstContentOfDesk.png").targetOffset(10,15).similar(0.70))
+                                        wait(2)
+
+                        wait(3)
+                        if exists("SaveButton.png"):
+                                click("SaveButton.png")
+                        wait(10)
+                
+                        if exists("PublishButtonSimple.png"):
+                                click("PublishButtonSimple.png")
