@@ -13,7 +13,7 @@ Create a Teaser View for Picture
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Content Type  Config  TeaserView
-	Type Text  TestAutomation (TeaserView for Picture)
+	Type Text  TestAutomation (TeaserViewforPicture) - VBHYUIK
 
 	Click Element  DefaultTab
 	Click Element  WidgetBodyElementSettings  -30  40
@@ -27,6 +27,10 @@ Create a Teaser View for Picture
 	Click Element  WidgetMediaContentTypeSettings  -35  10
 	Type Text  Picture
 	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
 	Type Key  ENTER
 
 	Click Element  WidgetMediaImageAspectRatioSettings
@@ -34,11 +38,11 @@ Create a Teaser View for Picture
 	Type Key  ENTER
 
 	Click Element  WidgetMediaImageWidthSettings
-	Type Text  80%
+	Type Text  50%
 	Type Key  ENTER
 
 	Save And Publish
 
 	###Assertions###
-		Search And Select First Item  TestAutomation (TeaserView for Picture)
+		Search And Select First Item  TestAutomation (TeaserViewforPicture) - VBHYUIK
 		Check If Exists  InboxItemSelected
