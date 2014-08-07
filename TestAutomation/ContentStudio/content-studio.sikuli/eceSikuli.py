@@ -190,7 +190,8 @@ class eceSikuli(object):
                         raise AssertionError(ScrollImageName+'Image does not exist. Screenshot: '+ImageName)
                 
         def clean_up_desk(self, sectionName):
-                ContentStudio.open_section_panel(self)
+                csInstance = ContentStudio()
+                ContentStudio.open_section_panel(csInstance)
                 SectionImageName=sectionName+'Section.png'
                 wait(2)
                 if exists(Pattern(SectionImageName).similar(0.95)):
