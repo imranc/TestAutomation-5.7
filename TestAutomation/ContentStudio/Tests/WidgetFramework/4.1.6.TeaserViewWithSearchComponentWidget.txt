@@ -1,0 +1,145 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Relate a Teaser View With Search Component Widget for Displaying Iterate With Related View
+**Test cases**
+Relate a Teaser View With Search Component Widget for Displaying Iterate With Related View
+	Switch To Content Studio
+	Close Allopen Tabs
+	Search And Select Without Waiting  TestAutomation Widget (Search Config widget)
+	Double Click Element  InboxItemSelected
+	Click Element  SearchQuerySettingsLabel  65  50
+	Click Element  SearchQuerySettingsLabel  65  50
+	Select Second Item From Dropdown  Story
+	Save And Publish
+
+	Open Section In Content Studio  FrontPageTemplate
+	Wait For  5
+	Click Element If Exists  SearchTab  SearchTab
+	Drag And Drop Element  InboxItemSelected  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+	### Create a Search Component Widget with Iterate View ###
+
+	Create Widget Content Type  SearchComponentWidget
+	Type Text  TestAutomation Widget (Search Component widget)
+	Click Element  SearchComponentWidgetComponentLabel  0  25
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+	Wait For  2
+
+	Click Element  SearchComponentWidgetResultList
+	Click Element  RenderingMode  -15  15
+	Type Text  Iterate
+	Type Key  ENTER
+
+	### Relate all teaser views displaying content item ###
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforstory) - VGTYUIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  Content
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  ContentTypeNameInContentSummary  0  25
+	Select Second Item From Dropdown  Story
+	
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPicture) - VBHYUIK
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  Content
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  ContentTypeNameInContentSummary  0  25
+	Select Second Item From Dropdown  Picture
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPositionIndex[3]) - BNHJUIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  3
+	Wait For  2
+	Type Key  ENTER
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPositionLast) - VFGJKIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  last
+	Wait For  2
+	Type Key  ENTER
+
+	Save And Publish
+
+	Open Section In Content Studio  SearchPageTemplate
+	Wait For  5
+	Search And Select Without Waiting  TestAutomation Widget (Search Component widget) 	
+	Drag And Drop Element  InboxItemSelected  MainContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+	###Assertion###
+	Open Browser To Publication  search/?order=DESC&page=1&q=CreatedForDSBySectionPageGroupTest&sort=publishdate
+	Check If Exists  TeaserViewSearchComponentWidgetAssertion
+	Close Browser
+
+Remove widget from search page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  SearchPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+
+Remove widget from front page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple
+	
+
+
+
+
+
+
