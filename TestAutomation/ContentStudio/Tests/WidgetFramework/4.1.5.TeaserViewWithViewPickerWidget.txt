@@ -102,6 +102,7 @@ Relate a Teaser View With View Picker Widget for Displaying Iterate With Related
 
 	Open Section In Content Studio  FrontpageTemplate
 	Wait for  5
+	Click Element  NavbarArea  -42  1
 	Drag And Drop Element  TeaserWidgetViewPickerTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
@@ -119,5 +120,6 @@ Remove teaser widget
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
+	Click Element  NavbarArea  -42  1
 	Click Element  PublishButtonSimple
 		
