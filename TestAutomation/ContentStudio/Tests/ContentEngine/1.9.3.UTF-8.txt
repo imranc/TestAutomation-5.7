@@ -16,7 +16,7 @@ Create a content with UTF-8 characters
 		Close Allopen Tabs
 		Wait For  2
 		Change Input Language
-		Create Content In Section  NewArticles  Epksj ofv
+		Create Content In Section  News  Epksj ofv
 		Check If Exists  UTF8-Assertion
 		Click Element  PreviewTab
 		Wait For  2
