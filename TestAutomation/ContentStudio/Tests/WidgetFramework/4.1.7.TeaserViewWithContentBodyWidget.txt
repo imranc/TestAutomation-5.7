@@ -1,0 +1,147 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Relate all Teaser View With Content Body Widget for Displaying all teaser Related View
+**Test cases**
+Relate all Teaser View With Content Body Widget for Displaying all teaser Related View
+	Switch To Content Studio
+	Close Allopen Tabs
+	
+	### Add 3 stories 2 image Contents to the Content body ###
+	
+	Search And Select Without Waiting  StoryCreatedForDSBySectionPageGroupTest
+	Double Click Element  InboxItemSelected
+	Click Element  BodyField  280  25
+	Type Key  ENTER
+	Type Key  ENTER
+	Drag And Drop Element  InboxItemSelected  BodyField  -10  75
+	Click Element  BodyField  280  75
+	Type Key  ENTER
+
+	Search And Select Without Waiting  DuplicateQAWSGYHStoryCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  BodyField  -10  100
+	Click Element  BodyField  410  100
+	Type Key  ENTER
+
+	Search And Select Without Waiting  DuplicateWSDFTYUStoryCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  BodyField  -10  125
+	Click Element  BodyField  410  125
+	Type Key  ENTER
+
+	Search And Select Without Waiting  ImageCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  BodyField  -10  150
+	Click Element  BodyField  200  150
+	Type Key  ENTER
+
+	Search And Select Without Waiting  DuplicateVEWSFTYImageCreatedForDSBySectionPageGroupTest
+	Drag And Drop Element  InboxItemSelected  BodyField  -10  300
+	Click Element  BodyField  200  300
+	Save And Publish
+
+	Create Widget Content Type  ContentBodyWidget
+	Type Text  TestAutomation Widget (Teaser view with Body Widget)
+
+	### Relate all teaser views displaying content item ###
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforstory) - VGTYUIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  Content
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  ContentTypeNameInContentSummary  0  25
+	Select Second Item From Dropdown  Story
+	
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPicture) - VBHYUIK
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  Content
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  ContentTypeNameInContentSummary  0  25
+	Select Second Item From Dropdown  Picture
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPositionIndex[3]) - BNHJUIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  3
+	Wait For  2
+	Type Key  ENTER
+
+	Search And Select Without Waiting  TestAutomation (TeaserViewforPositionLast) - VFGJKIO
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  last
+	Wait For  2
+	Type Key  ENTER
+
+	Save And Publish
+
+	###Relate widget to story page template###
+
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+	###Assertion###
+	Search And Select Without Waiting  StoryCreatedForDSBySectionPageGroupTest
+	Type Key  ENTER
+	Wait For  5
+	Click Element   ContentUrl  12  10
+	Wait For  10
+	Check If Exists  TeaserViewWithContentBodyWidgetAssertion
+	Close Browser
+
+Remove widget from story page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple	
+	
+	
+
+
+
+
+
+
