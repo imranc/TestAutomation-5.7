@@ -107,12 +107,20 @@ class eceSikuli(object):
                 dragSourceImageName = dragSource+'.png'
                 dragDestination = args[1]
                 dragDestinationImageName = dragDestination+'.png'
-                
-                if exists(Pattern(dragSourceImageName).similar(0.80)) and exists(Pattern(dragDestinationImageName).similar(0.80)):
-                        dragDrop(dragSourceImageName, dragDestinationImageName)
+                if len(args) == 2:
+                        if exists(Pattern(dragSourceImageName).similar(0.80)) and exists(Pattern(dragDestinationImageName).similar(0.80)):
+                                dragDrop(dragSourceImageName, dragDestinationImageName)
+                elif len(args) == 4:
+                        offset_x = int(args[2])
+                        offset_y = int(args[3])
+                        if exists(Pattern(dragSourceImageName).similar(0.80)) and exists(Pattern(dragDestinationImageName).similar(0.80)):
+                                corner=find(Pattern(dragSourceImageName).targetOffset(0,0))
+                                drop_point = find(Pattern(dragDestinationImageName).targetOffset(offset_x,offset_y))
+                                dragDrop(corner, drop_point)                         
                 else:
                         ScreenShot=capture_CS_screenshot()
                         raise AssertionError("Either drag source or drop destination images showing some problems..")
+
                 
                         
 
