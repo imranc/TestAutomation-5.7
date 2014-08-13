@@ -60,7 +60,7 @@ class ContentStudio(object):
                                 click("CheckBox.png")
                         
                         type(Key.ENTER)
-                        
+                maximize_content_studio_window()        
                 wait(Pattern("login_content_studio.png").targetOffset(-248,1),500)
                 
                 if len(args) == 0:
