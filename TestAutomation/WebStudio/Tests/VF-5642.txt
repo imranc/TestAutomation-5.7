@@ -9,7 +9,7 @@ Resource       common_resource.txt
 User object gets locked only once per session
 	Login To Web Studio
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
-	Click Element  xpath=//a[.='sports Administrator']
+	Click Element  xpath=//a[.='qa Administrator']
 	Go To WebStudio HomePage
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 		Page Should Contain Element  css=img[title^="Unlock"]
