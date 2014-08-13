@@ -18,7 +18,7 @@ User object gets locked only once per session
 		Page Should Not Contain  css=img[title^="Unlock"]
 
 	
-	Click Element  xpath=//a[.='sports Administrator']
+	Click Element  xpath=//a[.='qa Administrator']
 	Go To WebStudio HomePage
 	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
 		Page Should Contain Element  css=img[title^="Unlock"]
