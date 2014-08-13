@@ -493,11 +493,11 @@ class ContentStudio(object):
                 type(Key.DELETE)
                 wait(5)
                 
-                if exists(Pattern("PublishButton.png").similar(0.65)):
+                if exists(Pattern("PublishButton.png").similar(0.70)):
                         #wait(Pattern("PublishButton.png"),10)
-                        click(Pattern("PublishButton.png").similar(0.65))
-                elif exists(Pattern("PublishButtonSimple.png")):
-                        click(Pattern("PublishButtonSimple.png"))
+                        click(Pattern("PublishButton.png").similar(0.70))
+                elif exists(Pattern("PublishButtonSimple.png").similar(0.80)):
+                        click(Pattern("PublishButtonSimple.png").similar(0.80))
                 else:
                         print("No content in the section")
 
