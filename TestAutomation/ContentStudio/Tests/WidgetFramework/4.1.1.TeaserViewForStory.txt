@@ -46,19 +46,19 @@ Create a Teaser View for Story
     	Type Key    ENTER
 	
 
-	#Click Element  WidgetMediaSourceSettings  20  0
-	#Click Element  WidgetMediaSourceSpecifySettings  0  -13
-	#Select From Dropdown  Related
+	Click Element  WidgetMediaSourceSettings  20  0
+	Click Element  WidgetMediaSourceSpecifySettings  0  -13
+	Select From Dropdown  Related
 	
-	#Click Element  WidgetMediaImageWidthSettings
-	#Type Text  50%
-	#Type Key  ENTER
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  50%
+	Type Key  ENTER
 
 	
 
-	#Click Element  WidgetMediaImagePositionSettings
-	#Type Text  Left
-	#Type Key  ENTER
+	Click Element  WidgetMediaImagePositionSettings
+	Type Text  Left
+	Type Key  ENTER
 
 	Save And Publish
 
