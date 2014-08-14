@@ -14,16 +14,14 @@ Create an External Data source By Section Page Group
 	Switch To Content Studio
 	Close Allopen Tabs
 
-	#Clean Up Inbox  News
+	Clean Up Inbox  News
 	Clean Up Desk  News
 	Create Image In Section  News  ImageCreatedForDSBySectionPageGroupTest
 	Switch To Content Studio
 	Duplicate Item  DuplicateAsPicture  DuplicateVEWSFTY 
-
 	Create Content In Section  News  StoryCreatedForDSBySectionPageGroupTest
 	Switch To Content Studio
 	Duplicate Item  DuplicateAsStory  DuplicateWSDFTYU
-
 	Search And Select First Item  StoryCreatedForDSBySectionPageGroupTest
 	Double Click Element  InboxItemSelected
 	Duplicate Item  DuplicateAsStory  DuplicateQAWSGYH 

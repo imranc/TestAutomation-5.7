@@ -29,6 +29,7 @@ Create a Teaser View for Position Index[3]
 		
 	Scroll Element  TeaserViewScroll  50  250
 	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Click Element  WidgetMediaContentTypeSpecify  95  0
 	Type Text  Picture
 	Wait For  2
 	Type Key  DOWN

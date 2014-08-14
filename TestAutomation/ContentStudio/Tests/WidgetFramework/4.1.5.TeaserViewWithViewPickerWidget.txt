@@ -44,6 +44,10 @@ Relate a Teaser View With View Picker Widget for Displaying Iterate With Related
 	Click Element  ContentTypeNameInContentSummary  0  25
 	Type Text  Story
 	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
 	Type Key  ENTER
 	
 	Search And Select Without Waiting  TestAutomation (TeaserViewforPicture) - VBHYUIK
