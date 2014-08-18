@@ -21,6 +21,7 @@ Relate a Teaser View With Search Component Widget for Displaying Iterate With Re
 
 	Open Section In Content Studio  FrontPageTemplate
 	Wait For  5
+	Click Element If Exists  NavbarArea  NavbarArea  -40  0
 	Click Element If Exists  SearchTab  SearchTab
 	Drag And Drop Element  InboxItemSelected  TopContentArea
 	Click Element  SaveButton
@@ -28,7 +29,8 @@ Relate a Teaser View With Search Component Widget for Displaying Iterate With Re
 	Click Element  PublishButtonSimple
 
 	### Create a Search Component Widget with Iterate View ###
-
+	
+	Close Allopen Tabs
 	Create Widget Content Type  SearchComponentWidget
 	Type Text  TestAutomation Widget (Search Component widget)
 	Click Element  SearchComponentWidgetComponentLabel  0  25
