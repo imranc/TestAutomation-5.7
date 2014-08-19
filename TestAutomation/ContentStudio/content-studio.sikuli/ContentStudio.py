@@ -572,12 +572,13 @@ class ContentStudio(object):
                 ContentStudio.open_section_panel(self)
                 
                 SectionImageName=sectionName+'Section.png'
-                if exists(Pattern(SectionImageName).similar(0.95)):
-                        click(Pattern(SectionImageName).similar(0.95))
-                else:
-                        print("Do nothing")
+                #if exists(Pattern(SectionImageName).similar(0.95)):
+                #        click(Pattern(SectionImageName).similar(0.95))
+                #else:
+                #        print("Do nothing")
 
-
+                if exists("HomeSection.png"):
+                    click("HomeSection.png")
 
                 ContentStudio.right_click_section(self, sectionName)
                 if exists("CreateNewList.png"):
