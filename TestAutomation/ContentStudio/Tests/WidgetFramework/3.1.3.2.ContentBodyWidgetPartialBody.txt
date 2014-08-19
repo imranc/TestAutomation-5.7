@@ -1,0 +1,114 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a content Body Widget displaying "dateline" and "Partial with show more link"
+**Test cases**
+Create a content Body Widget displaying "dateline" and "Partial with show more link"
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Widget Content Type  ContentBodyWidget
+	Type Text  TestAutomation Widget (Body Widget with dateline and partial body)
+	Click Element  DefaultTab
+	Click Element  ParagraphMaximumField  85  0
+	Type Text  5
+	Click Element  ShowBodyLabelInBodyWidget  200  0
+	Type Text  partial
+	Wait For  2
+	Type Key  ENTER
+	Click Element  PartialParagraphNoInBodyWidget  125  0
+	Type Key  DELETE
+	Type Text  3
+	Save And Publish
+
+	###Assertion###
+	Search And Select First Item  TestAutomation Widget (Body Widget with dateline and partial body)
+	Check If Exists  InboxItemSelected
+
+	### A story content which has 5 paragraphs, 1 inline content, 1 tag related with it ###
+	Create Image In Section  NewArticles  Imagecreatedforcontentbodywidgettest
+	Switch To Content Studio
+	Create Content In Section  NewArticles  Article created for content body widget displaying partial body with show more link
+	Switch To Content Studio
+	Click Element  BodyField
+	Type Key  ENTER
+	Type Text  Paragraph2
+	Type Key  ENTER
+	Type Text  Paragraph3
+	Type Key  ENTER
+	Type Text  Paragraph4
+	Search And Select Without Waiting  Imagecreatedforcontentbodywidgettest
+	Copy From Menu
+	Click Element  BodyField
+	Type Key  ENTER
+	Paste From Menu
+	Type Key  ENTER
+	Type Text  Paragraph5 
+	Click Element If Exists  Related  RelatedContentInStory
+	Scroll Element  StoryContentScroll  0  100
+
+	Click Element If Exists  RightPanelTagCollapsed  RightPanelTagCollapsed  -45  -10
+	Click Element  RightPanelTag  0  10
+	Type Text  tag6754
+	Click Element If Exists  CreateNewTagLabel  CreateNewTagLabel
+	Click Element  WhereInCreateNewTagPanel  25  0
+	Type Text  Widget
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+	Wait For  2
+	Click Element  CreateInCreateNewTagPanel
+	Click Element If Exists  CreateTagFailedAlert  CreateTagFailedAlert  400  110
+	Save And Publish
+	
+	
+	Click Element  DatelineFieldInStoryContent  -20  20
+	Wait For  60
+	Type Text  tag6754
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+	Wait For  2
+	Save And Publish
+
+	###Relate widget to story page template###
+
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Drag And Drop Element  TestAutomationWidgetTab  MainContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+	###Assertion###
+	Search And Select Without Waiting  Article created for content body widget displaying partial body with show more link
+	Type Key  ENTER
+	Wait For  5
+	Click Element   ContentUrl  12  10
+	Wait For  10
+	Check If Exists  ContentBodyWithPartialAssertion
+	Close Browser
+
+Remove widget from story page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  StoryPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element  PublishButtonSimple	
+	
+	
+
+
+
+
+
+
