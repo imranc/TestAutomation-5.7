@@ -29,11 +29,12 @@ Drag a story/picture from the list to the Clipboard.
 Double click on a content of the clipboard
 	Close All Open Tabs
 	Clean Up Clipboard
-	Create Content In Section  Home
+	Create Content In Section  NewArticles
 	Check Clipboard
 		Check If Exists  PublishedContent
 
 Remove content from the clipboard
+	Close All Open Tabs
 	Create Content In Section  NewArticles
 	Clean Up Clipboard
 	Check If Not Exists  InboxItemSelected

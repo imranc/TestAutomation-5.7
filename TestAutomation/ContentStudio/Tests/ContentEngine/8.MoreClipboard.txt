@@ -6,12 +6,14 @@ Documentation  More Clipboard TC from ET
 
 **Test cases**
 Drag article into clipboard
+	Close All Open Tabs
 	Create Content In Section  NewArticles
 	Clean Up Clipboard
 	Drag  CurrentTab  EmptyClipboard
 	Check If Exists  InboxItemSelected
 
 Use Open Selected
+	Close All Open Tabs
 	Clean Up Clipboard
 	Create Content In Section  NewArticles
 	Go To Clipboard
@@ -22,6 +24,7 @@ Use Open Selected
 
 
 Undo and Redo
+	Close All Open Tabs
 	Clean Up Clipboard
 	Create Content In Section  NewArticles
 	Go To Clipboard
@@ -35,6 +38,7 @@ Undo and Redo
 	Check If Exists  EmptyClipboard
 
 Copy, Paste, Cut
+	Close All Open Tabs
 	Clean Up Clipboard
 	Create Content In Section  NewArticles
 	Go To Clipboard
