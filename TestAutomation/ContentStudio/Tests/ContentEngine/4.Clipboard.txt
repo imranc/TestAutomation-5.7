@@ -12,6 +12,7 @@ Create A content and check if it's available on clipboard
 	Check Clipboard
 
 Drag a story/picture to the list from Clipboard
+	Delete List  NewArticles  NewsList
 	Create New List  NewArticles  NewsList
 	Close All Open Tabs
 	Clean Up Clipboard
