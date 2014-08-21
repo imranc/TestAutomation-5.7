@@ -70,6 +70,8 @@ class eceSikuli(object):
                         type(Key.SPACE)
                 elif args[0] == 'f' and args[1] == 'ALT':
                         type('f',KeyModifier.ALT)
+                elif args[0] == 'CTRL' and args[1] == '7':
+                        type('7', KeyModifier.CTRL)
 
 
         def click_element_if_exists(self, *args):
