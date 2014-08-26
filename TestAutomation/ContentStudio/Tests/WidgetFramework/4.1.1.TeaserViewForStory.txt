@@ -33,7 +33,7 @@ Create a Teaser View for Story
     	Type Key    ENTER
 
 	Scroll Element  TeaserViewScroll  50  250
-	Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
+	#Drag And Drop Element  TeaserViewScroll  TeaserViewScrollDownTo	
 	
 	Click Element  WidgetMediaContentTypeSettings  -35  10
 	Click Element  WidgetMediaContentTypeSpecify  95  0
