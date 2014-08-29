@@ -50,7 +50,9 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Type Key  ENTER
 	Type Text  Paragraph5 
 	Click Element If Exists  Related  RelatedContentInStory
-	Scroll Element  StoryContentScroll  0  100
+	Type Key  CTRL  7
+	Click Element If Exists  ShowSideBar  ShowSideBar
+	Scroll Element  StoryEditorScroller  0  100
 
 	Click Element If Exists  RightPanelTagCollapsed  RightPanelTagCollapsed  -45  -10
 	Click Element  RightPanelTag  0  10

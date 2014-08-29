@@ -209,7 +209,7 @@ class eceSikuli(object):
                                 
                 offset_y = int(args[2])
                                 
-                if exists(Pattern(ScrollImageName)):
+                if exists(Pattern(ScrollImageName).similar(0.90)):
                         corner=find(Pattern(ScrollImageName).targetOffset(0,0))
                         drop_point = corner.getTarget().offset(offset_x, offset_y)
                         dragDrop(corner, drop_point)

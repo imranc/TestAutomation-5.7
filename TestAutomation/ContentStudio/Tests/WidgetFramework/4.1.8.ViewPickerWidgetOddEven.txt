@@ -1,0 +1,212 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a View picker widget displaying Deligating related view For Odd Even indexed Contents
+**Test cases**
+Create a View picker widget displaying Deligating related view For Odd Even indexed Contents
+	Switch To Content Studio
+	
+	### Create a Teaser View small for odd indexed contents ###
+	
+	Close Allopen Tabs
+	Create Content Type  Config  TeaserView
+	Type Text  TestAutomation (TeaserViewsmall) - odd
+
+
+	Click Element  DefaultTab
+	Click Element  WidgetTopElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Title
+	Type Key  ENTER
+
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Media
+	Type Key  ENTER
+
+	Click Element  WidgetElementSettings  80  15
+    	Click Element If Exists  WidgetElementsTextSizeSettings  WidgetSpecifyElements  
+    	Type Text    Title
+    	Type Key    ENTER
+	Click Element  WidgetElementsTextSizeSettings  55  0
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+	Scroll Element  TeaserViewScroll  50  250	
+	
+	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Click Element  WidgetMediaContentTypeSpecify  95  0
+	Type Text    Picture
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+    	Type Key    ENTER
+	
+
+	Click Element  WidgetMediaSourceSettings  20  0
+	Click Element  WidgetMediaSourceSpecifySettings  0  -13
+	Select From Dropdown  Related
+	
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  25%
+	Type Key  ENTER
+
+	
+	Save And Publish
+
+	###Assertions###
+		Search And Select First Item  TestAutomation (TeaserViewsmall) - odd
+		Check If Exists  InboxItemSelected
+
+	### Create a Teaser View small for odd indexed contents ###
+	Close Allopen Tabs
+	Create Content Type  Config  TeaserView
+	Type Text  TestAutomation (TeaserViewBig) - Even
+
+
+	Click Element  DefaultTab
+	Click Element  WidgetTopElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Title
+	Type Key  ENTER
+
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Media
+	Type Key  ENTER
+
+	Click Element    WidgetElementSettings  80  15
+    	Click Element If Exists  WidgetElementsTextSizeSettings  WidgetSpecifyElements  
+    	Type Text    Title
+    	Type Key    ENTER
+	Click Element  WidgetElementsTextSizeSettings  55  0
+	Type Key  UP
+	Wait For  2
+	Type Key  ENTER
+
+	Scroll Element  TeaserViewScroll  50  250	
+	
+	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Click Element  WidgetMediaContentTypeSpecify  95  0
+	Type Text    Picture
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+    	Type Key    ENTER
+	
+
+	Click Element  WidgetMediaSourceSettings  20  0
+	Click Element  WidgetMediaSourceSpecifySettings  0  -13
+	Select From Dropdown  Related
+	
+	Click Element  WidgetMediaImageAspectRatioSettings
+	Type Text  Wide
+	Type Key  ENTER	
+
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  50%
+	Type Key  ENTER
+
+	
+	Save And Publish
+
+	###Assertions###
+		Search And Select First Item  TestAutomation (TeaserViewBig) - Even
+		Check If Exists  InboxItemSelected
+
+
+	###Relate a Teaser View With View Picker Widget for Displaying Iterate With Related View###
+
+	Close Allopen Tabs
+	Create Widget Content Type  ViewPickerWidget
+	Type Text  TestAutomation (TeaserView With View Picker - Odd/Even test)
+	Click Element  DataSourceTab
+	Click Element  Use  0  20
+	Click Element  ExternalDataSource
+	Click Element If Exists    RelatedDatasource    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Wait For  10
+
+	Search And Select Without Waiting  DataSource by section page group created by automated test
+	Drag And Drop Element  InboxItemSelected  RelatedDatasource
+	Click Element If Exists    RelatedContent    RelatedContent
+
+	Click Element  DefaultTab
+	Click Element  RenderingMode  -15  15
+	Type Text  Iterate
+	Type Key  ENTER
+	
+	Search And Select Without Waiting  TestAutomation (TeaserViewsmall) - odd
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  odd
+	Wait For  2
+	Type Key  ENTER
+	
+	Search And Select Without Waiting  TestAutomation (TeaserViewBig) - Even
+	Click Element If Exists    RelatedView    RelatedContent
+    	Click Element If Exists    RelatedContent    RelatedContent
+	Drag And Drop Element  InboxItemSelected  RelatedView
+
+	Click Element  FirstItemInRelatedView
+	Click Element  SelectByInContentSummary  0  25
+	Type Text  position
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  PositionInContentSummary  0  25
+	Type Text  even
+	Wait For  2
+	Type Key  ENTER
+
+	Save And Publish
+	
+	Open Section In Content Studio  FrontpageTemplate
+	Wait for  5
+	Click Element  NavbarArea  -42  1
+	Drag And Drop Element  TeaserWidgetViewPickerTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+	####Assertions####
+
+	Open Browser To Publication
+	Check If Exists  ViewPickerWithOddEvenAssertion
+	Close Browser
+
+Remove widget from front page template
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+
+	Type Key  DELETE
+	Click Element  NavbarArea  -42  1
+	Click Element  PublishButtonSimple
+	
+
+	
+
+	
