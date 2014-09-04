@@ -5,6 +5,7 @@ Documentation  A test case for Preview All
 
 **Test cases**
 'Preview All' all types of contents
+	Close All Open Tabs
 	Create Content In Section  NewArticles
 	Preview Content  All
 	Create Image In Section  NewArticles
