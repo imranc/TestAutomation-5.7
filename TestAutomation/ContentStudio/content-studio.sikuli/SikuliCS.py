@@ -58,7 +58,7 @@ def capture_java_console_screenshot():
     imageName = imageName + '.JAVA_CONSOLE' + '-' + currentTime
         
     screenshotsDir = "TestResults\Screenshots"
-    switchApp("Java Console - Content Studio")
+    switchApp("Java Console -")
     type(Key.SPACE, KeyModifier.ALT)
     type('x')
     img = capture(App.focusedWindow())
