@@ -61,11 +61,13 @@ Create an External Data source By Section Page Group
 	Type Key  ENTER
 
 	Click Element  DataSourceGroupField  -10  15
-	Select From Dropdown  topStories
+	Select From Dropdown  Top stories
 
 	Click Element  DataSourceContentTypes  -10  15
 	Select From Dropdown  Story
-        Select From Dropdown  Picture
+        Type Text  Picture
+	Wait For  2
+	Type Key  ENTER
 
 	Click Element  Filter&Sort
 	Wait For  2
