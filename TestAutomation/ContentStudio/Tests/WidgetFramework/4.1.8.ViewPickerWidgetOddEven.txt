@@ -103,7 +103,7 @@ Create a View picker widget displaying Deligating related view For Odd Even inde
 	Wait For  2
 	Type Key  DOWN
 	Wait For  2
-    	Type Key    ENTER
+    	Type Key  ENTER
 	
 
 	Click Element  WidgetMediaSourceSettings  20  0
@@ -183,7 +183,7 @@ Create a View picker widget displaying Deligating related view For Odd Even inde
 	
 	Open Section In Content Studio  FrontpageTemplate
 	Wait for  5
-	Click Element  NavbarArea  -42  1
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -30  3
 	Drag And Drop Element  TeaserWidgetViewPickerTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
