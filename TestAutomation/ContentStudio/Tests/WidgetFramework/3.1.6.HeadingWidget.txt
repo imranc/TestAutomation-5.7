@@ -29,7 +29,7 @@ Create a Breadcrumb widget displaying content item
 	### Relate a Breadcrum widget displaying content item ###
 	Open Section In Content Studio  FrontPageTemplate
 	Wait For  5
-	Click Element  NavbarArea  -42  1
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
@@ -47,7 +47,7 @@ Remove widget from front page template
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
-	Click Element  NavbarArea  -42  1
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Click Element  PublishButtonSimple
 	
 

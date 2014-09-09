@@ -10,6 +10,7 @@ Resource       common_resource.txt
 Documentation  Create a View picker widget displaying Deligating related view For Odd Even indexed Contents
 **Test cases**
 Create a View picker widget displaying Deligating related view For Odd Even indexed Contents
+	
 	Switch To Content Studio
 	
 	### Create a Teaser View small for odd indexed contents ###
@@ -180,10 +181,10 @@ Create a View picker widget displaying Deligating related view For Odd Even inde
 	Type Key  ENTER
 
 	Save And Publish
-	
+
 	Open Section In Content Studio  FrontpageTemplate
 	Wait for  5
-	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -30  3
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Drag And Drop Element  TeaserWidgetViewPickerTab  TopContentArea
 	Click Element  SaveButton
 	Wait For  5
@@ -203,7 +204,7 @@ Remove widget from front page template
 	Click Element If Exists  WidgetListView  WidgetListView
 
 	Type Key  DELETE
-	Click Element  NavbarArea  -42  1
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Click Element  PublishButtonSimple
 	
 

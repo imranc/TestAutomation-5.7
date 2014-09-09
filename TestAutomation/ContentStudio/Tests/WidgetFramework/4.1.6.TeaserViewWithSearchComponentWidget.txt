@@ -21,7 +21,7 @@ Relate a Teaser View With Search Component Widget for Displaying Iterate With Re
 
 	Open Section In Content Studio  FrontPageTemplate
 	Wait For  5
-	Click Element If Exists  NavbarArea  NavbarArea  -40  0
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Click Element If Exists  SearchTab  SearchTab
 	Drag And Drop Element  InboxItemSelected  TopContentArea
 	Click Element  SaveButton
