@@ -9,7 +9,7 @@ Resource       common_resource.txt
 
 Documentation  Create a Teaser Widget with Data source query by section page group with data source as content type 
 **Test cases**
-Create a Teaser Widget with Data source query by section page group 
+Create a Teaser Widget with Data source query by section page group with data source as content type
 	
 	Switch To Content Studio
 	Close Allopen Tabs
