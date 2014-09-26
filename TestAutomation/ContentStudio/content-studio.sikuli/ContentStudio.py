@@ -508,7 +508,7 @@ class ContentStudio(object):
                 count=0
                 
                 while exists(Pattern("CloseTabs.png").similar(0.80)):
-                        click("CloseTabs.png")
+                        click(Pattern("CloseTabs.png").similar(0.80))
                         wait(1)
                         if count>50:
                                 ImageName=capture_CS_screenshot()
