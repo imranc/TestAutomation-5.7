@@ -185,11 +185,19 @@ class eceSikuli(object):
                         wait(5)
                         type(Key.ENTER)
                         wait(5)
+                        eceSikuli.maximize_browser_window()
+                        wait(2)
                 else:
                         raise AssertionError("Too many arguments")
 
         def open_browser_to_webstudio(self):
                 eceSikuli.open_browser(self, eceSikuli.getWsAddress(self))
+
+        def maximize_browser_window():
+                #***This Keyword Maximizes browser window****#
+                #Full screent content studio with SPACE+ALT+X
+                type(Key.SPACE, KeyModifier.ALT)
+                type('x')
         
         def getWsAddress(self):
                 ece_host= os.environ['ECE_EDITORIAL_HOST']
