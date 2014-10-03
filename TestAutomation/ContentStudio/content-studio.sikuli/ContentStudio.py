@@ -70,6 +70,8 @@ class ContentStudio(object):
                 
                 ##Assertion: Check if Section Tab or Search Tab exists
                 wait_for("SectionTab.png", 100)
+                maximize_content_studio_window()
+                wait(2)
                 
                 if exists(Pattern("SearchTab.png")) or exists(Pattern("SectionTab.png")):
                         wait(2)
