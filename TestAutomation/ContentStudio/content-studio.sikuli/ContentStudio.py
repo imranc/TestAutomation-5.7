@@ -226,6 +226,10 @@ class ContentStudio(object):
                         else:
                                 print("Do nothing")
                                 
+                if exists(Pattern("HomeSection.png").similar(0.90)):
+                        click(Pattern("HomeSection.png").similar(0.90))
+                        wait(2)
+                
                 if exists(Pattern("HomeSection.png").similar(1.00)):
                         click(Pattern("HomeSection.png").similar(1.00))
                         
@@ -245,7 +249,7 @@ class ContentStudio(object):
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
                         corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
-                        drop_point = corner.getTarget().offset(50, 250)
+                        drop_point = corner.getTarget().offset(50, 300)
                         dragDrop(corner, drop_point)
 
                         while exists(Pattern("ExpansionIcon.png").similar(0.90)):
