@@ -240,13 +240,15 @@ class ContentStudio(object):
 
                 ContentStudio.switch_to_content_studio(self)
 
-                if exists("HomeSection.png"):
-                        click("HomeSection.png")
         
                 SectionName=args[0]
                 
                 if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
+            
+                wait(2)
+                if exists("HomeSection.png"):
+                        click("HomeSection.png")
                         
                 ContentStudio.right_click_section(self, SectionName)
                 wait_for("NewContent.png",20)
