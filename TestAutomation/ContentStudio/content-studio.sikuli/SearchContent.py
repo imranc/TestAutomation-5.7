@@ -55,7 +55,7 @@ class SearchContent(object):
                         ImageName=capture_CS_screenshot()
                         raise AssertionError("Clipboard is EMPTY. Screenshot: "+ImageName)
 
-                wait(5)
+                wait(10)
 
         def clear_search(self):
                 wait(2)
