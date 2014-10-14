@@ -52,8 +52,12 @@ Remove widget from search page template
 	Close Allopen Tabs
 	Open Section In Content Studio  FrontPageTemplate
 	Wait for  5
+	Click Element If Exists  TopContentArea  TopContentArea
 	Click Element If Exists  WidgetListView  WidgetListView
-	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Wait For  2
+	Type Key  DOWN
+	Click Element If Exists  TopContentArea  TopContentArea
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
 	Click Element  NavbarArea  -42  1
