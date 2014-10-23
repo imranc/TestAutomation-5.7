@@ -43,7 +43,7 @@ class SearchContent(object):
                 ContentStudio.switch_to_content_studio(csInstance)
                 
                 SearchContent.search(self, 'simple')
-                click(Pattern("ClipboardTab.png").targetOffset(25, 100))
+                click(Pattern("Hit.png").targetOffset(-15, 30))
                 
                 if exists(Pattern("FirstContentOfClipboard.png").similar(0.90)):
                         logging.info("At least one content available in clipboard")
