@@ -13,7 +13,7 @@ Delete Section
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
     	Click For Multiple Cookies
-	Delete Section  International
+	Delete Section  Culture
 
 Log off
 	Click Link  Log off

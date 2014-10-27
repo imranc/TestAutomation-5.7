@@ -13,10 +13,10 @@ Create/Edit Section and actions under "Section Administration"
     	Input Environment Variable  password  ECE_Password
     	Submit Credentials
     	Click For Multiple Cookies
-	Create Section  International
+	Create Section  Culture
 
-	#Open Browser  http://demo-temp-dev.wfn.com/demo-temp-dev/International
-		#Page Should Contain  International
+	#Open Browser  http://demo-temp-dev.wfn.com/demo-temp-dev/Culture
+		#Page Should Contain  Culture
 
 
 Log Off
