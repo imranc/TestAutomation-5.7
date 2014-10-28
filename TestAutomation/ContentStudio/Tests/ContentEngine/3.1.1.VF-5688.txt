@@ -56,6 +56,7 @@ Set Collection Field Value In Frontpage
 		Check If Exists  VF-5688Assertion
 
 Remove Area from Frontpage
+	Set Tags  non-critical
 	Switch To Content Studio
 	Close Allopen Tabs
 	Open Section In Content Studio  Frontpage
