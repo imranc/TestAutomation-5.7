@@ -854,10 +854,9 @@ class ContentStudio(object):
                 wait(5)
                 type(Key.F4,KEY_ALT)
                 wait(5)
-                while exists("CloseTabsFirefox.png"):
-                    #switchApp("Firefox")
+                if exists("CloseTabsFirefox.png"):
+                    switchApp("Firefox")
                     click("CloseTabsFirefox.png")
-                    wait(5)
 
         def close_content_studio(self):
                 ContentStudio.switch_to_content_studio(self)
