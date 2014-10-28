@@ -712,7 +712,7 @@ class ContentStudio(object):
                 wait(2)
                 click("ListsTab.png")
                 ListImageName=ListName+'.png'
-                if exits(Pattern(ListImageName).similar(0.90)):
+                if exists(Pattern(ListImageName).similar(0.90)):
                     doubleClick(Pattern(ListImageName).similar(0.90))
                 waitVanish("Loading.png",20)
                 
