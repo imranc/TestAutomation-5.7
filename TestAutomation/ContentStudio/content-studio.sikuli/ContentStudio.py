@@ -769,7 +769,7 @@ class ContentStudio(object):
                 ContentStudio.switch_to_content_studio(self)
                 if exists("EditorTab.png"):
                         click("EditorTab.png")
-                else:
+                elif exists("DeskTab.png"):
                         click("DeskTab.png")
                 wait(2)
 
