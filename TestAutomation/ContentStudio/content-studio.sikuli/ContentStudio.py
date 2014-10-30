@@ -18,58 +18,60 @@ class ContentStudio(object):
                 browser=os.environ['browser']
                 
                 if browser=='IE':
-                        BrowserPath='C:\Program Files\Internet Explorer\iexplore.exe'
-                        BrowserApp=App.open(BrowserPath)
-                        wait(5)
-                        if exists("IE_prompt.png"):
-                                click("IE_prompt.png")
-                        switchApp("Internet Explorer")
-                        wait(20)
-                        while(1):
-                               if exists("ie_address_bar.png"):
-                                   break
-                               else:
-                                    type("l",KeyModifier.CTRL) 
+                    BrowserPath='C:\Program Files\Internet Explorer\iexplore.exe'
+                    BrowserApp=App.open(BrowserPath)
+                    wait(5)
+                    if exists("IE_prompt.png"):
+                        click("IE_prompt.png")
+                    switchApp("Internet Explorer")
+                    wait(20)
+                    while(1):
+                        if exists("ie_address_bar.png"):
+                            break
+                        else:
+                            type("l",KeyModifier.CTRL) 
                 else:
+                    BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
+                    BrowserApp=App.open(BrowserPath)
+                    switchApp("Mozilla Firefox")
+                    while exists("FirefoxStoppedWorking.png"):
+                        switchApp("Firefox")
+                        click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                        wait(5)
                         BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                         BrowserApp=App.open(BrowserPath)
                         switchApp("Mozilla Firefox")
-                        while exists("FirefoxStoppedWorking.png"):
-                                switchApp("Firefox")
-                                click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
-                                wait(5)
-                                BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
-                                BrowserApp=App.open(BrowserPath)
-                                switchApp("Mozilla Firefox")
-                        wait(10)
-                        type("l",KeyModifier.CTRL)
-        
+                    wait(10)
+                    type("l",KeyModifier.CTRL)
+                
                 csUrl=ContentStudio.getCsAddress(self)
                 paste(csUrl)
                 print (csUrl)
                 wait(5)
-                type("\n")
+                type(Key.ENTER)
                 wait_for(Pattern("FirefoxOpenWithJavaws.png"),20)
                 if exists("FirefoxOpenWithJavaws.png"):
-                        wait(2)
-                        type("\n")
-                wait(90)
+                    wait(2)
+                    type(Key.ENTER)
+                #wait(150)
                 #ContentStudio.switch_to_content_studio(self)
                 if exists("JavaWarning.png"):
-                        if exists("CheckBox.png"):
-                                click("CheckBox.png")
-                        
-                        type(Key.ENTER)
-                maximize_content_studio_window()        
-                wait(Pattern("login_content_studio.png").targetOffset(-248,1),500)
+                    if exists("CheckBox.png"):
+                        click("CheckBox.png")
+                    
+                    type(Key.ENTER)       
+                exists(Pattern("login_content_studio.png").targetOffset(-248,1),500)
+                switchApp("Escenic Content Studio")
+                maximize_content_studio_window()
+                exists(Pattern("login_content_studio.png").targetOffset(-248,1),50)
                 
                 if len(args) == 0:
-                        userName=os.environ['ECE_UserName']
-                        password=os.environ['ECE_Password']
+                    userName=os.environ['ECE_UserName']
+                    password=os.environ['ECE_Password']
                 else:
-                        userName=args[0]
-                        password=args[1]
-                        
+                    userName=args[0]
+                    password=args[1]
+                
                 type(userName)
                 wait(2)
                 type(Key.TAB + password + Key.TAB + Key.ENTER)
@@ -82,11 +84,11 @@ class ContentStudio(object):
                 wait_for("SearchTab.png", 100)
                 
                 if exists(Pattern("SearchTab.png")) or exists(Pattern("SectionTab.png")) or exists(Pattern("SectionsTabSelected.png")):
-                        wait(2)
-                        print("Log in successful")
+                    wait(2)
+                    print("Log in successful")
                 else:
-                        ImageName=capture_CS_screenshot()
-                        raise AssertionError('Login Failed! Screenshot: '+ImageName)
+                    ImageName=capture_CS_screenshot()
+                    raise AssertionError('Login Failed! Screenshot: '+ImageName)
 
         
                                       
