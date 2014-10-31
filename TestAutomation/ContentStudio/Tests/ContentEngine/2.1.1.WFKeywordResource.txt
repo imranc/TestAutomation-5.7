@@ -22,6 +22,12 @@ Create Widget Content Type  [Arguments]  ${ContentType}
 	Click Element  ${ContentType}
 	Wait For  2
 
+Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
+	Right Click Section  ${SectionName}
+	Click Element  NewContent  100  0
+	Click Element  ${ContentType}
+	Wait For  2
+
 Save And Publish
 	Wait For  2
 	Click Element  SaveButton
@@ -47,6 +53,7 @@ Search And Select Without Waiting  [Arguments]  ${SearchPattern}
 	Type Key  ENTER
 	Wait For  5
 	Click Element  Hit  -15  30
+
 
 Open Section In Content Studio  [Arguments]  ${SectionName}
 	Click Element If Exists  SectionsTab  SectionsTab
@@ -80,5 +87,24 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Type Text  ${TagName}
 	Type Key  ENTER 
 	Type Key  ESC
+
+Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
+	Right Click Element  ${Area}
+	Wait For  2
+	Click Element  InsertGroup  65  0
+	Wait For  2
+	Click Element  ${InsertGroupName}
+	Wait For  2
+	Click Element  PublishButtonSimple
+	Wait For  5
+
+Change Layout  [Arguments]  ${Layout}
+	Click Element  Tools
+	Click Element  ChangeLayout
+	Click Element If Exists  NewLayout  NewLayout  220  0
+	Click Element If Exists  ${Layout}  ${Layout}
+	Click Element  OkButtonForLayout
+	Wait For  2 
+
 
 	
