@@ -103,6 +103,8 @@ Change Layout  [Arguments]  ${Layout}
 	Click Element  ChangeLayout
 	Click Element If Exists  NewLayout  NewLayout  220  0
 	Click Element If Exists  ${Layout}  ${Layout}
+	Type Key  DOWN
+	Click Element If Exists  ${Layout}  ${Layout}
 	Click Element  OkButtonForLayout
 	Wait For  2 
 
