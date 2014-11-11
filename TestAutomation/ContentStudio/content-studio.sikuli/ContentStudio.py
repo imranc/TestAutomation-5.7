@@ -54,13 +54,15 @@ class ContentStudio(object):
                     wait(2)
                     type(Key.ENTER)
                 #wait(150)
-                #ContentStudio.switch_to_content_studio(self)
+                #ContentStudio.switch_to_content_studio(self)       
+                exists(Pattern("login_content_studio.png").targetOffset(-248,1),500)
+                        
                 if exists("JavaWarning.png"):
                     if exists("CheckBox.png"):
                         click("CheckBox.png")
-                    
-                    type(Key.ENTER)       
-                exists(Pattern("login_content_studio.png").targetOffset(-248,1),500)
+                            
+                    type(Key.ENTER)
+
                 switchApp("Escenic Content Studio")
                 maximize_content_studio_window()
                 exists(Pattern("login_content_studio.png").targetOffset(-248,1),50)
