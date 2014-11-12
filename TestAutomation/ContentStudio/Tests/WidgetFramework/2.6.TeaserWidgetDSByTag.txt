@@ -51,7 +51,7 @@ Create a Teaser Widget with Data source query by tag
 		Click Element  PublishButtonSimple
 
 	###Assertion###
-		Open Browser To Publication    news/sports
+		Open Browser To Publication    sports
 		Check If Exists  DSAssertion
 		Close Browser
 		
