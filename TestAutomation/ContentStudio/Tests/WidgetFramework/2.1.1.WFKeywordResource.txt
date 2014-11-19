@@ -85,8 +85,6 @@ Select Second Item From Dropdown  [Arguments]  ${Pattern}
 Select Second Content Type From Dropdown  [Arguments]  ${Pattern}
 	Type Text  ${Pattern}
 	Wait For  2
-	Type Key  DOWN
-	Wait For  2
 	Type Key  ENTER
 
 Tag Content  [Arguments]  ${TagName}
