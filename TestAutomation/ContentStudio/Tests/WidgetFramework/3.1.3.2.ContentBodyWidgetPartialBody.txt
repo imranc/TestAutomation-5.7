@@ -73,7 +73,7 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Click Element  DatelineFieldInStoryContent  -20  20
 	Wait For  60
 	Type Text  tag6754
-	Wait For  2
+	Wait For  5
 	Type Key  DOWN
 	Wait For  2
 	Type Key  ENTER
