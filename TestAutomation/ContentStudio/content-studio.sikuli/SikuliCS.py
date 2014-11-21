@@ -15,18 +15,18 @@ def wait_for(*args):
     ##This function works same as wait(pattern object, time in seconds)
 
     if len(args) == 2:
-        wait_time=(args[1]-1)
-
-        for x in range(0,args[1]):
-            if exists(args[0]):
+        uiElement=args[0]+'.png'
+        wait_time=int(args[1])
+        
+        for x in range(0,wait_time):
+            if exists(uiElement):
                 break
-                raise AssertionError('test')
             elif x == wait_time:
                 #ScreenShotImageName='ScreenShot-'+str(ScreenShot)
                 ImageName=capture_CS_screenshot()
                 raise AssertionError("Something went wrong while waiting for " + str(args[0])+". Check screenshot "+ImageName)
             else:
-                wait(1)
+                wait(uiElement, wait_time)
     elif len(args) == 1:
         wait(int(args[0]))
     else:
