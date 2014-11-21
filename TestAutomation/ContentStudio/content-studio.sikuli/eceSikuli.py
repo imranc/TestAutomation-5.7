@@ -32,7 +32,6 @@ class eceSikuli(object):
                 else:
                         ScreenShot=capture_CS_screenshot()
                         raise AssertionError(uiElement+' does not exist. Screenshot: '+ScreenShot)
-                wait(5)
 
         def mouse_over(self, *args):
                 wait(2)
