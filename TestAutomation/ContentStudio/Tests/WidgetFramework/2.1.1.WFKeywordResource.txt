@@ -32,7 +32,7 @@ Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
 Save And Publish
 	Wait For  2
 	Click Element  SaveButton
-	Wait For  10
+	Wait For  PublishButton  10
 	Click Element  PublishButton
 	Wait For  5
 	
