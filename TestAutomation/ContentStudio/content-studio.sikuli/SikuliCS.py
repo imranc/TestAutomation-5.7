@@ -15,7 +15,10 @@ def wait_for(*args):
     ##This function works same as wait(pattern object, time in seconds)
 
     if len(args) == 2:
-        uiElement=args[0]+'.png'
+        uiElement=args[0]
+        if uiElement.find("png") == -1:
+            uiElement=args[0]+'.png'
+        
         wait_time=int(args[1])
         
         for x in range(0,wait_time):
