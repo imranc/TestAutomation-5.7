@@ -49,7 +49,7 @@ class ContentStudio(object):
                 print (csUrl)
                 wait(5)
                 type(Key.ENTER)
-                wait_for(Pattern("FirefoxOpenWithJavaws.png"),20)
+                wait(Pattern("FirefoxOpenWithJavaws.png"),20)
                 if exists("FirefoxOpenWithJavaws.png"):
                         wait(2)
                         type(Key.ENTER)
