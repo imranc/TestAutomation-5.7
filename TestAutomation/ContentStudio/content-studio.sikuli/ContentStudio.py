@@ -871,6 +871,8 @@ class ContentStudio(object):
             while exists(Pattern("SearchTab.png")) or exists(Pattern("SectionTab.png")) or exists(Pattern("SectionsTabSelected.png")) or exists("login_content_studio.png"):
                 type(Key.F4,KEY_ALT)
                 wait(2)
+                while exists(Pattern("CloseTabs.png").similar(0.80)):
+                    click(Pattern("CloseTabs.png").similar(0.80))
                 ContentStudio.switch_to_content_studio(self)
 
         def check_if_exists_text(self, *args):
