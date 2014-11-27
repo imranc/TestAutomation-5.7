@@ -7,6 +7,6 @@ Documentation  A test case for Start and Logging into ContentStudio
 **Test cases**
 Start content studio and log in
 	Close All Open Content Studio
-	Start Content Studio
+	Start Content Studio  video_admin  admin
 	Close All Open Tabs
 	Print Version
