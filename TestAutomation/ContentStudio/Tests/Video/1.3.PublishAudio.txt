@@ -1,0 +1,31 @@
+*** Settings ***
+Documentation     Publish an audio content
+Library           ContentStudioClipboard.ContentStudioClipboard    WITH NAME    ContentStudioClipboard
+Library           ContentStudio.ContentStudio    WITH NAME    ContentStudio
+Library           SearchContent.SearchContent    WITH NAME    SearchContent
+Library           SikuliCS    WITH NAME    SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+Resource          common_resource.txt
+
+*** Test cases ***
+Publish an audio content
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Audio Content Type  NewArticles
+	Type Text  Audio test.mp3
+	Type Key  ENTER
+	Wait For  PublishButton  500
+	Click Element If Exists  ContentUrl  ContentInfoPanel
+	Wait For  2
+	Click Element If Exists  ArticleViews  cXenseAnalyticsPanel  
+	Click Element If Exists  Status-NotTranscoded  MediaStatusPanel
+	Wait For  2
+	Click Element  MediaStatusPanel
+	Check If Exists  Status-NotTranscoded
+	Click Element  PublishButton
+	Wait For  Status-Started  200
+	Wait For  Status-Transcoding  500
+	Wait For  Status-Publishing  500
+	Wait For  30
+	Wait For  Status-Published  100
+	Check If Not Exists  ApprovedState
