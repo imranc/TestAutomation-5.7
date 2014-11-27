@@ -1,0 +1,39 @@
+*** Settings ***
+Documentation     Publish an internal video content, assert for multiple states and keyframe
+Library           ContentStudioClipboard.ContentStudioClipboard    WITH NAME    ContentStudioClipboard
+Library           ContentStudio.ContentStudio    WITH NAME    ContentStudio
+Library           SearchContent.SearchContent    WITH NAME    SearchContent
+Library           SikuliCS    WITH NAME    SikuliCS
+Library           eceSikuli.eceSikuli    WITH NAME    eceSikuli
+Resource          common_resource.txt
+
+*** Test cases ***
+Publish an internal video content
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Internal Video Content Type  NewArticles
+	Type Text  Video test.mp4
+	Type Key  ENTER
+	Wait For  PublishButton  500
+	Wait For  1
+	Click Element If Exists  ContentUrl  ContentInfoPanel
+	Wait For  2
+	Click Element If Exists  ArticleViews  cXenseAnalyticsPanel
+	Click Element If Exists  Status-NotTranscoded  MediaStatusPanel
+	Wait For  2
+	Click Element  MediaStatusPanel
+	Check If Exists  Status-NotTranscoded
+	Click Element  PublishButton
+	Wait For  Status-Started  200
+	Wait For  Status-Transcoding  500
+	Wait For  Status-Publishing  500
+	Wait For  45
+	Wait For  Status-Published  100
+	Check If Not Exists  ApprovedState
+	Click Element If Exists  KeyFrameImages  RelatedContent
+	Click Element  RelatedContent
+	Click Element  KeyFrameImages
+	Double Click Element  KeyFrameImages  5  20
+	Wait For  ContentUrl  100
+	Wait For  10
+	Check If Exists  KeyFrameAssertion
