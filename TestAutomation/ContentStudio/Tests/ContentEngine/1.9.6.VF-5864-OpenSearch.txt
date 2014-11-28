@@ -15,6 +15,7 @@ Documentation  Testcase for custom search link provided by opensearch
 	Check If Not Exists  ContentUrl
 	Click Element If Exists  SearchTab  SearchTab
 	Wait For  1
+	Clear Search
 	Click Element  ExternalECEContent
 	Wait For  10
 	Click Element  Hit  -15  30
