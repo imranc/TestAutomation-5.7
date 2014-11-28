@@ -10,7 +10,6 @@ Resource       common_resource.txt
 Documentation  Checks field value of one memcached item
 **Test cases**
 Checks field value of one memcached item
-	Set Tags  non-critical
 	Switch To Content Studio
 	Close Allopen Tabs
 	Search And Select Without Waiting  ID:50

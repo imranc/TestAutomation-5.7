@@ -10,7 +10,6 @@ Resource       common_resource.txt
 Documentation  Testcase for custom search link provided by opensearch
 **Test cases**
  Testcase for custom search link provided by opensearch
-	Set Tags  non-critical
 	Switch To Content Studio
 	Close Allopen Tabs
 	Click Element If Exists  SearchTab  SearchTab
