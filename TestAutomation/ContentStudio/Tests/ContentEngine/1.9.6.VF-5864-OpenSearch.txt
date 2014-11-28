@@ -11,7 +11,8 @@ Documentation  Testcase for custom search link provided by opensearch
 **Test cases**
  Testcase for custom search link provided by opensearch
 	Switch To Content Studio
-	Close Allopen Tabs
+	Close All Open Tabs
+	Check If Not Exists  ContentUrl
 	Click Element If Exists  SearchTab  SearchTab
 	Wait For  1
 	Click Element  ExternalECEContent
