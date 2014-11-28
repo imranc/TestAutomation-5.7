@@ -8,5 +8,6 @@ Documentation  A test case for Start and Logging into ContentStudio
 Start content studio and log in
 	Close All Open Content Studio
 	Start Content Studio  video_admin  admin
+	Wait For  20
 	Close All Open Tabs
 	Print Version
