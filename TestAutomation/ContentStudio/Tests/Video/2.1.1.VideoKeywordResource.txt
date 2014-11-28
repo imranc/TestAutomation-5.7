@@ -17,14 +17,14 @@ Create New Other Content Type  [Arguments]  ${ContentType}
 
 Create Internal Video Content Type  [Arguments]  ${SectionName}
 	Right Click Section  ${SectionName}
-	Click Element  NewContent  100  0
-	Click Element  Videos  50  0
+	Mouse Over  NewContent  100  0
+	Mouse Over  Videos  50  0
 	Click Element  InternalVideoContent
 
 Create Audio Content Type  [Arguments]  ${SectionName}
 	Right Click Section  ${SectionName}
-	Click Element  NewContent  100  0
-	Click Element  AudioContentList  45  0
+	Mouse Over  NewContent  100  0
+	Mouse Over  AudioContentList  45  0
 	Click Element  AudioContent
 
 Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
