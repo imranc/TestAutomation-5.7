@@ -22,6 +22,7 @@ Publish an internal video content
 	Click Element If Exists  Status-NotTranscoded  MediaStatusPanel
 	Wait For  2
 	Click Element  MediaStatusPanel
+	Wait For  Status-NotTranscoded  200
 	Check If Exists  Status-NotTranscoded
 	Click Element  PublishButton
 	Wait For  Status-Started  200
