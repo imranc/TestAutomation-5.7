@@ -19,11 +19,11 @@ Publish an internal video content
 	Click Element If Exists  ContentUrl  ContentInfoPanel
 	Wait For  2
 	Click Element If Exists  ArticleViews  cXenseAnalyticsPanel
-	Click Element If Exists  Status-NotTranscoded  MediaStatusPanel
+	Click Element If Exists  StatusNotTranscoded  MediaStatusPanel
 	Wait For  2
 	Click Element  MediaStatusPanel
-	Wait For  Status-NotTranscoded  200
-	Check If Exists  Status-NotTranscoded
+	Wait For  StatusNotTranscoded  200
+	Check If Exists  StatusNotTranscoded
 	Click Element  PublishButton
 	Wait For  Status-Started  200
 	Wait For  Status-Transcoding  500
