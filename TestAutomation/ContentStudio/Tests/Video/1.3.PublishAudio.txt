@@ -22,7 +22,7 @@ Publish an audio content
 	Wait For  2
 	Click Element  MediaStatusPanel
 	Wait For  StatusNotTranscoded  200
-	Check If Exists  StatusNotTranscoded
+	Check If Exists  StatusNotTranscoded  .80
 	Click Element  PublishButton
 	Wait For  Status-Started  200
 	Wait For  Status-Transcoding  500
