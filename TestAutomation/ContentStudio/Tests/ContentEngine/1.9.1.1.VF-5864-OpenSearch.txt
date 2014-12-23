@@ -1,0 +1,27 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Testcase for custom search link provided by opensearch
+**Test cases**
+ Testcase for custom search link provided by opensearch
+	Switch To Content Studio
+	Close All Open Tabs
+	Check If Not Exists  ContentUrl
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  1
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Click Element  ExternalECEContent
+	Wait For  20
+	Click Element  Hit  -15  30
+	Type Key  ENTER
+	Wait For  10
+	Check If Exists  ContentUrl
+	
+	
