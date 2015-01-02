@@ -10,6 +10,7 @@ Resource       common_resource.txt
 Documentation  Testcase for custom search link provided by opensearch
 **Test cases**
  Testcase for custom search link provided by opensearch
+	Set Tags  non-critical
 	Switch To Content Studio
 	Close All Open Tabs
 	Check If Not Exists  ContentUrl
