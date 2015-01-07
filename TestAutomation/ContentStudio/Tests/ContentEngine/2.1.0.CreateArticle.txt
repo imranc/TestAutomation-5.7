@@ -1,0 +1,20 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Creates 1000 articles in parallel threads
+**Test cases**
+Creates 1000 articles in parallel threads
+	Set Tags  non-critical
+	Open Browser To Publication  template/qa/createArticle.jsp
+	Open Browser To Publication  template/qa/createArticle.jsp
+	Wait For  90
+	Check If Exists  CreateArticleInThreadsAssertion
+	Close Browser
+	Check If Exists  CreateArticleInThreadsAssertion
+	
