@@ -10,7 +10,6 @@ Resource       common_resource.txt
 Documentation  Create/Delete new section pages. Regression VF-6023
 **Test cases**
 Create/Delete new section pages
-	Set Tags  non-critical
 	Switch To Content Studio
 	Close Allopen Tabs
 	
