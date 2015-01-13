@@ -269,108 +269,34 @@ class ContentStudio(object):
 
 
        def create_section(self,*args):
-                ContentStudio.switch_to_content_studio(self)
-                NewSectionName=args[0]
-                HomeSectionName=args[1]
+            ContentStudio.switch_to_content_studio(self)
+            NewSectionName=args[0]
+            HomeSectionName=args[1]
 
-                if not exists(Pattern("InboxesTab.png").similar(0.60)):
-                    click("SectionsTab.png")
-                ContentStudio.right_click_section(self,HomeSectionName)
-                wait_for("NewsubSection.png",20)
+            if not exists(Pattern("InboxesTab.png").similar(0.60)):
+                click("SectionsTab.png")
+            ContentStudio.right_click_section(self,HomeSectionName)
+            wait_for("NewsubSection.png",20)
+            wait(2)
+            click("NewsubSection.png")
+            wait_for("TitleFieldOfSection.png",20)
+            if exists("TitleFieldOfSection.png"):
+                type(NewSectionName)
+                type(Key.TAB)
+                type(NewSectionName)
+                type(Key.TAB)
+                type(NewSectionName)
+                type(Key.TAB)
+                type(os.environ['publication']+NewSectionName+"/")
                 wait(2)
-                click("NewsubSection.png")
-                wait_for("TitleFieldOfSection.png",20)
-                if exists("TitleFieldOfSection.png"):
-                    type(NewSectionName)
-                    type(Key.TAB)
-                    type(NewSectionName)
-                    type(Key.TAB)
-                    type(NewSectionName)
-                    type(Key.TAB)
-                    type(os.environ['publication']+NewSectionName+"/")
-                    wait(2)
-                    if exists("InheritAccessControlInSection.png"):
-                        click(Pattern("InheritAccessControlInSection.png").targetOffset(-55,0))
-                        wait(3)
-                    if exists("AllowShadowing.png"):
-                        click(Pattern("AllowShadowing.png").targetOffset(-45,0))
-                        wait(3)
-                    if exists("HideSectionCheckbox.png"):
-                        click(Pattern("HideSectionCheckbox.png").targetOffset(-33,0))
-                        wait(3)
-                    if exists("AgreementType.png"):
-                        click(Pattern("AgreementType.png").targetOffset(70,0))
-                        wait(3)
-                        type(Key.DOWN)
-                        wait(3)
-                        type(Key.ENTER)
-                    if exists("StateInSection.png"):
-                        click(Pattern("StateInSection.png").targetOffset(85,0))
-                        type("published")
-                        wait(3)
-                        type(Key.ENTER)
-                    if exists("SaveButton.png"):
-                        click("SaveButton.png")
-                        wait(10)
-                else:
-                    ImageName=capture_CS_screenshot()
-                    raise AssertionError("Section is not created: "+ImageName)
-                wait(2)
-                if exists(Pattern("ContentUrl.png").similar(0.90)):
-                            print("Content was successfully created")
-                            click(Pattern("ContentUrl.png").targetOffset(12,10))
-                else:
-                            if exists(Pattern("ShowSideBar.png").similar(0.60)):
-                                    click(Pattern("ShowSideBar.png").similar(0.60))
-                                    if exists("ShowSideBar.png"):
-                                            click("ShowSideBar.png")
-                                    if not exists(Pattern("ContentUrl.png").similar(0.90)):
-                                            ImageName=capture_CS_screenshot()
-                                            raise AssertionError("Section Url was not created. Check Content Studio. Screenshot: "+ImageName)
-                                    else:
-                                            click(Pattern("ContentUrl.png").targetOffset(12,10))
-                            else:
-                                    ImageName=capture_CS_screenshot()
-                                    raise AssertionError("Section Url was not created. Check Content Studio. Screenshot: "+ImageName)
-
-                wait(10)
-            
-        def update_section(self,*args):
-                #***This Keyword Updates a Section.....hopefully***#
-                #***Update Section  SectionName  UpdatedSectionName***#
-
-                ContentStudio.switch_to_content_studio(self)
-                SectionName=args[0]
-                UpdatedSectionName=args[1]
-                ContentStudio.right_click_section(self,SectionName)
-                if exists("EditSectionMenu.png"):
-                    click("EditSectionMenu.png")
-
-                type("a", KeyModifier.CTRL)
-                type(UpdatedSectionName)
-                type(Key.TAB)
-
-                type("a", KeyModifier.CTRL)
-                type(UpdatedSectionName)
-                type(Key.TAB)
-
-                type("a", KeyModifier.CTRL)
-                type(UpdatedSectionName)
-                type(Key.TAB)
-
-                type("a", KeyModifier.CTRL)
-                type(os.environ['publication']+UpdatedSectionName+"/")
-
-                if exists(Pattern("HideSectionCheckbox.png").similar(0.95)):
-                    click(Pattern("HideSectionCheckbox.png").targetOffset(-33,0))
-                    wait(3)
-
-                if exists(Pattern("InheritAccessControlInSection.png").similar(0.95)):
+                if exists("InheritAccessControlInSection.png"):
                     click(Pattern("InheritAccessControlInSection.png").targetOffset(-55,0))
                     wait(3)
-
-                if exists(Pattern("AllowShadowing.png").similar(0.95)):
+                if exists("AllowShadowing.png"):
                     click(Pattern("AllowShadowing.png").targetOffset(-45,0))
+                    wait(3)
+                if exists("HideSectionCheckbox.png"):
+                    click(Pattern("HideSectionCheckbox.png").targetOffset(-33,0))
                     wait(3)
                 if exists("AgreementType.png"):
                     click(Pattern("AgreementType.png").targetOffset(70,0))
@@ -378,30 +304,104 @@ class ContentStudio(object):
                     type(Key.DOWN)
                     wait(3)
                     type(Key.ENTER)
+                if exists("StateInSection.png"):
+                    click(Pattern("StateInSection.png").targetOffset(85,0))
+                    type("published")
+                    wait(3)
+                    type(Key.ENTER)
                 if exists("SaveButton.png"):
-                        click("SaveButton.png")
-                        wait(10)
-                else:
-                    ImageName=capture_CS_screenshot()
-                    raise AssertionError("Section is not created: "+ImageName)
-                wait(2)
-                if exists(Pattern("UpdatedSectionUrl.png").similar(0.90)):
-                            print("Section Has successfully created")
-                            click("UpdatedSectionUrl.png")
-                else:
-                            if exists(Pattern("ShowSideBar.png").similar(0.60)):
-                                    click(Pattern("ShowSideBar.png").similar(0.60))
-                                    if exists("ShowSideBar.png"):
-                                            click("ShowSideBar.png")
-                                    if not exists(Pattern("UpdatedSectionUrl.png").similar(0.90)):
-                                            ImageName=capture_CS_screenshot()
-                                            raise AssertionError("Section Url was not Updated. Check Content Studio. Screenshot: "+ImageName)
-                                    else:
-                                            click("UpdatedSectionUrl.png")
-                            else:
-                                    ImageName=capture_CS_screenshot()
-                                    raise AssertionError("Section Url was not created. Check Content Studio. Screenshot: "+ImageName)
-                wait(10)
+                    click("SaveButton.png")
+                    wait(10)
+            else:
+                ImageName=capture_CS_screenshot()
+                raise AssertionError("Section is not created: "+ImageName)
+            wait(2)
+            if exists(Pattern("ContentUrl.png").similar(0.90)):
+                        print("Content was successfully created")
+                        click(Pattern("ContentUrl.png").targetOffset(12,10))
+            else:
+                        if exists(Pattern("ShowSideBar.png").similar(0.60)):
+                                click(Pattern("ShowSideBar.png").similar(0.60))
+                                if exists("ShowSideBar.png"):
+                                        click("ShowSideBar.png")
+                                if not exists(Pattern("ContentUrl.png").similar(0.90)):
+                                        ImageName=capture_CS_screenshot()
+                                        raise AssertionError("Section Url was not created. Check Content Studio. Screenshot: "+ImageName)
+                                else:
+                                        click(Pattern("ContentUrl.png").targetOffset(12,10))
+                        else:
+                                ImageName=capture_CS_screenshot()
+                                raise AssertionError("Section Url was not created. Check Content Studio. Screenshot: "+ImageName)
+
+            wait(10)
+            
+        def update_section(self,*args):
+            #***This Keyword Updates a Section.....hopefully***#
+            #***Update Section  SectionName  UpdatedSectionName***#
+
+            ContentStudio.switch_to_content_studio(self)
+            SectionName=args[0]
+            UpdatedSectionName=args[1]
+            ContentStudio.right_click_section(self,SectionName)
+            if exists("EditSectionMenu.png"):
+                click("EditSectionMenu.png")
+
+            type("a", KeyModifier.CTRL)
+            type(UpdatedSectionName)
+            type(Key.TAB)
+
+            type("a", KeyModifier.CTRL)
+            type(UpdatedSectionName)
+            type(Key.TAB)
+
+            type("a", KeyModifier.CTRL)
+            type(UpdatedSectionName)
+            type(Key.TAB)
+
+            type("a", KeyModifier.CTRL)
+            type(os.environ['publication']+UpdatedSectionName+"/")
+
+            if exists(Pattern("HideSectionCheckbox.png").similar(0.95)):
+                click(Pattern("HideSectionCheckbox.png").targetOffset(-33,0))
+                wait(3)
+
+            if exists(Pattern("InheritAccessControlInSection.png").similar(0.95)):
+                click(Pattern("InheritAccessControlInSection.png").targetOffset(-55,0))
+                wait(3)
+
+            if exists(Pattern("AllowShadowing.png").similar(0.95)):
+                click(Pattern("AllowShadowing.png").targetOffset(-45,0))
+                wait(3)
+            if exists("AgreementType.png"):
+                click(Pattern("AgreementType.png").targetOffset(70,0))
+                wait(3)
+                type(Key.DOWN)
+                wait(3)
+                type(Key.ENTER)
+            if exists("SaveButton.png"):
+                    click("SaveButton.png")
+                    wait(10)
+            else:
+                ImageName=capture_CS_screenshot()
+                raise AssertionError("Section is not created: "+ImageName)
+            wait(2)
+            if exists(Pattern("UpdatedSectionUrl.png").similar(0.90)):
+                        print("Section Has successfully created")
+                        click("UpdatedSectionUrl.png")
+            else:
+                        if exists(Pattern("ShowSideBar.png").similar(0.60)):
+                                click(Pattern("ShowSideBar.png").similar(0.60))
+                                if exists("ShowSideBar.png"):
+                                        click("ShowSideBar.png")
+                                if not exists(Pattern("UpdatedSectionUrl.png").similar(0.90)):
+                                        ImageName=capture_CS_screenshot()
+                                        raise AssertionError("Section Url was not Updated. Check Content Studio. Screenshot: "+ImageName)
+                                else:
+                                        click("UpdatedSectionUrl.png")
+                        else:
+                                ImageName=capture_CS_screenshot()
+                                raise AssertionError("Section Url was not created. Check Content Studio. Screenshot: "+ImageName)
+            wait(10)
             
       
         def create_content_in_section(self, *args):
