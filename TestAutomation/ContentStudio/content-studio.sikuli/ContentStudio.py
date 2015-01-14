@@ -413,9 +413,9 @@ class ContentStudio(object):
                 
                 wait(5)
                 
-                while not exists("InboxesTab.png"):
-                        type("7", KeyModifier.CTRL)
-                        ContentStudio.switch_to_content_studio(self)
+                #while not exists("InboxesTab.png"):
+                #        type("7", KeyModifier.CTRL)
+                #        ContentStudio.switch_to_content_studio(self)
 
         def add_content_to_section(self, inboxSection, destinationSection):
                 #***This keyword drags the first content from 1st argument section to 2nd Argument
