@@ -1,0 +1,66 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create/Modify/Move/Delete a Section
+**Test cases**
+Create a new section in CS
+	Set Tags  non-critical
+	Switch To Content Studio
+	Close Allopen Tabs
+	Create Sub Section  NewArticles  SouthAsia
+	Close Allopen Tabs
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Check If Exists  SouthAsiaSection
+	Create Content In Section   SouthAsia  Article created for Create/Modify/Move/Delete section test
+
+Modify an existing section in CS
+	Set Tags  non-critical
+	Switch To Content Studio
+	Right Click Section  SouthAsia
+	Click Element  EditSectionMenu
+	Wait For  5
+	Type Text  News
+	Click Element  SaveButton
+	Close Allopen Tabs
+	Click Element  HomeSection
+	Check If Exists  NewsSouthAsiaSection
+	
+Move a section in CS
+	Set Tags  non-critical
+	Close All Open Tabs
+	Right Click Section  NewsSouthAsia
+	Click Element  Move
+	Wait For  2
+	Select From Dropdown  Front Page
+	Click Element  MoveButton
+	Wait For  10
+	Right Click Section  NewsSouthAsia
+	Click Element  EditSectionMenu
+	Wait For  5
+	Check If Exists  ParentFrontPage
+	
+Delete a section in CS
+	Set Tags  non-critical
+	Close All Open Tabs
+	Right Click Section  NewsSouthAsia
+	Click Element  Delete
+	Wait For  3
+	Select From Dropdown  Front Page
+	Click Element  DeleteSectionConfirmation
+	Click Element  DeleteButtonSimple
+	Wait For  10
+	Click Element  HomeSection
+	Check If Not Exists  NewsSouthAsiaSection
+	Search And Select Without Waiting  Article created for Create/Modify/Move/Delete section test
+	Type Key  ENTER
+	Wait For  5
+	Check If Exists  FrontPageHomeSectionAssertion
+
+	
