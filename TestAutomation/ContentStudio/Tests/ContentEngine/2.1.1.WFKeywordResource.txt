@@ -28,6 +28,12 @@ Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
 	Click Element  ${ContentType}
 	Wait For  2
 
+Create Sub Section  [Arguments]  ${SectionName}  ${SubSectionName}
+	Right Click Section  ${SectionName}
+	Click Element  NewSubSection
+	Type Text  ${SubSectionName}
+	Click Element  SaveButton
+
 Save And Publish
 	Wait For  2
 	Click Element  SaveButton
