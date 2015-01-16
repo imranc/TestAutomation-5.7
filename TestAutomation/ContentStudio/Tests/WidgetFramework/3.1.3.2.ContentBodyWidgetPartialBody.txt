@@ -60,25 +60,16 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Wait For  5
 	Click Element If Exists  CreateNewTagLabel  CreateNewTagLabel
 	Click Element  WhereInCreateNewTagPanel  25  0
-	Type Text  Widget
-	Wait For  2
-	Type Key  DOWN
-	Wait For  2
-	Type Key  ENTER
-	Wait For  2
+	Select From Dropdown  Widget
+	Wait For  1
 	Click Element  CreateInCreateNewTagPanel
 	Click Element If Exists  CreateTagFailedAlert  CreateTagFailedAlert  400  110
 	Save And Publish
 	
 	
 	Click Element  DatelineFieldInStoryContent  -20  20
-	Wait For  60
-	Type Text  tag6754
-	Wait For  2
-	Type Key  DOWN
-	Wait For  2
-	Type Key  ENTER
-	Wait For  2
+	Wait For  70
+	Select From Dropdown  tag6754
 	Save And Publish
 
 	###Relate widget to story page template###
