@@ -39,6 +39,7 @@ Move a section in CS
 	Click Element  Move
 	Wait For  2
 	Select From Dropdown  Front Page
+	Wait For  2
 	Click Element  MoveButton
 	Wait For  10
 	Right Click Section  NewsSouthAsia
