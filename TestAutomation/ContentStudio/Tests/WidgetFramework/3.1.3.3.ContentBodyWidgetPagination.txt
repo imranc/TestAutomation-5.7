@@ -77,6 +77,9 @@ Remove widget from story page template
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
+	Click Element If Exists  MainContentArea  MainContentArea
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
 	Click Element  PublishButtonSimple	
 	
 	

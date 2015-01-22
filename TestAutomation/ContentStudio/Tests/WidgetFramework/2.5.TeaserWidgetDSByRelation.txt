@@ -10,13 +10,13 @@ Resource       common_resource.txt
 Documentation  Create a Teaser Widget with Data source query by Relation
 **Test cases**
 Create a Teaser Widget with Data source query by section Relation
-	Create Image In Section  NewArticles
+	Create Image In Section  NewArticles  Image for Datasource by relation
 	Switch To Content Studio
-	Create Content In Section  NewArticles
+	Create Content In Section  NewArticles  Article for Datasource by relation
 	Switch To Content Studio
 	Click Element If Exists  Related  RelatedContent
 	Click Element If Exists  RelatedContent  RelatedContent
-	Search And Select First Item  image
+	Search And Select First Item  Image for Datasource by relation
 	Drag And Drop Element  InboxItemSelected  Related
 	Click Element If Exists  RelatedContent  RelatedContent 
   	Save And Publish	
@@ -55,7 +55,7 @@ Create a Teaser Widget with Data source query by section Relation
 
 
 	##ASSERTION
-	Search And Select First Item  Article
+	Search And Select First Item  Article for Datasource by relation
 	Type Key  ENTER
 	Click Element   ContentUrl  12  10
 	Wait For  10

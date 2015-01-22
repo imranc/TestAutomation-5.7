@@ -88,6 +88,16 @@ Tag Content  [Arguments]  ${TagName}
 	Wait For  2
 	Type Key  ENTER
 
+Create Tag From Content Editor  [Arguments]  ${TagName}  ${TagStructure}
+	Click Element  AddButton
+	Type Text  ${TagName}
+	Wait For  3
+	Type Key  ENTER
+	Click Element  WhereInCreateNewTagPanel  25  0
+	Select From Dropdown  ${TagStructure}
+	Wait For  1
+	Click Element  CreateInCreateNewTagPanel
+
 Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  Tools
 	Click Element  ManageTags  -25  0

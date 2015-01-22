@@ -15,14 +15,18 @@ Create a Teaser Widget with Data source query by tag
 		Switch To Content Studio
 		Close Allopen Tabs
 
-		Create Content In Section  NewArticles
+		Create Content In Section  NewArticles  Article for Datasource for shared tag
 		Switch To Content Studio
 		Tag Content  widget
+		Wait For  2
+		Check If Exists  widgetTagAssertion
 		Save And Publish
 
-		Create Image In Section  NewArticles
+		Create Image In Section  NewArticles  Image for Datasource for shared tag
 		Switch To Content Studio
 		Tag Content  widget
+		Wait For  2
+		Check If Exists  widgetTagAssertion
 		Save And Publish
 		
 
@@ -55,7 +59,7 @@ Create a Teaser Widget with Data source query by tag
 		Click Element  PublishButtonSimple
 
 	###Assertion###
-		Search And Select First Item  Article
+		Search And Select First Item  Article for Datasource for shared tag
 		Type Key  ENTER
 		Click Element   ContentUrl  12  10
 		Wait For  10
