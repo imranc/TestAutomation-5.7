@@ -62,7 +62,7 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Click Element If Exists  CreateNewTagLabel  CreateNewTagLabel
 	Click Element  WhereInCreateNewTagPanel  25  0
 	Select From Dropdown  Widget
-	Wait For  1
+	Wait For  15
 	Click Element  CreateInCreateNewTagPanel
 	Click Element If Exists  CreateTagFailedAlert  CreateTagFailedAlert  400  110
 	
