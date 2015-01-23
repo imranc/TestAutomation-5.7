@@ -90,8 +90,9 @@ Tag Content  [Arguments]  ${TagName}
 
 Create Tag From Content Editor  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  AddButton
+	Wait For  1
 	Type Text  ${TagName}
-	Wait For  3
+	Wait For  15
 	Type Key  ENTER
 	Click Element  WhereInCreateNewTagPanel  25  0
 	Select From Dropdown  ${TagStructure}
