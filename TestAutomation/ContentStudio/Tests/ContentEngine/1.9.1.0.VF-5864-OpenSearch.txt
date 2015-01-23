@@ -18,7 +18,7 @@ Documentation  Testcase for custom search link provided by opensearch
 	Click Element  FindTextBox  20  0
 	Clear Search
 	Click Element  ExternalECEContent
-	Wait For  20
+	Wait For  30
 	Click Element  Hit  -15  30
 	Type Key  ENTER
 	Wait For  10
