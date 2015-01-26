@@ -1,0 +1,21 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Web Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to WebStudio
+    Close All Browsers
+    Open Browser To Escenic MobileStudio
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Page Should Contain Button  Draft
+
+Log off
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/logout"]
+    Page Should Contain Button  css=button[class="login"]

@@ -1,0 +1,23 @@
+*** Settings ***
+
+Documentation  A test case to Create User and Assign roles to user
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Delete User if exists
+	Login To Web Studio
+	Delete User  joe joe
+Log off
+	Click Link  Log off
+Create User
+	Open Browser To Escenic WebStudio
+    	Input Environment Variable  userId  ECE_UserName
+    	Input Environment Variable  password  ECE_Password
+    	Submit Credentials
+    	Click For Multiple Cookies
+	Create User  joe
+
+Log out from webstudio
+	Click Link  Log off

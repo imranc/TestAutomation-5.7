@@ -1,0 +1,19 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Web Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Delete Section
+	#Open Browser To Escenic WebStudio
+    	Input Environment Variable  userId  ECE_UserName
+    	Input Environment Variable  password  ECE_Password
+    	Submit Credentials
+    	Click For Multiple Cookies
+	Delete Section  Culture
+
+Log off
+	Click Link  Log off

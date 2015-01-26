@@ -1,0 +1,29 @@
+*** Settings ***
+
+Documentation  https://cci-jira.ccieurope.com/browse/VF-5642
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+User object gets locked only once per session
+	Login To Web Studio
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Click Element  xpath=//a[.='qa Administrator']
+	Open Browser To Escenic WebStudio
+	Login To Web Studio
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+		Page Should Contain Element  css=img[title="Unlock"]
+	Click Element  css=img[title="Unlock"]
+	Confirm Action
+		Page Should Not Contain  css=img[title="Unlock"]
+
+	
+	Click Element  xpath=//a[.='qa Administrator']
+	Open Browser To Escenic WebStudio
+	Login To Web Studio
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+		Page Should Contain Element  css=img[title="Unlock"]
+
+	Click Link  Log off
+	
