@@ -71,7 +71,7 @@ Select From Dropdown  [Arguments]  ${Pattern}
 	Type Text  ${Pattern}
 	Wait For  2
 	#Type Key  DOWN
-	#Wait For  2
+	Wait For  2
 	Type Key  ENTER
 
 Select Second Item From Dropdown  [Arguments]  ${Pattern}
