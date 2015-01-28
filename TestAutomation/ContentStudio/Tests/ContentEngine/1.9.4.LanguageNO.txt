@@ -1,4 +1,4 @@
-﻿***Settings***
+***Settings***
 Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
 Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
 Library  SearchContent.SearchContent  WITH NAME  SearchContent
@@ -13,7 +13,8 @@ Open a content studio with Norwegian language
 	Open Browser To Studio  user.country=NO&user.language=nb
 	Wait For  2
 	Type Key  ENTER
-	Wait For  60
+	Wait For  login_content_studio  100
+	Maximize Content Studio Window
 	Type Text  qa_admin
 	Type Key  TAB
 	Type Text  admin
