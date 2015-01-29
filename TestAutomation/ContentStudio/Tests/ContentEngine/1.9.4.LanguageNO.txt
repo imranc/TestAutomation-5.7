@@ -13,8 +13,9 @@ Open a content studio with Norwegian language
 	Open Browser To Studio  user.country=NO&user.language=nb
 	Wait For  2
 	Type Key  ENTER
-	Wait For  login_content_studio  300
+	Wait For  login_content_studio  500
 	Maximize Content Studio Window
+	Wait For  5
 	Type Text  qa_admin
 	Type Key  TAB
 	Type Text  admin
