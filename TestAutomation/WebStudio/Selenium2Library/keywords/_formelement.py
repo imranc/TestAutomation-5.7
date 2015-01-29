@@ -206,6 +206,16 @@ class _FormElementKeywords(KeywordGroup):
         self._info("Typing text '%s' into text field '%s'" % (text, locator))
         self._input_text_into_text_field(locator, text)
 
+    def input_text_into_rich_text_editor(self, locator, text):
+        """Types the given `text` into rich text field identified by `locator`.
+
+        See `introduction` for details about locating elements.
+        """
+        element = self._element_find(locator, True, True)
+        element.click()
+        #element.clear()
+        element.send_keys(text)
+        
     def page_should_contain_textfield(self, locator, message='', loglevel='INFO'):
         """Verifies text field identified by `locator` is found from current page.
 
