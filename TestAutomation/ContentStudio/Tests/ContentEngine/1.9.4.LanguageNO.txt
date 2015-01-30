@@ -14,6 +14,7 @@ Open a content studio with Norwegian language
 	Wait For  2
 	Type Key  ENTER
 	Wait For  login_content_studio  500
+	Switch To Content Studio
 	Maximize Content Studio Window
 	Wait For  5
 	Type Text  qa_admin
