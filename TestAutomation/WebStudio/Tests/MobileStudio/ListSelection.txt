@@ -1,0 +1,37 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Web Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to WebStudio
+    Close All Browsers
+    Open Browser To Escenic MobileStudio
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Page Should Contain Button  Draft
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/list"]
+    Page Should Contain  Your Lists
+    Wait Until Element Is Visible  css=div[class="contents ng-scope"]
+    Click Element  xpath=//div/h3[text()='Shows List']/../span[@data-ng-click="toggle(list)"]
+    Click Element  xpath=//div/h2[text()="From 'New Articles'"]/../div/span[@data-ng-click="favorite(list)"]
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/editor/new"]
+    Page Should Contain Element  css=optgroup[label="Front Page / New Articles"] > option[selected="selected"]
+    Page Should Not Contain Element  css=optgroup[label="Front Page / Shows"]
+    Create Story  This is Automated Test for Default List Selection & Hide List
+    Click Element  css=button[class="button publish"]
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Test for Default List Selection & Hide List']
+    Page Should Contain Element  xpath=//div/h3[text()='This is Automated Test for Default List Selection & Hide List']/../div/span[text()='In "New Articles"']
+     
+    
+
+Log off
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/logout"]
+    Page Should Contain Button  css=button[class="login"]

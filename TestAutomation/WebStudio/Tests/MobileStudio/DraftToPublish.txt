@@ -1,0 +1,35 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Web Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to WebStudio
+    Close All Browsers
+    Open Browser To Escenic MobileStudio
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Page Should Contain Button  Draft
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/draft"]
+    Page Should Contain  Your Drafts
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Drafted Item']
+    Click Element  xpath=//div/div/h3[text()='This is Drafted Item']
+    Input Text  css=textarea[id="field-title"]  ""
+    Input Text  css=textarea[id="field-title"]  This Automated Draft To Publish Story
+    Input Text  css=textarea[id="field-byline"]  This Automated Draft To Publish Story
+    Input Text  css=textarea[id="field-quote"]  This Automated Draft To Publish Story
+    Click Element  css=select[class="publishTo"]
+    Click Element  css=optgroup[label="Front Page / Shows"]>option
+    Page Should Contain  Your Stories
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This Automated Draft To Publish Story']
+
+
+Log off
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/logout"]
+    Page Should Contain Button  css=button[class="login"]
