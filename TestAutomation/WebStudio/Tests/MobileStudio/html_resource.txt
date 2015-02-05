@@ -180,3 +180,13 @@ Delete User  [Arguments]  ${userName}
 	Click Link If Exists  css=a[href^="/escenic/person/search/deletePersons.do?deletePossible=true"]
 	Page Should Not Contain  These items could not be deleted
 
+
+Create Story  [Arguments]  ${inputText}
+	Click Element  css=div[class='logo']
+	Click Element  css=a[href="#/editor/new"]
+	Input Text  css=textarea[id="field-title"]  ${inputText}
+	Input Text  css=textarea[id="field-subtitle"]  ${inputText}
+	Input Text  css=textarea[id="field-leadtext"]  ${inputText}
+	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText} 
+	
+
