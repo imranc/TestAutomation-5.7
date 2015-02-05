@@ -99,8 +99,8 @@ Create User  [Arguments]  ${userName}
 Create Section  [Arguments]  ${sectionName}
 	Go To Link  javascript:submitForm("section-archive")
 	Click Element  xpath=//*[@value='Search']
-	Click Element  xpath=//*[@href="javascript:submitForm('redirect:/section/view.do?id=1')"]
-	Go To Link  /escenic/section/new.do?id=1
+	Click Element  xpath=//*[@href="javascript:submitForm('redirect:/section/view.do?id=4')"]
+	Go To Link  /escenic/section/new.do?id=4
 	Input Text  name  ${sectionName}
 	Input Text  uniqueName  ece_${sectionName}
 	Click Element  xpath=//*[@value='Save']
