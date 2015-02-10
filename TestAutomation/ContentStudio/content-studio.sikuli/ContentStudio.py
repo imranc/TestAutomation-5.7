@@ -766,7 +766,8 @@ class ContentStudio(object):
                 if args[0] == "All":
                         type(Key.DOWN)
                         click(Pattern("PreviewAll.png").targetOffset(-30, 0))
-
+                
+                wait_for("OpenInBrowser.png", 10)
                 click(Pattern("OpenInBrowser.png"))
                 #type(Key.ENTER)
                 wait(5)
