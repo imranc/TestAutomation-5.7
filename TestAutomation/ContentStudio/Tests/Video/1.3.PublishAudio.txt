@@ -9,6 +9,7 @@ Resource          common_resource.txt
 
 *** Test cases ***
 Publish an audio content
+	Set Tags  non-critical
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Audio Content Type  NewArticles
