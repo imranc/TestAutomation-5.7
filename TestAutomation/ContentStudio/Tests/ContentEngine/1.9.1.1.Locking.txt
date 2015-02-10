@@ -13,6 +13,7 @@ Locking
 	Create Content In Section  NewArticles
 	Achieve Lock
 	Start Content Studio  joe  joe
+	Wait For  SearchTab  100
 	Check Search
 	Wait For  20
 	Check If Exists  Lock
