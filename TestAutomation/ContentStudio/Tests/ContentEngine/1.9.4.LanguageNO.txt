@@ -21,7 +21,8 @@ Open a content studio with Norwegian language
 	Type Key  TAB
 	Type Text  admin
 	Type Key  ENTER
-	Wait For  20
+	Wait For  SearchTab  100
+	Wait For  5
 	Type Key  f  ALT
 	Check If Exists  LanguageAssertionNO
 	Close Content Studio
