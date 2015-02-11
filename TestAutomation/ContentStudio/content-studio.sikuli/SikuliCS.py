@@ -20,7 +20,7 @@ def wait_for(*args):
             uiElement=args[0]+'.png'
         
         wait_time=int(args[1])
-        exists(uiElement,wait_time-3)
+        exists(uiElement, wait_time)
         if exists(uiElement):
             print("Found")
         else:

@@ -762,6 +762,7 @@ class ContentStudio(object):
                 ContentStudio.switch_to_content_studio(self)
                 click("PreviewTab.png")
                 wait_for("OpenInBrowser.png", 10)
+                wait_for("PreviewAll.png", 10)
 
                 if args[0] == "All":
                         type(Key.DOWN)
