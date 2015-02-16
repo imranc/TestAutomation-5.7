@@ -103,6 +103,8 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Type Text  ${TagName}
 	Type Key  ENTER 
 	Type Key  ESC
+	Type Key  ESC
+	Type Key  ESC
 
 Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
 	Right Click Element  ${Area}
