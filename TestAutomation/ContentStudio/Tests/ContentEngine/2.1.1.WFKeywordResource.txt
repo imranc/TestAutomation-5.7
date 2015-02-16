@@ -74,7 +74,7 @@ Open Section In Content Studio  [Arguments]  ${SectionName}
 
 Select From Dropdown  [Arguments]  ${Pattern}
 	Type Text  ${Pattern}
-	Wait For  2
+	Wait For  4
 	Type Key  DOWN
 	Wait For  2
 	Type Key  ENTER
