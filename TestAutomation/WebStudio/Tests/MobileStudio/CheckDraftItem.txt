@@ -1,26 +1,28 @@
 *** Settings ***
 
-Documentation  A test case to Login to Escenic Web Studio
+Documentation  A test case to create a draft story
 
 Resource       common_resource.txt
 
 
 *** Test Cases ***
 
-Login to WebStudio
+Create a draft story
     Close All Browsers
     Open Browser To Escenic MobileStudio
     Input Environment Variable  userName  ECE_UserName
     Input Environment Variable  password  ECE_Password
     Submit Credentials
+    Wait Until Page Contains Element  css=button[data-ng-click="save()"]
     Page Should Contain Button  Draft
-    Create Story  This is Drafted Item
+    Create Story  This is a test Item
     Click Button  Draft
+    Wait For  90
     Click Element  css=div[class='logo']
     Click Element  css=a[href="#/draft"]
-    Page Should Contain  Your Drafts
-    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Drafted Item']
-    Click Element  xpath=//div/div/h3[text()='This is Drafted Item'] 
+    Page Should Contain  Your Drafts   
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is a test Item']
+    Click Element  xpath=//div/div/h3[text()='This is a test Item'] 
     
 
 Log off

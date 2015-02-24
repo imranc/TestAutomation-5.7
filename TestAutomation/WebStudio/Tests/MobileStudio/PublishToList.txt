@@ -1,13 +1,13 @@
 *** Settings ***
 
-Documentation  A test case to Login to Escenic Web Studio
+Documentation  A test case to publish to list
 
 Resource       common_resource.txt
 
 
 *** Test Cases ***
 
-Login to WebStudio
+Publish to list
     Close All Browsers
     Open Browser To Escenic MobileStudio
     Input Environment Variable  userName  ECE_UserName

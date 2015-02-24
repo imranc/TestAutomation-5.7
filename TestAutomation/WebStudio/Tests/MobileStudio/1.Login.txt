@@ -13,9 +13,11 @@ Login to WebStudio
     Input Environment Variable  userName  ECE_UserName
     Input Environment Variable  password  ECE_Password
     Submit Credentials
+    Wait Until Page Contains Element  css=button[data-ng-click="save()"]
     Page Should Contain Button  Draft
 
 Log off
     Click Element  css=div[class='logo']
     Click Element  css=a[href="#/logout"]
     Page Should Contain Button  css=button[class="login"]
+

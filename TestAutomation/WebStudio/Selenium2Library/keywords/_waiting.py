@@ -106,6 +106,14 @@ class _WaitingKeywords(KeywordGroup):
                 raise AssertionError(timeout_error)
             time.sleep(0.2)
 
+    def wait_for(self, timeout):
+        timeout = robot.utils.timestr_to_secs(timeout)
+        maxtime = time.time() + timeout
+        while True:
+            if time.time() > maxtime:
+                break
+            time.sleep(0.2)
+
     def _format_timeout(self, timeout):
         timeout = robot.utils.timestr_to_secs(timeout) if timeout is not None else self._timeout_in_secs
         return robot.utils.secs_to_timestr(timeout)

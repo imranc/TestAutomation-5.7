@@ -1,19 +1,21 @@
 *** Settings ***
 
-Documentation  A test case to Login to Escenic Web Studio
+Documentation  A test case to update story from EMS
 
 Resource       common_resource.txt
 
 
 *** Test Cases ***
 
-Login to WebStudio
+Update story
     Close All Browsers
     Open Browser To Escenic MobileStudio
     Input Environment Variable  userName  ECE_UserName
     Input Environment Variable  password  ECE_Password
     Submit Credentials
     Page Should Contain Button  Draft
+    Create Story  This is Automated Smoke Test for EMS
+    Click Element  css=button[class="button publish"]
     Click Element  css=div[class='logo']
     Click Element  css=a[href="#/story"]
     Page Should Contain  Your Stories
@@ -32,8 +34,7 @@ Login to WebStudio
     Input Text  css=textarea[id="field-quote"]  ""
     Input Text  css=textarea[id="field-quote"]  This is Automated Updated Story
     Click Element  css=button[class="button publish"]
-    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Updated Story']   
-    
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Updated Story']
 
 Log off
     Click Element  css=div[class='logo']
