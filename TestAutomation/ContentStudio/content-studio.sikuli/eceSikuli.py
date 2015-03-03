@@ -228,6 +228,13 @@ class eceSikuli(object):
                         ImageName=capture_CS_screenshot()
                         raise AssertionError(ScrollImageName+'Image does not exist. Screenshot: '+ImageName)
                 
+        def get_content_id(self, *args):
+                csInstance = ContentStudio()
+                ContentStudio.switch_to_content_studio(csInstance)
+                doubleClick(Pattern("ContentInfoPanel.png").targetOffset(85,60))
+                type("c", KEY_CTRL)
+                return Env.getClipboard().strip()
+
         def clean_up_desk(self, sectionName):
                 csInstance = ContentStudio()
                 ContentStudio.open_section_panel(csInstance)
