@@ -231,8 +231,11 @@ class eceSikuli(object):
         def get_content_id(self, *args):
                 csInstance = ContentStudio()
                 ContentStudio.switch_to_content_studio(csInstance)
+                wait(2)
                 doubleClick(Pattern("ContentInfoPanel.png").targetOffset(85,60))
+                wait(2)
                 type("c", KEY_CTRL)
+                wait(2)
                 return Env.getClipboard().strip()
 
         def clean_up_desk(self, sectionName):
