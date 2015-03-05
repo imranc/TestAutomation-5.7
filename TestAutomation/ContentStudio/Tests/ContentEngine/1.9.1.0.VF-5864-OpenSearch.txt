@@ -21,7 +21,7 @@ Documentation  Testcase for custom search link provided by opensearch
 	Wait For  Hit  100
 	Click Element  Hit  -15  30
 	Type Key  ENTER
-	Wait For  10
+	Wait For  ContentUrl  100
 	Check If Exists  ContentUrl
 	
 	
