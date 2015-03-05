@@ -1,4 +1,3 @@
-git log
 from sikuli.Sikuli import *
 import os
 import logging
