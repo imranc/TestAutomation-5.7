@@ -56,7 +56,7 @@ class ContentStudio(object):
                 #wait(150)
                 #ContentStudio.switch_to_content_studio(self)
                             
-                exists(Pattern("login_content_studio.png").targetOffset(-248,1),100)
+                exists(Pattern("login_content_studio.png").targetOffset(-248,1),1000)
     
                 if exists("JavaWarning.png"):
                     if exists("CheckBox.png"):
