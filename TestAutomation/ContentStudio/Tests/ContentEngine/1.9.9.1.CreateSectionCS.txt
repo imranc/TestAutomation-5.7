@@ -10,7 +10,6 @@ Resource       common_resource.txt
 Documentation  Create/Modify/Move/Delete a Section
 **Test cases**
 Create a new section in CS
-	Set Tags  non-critical
 	Switch To Content Studio
 	Close Allopen Tabs
 	Create Sub Section  NewArticles  SouthAsia
@@ -21,7 +20,6 @@ Create a new section in CS
 	Create Content In Section   SouthAsia  Article created for Create/Modify/Move/Delete section test
 
 Modify an existing section in CS
-	Set Tags  non-critical
 	Switch To Content Studio
 	Right Click Section  SouthAsia
 	Click Element  EditSectionMenu
@@ -33,7 +31,6 @@ Modify an existing section in CS
 	Check If Exists  NewsSouthAsiaSection
 	
 Move a section in CS
-	Set Tags  non-critical
 	Close All Open Tabs
 	Right Click Section  NewsSouthAsia
 	Click Element  Move
@@ -48,7 +45,6 @@ Move a section in CS
 	Check If Exists  ParentFrontPage
 	
 Delete a section in CS
-	Set Tags  non-critical
 	Close All Open Tabs
 	Right Click Section  NewsSouthAsia
 	Click Element  Delete
