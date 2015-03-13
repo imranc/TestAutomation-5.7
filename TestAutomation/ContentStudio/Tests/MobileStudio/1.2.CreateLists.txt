@@ -1,0 +1,17 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+
+Documentation  A test case for Selecting/Unselecting Content's List
+**Test cases**
+Select / Unselect the content's List
+	Close All Open Tabs
+	Delete List  NewArticles  NewsList
+	Create New List  NewArticles  NewsList
+	Check If Exists  NewsList
+	Delete List  Shows  ShowsList
+	Create New List  Shows  ShowsList
+	Check If Exists  ShowsList
+	Delete List  News  NewsList
+	Create New List  News  NewsList
+	Check If Exists  NewsList

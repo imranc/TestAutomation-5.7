@@ -24,6 +24,23 @@ Login To Web Studio
     	Submit Credentials
     	Click For Multiple Cookies
 
+Login To Escenic Mobile Studio
+    Open Browser To Escenic MobileStudio
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Wait Until Page Contains Element  css=button[data-ng-click="save()"]
+    Page Should Contain Button  Draft
+
+Log Off From Escenic Mobile Studio
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/logout"]
+    Page Should Contain Button  css=button[class="login"]
+
+Open New Editor
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/editor/new"]
+
 Open Browser To Login Page
     Open Browser  ${LOGIN URL}  ${BROWSER}
     Maximize Browser Window

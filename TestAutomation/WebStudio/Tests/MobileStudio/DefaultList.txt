@@ -9,18 +9,13 @@ Resource       common_resource.txt
 
 Change default list
     Close All Browsers
-    Open Browser To Escenic MobileStudio
-    Input Environment Variable  userName  ECE_UserName
-    Input Environment Variable  password  ECE_Password
-    Submit Credentials
-    Page Should Contain Button  Draft
+    Login To Escenic Mobile Studio
     Click Element  css=div[class='logo']
     Click Element  css=a[href="#/list"]
     Page Should Contain  Your Lists
     Wait Until Element Is Visible  css=div[class="contents ng-scope"]
-    Click Element  xpath=//div/h3[text()='Shows List']/../span[@data-ng-click="favorite(list)"]
-    Click Element  css=div[class='logo']
-    Click Element  css=a[href="#/editor/new"]
+    Click Element  xpath=//div/h3[text()='ShowsList']/../span[@data-ng-click="favorite(list)"]
+    Open New Editor
     Page Should Contain Element  css=optgroup[label="Front Page / Shows"] > option[selected="selected"]
     Create Story  Publishing a story to shows list
     Click Element  css=button[class="button publish"]
@@ -31,15 +26,10 @@ Change default list
     Page Should Contain  Your Lists
     Wait Until Element Is Visible  css=div[class="contents ng-scope"]
     Click Element  xpath=//div/h2[text()="From 'New Articles'"]/../div/span[@data-ng-click="favorite(list)"]
-    Click Element  css=div[class='logo']
-    Click Element  css=a[href="#/editor/new"]
-    Page Should Contain Element  css=optgroup[label="Front Page / New Articles"] > option[selected="selected"]    
-            
-
+    Open New Editor
+    Page Should Contain Element  css=optgroup[label="Front Page / New Articles"] > option[selected="selected"]
 
 Log off
-    Click Element  css=div[class='logo']
-    Click Element  css=a[href="#/logout"]
-    Page Should Contain Button  css=button[class="login"]
+    Log Off From Escenic Mobile Studio
 
 

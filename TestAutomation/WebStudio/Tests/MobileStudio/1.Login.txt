@@ -1,23 +1,16 @@
 *** Settings ***
 
-Documentation  A test case to Login to Escenic Web Studio
+Documentation  A test case to Login to Escenic Mobile Studio
 
 Resource       common_resource.txt
 
 
 *** Test Cases ***
 
-Login to WebStudio
+Login to MobileStudio
     Close All Browsers
-    Open Browser To Escenic MobileStudio
-    Input Environment Variable  userName  ECE_UserName
-    Input Environment Variable  password  ECE_Password
-    Submit Credentials
-    Wait Until Page Contains Element  css=button[data-ng-click="save()"]
-    Page Should Contain Button  Draft
+    Login To Escenic Mobile Studio
 
 Log off
-    Click Element  css=div[class='logo']
-    Click Element  css=a[href="#/logout"]
-    Page Should Contain Button  css=button[class="login"]
+    Log Off From Escenic Mobile Studio
 

@@ -1,0 +1,131 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Relate an External Data source with teaser widget
+
+**Keywords**
+Create New Other Content Type  [Arguments]  ${ContentType}
+	Right Click Section  Config
+	Click Element  NewContent  100  0
+	Click Element  OthersContent  -45  0
+	Click Element  ${ContentType}
+	Wait For  2
+
+Create Internal Video Content Type  [Arguments]  ${SectionName}
+	Right Click Section  ${SectionName}
+	Mouse Over  NewContent  100  0
+	Mouse Over  Videos  25  0
+	Click Element  InternalVideoContent
+
+Create Audio Content Type  [Arguments]  ${SectionName}
+	Right Click Section  ${SectionName}
+	Mouse Over  NewContent  100  0
+	Mouse Over  AudioContentList  25  0
+	Click Element  AudioContent
+
+Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
+	Right Click Section  ${SectionName}
+	Click Element  NewContent  100  0
+	Click Element  ${ContentType}
+	Wait For  2
+
+Save And Publish
+	Wait For  2
+	Click Element  SaveButton
+	Wait For  PublishButton  10
+	Click Element  PublishButton
+	Wait For  5
+	
+Search And Select First Item  [Arguments]  ${SearchPattern}
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  60
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Type Text  ${SearchPattern}
+	Type Key  ENTER
+	Wait For  15
+	Click Element  Hit  -15  30
+
+Search And Select Without Waiting  [Arguments]  ${SearchPattern}
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  10
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Type Text  ${SearchPattern}
+	Type Key  ENTER
+	Wait For  10
+	Click Element  Hit  -15  30
+
+Open Section In Content Studio  [Arguments]  ${SectionName}
+	Click Element If Exists  SectionsTab  SectionsTab
+	Click Element  HomeSection
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Right Click Section  ${SectionName}
+	Type Key  ENTER
+	Wait For  5
+
+Select From Dropdown  [Arguments]  ${Pattern}
+	Type Text  ${Pattern}
+	Wait For  2
+	#Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+Select Second Item From Dropdown  [Arguments]  ${Pattern}
+	Type Text  ${Pattern}
+	Wait For  2
+	Type Key  DOWN
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+Tag Content  [Arguments]  ${TagName}
+	Click Element  AddButton
+	Type Text  ${TagName}
+	Wait For  2
+	Type Key  ENTER
+
+Create Tag  [Arguments]  ${TagName}  ${TagStructure}
+	Click Element  Tools
+	Click Element  ManageTags  -25  0
+	Click Element  ${TagStructure}
+	Click Element  AddSubTags
+	Type Text  ${TagName}
+	Type Key  ENTER 
+	Type Key  ESC
+
+Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
+	Right Click Element  ${Area}
+	Wait For  2
+	Click Element  InsertGroup  65  0
+	Wait For  2
+	Click Element  ${InsertGroupName}
+	Wait For  2
+	Click Element  PublishButtonSimple
+	Wait For  5
+
+Duplicate Item  [Arguments]  ${DuplicateAs}  ${AppendWith}
+	Wait For  2
+	Click Element  FileMenu
+	Click Element  ${DuplicateAs}
+	wait For  5
+	Type Text  ${AppendWith}
+	Type Text If Element Exists  SubtitleFieldInContent  -20  20  ${AppendWith}
+	Wait For  2
+
+	Type Text If Element Exists  LeadTextFieldInStoryContent  -25  20  ${AppendWith}
+	Wait For  2
+	
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButton
+	Wait For  5
+
+	

@@ -9,12 +9,7 @@ Resource       common_resource.txt
 
 A test case to publish a draft story
     Close All Browsers
-    Open Browser To Escenic MobileStudio
-    Input Environment Variable  userName  ECE_UserName
-    Input Environment Variable  password  ECE_Password
-    Submit Credentials
-    Wait Until Page Contains Element  css=button[data-ng-click="save()"]
-    Page Should Contain Button  Draft
+    Login To Escenic Mobile Studio
     Click Element  css=div[class='logo']
     Click Element  css=a[href="#/draft"]
     Page Should Contain  Your Drafts
@@ -26,11 +21,8 @@ A test case to publish a draft story
     Input Text  css=textarea[id="field-quote"]  Publishing a draft story
     Click Element  css=select[class="publishTo"]
     Click Element  css=optgroup[label="Front Page / Shows"]>option
-    Page Should Contain  Your Stories
     Wait Until Element Is Visible  xpath=//div/div/h3[text()='Publishing a draft story']
-
+    Page Should Contain  Your Stories
 
 Log off
-    Click Element  css=div[class='logo']
-    Click Element  css=a[href="#/logout"]
-    Page Should Contain Button  css=button[class="login"]
+    Log Off From Escenic Mobile Studio
