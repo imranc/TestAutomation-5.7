@@ -21,7 +21,7 @@ A test case to publish a draft story
     Input Text  css=textarea[id="field-quote"]  Publishing a draft story
     Click Element  css=select[class="publishTo"]
     Click Element  css=optgroup[label="Front Page / Shows"]>option
-    Wait Until Element Is Visible  xpath=//div/div/h3[text()='Publishing a draft story']
+    Wait Until Page Contains Element  xpath=//div/div/h3[text()='Publishing a draft story']
     Page Should Contain  Your Stories
 
 Log off

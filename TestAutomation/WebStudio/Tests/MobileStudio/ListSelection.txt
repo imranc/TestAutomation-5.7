@@ -21,7 +21,7 @@ Hide list
     Page Should Not Contain Element  css=optgroup[label="Front Page / Shows"]
     Create Story  This is Automated Test for Default List Selection & Hide List
     Click Element  css=button[class="button publish"]
-    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Test for Default List Selection & Hide List']
+    Wait Until Page Contains Element  xpath=//div/div/h3[text()='This is Automated Test for Default List Selection & Hide List']
     Page Should Contain Element  xpath=//div/h3[text()='This is Automated Test for Default List Selection & Hide List']/../div/span[text()='In "New Articles"']
 
 Unhide list    
