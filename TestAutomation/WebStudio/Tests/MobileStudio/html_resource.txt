@@ -1,0 +1,209 @@
+*** Settings ***
+
+Documentation  A resource file containing the application specific keywords
+...            that create our own domain specific language. This resource
+...            implements keywords for testing HTML version of the test
+...            application. Keywords for Flex version are in flex_resource.txt
+...            and common_resource.txt is used to select which one to use.
+
+
+*** Variables ***
+
+${LOGIN URL}     http://172.24.201.221:8080/escenic
+${WELCOME URL}   http://${SERVER}/html/welcome.html
+${ERROR URL}     http://${SERVER}/html/error.html
+${JENKINS URL}   http://172.24.201.221:8089
+
+
+*** Keywords ***
+
+Login To Web Studio
+	#Open Browser To Escenic WebStudio
+    	Input Environment Variable  userId  ECE_UserName
+    	Input Environment Variable  password  ECE_Password
+    	Submit Credentials
+    	Click For Multiple Cookies
+
+Login To Escenic Mobile Studio
+    Open Browser To Escenic MobileStudio
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
+    Submit Credentials
+    Wait Until Page Contains Element  css=button[data-ng-click="save()"]
+    Page Should Contain Button  Draft
+
+Log Off From Escenic Mobile Studio
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/logout"]
+    Page Should Contain Button  css=button[class="login"]
+
+Open New Editor
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/editor/new"]
+
+Open Browser To Login Page
+    Open Browser  ${LOGIN URL}  ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed  ${DELAY}
+    Title Should Be  Escenic Web Studio
+
+Open Browser To Escenic MobileStudio
+    Open Browser MobileStudio
+    Maximize Browser Window
+    Set Selenium Speed  ${DELAY}
+    	Title Should Be  Mobile Studio
+
+Go To Login Page
+    Go To  ${LOGIN URL}
+    Title Should Be  Login Page
+
+Go To Change Password Page
+    Click Link  xpath=//*[@href='/escenic/person/changePassword.do']  
+ 
+Go To Change Language Page
+    Click Link  xpath=//*[@href='/escenic/base/changeLanguage.do']  
+
+Go To Link  [Arguments]  ${url}
+    Click Link  xpath=//*[@href='${url}']
+
+Go To WebStudio HomePage
+	Go To Link  javascript:submitForm("main-menu")
+
+Input Username  [Arguments]  ${username}
+    Input Text  username_field  ${username}
+
+Input Password  [Arguments]  ${password}
+    Input Text  password_field  ${password}
+
+Submit Credentials
+    Click Button  Log in
+
+Welcome Page Should Be Open
+    Location Should Be  ${WELCOME URL}
+    Title Should Be  Welcome Page
+
+Login Should Have Failed
+    Location Should Be  ${ERROR URL}
+    Title Should Be  Error Page
+
+Click For Multiple Cookies
+    Click Element If Exists  css=button[class='hijack']
+
+Check if Log off Link Exists
+    Page Should Contain Link  xpath=//*[@href='/escenic/logoff.do']
+
+Create User  [Arguments]  ${userName}
+    Go To Link  javascript:submitForm("main-menu")
+    Click Element  xpath=//*[@href="/escenic/user/new.do"]
+    Input Text  firstName  ${userName}
+    Input Text  surName  ${userName}
+    Input Text  userName  ${userName}
+    Input Text  newPassword  ${userName}
+    Input Text  confirmPassword  ${userName}
+    Click Element  xpath=//*[@value='Save']
+	Alert Should Not Be Present
+	##Click Search button and check if new user exists
+	#Go To WebStudio HomePage
+	#Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Wait Until Page Contains  Person archive  50  error=None
+	Page Should Contain Button  Search
+	#Click Element  xpath=//*[@value='Search']
+	#Wait Until Page Contains  View person  50  error=None
+	#Click Element  xpath=//*[@value='Search']
+	#Wait Until Page Contains  View person  10  error=None
+	#Page Should Contain  View person
+
+Create Section  [Arguments]  ${sectionName}
+	Go To Link  javascript:submitForm("section-archive")
+	Click Element  xpath=//*[@value='Search']
+	Click Element  xpath=//*[@href="javascript:submitForm('redirect:/section/view.do?id=1')"]
+	Go To Link  /escenic/section/new.do?id=1
+	Input Text  name  ${sectionName}
+	Input Text  uniqueName  ece_${sectionName}
+	Click Element  xpath=//*[@value='Save']
+		Alert Should Not Be Present
+		#Assertion Check
+		Page Should Contain Button  Search
+		Click Element  xpath=//*[@value='Search']
+		Wait Until Page Contains  ${sectionName}  10  error=None
+		Page Should Contain  ${sectionName}
+
+Delete Section  [Arguments]  ${sectionName}
+	Go To Link  javascript:submitForm("section-archive")
+	#Click Element  xpath=//*[@href="javascript:submitForm('redirect:/section/view.do?id=3')"
+	Input Text  searchString  ${sectionName}
+	Click Element  xpath=//*[@value='Search']
+	Click Element  xpath=//a[.='Administer']
+	Click Element  xpath=//a[.='Delete']
+	Click Element  xpath=//a[.='Delete']
+	Click Element  xpath=//*[@href="javascript:submitForm('delete')"]
+		#Assertion Check
+		Page Should Not Contain  ${sectionName} (ID:
+
+Assign Global Role  [Arguments]  ${userName}  ${role}
+	Go To WebStudio HomePage
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Click Element  xpath=//a[.='${userName} ${userName}']
+	Click Element  xpath=//*[@href="javascript:submitForm('editGlobalRoles')"]
+	Select Checkbox   xpath=//*[@name="globalRole(${role})"]
+	Click Element  xpath=//*[@value='Save']
+
+Assign Section Role  [Arguments]  ${userName}  ${role}
+	Go To WebStudio HomePage
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Click Element  xpath=//a[.='${userName} ${userName}']
+	Click Element  xpath=//*[@href="javascript:submitForm('editRoles')"]
+	Select Checkbox   xpath=//*[@name="relatedObject(0001).attribute(${role})"]
+	Click Element  xpath=//*[@value='Save']
+
+Assign All Global Roles  [Arguments]  ${userName}
+	Go To WebStudio HomePage
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Click Element  xpath=//a[.='${userName} ${userName}']
+	Click Element  xpath=//*[@href="javascript:submitForm('editGlobalRoles')"]
+	Select Checkbox   xpath=//*[@name="globalRole(publicationadmin)"]
+	Select Checkbox   xpath=//*[@name="globalRole(administrator)"]
+	Select Checkbox   xpath=//*[@name="globalRole(useradmin)"]
+	Select Checkbox   xpath=//*[@name="globalRole(editor)"]
+	Select Checkbox   xpath=//*[@name="globalRole(journalist)"]
+	Select Checkbox   xpath=//*[@name="globalRole(reader)"]
+	Select Checkbox   xpath=//*[@name="globalRole(articleWithContentTypeReader)"]
+	Select Checkbox   xpath=//*[@name="globalRole(articleWithContentTypeWriter)"]
+	Select Checkbox   xpath=//*[@name="globalRole(dashboard-administrator)"]
+	Select Checkbox   xpath=//*[@name="globalRole(content-moderator)"]
+	Click Element  xpath=//*[@value='Save']
+
+Assign All Section Roles  [Arguments]  ${userName}
+	Go To WebStudio HomePage
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Click Element  xpath=//a[.='${userName} ${userName}']
+	Click Element  xpath=//*[@href="javascript:submitForm('editRoles')"]
+	Select Checkbox   xpath=//*[@name="relatedObject(0001).attribute(administrator)"]
+	Select Checkbox   xpath=//*[@name="relatedObject(0001).attribute(useradmin)"]
+	Select Checkbox   xpath=//*[@name="relatedObject(0001).attribute(editor)"]
+	Select Checkbox   xpath=//*[@name="relatedObject(0001).attribute(journalist)"]
+	Select Checkbox   xpath=//*[@name="relatedObject(0001).attribute(reader)"]
+	Click Element  xpath=//*[@value='Save']
+
+	
+Delete User  [Arguments]  ${userName}
+	Go To WebStudio HomePage
+	Click Element  xpath=//*[@href="javascript:submitForm('person-archive')"]
+	Input Text  searchWord  ${userName}
+	Click Button  Search
+	Click Element If Exists  css=input[value='on']
+	Click Element If Exists  css=a[href='javascript: confirmDelete()']
+	Close Alert If Exists
+	Click Link If Exists  css=a[href^="/escenic/person/search/deletePersons.do?deletePossible=true"]
+	Page Should Not Contain  These items could not be deleted
+
+
+Create Story  [Arguments]  ${inputText}
+	Click Element  css=div[class='logo']
+	Click Element  css=a[href="#/editor/new"]
+	Input Text  css=textarea[id="field-title"]  ${inputText}
+	Input Text  css=textarea[id="field-subtitle"]  ${inputText}
+	Input Text  css=textarea[id="field-leadtext"]  ${inputText}
+	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText} 
+	
+

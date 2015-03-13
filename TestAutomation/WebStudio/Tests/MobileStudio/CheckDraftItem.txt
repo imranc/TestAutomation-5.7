@@ -1,0 +1,24 @@
+*** Settings ***
+
+Documentation  A test case to create a draft story
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create a draft story
+    Close All Browsers
+    Login To Escenic Mobile Studio
+    Create Story  This is a test Item
+    Click Button  Draft
+    Wait For  90
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/draft"]
+    Page Should Contain  Your Drafts   
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is a test Item']
+    Click Element  xpath=//div/div/h3[text()='This is a test Item'] 
+    
+
+Log off
+    Log Off From Escenic Mobile Studio

@@ -1,0 +1,36 @@
+*** Settings ***
+
+Documentation  A test case to update story from EMS
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Update story
+    Close All Browsers
+    Login To Escenic Mobile Studio
+    Create Story  This is Automated Smoke Test for EMS
+    Click Element  css=button[class="button publish"]
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/story"]
+    Page Should Contain  Your Stories
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Smoke Test for EMS']
+    Click Element  xpath=//div/div/h3[text()='This is Automated Smoke Test for EMS']
+    Input Text  css=textarea[id="field-title"]  ""
+    Input Text  css=textarea[id="field-title"]  This is Automated Updated Story
+    Input Text  css=textarea[id="field-subtitle"]  ""
+    Input Text  css=textarea[id="field-subtitle"]  This is Automated Updated Story
+    Input Text  css=textarea[id="field-leadtext"]  ""
+    Input Text  css=textarea[id="field-leadtext"]  This is Automated Updated Story
+    Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ""
+    Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  This is Automated Updated Story
+    Input Text  css=textarea[id="field-byline"]  ""
+    Input Text  css=textarea[id="field-byline"]  This is Automated Updated Story
+    Input Text  css=textarea[id="field-quote"]  ""
+    Input Text  css=textarea[id="field-quote"]  This is Automated Updated Story
+    Click Element  css=button[class="button publish"]
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Updated Story']
+
+Log off
+    Log Off From Escenic Mobile Studio

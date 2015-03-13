@@ -1,0 +1,35 @@
+*** Settings ***
+
+Documentation  A test case to change/revert default list
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Change default list
+    Close All Browsers
+    Login To Escenic Mobile Studio
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/list"]
+    Page Should Contain  Your Lists
+    Wait Until Element Is Visible  css=div[class="contents ng-scope"]
+    Click Element  xpath=//div/h3[text()='ShowsList']/../span[@data-ng-click="favorite(list)"]
+    Open New Editor
+    Page Should Contain Element  css=optgroup[label="Front Page / Shows"] > option[selected="selected"]
+    Create Story  Publishing a story to shows list
+    Click Element  css=button[class="button publish"]
+    Wait Until Element Is Visible  xpath=//div/h3[text()='Publishing a story to shows list']  timeout=20
+    Page Should Contain Element  xpath=//div/h3[text()='Publishing a story to shows list']/../div/span[text()='In "Shows"']
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/list"]
+    Page Should Contain  Your Lists
+    Wait Until Element Is Visible  css=div[class="contents ng-scope"]
+    Click Element  xpath=//div/h2[text()="From 'New Articles'"]/../div/span[@data-ng-click="favorite(list)"]
+    Open New Editor
+    Page Should Contain Element  css=optgroup[label="Front Page / New Articles"] > option[selected="selected"]
+
+Log off
+    Log Off From Escenic Mobile Studio
+
+

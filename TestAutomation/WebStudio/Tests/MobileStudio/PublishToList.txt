@@ -1,0 +1,21 @@
+*** Settings ***
+
+Documentation  A test case to publish to list
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Publish to list
+    Close All Browsers
+    Login To Escenic Mobile Studio
+    Create Story  This is Automated Smoke Test for EMS
+    Click Element  css=select[class="publishTo"]
+    Click Element  css=optgroup[label="Front Page / Shows"]>option
+            
+
+
+Log off
+    Log Off From Escenic Mobile Studio
+

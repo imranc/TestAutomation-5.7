@@ -1,0 +1,28 @@
+*** Settings ***
+
+Documentation  A test case to publish a draft story
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+A test case to publish a draft story
+    Close All Browsers
+    Login To Escenic Mobile Studio
+    Click Element  css=div[class='logo']
+    Click Element  css=a[href="#/draft"]
+    Page Should Contain  Your Drafts
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is a test Item']
+    Click Element  xpath=//div/div/h3[text()='This is a test Item']
+    Input Text  css=textarea[id="field-title"]  ""
+    Input Text  css=textarea[id="field-title"]  Publishing a draft story
+    Input Text  css=textarea[id="field-byline"]  Publishing a draft story
+    Input Text  css=textarea[id="field-quote"]  Publishing a draft story
+    Click Element  css=select[class="publishTo"]
+    Click Element  css=optgroup[label="Front Page / Shows"]>option
+    Wait Until Element Is Visible  xpath=//div/div/h3[text()='Publishing a draft story']
+    Page Should Contain  Your Stories
+
+Log off
+    Log Off From Escenic Mobile Studio
