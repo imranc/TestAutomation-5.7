@@ -41,7 +41,7 @@ Move a section in CS
 	Wait For  10
 	Right Click Section  NewsSouthAsia
 	Click Element  EditSectionMenu
-	Wait For  5
+	Wait For  ParentFrontPage  20
 	Check If Exists  ParentFrontPage
 	
 Delete a section in CS
