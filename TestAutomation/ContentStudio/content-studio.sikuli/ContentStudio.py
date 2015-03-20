@@ -761,6 +761,7 @@ class ContentStudio(object):
                 #        click(Pattern("PreviewButton.png").similar(0.60))
                 ContentStudio.switch_to_content_studio(self)
                 click("PreviewTab.png")
+                wait(10)
                 wait_for("OpenInBrowser.png", 10)
                 wait_for("PreviewAll.png", 10)
 
