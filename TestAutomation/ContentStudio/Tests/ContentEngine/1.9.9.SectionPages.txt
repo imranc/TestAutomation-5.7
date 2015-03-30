@@ -28,3 +28,4 @@ Create/Delete new section pages
 	Type Key  DELETE
 	Type Key  ENTER 
 	Check If Not Exists  TestPageAssertion
+	Close Content Studio
