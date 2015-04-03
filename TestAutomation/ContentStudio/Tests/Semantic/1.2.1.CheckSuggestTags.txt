@@ -1,0 +1,18 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  A test case for asserting suggest tags button
+
+**Test cases**
+Assertion of suggest tags button
+	Switch To Content Studio
+	Close All Open Tabs
+	Create Cxense Story  Story created from automated tests
+	Check If Exists  SuggestTags
+

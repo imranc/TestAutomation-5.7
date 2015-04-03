@@ -1,0 +1,139 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Relate an External Data source with teaser widget
+
+**Keywords**
+Create New Other Content Type  [Arguments]  ${SectionName}  ${ContentType}
+	Right Click Section  ${SectionName}
+	Click Element  NewContent  100  0
+	Click Element  OthersContent  -45  0
+	Click Element  ${ContentType}
+	Wait For  2
+
+Create Widget Content Type  [Arguments]  ${ContentType}
+	Right Click Section  Config
+	Click Element  NewContent  100  0
+	Click Element  WidgetsContent  80  0
+	Click Element  ${ContentType}
+	Wait For  2
+
+Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
+	Right Click Section  ${SectionName}
+	Click Element  NewContent  100  0
+	Click Element  ${ContentType}
+	Wait For  2
+
+Create Sub Section  [Arguments]  ${SectionName}  ${SubSectionName}
+	Right Click Section  ${SectionName}
+	Click Element  NewSubSection
+	Type Text  ${SubSectionName}
+	Click Element  SaveButton
+
+Save And Publish
+	Wait For  2
+	Click Element  SaveButton
+	Wait For  10
+	Click Element  PublishButton
+	Wait For  5
+	
+Search And Select First Item  [Arguments]  ${SearchPattern}
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  60
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Type Text  ${SearchPattern}
+	Type Key  ENTER
+	Click Element  ClipboardTab  20  120
+
+Search And Select Without Waiting  [Arguments]  ${SearchPattern}
+	Click Element If Exists  SearchTab  SearchTab
+	Wait For  1
+	Click Element  FindTextBox  20  0
+	Clear Search
+	Type Text  ${SearchPattern}
+	Type Key  ENTER
+	Wait For  5
+	Click Element  Hit  -15  30
+
+
+Open Section In Content Studio  [Arguments]  ${SectionName}
+	Click Element If Exists  SectionsTab  SectionsTab
+	Click Element  HomeSection
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Right Click Section  ${SectionName}
+	Type Key  ENTER
+	Wait For  5
+
+Select From Dropdown  [Arguments]  ${Pattern}
+	Type Text  ${Pattern}
+	Wait For  4
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+Tag Content  [Arguments]  ${TagName}
+	Click Element  AddButton
+	Type Text  ${TagName}
+	Wait For  2
+	Type Key  ENTER
+
+Create Tag From Content Editor  [Arguments]  ${TagName}  ${TagStructure}
+	Click Element  AddButton
+	Type Text  ${TagName}
+	Wait For  3
+	Type Key  ENTER
+	Click Element  WhereInCreateNewTagPanel  25  0
+	Select From Dropdown  ${TagStructure}
+	Wait For  1
+	Click Element  CreateInCreateNewTagPanel
+
+Create Tag  [Arguments]  ${TagName}  ${TagStructure}
+	Click Element  Tools
+	Click Element  ManageTags  -25  0
+	Click Element  ${TagStructure}
+	Click Element  AddSubTags
+	Type Text  ${TagName}
+	Type Key  ENTER 
+	Type Key  ESC
+	Type Key  ESC
+	Type Key  ESC
+
+Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
+	Right Click Element  ${Area}
+	Wait For  2
+	Click Element  InsertGroup  65  0
+	Wait For  2
+	Click Element  ${InsertGroupName}
+	Wait For  2
+	Click Element  PublishButtonSimple
+	Wait For  5
+
+Change Layout  [Arguments]  ${Layout}
+	Click Element  Tools
+	Click Element  ChangeLayout
+	Click Element If Exists  NewLayout  NewLayout  220  0
+	Click Element If Exists  ${Layout}  ${Layout}
+	Type Key  DOWN
+	Click Element If Exists  ${Layout}  ${Layout}
+	Click Element  OkButtonForLayout
+	Wait For  2 
+
+Create Cxense Story  [Arguments]  ${Body}
+	Create New Other Content Type  NewArticles  CxenseStory 
+	Type Text  Cxense story created from automated tests 
+	Type Key  TAB
+	Type Text  Cxense story created from automated tests
+	Type Key  TAB
+	Type Text  ${Body}
+	Save And Publish
+
+
+	
