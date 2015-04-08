@@ -232,7 +232,7 @@ class eceSikuli(object):
                 csInstance = ContentStudio()
                 ContentStudio.switch_to_content_studio(csInstance)
                 wait(2)
-                doubleClick(Pattern("ContentInfoPanel.png").targetOffset(65,60))
+                doubleClick(Pattern("ContentInfoPanel.png").targetOffset(85,60))
                 wait(2)
                 type("c", KEY_CTRL)
                 wait(2)
