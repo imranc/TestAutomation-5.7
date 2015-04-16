@@ -26,6 +26,7 @@ Create/Delete new section pages
 	Click Element  PublishButtonSimple
 	Click Element  TestPageAssertion
 	Type Key  DELETE
-	Type Key  ENTER 
+	Type Key  ENTER
+	Wait For  2
 	Check If Not Exists  TestPageAssertion
 	Close Content Studio
