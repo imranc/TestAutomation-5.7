@@ -13,3 +13,4 @@ org.robotframework.RobotFramework ^
 %*
 
 xcopy %tmp%\hs_err_pid*.log TestResults\Logs
+xcopy %tmp%\com.escenic.studio\log\*.log TestResults\Logs
