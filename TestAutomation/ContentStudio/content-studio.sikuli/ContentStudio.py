@@ -123,6 +123,7 @@ class ContentStudio(object):
                 click("rssFeedPanelUrl.png")
                 wait(5)
                 paste("http://feeds.bbci.co.uk/news/technology/rss.xml")
+                wait(2)
                 click("OK_button.png")
 
                 #Open created RSS feed Panel (CTRL+4) and close panel (CTRL+4)
