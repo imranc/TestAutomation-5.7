@@ -118,7 +118,7 @@ class ContentStudio(object):
                 type("8",KeyModifier.CTRL)
                 if exists("new_research_panel.png", 200):
                     click("new_research_panel.png")
-                wait(2)
+                wait(5)
                 #type(Key.TAB + Key.TAB + Key.TAB + Key.TAB)
                 click("rssFeedPanelUrl.png")
                 wait(5)
