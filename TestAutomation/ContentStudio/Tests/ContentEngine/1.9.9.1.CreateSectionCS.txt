@@ -48,7 +48,7 @@ Delete a section in CS
 	Close All Open Tabs
 	Right Click Section  NewsSouthAsia
 	Click Element  Delete
-	Wait For  3
+	Wait For  DeleteSectionConfirmation  30
 	Select From Dropdown  Front Page
 	Click Element  DeleteSectionConfirmation
 	Click Element  DeleteButtonSimple
