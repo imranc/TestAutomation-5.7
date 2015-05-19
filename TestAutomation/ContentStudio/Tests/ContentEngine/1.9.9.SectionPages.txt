@@ -18,7 +18,7 @@ Create/Delete new section pages
 	Click Element  CreateNewPage
 	Type Text  Test Page By Automated tests
 	Type Key  ENTER
-	Wait For  2
+	Wait For  PublishButtonSimple  20
 	Click Element  PublishButtonSimple
 	Click Element  PagesTab
 	Check If Exists  TestPageAssertion
