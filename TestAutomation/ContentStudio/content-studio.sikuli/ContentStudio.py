@@ -735,6 +735,7 @@ class ContentStudio(object):
                 ContentStudio.open_section_panel(self)
                 
                 SectionImageName=sectionName+'Section.png'
+                ListImageName=listName+'.png'
 
                 if exists("HomeSection.png"):
                         click("HomeSection.png")
@@ -748,8 +749,8 @@ class ContentStudio(object):
                 click("ListsTab.png")
                 wait(2)
                 
-                if exists(Pattern("NewsList.png").similar(0.90)):
-                        click(Pattern("NewsList.png").similar(0.90))
+                if exists(Pattern(ListImageName).similar(0.90)):
+                        click(Pattern(ListImageName).similar(0.90))
                         
                 type(Key.DELETE)
                 wait(2)
