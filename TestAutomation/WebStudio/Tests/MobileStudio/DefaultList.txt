@@ -20,6 +20,7 @@ Change default list
     Create Story  Publishing a story to shows list
     Click Element  css=button[class="button publish"]
     Wait Until Element Is Visible  xpath=//div/h3[text()='Publishing a story to shows list']  timeout=20
+    Wait For  5
     Page Should Contain Element  xpath=//div/h3[text()='Publishing a story to shows list']/../div/span[text()='In "Shows"']
     Click Element  css=div[class='logo']
     Click Element  css=a[href="#/list"]

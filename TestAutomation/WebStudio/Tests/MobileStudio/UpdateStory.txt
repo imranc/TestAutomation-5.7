@@ -30,6 +30,7 @@ Update story
     Input Text  css=textarea[id="field-quote"]  ""
     Input Text  css=textarea[id="field-quote"]  This is Automated Updated Story
     Click Element  css=button[class="button publish"]
+    Wait For  5
     Wait Until Element Is Visible  xpath=//div/div/h3[text()='This is Automated Updated Story']
 
 Log off
