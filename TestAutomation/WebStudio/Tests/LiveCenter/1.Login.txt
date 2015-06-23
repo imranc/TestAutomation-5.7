@@ -1,6 +1,6 @@
 *** Settings ***
 
-Documentation  A test case to Login to Escenic Mobile Studio
+Documentation  A test case to Login to Escenic Live Center
 
 Resource       common_resource.txt
 
