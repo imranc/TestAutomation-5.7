@@ -8,7 +8,7 @@ Documentation  A test case for creating live-center event
 **Test cases**
 Create an event in CS
 	Create Content Type  NewArticles  Event
-	Type Text  Test Live Event
+	Type Text  Escenic Live Automated Test
 	Click Element  LiveCenterEntryType
 	Click Element  LiveCenterSubscriptions  -15  20
 	Click Element  Twitter
