@@ -1,0 +1,17 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Resource          common_resource.txt
+
+Documentation  A test case for creating live-center event
+
+**Test cases**
+Create an event in CS
+	Create Content Type  NewArticles  Event
+	Type Text  Test Live Event
+	Click Element  LiveCenterEntryType
+	Click Element  LiveCenterSubscriptions  -15  20
+	Click Element  Twitter
+	Click Element  Query  200  0
+	Type Text  escenic
+	Save And Publish
