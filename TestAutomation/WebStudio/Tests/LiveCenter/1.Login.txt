@@ -7,7 +7,7 @@ Resource       common_resource.txt
 
 *** Test Cases ***
 
-Login to MobileStudio
+Login to Live Center Editorial
     Close All Browsers
     Login To Escenic Live Center
 
