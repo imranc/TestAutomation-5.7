@@ -192,12 +192,74 @@ Delete User  [Arguments]  ${userName}
 	Page Should Not Contain  These items could not be deleted
 
 
-Create Story  [Arguments]  ${inputText}
-	Click Element  css=div[class='logo']
-	Click Element  css=a[href="#/editor/new"]
-	Input Text  css=textarea[id="field-title"]  ${inputText}
-	Input Text  css=textarea[id="field-subtitle"]  ${inputText}
-	Input Text  css=textarea[id="field-leadtext"]  ${inputText}
-	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText} 
+
+
+
+Create Entry  [Arguments]  ${inputText}
+	Input Text  css=textarea[id="field-basic-"]  ${inputText}
+	Input Text  css=div[id="field-xhtml-"]  ${inputText}
 	
+
+Submit Entry
+        Click Element  xpath=//div/a[text()='Submit']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
+
+Open an Event
+	Click Element  xpath=//div/h3[text()='Escenic Live Event Test']
+
+Publish the Submitted Entry
+	Mouse Over  xpath=//div/p[text()=' First test entry of Escenic event']
+        Wait For  5
+        Click Element  css=span[class="approve ng-scope"] 
+        Page Should Not Contain Element  css=span[class="approve ng-scope"]
+
+Make Entry Sticky
+	Click Element  css=input[class="ng-pristine ng-valid"]
+
+Select Author  [Arguments]  ${inputText}
+	Click Element  css=span[class="select2-arrow"]
+	Wait For  5
+	Click Element  xpath=//*[@id="s2id_autogen2_search"]
+	Input Text  xpath=//*[@id="s2id_autogen2_search"]  ${inputText}
+	Click Element  css=ul[class="select2-results"]
+
+Add Tweet to an Entry
+        Click Element  css=#t1
+        Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(2)
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a tweet']
+
+
+Update an Entry  [Arguments]  ${inputText}
+	Click Element  css=span[class="edit"]
+	Input Text  css=textarea[id$='live-center-editorial-entry-1']   ${inputText}
+	Input Text  css=div[id$='live-center-editorial-entry-1']  ${inputText}
+	Click Element  xpath=//div/a[text()='Update']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Updated entry']
+	
+Delete an Entry
+	Mouse Over  xpath=//div/p[text()=' Deleting an entry']
+        Wait For  5
+        Click Element  css=span[class="remove"] 
+        Click Element  xpath=//div/a[text()='OK']
+        Page Should Not Contain Element  xpath=//div/p[text()=' Deleting an entry']
+
+Publish Entry for deleting
+        Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Deleting an entry']
+
+Add EmbedURL to an Entry
+	Click Element  css=button[class="embed-url"]
+	Click Element  css=input[class='ng-pristine ng-valid']
+	Input Text  css=input[class='ng-pristine ng-valid']  https://vine.co/v/ebDKuAUm56a
+	Click Element  xpath=//div/a[text()='OK']
+	Wait For  5
+        Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with EmbedURL']
+
 

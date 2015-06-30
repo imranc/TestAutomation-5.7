@@ -1,0 +1,18 @@
+*** Settings ***
+
+Documentation  A test case to add a tweet in an entry 
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create an entry with a tweet
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Create Entry  Test entry of Escenic event with a tweet
+        Add Tweet to an Entry
+
+Log off
+    Log Off From Escenic Live Center

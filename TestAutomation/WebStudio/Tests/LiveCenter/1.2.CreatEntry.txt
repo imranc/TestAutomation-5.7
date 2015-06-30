@@ -1,0 +1,21 @@
+*** Settings ***
+
+Documentation  A test case to create an entry and publish it
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create an entry and publish it
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Create Entry  First test entry of Escenic event
+	Make Entry Sticky
+	Select Author  elive	
+	Submit Entry
+	Publish the Submitted Entry
+
+Log off
+    Log Off From Escenic Live Center

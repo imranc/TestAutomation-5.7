@@ -1,0 +1,17 @@
+*** Settings ***
+
+Documentation  A test case to update an entry 
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Update an Entry 
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Update an Entry  Updated entry  
+
+Log off
+    Log Off From Escenic Live Center
