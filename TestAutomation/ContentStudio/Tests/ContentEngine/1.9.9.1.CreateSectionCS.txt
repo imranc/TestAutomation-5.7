@@ -35,21 +35,21 @@ Move a section in CS
 	Right Click Section  NewsSouthAsia
 	Click Element  Move
 	Wait For  2
-	Select From Dropdown  Front Page
+	Select From Dropdown  New Articles
 	Wait For  2
 	Click Element  MoveButton
 	Wait For  10
 	Right Click Section  NewsSouthAsia
 	Click Element  EditSectionMenu
-	Wait For  ParentFrontPage  20
-	Check If Exists  ParentFrontPage
+	Wait For  ParentNewArticles  20
+	Check If Exists  ParentNewArticles
 	
 Delete a section in CS
 	Close All Open Tabs
 	Right Click Section  NewsSouthAsia
 	Click Element  Delete
 	Wait For  DeleteSectionConfirmation  30
-	Select From Dropdown  Front Page
+	Select From Dropdown  New Articles
 	Click Element  DeleteSectionConfirmation
 	Click Element  DeleteButtonSimple
 	Wait For  10
@@ -58,6 +58,6 @@ Delete a section in CS
 	Search And Select Without Waiting  Article created for Create/Modify/Move/Delete section test
 	Type Key  ENTER
 	Wait For  10
-	Check If Exists  FrontPageHomeSectionAssertion
+	Check If Exists  NewArticlesHomeSectionAssertion
 
 	
