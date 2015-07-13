@@ -6,6 +6,6 @@ Documentation  A test case for Start and Logging into ContentStudio
 
 **Test cases**
 Start content studio and log in
-	Start Content Studio
+	Start Content Studio  elive_admin  admin
 	Close All Open Tabs
 	Print Version
