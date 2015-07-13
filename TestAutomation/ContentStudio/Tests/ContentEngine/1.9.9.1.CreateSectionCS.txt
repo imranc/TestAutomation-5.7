@@ -12,10 +12,8 @@ Documentation  Create/Modify/Move/Delete a Section
 Create a new section in CS
 	Switch To Content Studio
 	Close Allopen Tabs
-	Create Sub Section  Sports  SouthAsia
+	Create Sub Section  News  SouthAsia
 	Close Allopen Tabs
-	Click Element If Exists  ExpansionIcon  ExpansionIcon
-	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
