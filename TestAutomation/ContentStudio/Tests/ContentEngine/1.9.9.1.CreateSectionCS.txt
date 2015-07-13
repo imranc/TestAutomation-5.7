@@ -16,6 +16,9 @@ Create a new section in CS
 	Close Allopen Tabs
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
+	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Check If Exists  SouthAsiaSection
 	Create Content In Section   SouthAsia  Article created for Create/Modify/Move/Delete section test
 
