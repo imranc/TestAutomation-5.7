@@ -1,0 +1,78 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Create a Teaser Widget with Data source query by section
+**Test cases**
+Create a Teaser Widget with Data source query by section
+	Switch To Content Studio
+	Create Image In Section    NewArticles
+	Close Allopen Tabs
+	Create Widget Content Type  TeaserWidgetContent
+	Type Text  TestAutomation Widget (TeaserWidget_DS_by_Section)
+	Click Element  DataSourceTab
+	Click Element  AddQuery
+	Wait For  2
+	Click Element  DataSourceBySection  -70  0
+	Click Element  DataSourceSectionBox  -10  15
+	Select From Dropdown  New Articl
+	
+	Click Element  DataSourceContentTypes  -10  15
+	Select From Dropdown  Picture
+	
+	Click Element  DefaultTab
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Media
+	Type Key  ENTER
+	Scroll Element  TeaserViewScroll  50  250
+		
+	
+	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Select Second Item From Dropdown  Picture
+
+	Click Element  WidgetMediaImageAspectRatioSettings
+	Type Text  Wide
+	Type Key  ENTER
+
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  50%
+	Type Key  ENTER
+
+	Drag And Drop Element  TeaserViewScroll  SaveButton
+	Click Element  WidgetRelationSourceSettings  50  0
+	Click Element  WidgetRelationSourceSpecifySettings
+	Select From Dropdown  Related
+
+	Click Element  WidgetRelationContentTypeSettings  50  0
+	Click Element  WidgetRelationContentTypeSpecifySettings
+	Select Second Item From Dropdown  Picture
+
+	Save And Publish
+
+	Open Section In Content Studio  FrontpageTemplate
+	Wait for  5
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+	###Assertion###
+		Open Browser To Publication 
+		Check If Exists  DSBySectionAssertion
+		Close Browser
+
+Remove teaser widget
+	Set Tags  non-critical
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  WidgetListView  WidgetListView
+	Type Key  DELETE
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
+	Click Element  PublishButtonSimple
