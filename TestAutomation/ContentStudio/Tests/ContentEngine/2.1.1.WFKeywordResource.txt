@@ -79,6 +79,13 @@ Select From Dropdown  [Arguments]  ${Pattern}
 	Wait For  2
 	Type Key  ENTER
 
+Select First Item From Dropdown  [Arguments]  ${Pattern}
+	Type Text  ${Pattern}
+	Wait For  4
+	#Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
 Select Second Item From Dropdown  [Arguments]  ${Pattern}
 	Type Text  ${Pattern}
 	Wait For  2
