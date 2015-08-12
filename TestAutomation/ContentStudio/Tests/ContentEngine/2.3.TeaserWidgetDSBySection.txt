@@ -31,6 +31,29 @@ Create a Teaser Widget with Data source query by section
 	Type Text  Media
 	Type Key  ENTER
 
+        Scroll Element  TeaserViewScroll  50  250
+               
+       
+        Click Element  WidgetMediaContentTypeSettings  -35  10
+        Select Second Item From Dropdown  Picture
+
+        Click Element  WidgetMediaImageAspectRatioSettings
+        Type Text  Wide
+        Type Key  ENTER
+
+        Click Element  WidgetMediaImageWidthSettings
+        Type Text  50%
+        Type Key  ENTER
+ 
+        Drag And Drop Element  TeaserViewScroll  SaveButton
+        Click Element  WidgetRelationSourceSettings  50  0
+        Click Element  WidgetRelationSourceSpecifySettings
+        Select From Dropdown  Related
+ 
+        Click Element  WidgetRelationContentTypeSettings  50  0
+        Click Element  WidgetRelationContentTypeSpecifySettings
+        Select Second Item From Dropdown  Picture
+
 	Save And Publish
 
 	Open Section In Content Studio  FrontpageTemplate
