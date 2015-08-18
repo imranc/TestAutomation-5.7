@@ -215,7 +215,7 @@ Publish the Submitted Entry
         Page Should Not Contain Element  css=span[class="approve ng-scope"]
 
 Make Entry Sticky
-	Click Element  css=input[class="ng-pristine ng-valid"]
+	Click Element  css=input[class="ng-pristine ng-untouched ng-valid"]
 
 Select Author  [Arguments]  ${inputText}
 	Click Element  css=span[class="select2-arrow"]
