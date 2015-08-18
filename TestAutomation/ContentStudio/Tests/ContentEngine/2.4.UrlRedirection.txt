@@ -29,6 +29,7 @@ Check if redirection works with special character in pretty url
 
 	Open Browser To Publication  news/article${contentID}.ece
 	Check If Exists  ArticleUrlRedirectionAssertion
+	Close Browser
 	Switch To Content Studio
 	Close All Open Tabs
 	Change Input Language
