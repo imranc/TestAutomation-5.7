@@ -13,7 +13,7 @@ Create an entry and publish it
 	Open an Event
 	Create Entry  First test entry of Escenic event
 	Make Entry Sticky
-	Select Author  elive	
+	#Select Author  elive	
 	Submit Entry
 	Publish the Submitted Entry
 
