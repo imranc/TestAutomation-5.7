@@ -220,8 +220,8 @@ Make Entry Sticky
 Select Author  [Arguments]  ${inputText}
 	Click Element  css=span[class="select2-arrow"]
 	Wait For  5
-	Click Element  xpath=//*[@id="s2id_autogen2_search"]
-	Input Text  xpath=//*[@id="s2id_autogen2_search"]  ${inputText}
+	Click Element  xpath=//div[@class="select2-search"]/input
+	Input Text  xpath=//div[@class="select2-search"]/input  ${inputText}
 	Click Element  css=ul[class="select2-results"]
 
 Add Tweet to an Entry
