@@ -11,6 +11,7 @@ Update an Entry
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
+	Wait For  5
 	Update an Entry  Updated entry  
 
 Log off
