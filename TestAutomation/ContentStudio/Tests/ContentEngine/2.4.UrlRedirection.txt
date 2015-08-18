@@ -1,0 +1,35 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Resource       common_resource.txt
+
+Documentation  Check if url redirection works properly
+**Test cases**
+Check if section url redirection works properly
+	Set Tags  non-critical
+	Open Browser To Publication  sports
+	Check If Exists  SectionUrlRedirectionAssertion
+	Close Browser
+
+Check if redirection works with special character in pretty url
+	Set Tags  non-critical
+	Switch To Content Studio
+	Wait For  5
+	Change Input Language
+	Wait For  5
+	Change Input Language
+	Create Content In Section  News  Test ']'
+	Wait For  120
+	Switch To Content Studio
+	${contentID}=  Get Content Id
+
+	Open Browser To Publication  news/article${contentID}.ece
+	Check If Exists  ArticleUrlRedirectionAssertion
+	Switch To Content Studio
+	Close All Open Tabs
+	Change Input Language
+	
