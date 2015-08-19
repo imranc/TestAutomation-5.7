@@ -234,8 +234,8 @@ Add Tweet to an Entry
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  css=span[class="edit"]
-	Input Text  css=textarea[id="field-basic-1"]   ${inputText}
-	Input Text  css=div[id="field-xhtml-1"]  ${inputText}
+	Input Text  css=textarea[id^="field-basic-1"]   ${inputText}
+	Input Text  css=div[id^="field-xhtml-1"]  ${inputText}
 	Click Element  xpath=//div/a[text()='Update']
 	Wait For  5
     	Page Should Contain Element  xpath=//div/p[text()=' Updated entry']
