@@ -12,7 +12,7 @@ Documentation  Checks field value of one memcached item
 Checks field value of one memcached item
 	Switch To Content Studio
 	Close Allopen Tabs
-	Search And Select Without Waiting  story
+	Search And Select Without Waiting  This is the title of an article — by automated smoke tests
 	Wait For  5
 	Type Key  ENTER
 	Wait For  10
