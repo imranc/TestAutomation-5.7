@@ -66,6 +66,7 @@ Create a Teaser Widget with Data source query by section
 
 	###Assertion###
 		Open Browser To Publication 
+		Wait For  5
 		Check If Exists  DSBySectionAssertion
 		Close Browser
 
