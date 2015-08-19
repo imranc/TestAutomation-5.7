@@ -256,7 +256,7 @@ Add EmbedURL to an Entry
 	Click Element  css=button[class="embed-url"]
 	Click Element  css=label[class="ng-binding"]
 	#Click Element  css=input[class="ng-pristine ng-valid ng-touched"]
-	Input Text  css=input[type=“text”]  https://vine.co/v/ebDKuAUm56a
+	Input Text  css=input[type="text"]  https://vine.co/v/ebDKuAUm56a
 	Click Element  xpath=//div/a[text()='OK']
 	Wait For  5
         Click Element  xpath=//div/a[text()='Publish']
