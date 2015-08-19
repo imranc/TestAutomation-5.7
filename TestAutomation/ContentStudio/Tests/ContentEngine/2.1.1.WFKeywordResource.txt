@@ -63,6 +63,7 @@ Search And Select Without Waiting  [Arguments]  ${SearchPattern}
 
 Open Section In Content Studio  [Arguments]  ${SectionName}
 	Click Element If Exists  SectionsTab  SectionsTab
+	Click Element  SportsSection
 	Click Element  HomeSection
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
 	Click Element If Exists  ExpansionIcon  ExpansionIcon
