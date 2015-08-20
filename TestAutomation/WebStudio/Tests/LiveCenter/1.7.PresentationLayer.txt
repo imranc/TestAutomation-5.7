@@ -15,5 +15,4 @@ Check live-center publication
 	Wait For  10
 	Page Should Contain  First test entry of Escenic event
 	Page Should Contain  Test entry of Escenic event with EmbedURL
-	Page Should Contain  In Norway 28% of intranets are based on
 	
