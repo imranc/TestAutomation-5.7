@@ -17,7 +17,7 @@ Create a Teaser Widget with Data source query by section
 	Type Text  TestAutomation Widget (TeaserWidget_DS_by_Section)
 	Click Element  DataSourceTab
 	Click Element If Exists    RelatedDatasource    RelatedContent
-	Wait For  2
+	Wait For  10
 	Click Element  AddQuery
 	Wait For  2
 	Click Element  DataSourceBySection  -70  0
