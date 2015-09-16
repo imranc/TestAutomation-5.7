@@ -1,0 +1,16 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Mobile Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to MobileStudio
+    Close All Browsers
+    Login To Escenic Common Framework
+
+Log off
+    Log Off From Escenic Mobile Studio
+

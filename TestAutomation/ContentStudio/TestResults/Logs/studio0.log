@@ -1,0 +1,213 @@
+2015-09-15 01:04:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 159Mb in use by applications (163730k delta) ; 247Mb total allocated by JVM; 48 threads; uptime 01:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 11, completedTaskCount: 11, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 58, completedTaskCount: 58, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 5 connections; effective 0.08Hz; average 4ms; peak 20ms; load 0.00 (delta 0.00); 0 failed; Total: 5 connections; average 4ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 169.984KBps, average: 75.844KBps
+Requests: Since last sample: min: 0.00/sec, max: 4.20/sec, average: 2.07/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.000KBps, average: 0.000KBps
+Active connections on the server: Since last sample: 123 requests, min: 1 connections, max: 2 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 124 requests; effective 2.07Hz; average 99ms; peak 1442ms; load 0.21 (delta 0.21); 0 failed; Total: 124 requests; average 99ms.
+Cache statistics: size: 93, Since last sample: hits: 17, misses: 104, hit ratio: 0.14
+2015-09-15 01:09:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 226Mb in use by applications (68535k delta) ; 460Mb total allocated by JVM; 54 threads; uptime 06:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 26, completedTaskCount: 26, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 743, completedTaskCount: 743, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 11 connections; effective 0.04Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 16 connections; average 1ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 165.860KBps, average: 23.100KBps
+Requests: Since last sample: min: 0.00/sec, max: 4.40/sec, average: 1.69/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 32.439KBps, average: 6.103KBps
+Active connections on the server: Since last sample: 506 requests, min: 1 connections, max: 4 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 508 requests; effective 1.69Hz; average 58ms; peak 4024ms; load 0.10 (delta -0.11); 0 failed; Total: 632 requests; average 66ms.
+Cache statistics: size: 115, Since last sample: hits: 376, misses: 346, hit ratio: 0.52
+2015-09-15 01:14:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 338Mb in use by applications (114205k delta) ; 460Mb total allocated by JVM; 52 threads; uptime 11:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 34, completedTaskCount: 34, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 1410, completedTaskCount: 1410, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 12 connections; effective 0.04Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 28 connections; average 1ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 62.340KBps, average: 8.161KBps
+Requests: Since last sample: min: 0.00/sec, max: 2.53/sec, average: 1.40/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 29.189KBps, average: 1.534KBps
+Active connections on the server: Since last sample: 421 requests, min: 1 connections, max: 5 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 422 requests; effective 1.41Hz; average 40ms; peak 1183ms; load 0.06 (delta -0.04); 0 failed; Total: 1054 requests; average 56ms.
+Cache statistics: size: 119, Since last sample: hits: 213, misses: 266, hit ratio: 0.44
+2015-09-15 01:19:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 446Mb in use by applications (110742k delta) ; 581Mb total allocated by JVM; 53 threads; uptime 16:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 49, completedTaskCount: 49, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 1995, completedTaskCount: 1995, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 11 connections; effective 0.04Hz; average 1ms; peak 3ms; load 0.00 (delta 0.00); 0 failed; Total: 39 connections; average 1ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 49.725KBps, average: 5.919KBps
+Requests: Since last sample: min: 0.00/sec, max: 3.20/sec, average: 1.20/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.870KBps, average: 0.107KBps
+Active connections on the server: Since last sample: 373 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 375 requests; effective 1.25Hz; average 31ms; peak 847ms; load 0.04 (delta -0.02); 0 failed; Total: 1429 requests; average 49ms.
+Cache statistics: size: 121, Since last sample: hits: 263, misses: 181, hit ratio: 0.59
+2015-09-15 01:20:47 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.collapsedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named collapsedIcon
+2015-09-15 01:20:47 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.expandedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named expandedIcon
+2015-09-15 01:21:37 WARNING com.escenic.studio.core.performance.ui.SimpleUISource refresh Memory usages = 99.54259761566612% > 90.0% for 10000ms; turning on error light
+2015-09-15 01:24:17 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.collapsedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named collapsedIcon
+2015-09-15 01:24:17 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.expandedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named expandedIcon
+2015-09-15 01:24:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 486Mb in use by applications (40603k delta) ; 762Mb total allocated by JVM; 69 threads; uptime 21:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 71, completedTaskCount: 71, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 2553, completedTaskCount: 2553, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 10 connections; effective 0.03Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 49 connections; average 1ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 42.830KBps, average: 9.892KBps
+Requests: Since last sample: min: 0.00/sec, max: 2.33/sec, average: 1.02/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 37.442KBps, average: 4.040KBps
+Active connections on the server: Since last sample: 317 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 318 requests; effective 1.06Hz; average 46ms; peak 1460ms; load 0.05 (delta 0.01); 0 failed; Total: 1747 requests; average 49ms.
+Cache statistics: size: 126, Since last sample: hits: 168, misses: 201, hit ratio: 0.46
+2015-09-15 01:29:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 717Mb in use by applications (237379k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 26:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 80, completedTaskCount: 80, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 2916, completedTaskCount: 2916, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 13 connections; effective 0.04Hz; average 58ms; peak 187ms; load 0.00 (delta 0.00); 0 failed; Total: 62 connections; average 13ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 18.260KBps, average: 2.479KBps
+Requests: Since last sample: min: 0.00/sec, max: 1.33/sec, average: 0.61/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.484KBps, average: 0.028KBps
+Active connections on the server: Since last sample: 195 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 2 connections
+Total time for HTTP requests: Since last sample: 196 requests; effective 0.65Hz; average 56ms; peak 939ms; load 0.04 (delta -0.01); 0 failed; Total: 1943 requests; average 49ms.
+Cache statistics: size: 129, Since last sample: hits: 82, misses: 160, hit ratio: 0.34
+2015-09-15 01:34:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 691Mb in use by applications (-27373k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 31:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 92, completedTaskCount: 92, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 3427, completedTaskCount: 3427, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 10 connections; effective 0.03Hz; average 1ms; peak 2ms; load 0.00 (delta -0.00); 0 failed; Total: 72 connections; average 11ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 7.132KBps, average: 2.647KBps
+Requests: Since last sample: min: 0.00/sec, max: 2.00/sec, average: 0.99/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.500KBps, average: 0.074KBps
+Active connections on the server: Since last sample: 310 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 312 requests; effective 1.04Hz; average 29ms; peak 529ms; load 0.03 (delta -0.01); 0 failed; Total: 2255 requests; average 46ms.
+Cache statistics: size: 132, Since last sample: hits: 153, misses: 152, hit ratio: 0.5
+2015-09-15 01:39:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 792Mb in use by applications (103375k delta) ; 989Mb total allocated by JVM; 54 threads; uptime 36:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 106, completedTaskCount: 106, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 3876, completedTaskCount: 3876, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 6 connections; effective 0.02Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 78 connections; average 10ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 5.274KBps, average: 2.150KBps
+Requests: Since last sample: min: 0.00/sec, max: 1.87/sec, average: 0.81/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.345KBps, average: 0.055KBps
+Active connections on the server: Since last sample: 252 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 254 requests; effective 0.85Hz; average 33ms; peak 532ms; load 0.03 (delta -0.00); 0 failed; Total: 2509 requests; average 45ms.
+Cache statistics: size: 134, Since last sample: hits: 160, misses: 158, hit ratio: 0.5
+2015-09-15 01:41:33 WARNING com.escenic.studio.core.performance.ui.SimpleUISource refresh Memory usages = 93.39162906261839% > 90.0% for 10000ms; turning on error light
+2015-09-15 01:44:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 459Mb in use by applications (-340403k delta) ; 989Mb total allocated by JVM; 53 threads; uptime 41:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 113, completedTaskCount: 113, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 4397, completedTaskCount: 4397, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 7 connections; effective 0.02Hz; average 0ms; peak 1ms; load 0.00 (delta 0.00); 0 failed; Total: 85 connections; average 9ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 13.817KBps, average: 4.044KBps
+Requests: Since last sample: min: 0.00/sec, max: 1.67/sec, average: 0.79/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.534KBps, average: 0.083KBps
+Active connections on the server: Since last sample: 252 requests, min: 1 connections, max: 4 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 254 requests; effective 0.85Hz; average 41ms; peak 571ms; load 0.04 (delta 0.01); 0 failed; Total: 2763 requests; average 45ms.
+Cache statistics: size: 136, Since last sample: hits: 152, misses: 158, hit ratio: 0.49
+2015-09-15 01:45:09 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.collapsedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named collapsedIcon
+2015-09-15 01:45:09 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.expandedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named expandedIcon
+2015-09-15 01:48:40 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.collapsedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named collapsedIcon
+2015-09-15 01:48:40 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.expandedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named expandedIcon
+2015-09-15 01:49:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 658Mb in use by applications (203340k delta) ; 989Mb total allocated by JVM; 54 threads; uptime 46:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 137, completedTaskCount: 137, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 4963, completedTaskCount: 4963, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 10 connections; effective 0.03Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 95 connections; average 8ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 45.349KBps, average: 14.027KBps
+Requests: Since last sample: min: 0.00/sec, max: 2.53/sec, average: 1.08/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 38.722KBps, average: 4.180KBps
+Active connections on the server: Since last sample: 334 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 335 requests; effective 1.12Hz; average 52ms; peak 1092ms; load 0.06 (delta 0.02); 0 failed; Total: 3098 requests; average 45ms.
+Cache statistics: size: 142, Since last sample: hits: 195, misses: 230, hit ratio: 0.46
+2015-09-15 01:54:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 532Mb in use by applications (-129050k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 51:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 149, completedTaskCount: 149, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 5524, completedTaskCount: 5524, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 10 connections; effective 0.03Hz; average 0ms; peak 1ms; load 0.00 (delta 0.00); 0 failed; Total: 105 connections; average 8ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 8.285KBps, average: 2.203KBps
+Requests: Since last sample: min: 0.00/sec, max: 1.60/sec, average: 0.82/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.664KBps, average: 0.062KBps
+Active connections on the server: Since last sample: 266 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 269 requests; effective 0.90Hz; average 53ms; peak 1580ms; load 0.05 (delta -0.01); 0 failed; Total: 3367 requests; average 46ms.
+Cache statistics: size: 147, Since last sample: hits: 142, misses: 175, hit ratio: 0.45
+2015-09-15 01:59:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 666Mb in use by applications (137035k delta) ; 989Mb total allocated by JVM; 49 threads; uptime 56:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 161, completedTaskCount: 161, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 6003, completedTaskCount: 6003, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 11 connections; effective 0.04Hz; average 0ms; peak 1ms; load 0.00 (delta 0.00); 0 failed; Total: 116 connections; average 7ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 6.645KBps, average: 1.445KBps
+Requests: Since last sample: min: 0.00/sec, max: 1.67/sec, average: 0.73/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.500KBps, average: 0.056KBps
+Active connections on the server: Since last sample: 230 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 232 requests; effective 0.77Hz; average 71ms; peak 1868ms; load 0.06 (delta 0.01); 0 failed; Total: 3599 requests; average 48ms.
+Cache statistics: size: 154, Since last sample: hits: 112, misses: 171, hit ratio: 0.4
+2015-09-15 02:04:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 673Mb in use by applications (7983k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 01:01:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 166, completedTaskCount: 166, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 6474, completedTaskCount: 6474, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 11 connections; effective 0.04Hz; average 0ms; peak 2ms; load 0.00 (delta 0.00); 0 failed; Total: 127 connections; average 6ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 7.434KBps, average: 2.041KBps
+Requests: Since last sample: min: 0.00/sec, max: 2.07/sec, average: 0.79/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.500KBps, average: 0.027KBps
+Active connections on the server: Since last sample: 245 requests, min: 1 connections, max: 5 connections, average: 1 connections, last: 2 connections
+Total time for HTTP requests: Since last sample: 249 requests; effective 0.83Hz; average 39ms; peak 1413ms; load 0.03 (delta -0.02); 0 failed; Total: 3848 requests; average 47ms.
+Cache statistics: size: 167, Since last sample: hits: 114, misses: 180, hit ratio: 0.39
+2015-09-15 02:09:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 739Mb in use by applications (67539k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 01:06:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 166, completedTaskCount: 166, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 6864, completedTaskCount: 6864, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 10 connections; effective 0.03Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 137 connections; average 6ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 1.596KBps, average: 1.371KBps
+Requests: Since last sample: min: 0.00/sec, max: 0.93/sec, average: 0.81/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.000KBps, average: 0.000KBps
+Active connections on the server: Since last sample: 256 requests, min: 1 connections, max: 4 connections, average: 1 connections, last: 2 connections
+Total time for HTTP requests: Since last sample: 256 requests; effective 0.85Hz; average 19ms; peak 324ms; load 0.02 (delta -0.02); 0 failed; Total: 4104 requests; average 45ms.
+Cache statistics: size: 167, Since last sample: hits: 100, misses: 206, hit ratio: 0.33
+2015-09-15 02:14:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 714Mb in use by applications (-25590k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 01:11:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 166, completedTaskCount: 166, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 7249, completedTaskCount: 7249, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 9 connections; effective 0.03Hz; average 0ms; peak 1ms; load 0.00 (delta 0.00); 0 failed; Total: 146 connections; average 5ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 1.596KBps, average: 1.371KBps
+Requests: Since last sample: min: 0.00/sec, max: 0.93/sec, average: 0.81/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.000KBps, average: 0.000KBps
+Active connections on the server: Since last sample: 254 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 254 requests; effective 0.85Hz; average 15ms; peak 79ms; load 0.01 (delta -0.00); 0 failed; Total: 4358 requests; average 44ms.
+Cache statistics: size: 167, Since last sample: hits: 100, misses: 204, hit ratio: 0.33
+2015-09-15 02:19:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 692Mb in use by applications (-23396k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 01:16:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 166, completedTaskCount: 166, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 7634, completedTaskCount: 7634, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 10 connections; effective 0.03Hz; average 0ms; peak 3ms; load 0.00 (delta 0.00); 0 failed; Total: 156 connections; average 5ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 1.596KBps, average: 1.371KBps
+Requests: Since last sample: min: 0.00/sec, max: 0.93/sec, average: 0.81/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.000KBps, average: 0.000KBps
+Active connections on the server: Since last sample: 254 requests, min: 1 connections, max: 4 connections, average: 1 connections, last: 2 connections
+Total time for HTTP requests: Since last sample: 254 requests; effective 0.85Hz; average 13ms; peak 131ms; load 0.01 (delta -0.00); 0 failed; Total: 4612 requests; average 42ms.
+Cache statistics: size: 167, Since last sample: hits: 100, misses: 204, hit ratio: 0.33
+2015-09-15 02:24:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 673Mb in use by applications (-19061k delta) ; 989Mb total allocated by JVM; 52 threads; uptime 01:21:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 166, completedTaskCount: 166, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 8024, completedTaskCount: 8024, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 12 connections; effective 0.04Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 168 connections; average 5ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 1.640KBps, average: 1.378KBps
+Requests: Since last sample: min: 0.00/sec, max: 1.20/sec, average: 0.85/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.000KBps, average: 0.000KBps
+Active connections on the server: Since last sample: 268 requests, min: 1 connections, max: 3 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 268 requests; effective 0.89Hz; average 13ms; peak 123ms; load 0.01 (delta 0.00); 0 failed; Total: 4880 requests; average 40ms.
+Cache statistics: size: 167, Since last sample: hits: 100, misses: 206, hit ratio: 0.33
+2015-09-15 02:27:47 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.collapsedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named collapsedIcon
+2015-09-15 02:27:47 WARNING org.jdesktop.application.ResourceMap injectComponentProperties [resource com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel.expandedIcon] component named com.escenic.studio.core.editors.ImagePropertyEditorUI.editLabel doesn't have a property named expandedIcon
+2015-09-15 02:29:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 688Mb in use by applications (15413k delta) ; 989Mb total allocated by JVM; 50 threads; uptime 01:26:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 181, completedTaskCount: 181, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 8470, completedTaskCount: 8470, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 11 connections; effective 0.04Hz; average 0ms; peak 1ms; load 0.00 (delta 0.00); 0 failed; Total: 179 connections; average 5ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 53.035KBps, average: 6.756KBps
+Requests: Since last sample: min: 0.00/sec, max: 2.13/sec, average: 0.81/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 37.508KBps, average: 1.934KBps
+Active connections on the server: Since last sample: 251 requests, min: 1 connections, max: 5 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 251 requests; effective 0.84Hz; average 74ms; peak 2029ms; load 0.06 (delta 0.05); 0 failed; Total: 5131 requests; average 42ms.
+Cache statistics: size: 177, Since last sample: hits: 123, misses: 165, hit ratio: 0.43
+2015-09-15 02:34:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 669Mb in use by applications (-19188k delta) ; 989Mb total allocated by JVM; 53 threads; uptime 01:31:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 186, completedTaskCount: 186, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 9012, completedTaskCount: 9012, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 8 connections; effective 0.03Hz; average 0ms; peak 1ms; load 0.00 (delta -0.00); 0 failed; Total: 187 connections; average 4ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 278.016KBps, average: 23.843KBps
+Requests: Since last sample: min: 0.00/sec, max: 10.00/sec, average: 0.97/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 0.532KBps, average: 0.048KBps
+Active connections on the server: Since last sample: 302 requests, min: 1 connections, max: 4 connections, average: 1 connections, last: 2 connections
+Total time for HTTP requests: Since last sample: 306 requests; effective 1.02Hz; average 60ms; peak 4819ms; load 0.06 (delta -0.00); 0 failed; Total: 5437 requests; average 43ms.
+Cache statistics: size: 219, Since last sample: hits: 379, misses: 234, hit ratio: 0.62
+2015-09-15 02:35:00 WARNING com.escenic.studio.core.performance.ui.SimpleUISource refresh Average number of HTTP requests per second = 14.492753623188406null > 10.0null for 10000ms; turning on error light
+2015-09-15 02:39:49 INFO com.escenic.studio.core.performance.PerformanceReporter singleExecute : 788Mb in use by applications (121592k delta) ; 989Mb total allocated by JVM; 69 threads; uptime 01:36:00
+ThreadPoolExecutor 'default' metrics: activeCount: 0, taskCount: 190, completedTaskCount: 190, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+ThreadPoolExecutor 'secondary' metrics: activeCount: 0, taskCount: 9636, completedTaskCount: 9636, corePoolSize: 3, poolSize: 3, largestPoolSize: 3, maximumPoolSize: 10
+Time to setup HTTP connections: Since last sample: 20 connections; effective 0.07Hz; average 0ms; peak 1ms; load 0.00 (delta 0.00); 0 failed; Total: 207 connections; average 4ms.
+Receive bandwidth: Since last sample: min: 0.000KBps, max: 3699.613KBps, average: 217.596KBps
+Requests: Since last sample: min: 0.00/sec, max: 14.49/sec, average: 1.82/sec
+Send bandwidth: Since last sample: min: 0.000KBps, max: 80.882KBps, average: 8.082KBps
+Active connections on the server: Since last sample: 345 requests, min: 1 connections, max: 4 connections, average: 1 connections, last: 1 connections
+Total time for HTTP requests: Since last sample: 346 requests; effective 1.15Hz; average 48ms; peak 1570ms; load 0.06 (delta -0.00); 0 failed; Total: 5783 requests; average 43ms.
+Cache statistics: size: 220, Since last sample: hits: 1302, misses: 243, hit ratio: 0.84
