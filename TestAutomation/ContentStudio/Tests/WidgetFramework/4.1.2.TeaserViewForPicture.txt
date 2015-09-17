@@ -12,7 +12,7 @@ Documentation  Create a Teaser View for Picture
 Create a Teaser View for Picture
 	Switch To Content Studio
 	Close Allopen Tabs
-	Create Content Type  Config  TeaserView
+	Create View Content Type  TeaserView
 	Type Text  TestAutomation (TeaserViewforPicture) - VBHYUIK
 
 	Click Element  DefaultTab

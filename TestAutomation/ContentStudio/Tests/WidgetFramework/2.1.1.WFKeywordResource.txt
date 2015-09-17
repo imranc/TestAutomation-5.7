@@ -29,6 +29,14 @@ Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
 	Click Element  ${ContentType}
 	Wait For  2
 
+Create View Content Type  [Arguments]  ${ContentType}
+	Right Click Section  Config
+	Click Element  NewContent  100  0
+	Wait For  2
+	Click Element  ViewInFileMenu  79  2
+	Click Element  ${ContentType}
+	Wait For  2
+
 Save And Publish
 	Wait For  2
 	Click Element  SaveButton
