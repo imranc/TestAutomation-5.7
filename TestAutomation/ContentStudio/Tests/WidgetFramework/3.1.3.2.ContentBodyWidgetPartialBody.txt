@@ -58,13 +58,13 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Click Element  RightPanelTag  0  10
 	Wait For  1
 	Create Tag  tag6754
-	Wait For  5
+	Wait For  90
 	Tag Content  tag6754
 	Click Element If Exists  CreateTagFailedAlert  CreateTagFailedAlert  400  110
 	
 	
 	Click Element  DatelineFieldInStoryContent  -20  20
-	Wait For  90
+	Wait For  1
 	Select From Dropdown  tag6754
 	Save And Publish
 
