@@ -114,6 +114,7 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  AddSubTags
 	Type Text  ${TagName}
 	Type Key  ENTER 
+	Type Key  ENTER
 	Type Key  ESC
 
 Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
