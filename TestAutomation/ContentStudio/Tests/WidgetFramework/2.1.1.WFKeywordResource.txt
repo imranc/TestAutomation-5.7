@@ -28,7 +28,7 @@ Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
 	Click Element  NewContent  100  0
 	Click Element  ${ContentType}
 	Wait For  2
- #checking commit
+
 Create View Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
