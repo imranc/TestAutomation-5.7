@@ -57,7 +57,7 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Click Element If Exists  RightPanelTagCollapsed  RightPanelTagCollapsed  -45  -10
 	Click Element  RightPanelTag  0  10
 	Wait For  1
-	Create Tag  tag6754
+	Create Tag  tag6754  Widget
 	Wait For  90
 	Tag Content  tag6754
 	Click Element If Exists  CreateTagFailedAlert  CreateTagFailedAlert  400  110
