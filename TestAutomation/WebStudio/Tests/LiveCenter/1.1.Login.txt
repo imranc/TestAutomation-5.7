@@ -10,7 +10,5 @@ Resource       common_resource.txt
 Login to Live Center Editorial
     Close All Browsers
     Login To Escenic Live Center
-
-Log off
-    Log Off From Escenic Live Center
+    
 

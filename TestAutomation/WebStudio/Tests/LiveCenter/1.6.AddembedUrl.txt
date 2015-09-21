@@ -12,8 +12,11 @@ Create an entry with EmbedURL
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  Test entry of Escenic event with EmbedURL
-        Add EmbedURL to an Entry
-	
-
-Log off
-    Log Off From Escenic Live Center
+        Add EmbedURL to an Entry  https://vine.co/v/ebDKuAUm56a
+	Publish Entry
+	Wait For  2
+	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with EmbedURL']
+	Open live center publication event page
+	Wait Until Page Contains Element  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
+	Select Frame  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
+	Page Should Contain Element  css=video[poster^="https://v.cdn.vine.co/"]

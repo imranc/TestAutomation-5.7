@@ -15,7 +15,4 @@ Update an Entry
 	Update an Entry  Updated entry  
 	Page Should Contain Element  xpath=//div/p[text()=' Updated entry']
 	Open live center publication event page
-	Page Should Contain  Updated entry
-
-Log off
-    Log Off From Escenic Live Center
+	Page Should Contain Element  xpath=//h2[text()='Updated entry']

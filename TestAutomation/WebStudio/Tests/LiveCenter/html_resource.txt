@@ -28,7 +28,8 @@ Login To Escenic Live Center
 
 Log Off From Escenic Live Center
     Click Element  css=div[class='logo']
-    Click Element  css=a[href="#/logout"]
+    Wait Until Page Contains Element  xpath=//a[text()='Logout']
+    Click Element  xpath=//a[text()='Logout']
     Page Should Contain Button  css=button[class="login"]
 
 Open New Editor
@@ -232,10 +233,6 @@ Select Author  [Arguments]  ${inputText}
 Add Tweet to an Entry
         Click Element  css=#t1
         Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(2)
-	Click Element  xpath=//div/a[text()='Publish']
-	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a tweet']
-
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  css=span[class="edit"]
@@ -249,22 +246,19 @@ Delete an Entry
         Wait For  5
         Click Element  css=span[class="remove"] 
         Click Element  xpath=//div/a[text()='OK']
-        Page Should Not Contain Element  xpath=//div/p[text()=' Deleting an entry']
 
-Publish Entry for deleting
+Publish Entry
         Click Element  xpath=//div/a[text()='Publish']
-	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Deleting an entry']
+	Wait For  1
 
-Add EmbedURL to an Entry
+Add EmbedURL to an Entry  [Arguments]  ${embedUrl}
 	Click Element  css=button[class="embed-url"]
+	Wait Until Page Contains Element  css=label[class="ng-binding"]
 	Click Element  css=label[class="ng-binding"]
 	#Click Element  css=input[class="ng-pristine ng-valid ng-touched"]
-	Input Text  css=input[type="text"]  https://vine.co/v/ebDKuAUm56a
+	Input Text  css=input[type="text"]  ${embedUrl}
 	Click Element  xpath=//div/a[text()='OK']
-	Wait For  5
-        Click Element  xpath=//div/a[text()='Publish']
-	Wait For  5
+	Wait For  1
 
 Open live center publication event page
 	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
