@@ -196,6 +196,7 @@ Delete User  [Arguments]  ${userName}
 
 
 Create Entry  [Arguments]  ${inputText}
+	Wait Until Page Contains Element  css=textarea[id="field-basic-"]
 	Input Text  css=textarea[id="field-basic-"]  ${inputText}
 	Input Text  css=div[id="field-xhtml-"]  ${inputText}
 	
@@ -206,23 +207,27 @@ Submit Entry
     	Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
 
 Open an Event
+	Wait Until Page Contains Element  xpath=//div/h3[text()='Escenic Live Event Test']  10
 	Click Element  xpath=//div/h3[text()='Escenic Live Event Test']
 
 Publish the Submitted Entry
+	Wait Until Page Contains Element  xpath=//div/p[text()=' First test entry of Escenic event']
 	Mouse Over  xpath=//div/p[text()=' First test entry of Escenic event']
-        Wait For  5
-        Click Element  css=span[class="approve ng-scope"] 
+        Click Element  css=span[class="approve ng-scope"]
+	Wait For  2
         Page Should Not Contain Element  css=span[class="approve ng-scope"]
 
 Make Entry Sticky
 	Click Element  css=input[class="ng-pristine ng-untouched ng-valid"]
 
 Select Author  [Arguments]  ${inputText}
-	Click Element  css=span[class="select2-arrow"]
+	Click Element  css=div[class="selections"]
 	Wait For  5
-	Click Element  xpath=//div[@class="select2-search"]/input
-	Input Text  xpath=//div[@class="select2-search"]/input  ${inputText}
-	Click Element  css=ul[class="select2-results"]
+	Click Element  css=input[id="s2id_autogen2_search"]
+	Input Text  css=input[id="s2id_autogen2_search"]  ${inputText}
+	Wait Until Page Contains Element  css=ul[class="select2-results"]
+	Wait For  2
+	Click Element  css=span[class="select2-match"]
 
 Add Tweet to an Entry
         Click Element  css=#t1
@@ -234,11 +239,10 @@ Add Tweet to an Entry
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  css=span[class="edit"]
-	Input Text  css=textarea[id^="field-basic-1"]   ${inputText}
-	Input Text  css=div[id^="field-xhtml-1"]  ${inputText}
+	Input Text  xpath=//a[@data-ng-click="update(entry)"]/ancestor::div[4]//textarea   ${inputText}
+	Input Text  xpath=//a[@data-ng-click="update(entry)"]/ancestor::div[4]//div[@data-placeholder="Body"]  ${inputText}
 	Click Element  xpath=//div/a[text()='Update']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Updated entry']
 	
 Delete an Entry
 	Mouse Over  xpath=//div/p[text()=' Deleting an entry']
@@ -261,6 +265,8 @@ Add EmbedURL to an Entry
 	Wait For  5
         Click Element  xpath=//div/a[text()='Publish']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with EmbedURL']
 
-
+Open live center publication event page
+	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
+	Open Browser  ${prsentationLink}
+	Wait For  10

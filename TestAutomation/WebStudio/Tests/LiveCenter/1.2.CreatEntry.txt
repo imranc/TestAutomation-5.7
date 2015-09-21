@@ -7,15 +7,23 @@ Resource       common_resource.txt
 
 *** Test Cases ***
 
-Create an entry and publish it
+Create an entry and submit it
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  First test entry of Escenic event
 	Make Entry Sticky
-	#Select Author  elive	
+	Select Author  elive	
 	Submit Entry
-	Publish the Submitted Entry
+	Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
+	Open live center publication event page
+	Page Should not Contain Element  xpath=//h2[text()='First test entry of Escenic event']
 
-Log off
-    Log Off From Escenic Live Center
+Publish submitted entry
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Publish the Submitted Entry
+	Open live center publication event page
+	Wait Until Page Contains Element  xpath=//h2[text()='First test entry of Escenic event']
+	Page Should Contain Element  xpath=//h2[text()='First test entry of Escenic event']
