@@ -9,6 +9,7 @@ Resource       common_resource.txt
 
 Create an entry and submit it
 	Close All Browsers
+	Wait For  30
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  First test entry of Escenic event

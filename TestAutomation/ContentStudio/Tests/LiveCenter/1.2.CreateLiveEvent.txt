@@ -17,3 +17,4 @@ Create an event in CS
 	Click Element  Query  200  0
 	Type Text  escenic
 	Save And Publish
+	Wait For  120
