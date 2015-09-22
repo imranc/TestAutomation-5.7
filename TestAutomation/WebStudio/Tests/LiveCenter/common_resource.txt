@@ -13,6 +13,6 @@ Library        Selenium2Library
 ${SUT}           html
 ${SERVER}        localhost:7272
 ${BROWSER}       Firefox
-${DELAY}         0
+${DELAY}         1
 ${VALID USER}    demo-temp-dev_admin
 ${VALID PASSWD}  escenic
