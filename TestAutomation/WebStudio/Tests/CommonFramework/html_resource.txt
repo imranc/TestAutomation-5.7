@@ -33,7 +33,7 @@ Login To Escenic Mobile Studio
     Page Should Contain Button  Draft
 
 Login To Escenic Common Framework
-    Open Browser To Escenic Common Framework
+    Open Browser To Escenic Common Framework  ${BROWSER}
     Wait Until Page Contains Element  css=input[id="username"]
     Input Environment Variable  username  ECE_CF_UserName
     Input Environment Variable  password  ECE_CF_Password

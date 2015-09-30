@@ -31,7 +31,7 @@ Open Browser To Login Page
     Title Should Be  Escenic Web Studio
 
 Open Browser To Escenic WebStudio
-    Open Browser WebStudio
+    Open Browser WebStudio  ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed  ${DELAY}
     	Title Should Be  Escenic Web Studio -

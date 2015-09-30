@@ -43,7 +43,7 @@ Open Browser To Login Page
     Title Should Be  Escenic Web Studio
 
 Open Browser To Escenic LiveCenter
-    Open Browser LiveCenter
+    Open Browser LiveCenter  ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed  ${DELAY}
     	Title Should Be  Live Center
