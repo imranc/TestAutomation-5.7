@@ -116,8 +116,8 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
-    def open_browser_webstudio(self, browser='chrome', alias=None,remote_url=False,
-                desired_capabilities=None,ff_profile_dir='C:/ffProfile'):
+    def open_browser_webstudio(self, browser='firefox', alias=None,remote_url=False,
+                desired_capabilities=None,ff_profile_dir=None):
         url=_BrowserManagementKeywords.getWsAddress(self)
         if remote_url:
             self._info("Opening browser '%s' to base url '%s' through remote server at '%s'"
@@ -132,8 +132,8 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
-    def open_browser_mobilestudio(self, browser='chrome', alias=None,remote_url=False,
-                desired_capabilities=None,ff_profile_dir='C:/ffProfile'):
+    def open_browser_mobilestudio(self, browser='firefox', alias=None,remote_url=False,
+                desired_capabilities=None,ff_profile_dir=None):
         url=_BrowserManagementKeywords.getMsAddress(self)
         if remote_url:
             self._info("Opening browser '%s' to base url '%s' through remote server at '%s'"
@@ -148,8 +148,8 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
-    def open_browser_to_escenic_common_framework(self, browser='chrome', alias=None,remote_url=False,
-                desired_capabilities=None,ff_profile_dir='C:/ffProfile'):
+    def open_browser_to_escenic_common_framework(self, browser='firefox', alias=None,remote_url=False,
+                desired_capabilities=None,ff_profile_dir=None):
         ece_host= os.environ['ECE_CF_HOST']
         ece_port= os.environ['ECE_CF_PORT']
         ece_cf_address= 'http://'+ece_host+':'+ece_port+'/cf/develop'
@@ -167,8 +167,8 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
-    def open_browser_livecenter(self, browser='chrome', alias=None,remote_url=False,
-                desired_capabilities=None,ff_profile_dir='C:/ffProfile'):
+    def open_browser_livecenter(self, browser='firefox', alias=None,remote_url=False,
+                desired_capabilities=None,ff_profile_dir=None):
         url=_BrowserManagementKeywords.getLcAddress(self)
         if remote_url:
             self._info("Opening browser '%s' to base url '%s' through remote server at '%s'"
