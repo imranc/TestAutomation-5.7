@@ -1,0 +1,20 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Mobile Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to CUE
+    Login To CUE
+    Wait For  15
+    
+Create Story
+    Create Story  This is an Automated story For Common Framework
+    
+
+Log off
+    Log Off From CUE
+
