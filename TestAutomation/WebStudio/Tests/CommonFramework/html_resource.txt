@@ -32,13 +32,18 @@ Login To Escenic Mobile Studio
     Wait Until Page Contains Element  css=button[data-ng-click="save()"]
     Page Should Contain Button  Draft
 
-Login To Escenic Common Framework
+Login To CUE
     Open Browser To Escenic Common Framework  ${BROWSER}
+    Maximize Browser Window
     Wait Until Page Contains Element  css=input[id="username"]
     Input Environment Variable  username  ECE_CF_UserName
     Input Environment Variable  password  ECE_CF_Password
     Click Button  css=input[id="login"]
 
+Log Off From CUE
+    Click Element  css=a[ng-click='vm.logout()']
+    Wait Until Page Contains Element  css=input[value='Login']
+    Page Should Contain Element  css=input[value='Login']
 
 Log Off From Escenic Mobile Studio
     Click Element  css=div[class='logo']
@@ -207,11 +212,17 @@ Delete User  [Arguments]  ${userName}
 
 
 Create Story  [Arguments]  ${inputText}
-	Click Element  css=div[class='logo']
-	Click Element  css=a[href="#/editor/new"]
-	Input Text  css=textarea[id="field-title"]  ${inputText}
-	Input Text  css=textarea[id="field-subtitle"]  ${inputText}
-	Input Text  css=textarea[id="field-leadtext"]  ${inputText}
-	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText} 
+	Mouse Down On Link  css=a[title="File"]
+	Mouse Down  css=a[title="New"] >span.ng-scope
+        Wait Until Page Contains Element  css=a[title="Story"]
+        Click Element  xpath=//*[@id="fileMenu"]/li[1]/ul/li/ul/li[3]/a
+        Wait For  10
+        Wait Until Page Contains Element  css=div[title="story: New Story"]
+	Input Text  css=textarea[placeholder="Title"]  ${inputText}
+	Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
+	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
+	Click Button  css=input[id="save"]
+	Wait For  10
+
 	
 

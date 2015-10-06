@@ -7,10 +7,10 @@ Resource       common_resource.txt
 
 *** Test Cases ***
 
-Login to MobileStudio
+Login to CUE
     Close All Browsers
-    Login To Escenic Common Framework
+    Login To CUE
 
 Log off
-    Log Off From Escenic Mobile Studio
+    Log Off From CUE
 
