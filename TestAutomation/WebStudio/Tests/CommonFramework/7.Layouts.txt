@@ -1,0 +1,80 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Mobile Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to CUE
+    Login To CUE
+    Wait For  15
+    
+Open Quad Layout Window
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=a#grid > span.ng-scope
+    Wait For  10
+
+Check Layout 1
+    Click Element  css=div[class="areaPlaceholder ng-isolate-scope"]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Check Layout 2
+    Click Element  xpath=//div[@id='editors']/div[2]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Check Layout 3
+    Click Element  xpath=//div[@id='editors']/div[3]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Check Layout 4
+    Click Element  xpath=//div[@id='editors']/div[4]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Open Duel Layout(Vertically) Window
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=#columns > span.ng-scope
+    Wait For  10
+
+Check Layout Top
+    Click Element  css=div[class="areaPlaceholder ng-isolate-scope"]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Check Layout Bottom
+    Click Element  xpath=//div[@id='editors']/div[2]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Open Duel Layout(Horizonally) Window
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=a#rows > span.ng-scope
+    Wait For  10
+
+Check Layout Left
+    Click Element  css=div[class="areaPlaceholder ng-isolate-scope"]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Check Layout Right
+    Click Element  xpath=//div[@id='editors']/div[2]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Open Single Window
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=#single > span.ng-scope
+    Wait For  10
+
+Check Layout
+    Click Element  css=div[class="areaPlaceholder ng-isolate-scope"]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Log off
+    Log Off From CUE

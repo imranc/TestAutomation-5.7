@@ -1,0 +1,25 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Mobile Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to CUE
+    Login To CUE
+    Wait For  15
+    
+Search Story Folder And Open
+    Click Element  css=div[title="Story folders"]
+    Wait Until Page Contains Element  xpath=//*[@id="cf-story-folder-sidepanel-loader"]
+    Input Text  css=input[name="search"]  Automated
+    Wait For  5
+    Click Link  xpath=//a[contains(text(),'This is an Automated story For Common Framework')]
+    Wait Until Page Contains Element  css=div[title="storyfolder: This is an Automated story For Common Framework"]
+    Wait For  10
+    Click Element  css=div.close
+
+Log off
+    Log Off From CUE
