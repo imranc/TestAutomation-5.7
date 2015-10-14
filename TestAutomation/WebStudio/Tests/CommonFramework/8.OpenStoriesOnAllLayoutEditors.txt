@@ -1,0 +1,156 @@
+*** Settings ***
+
+Documentation  A test case to Login to Escenic Mobile Studio
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to CUE
+    Login To CUE
+    Wait For  15
+    
+Open Quad Layout
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=a#grid > span.ng-scope
+    Wait For  10
+
+Open Story On Editor 1 
+    Click Element  css=div[class="areaPlaceholder ng-isolate-scope"]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+    Input Text  css=input[name="search"]  Editor One
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+    
+Open Story On Editor 2
+    Click Element  xpath=//div[@id='editors']/div[2]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+    Input Text  css=input[name="search"]  ${EMPTY}
+    Input Text  css=input[name="search"]  Editor Two
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Open Story On Editor 3
+    Click Element  xpath=//div[@id='editors']/div[3]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+    Input Text  css=input[name="search"]  ${EMPTY}
+    Input Text  css=input[name="search"]  Editor Three
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Open Story On Editor 4
+    Click Element  xpath=//div[@id='editors']/div[4]/div[2]
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+    Input Text  css=input[name="search"]  ${EMPTY}
+    Input Text  css=input[name="search"]  Editor Four
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Move to Duel Layout(Vertically)
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=#columns > span.ng-scope
+    Wait For  10
+
+Checking Editor 2 Tabs(Tab should not move) 
+    Click Element  xpath=//div[@id='editors']/div[2]/div/div
+    Wait For  5
+    Page Should Contain Element  css=div[class="area ng-scope active"]
+
+Checking All Remaining Tabs In One Group
+    Click Element  xpath=//div[@id='editors']/div/div/div
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[2]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[3]
+    Wait For  3
+
+Open Story On Left Tab Group
+    Click Element  css=span[class="reset"]
+    Input Text  css=input[name="search"]  Left Tab Editor
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Open Story On Right Tab Group
+    Click Element  xpath=//div[@id='editors']/div[2]/div/div
+    Wait For  5
+    Click Element  css=span[class="reset"]
+    Input Text  css=input[name="search"]  Right Tab Editor
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Move to Duel Layout(Horizonally)
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=a#rows > span.ng-scope
+    Wait For  10
+
+Checking Left TabGroup Stories(All Should Exists On Top)
+    Click Element  xpath=//div[@id='editors']/div/div/div
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[2]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[3]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[4]
+    Wait For  3
+
+Checking Right TabGroup Stories(All Should Exists On Bottom)
+    Click Element  xpath=//div[@id='editors']/div[2]/div/div
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div[2]/div/div[2]
+    Wait For  3
+
+Open Story On Top TabGroup
+    Click Element  xpath=//div[@id='editors']/div/div/div[4]
+    Wait For  3
+    Click Element  css=span[class="reset"]
+    Input Text  css=input[name="search"]  Top Editor
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Open Story On Bottom TabGroup
+    Click Element  xpath=//div[@id='editors']/div[2]/div/div[2]
+    Wait For  3
+    Click Element  css=span[class="reset"]
+    Input Text  css=input[name="search"]  Bottom Editor
+    Wait For  10
+    Click Element  css=div[class="title ng-binding"]
+    Wait For  10
+
+Move To Single Layout
+    Mouse Down On Link  css=a[title="Window"]
+    Click Element  css=#single > span.ng-scope
+    Wait For  10
+
+Checking All Stories In Single TabGroup
+    Click Element  xpath=//div[@id='editors']/div/div/div
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[2]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[3]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[4]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[5]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[6]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[7]
+    Wait For  3
+    Click Element  xpath=//div[@id='editors']/div/div/div[8]
+    Wait For  10
+
+
+Log off
+    Log Off From CUE
