@@ -214,11 +214,12 @@ Delete User  [Arguments]  ${userName}
 
 Create Story  [Arguments]  ${inputText}
 	Mouse Down On Link  css=a[title="File"]
-	Mouse Down  css=a[title="New"] >span.ng-scope
-        Wait Until Page Contains Element  css=a[title="Story"]
-        Click Element  xpath=//*[@id="fileMenu"]/li[1]/ul/li/ul/li[3]/a
-        Wait For  10
-        Wait Until Page Contains Element  css=div[title="story: New Story"]
+	Wait Until Page Contains Element  css=a[title="New"]
+	Click Element  css=a[title="New"] >span.ng-scope
+	Wait Until Page Contains Element  css=a[title="Story"]
+	Click Element  css=a[title="Story"]
+	#Click Element  xpath=//*[@id="fileMenu"]/li[1]/ul/li/ul/li[3]/a
+	Wait Until Page Contains Element  css=div[title="story: New Story"]
 	Input Text  css=textarea[placeholder="Title"]  ${inputText}
 	Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
 	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
