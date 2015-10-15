@@ -10,13 +10,11 @@ Resource       common_resource.txt
 Documentation  Check if url redirection works properly
 **Test cases**
 Check if section url redirection works properly
-	Set Tags  non-critical
 	Open Browser To Publication  sports
 	Check If Exists  SectionUrlRedirectionAssertion
 	Close Browser
 
 Check if redirection works with special character in pretty url
-	Set Tags  non-critical
 	Switch To Content Studio
 	Wait For  5
 	Change Input Language
