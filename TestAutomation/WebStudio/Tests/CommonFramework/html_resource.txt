@@ -41,6 +41,7 @@ Login To CUE
     Click Button  css=input[id="login"]
 
 Log Off From CUE
+    Wait Until Page Contains Element  css=a[ng-click='vm.logout()']
     Click Element  css=a[ng-click='vm.logout()']
     Wait Until Page Contains Element  css=input[value='Login']
     Page Should Contain Element  css=input[value='Login']
