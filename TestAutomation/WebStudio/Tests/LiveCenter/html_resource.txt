@@ -232,7 +232,7 @@ Select Author  [Arguments]  ${inputText}
 
 Add Tweet to an Entry
         Click Element  css=#t1
-        Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(3)
+        Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(4)
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  css=span[class="edit"]
