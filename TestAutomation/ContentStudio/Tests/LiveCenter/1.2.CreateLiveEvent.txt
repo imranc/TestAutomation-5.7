@@ -10,7 +10,7 @@ Create an event in CS
 	Create Content Type  NewArticles  Event
 	Type Text  Escenic Live Event Test
 	Click Element  LiveCenterEntryType  10  25
-	Type Text  Sample-1
+	Type Text  Generic
 	Type Key  ENTER
 	Click Element  LiveCenterSubscriptions  -15  20
 	Click Element  Twitter
