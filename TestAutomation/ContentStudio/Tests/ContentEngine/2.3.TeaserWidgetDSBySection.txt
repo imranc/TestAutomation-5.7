@@ -1,4 +1,4 @@
-I***Settings***
+***Settings***
 Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
 Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
 Library  SearchContent.SearchContent  WITH NAME  SearchContent
