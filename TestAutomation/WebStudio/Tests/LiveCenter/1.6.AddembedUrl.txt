@@ -19,4 +19,5 @@ Create an entry with EmbedURL
 	Open live center publication event page
 	Wait Until Page Contains Element  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
 	Select Frame  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
+	Click Element  css=div[class="play-button"]
 	Page Should Contain Element  css=video[poster^="https://v.cdn.vine.co/"]
