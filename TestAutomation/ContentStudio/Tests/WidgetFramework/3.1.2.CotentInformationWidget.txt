@@ -12,7 +12,7 @@ Documentation  Create a content information widget showing "Author" and Create a
 Create a content information widget showing "Author"
 	Switch To Content Studio
 	Close Allopen Tabs
-	Create Content In Section  NewArticles  Article created for content information widget test
+	Create Content In Section  ContentNewArticles  0  10  Article created for content information widget test
 	Create Widget Content Type  ContentInformationWidget
 	Type Text  TestAutomation Widget (Author Widget)
 	Click Element  DefaultTab

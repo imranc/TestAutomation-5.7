@@ -10,7 +10,7 @@ Resource          common_resource.txt
 *** Test cases ***
 Relate an External Data source with teaser widget
     #Create Content In Section    NewArticles
-    Create Image In Section    NewArticles
+    Create Image In Section  ContentNewArticles  0  10
     Close Allopen Tabs
     Create Widget Content Type    TeaserWidgetContent
     Type Text    TestAutomation Widget (TeaserWidget_External_Datasource)

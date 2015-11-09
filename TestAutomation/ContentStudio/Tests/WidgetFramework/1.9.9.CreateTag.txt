@@ -14,7 +14,7 @@ Create a Teaser Widget with Data source query by section Relation
 	###Create content with a tag###
 		Switch To Content Studio
 		Close Allopen Tabs
-		Create Content In Section  NewArticles
+		Create Content In Section  ContentNewArticles  0  10  test-content
 		Switch To Content Studio
 		Create Tag  widget  Widget
 		Type Key  ESC

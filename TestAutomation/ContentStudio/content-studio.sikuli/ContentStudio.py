@@ -276,13 +276,18 @@ class ContentStudio(object):
                 #***Create Content In Section SectionName***#
 
                 ContentStudio.switch_to_content_studio(self)
-
-                SectionName=args[0]
+                
+                SectionName = args[0]
+                
                 
                 if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
-                        
-                ContentStudio.right_click_section(self, SectionName)
+                if len(args) > 3:
+                        offset_x = int(args[1])
+                        offset_y = int(args[2])
+                        ContentStudio.right_click_section(self, SectionName, offset_x, offset_y)
+                else:
+                        ContentStudio.right_click_section(self, SectionName)
                 wait_for("NewContent.png",20)
                 click(Pattern("NewContent.png").targetOffset(100,0))
                 wait_for("PictureContent.png",20)
@@ -292,7 +297,15 @@ class ContentStudio(object):
                         click("NewsContent.png")
                 wait(3)
 
-                if len(args) > 1:
+                if len(args) == 4:
+                        type(args[3])
+                        type(Key.TAB)
+                        type(args[3])
+                        type(Key.TAB)
+                        type(args[3])
+                        type(Key.TAB)
+                        type(args[3])
+                elif len(args) == 2:
                         type(args[1])
                         type(Key.TAB)
                         type(args[1])
@@ -359,8 +372,12 @@ class ContentStudio(object):
 
                 if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
-                
-                ContentStudio.right_click_section(self, SectionName)
+                if len(args) > 3:
+                        offset_x = int(args[1])
+                        offset_y = int(args[2])
+                        ContentStudio.right_click_section(self, SectionName, offset_x, offset_y)
+                else:
+                        ContentStudio.right_click_section(self, SectionName)
                 wait(2)
                 click(Pattern("NewContent.png").targetOffset(100,0))
                 wait(2)
@@ -372,15 +389,15 @@ class ContentStudio(object):
                 wait(10)
                 type("a", KEY_CTRL)
 
-                if len(args)>1:
-                        type(args[1])
+                if len(args) == 4:
+                        type(args[3])
                 else:
                         type("This image is created by automated smoke test BOT")
                         
                 wait(2)
                 wait(Pattern("SaveButton.png").similar(0.65),20)
                 wait(Pattern("ContentUrl.png").similar(0.90), 1000)
-                    
+                
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
                 elif exists(Pattern("PublishButtonSimple.png")):

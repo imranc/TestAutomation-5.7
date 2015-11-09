@@ -36,7 +36,7 @@ Create a content Body Widget displaying "Pagination"
 
 	### A story content which has 5 paragraphs, 1 inline content, 1 tag related with it ###
 	
-	Create Content In Section  NewArticles  Article created for content body widget displaying Pagination
+	Create Content In Section  ContentNewArticles  0  10  Article created for content body widget displaying Pagination
 	Switch To Content Studio
 	Click Element  BodyField
 	Type Key  ENTER

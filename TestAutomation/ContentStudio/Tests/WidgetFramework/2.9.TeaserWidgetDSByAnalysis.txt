@@ -16,7 +16,7 @@ Create a Teaser Widget with Data source query by analysis
 		Switch To Content Studio
 		Close Allopen Tabs
 
-		Create Image In Section  NewArticles
+		Create Image In Section  ContentNewArticles  0  10
 		Switch To Content Studio
 		
 

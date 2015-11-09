@@ -31,9 +31,9 @@ Create a content Body Widget displaying "dateline" and "Partial with show more l
 	Check If Exists  InboxItemSelected
 
 	### A story content which has 5 paragraphs, 1 inline content, 1 tag related with it ###
-	Create Image In Section  NewArticles  Imagecreatedforcontentbodywidgettest
+	Create Image In Section  ContentNewArticles  0  10  Imagecreatedforcontentbodywidgettest
 	Switch To Content Studio
-	Create Content In Section  NewArticles  Article created for content body widget displaying partial body with show more link
+	Create Content In Section  ContentNewArticles  0  10  Article created for content body widget displaying partial body with show more link
 	Switch To Content Studio
 	Click Element  BodyField
 	Type Key  ENTER

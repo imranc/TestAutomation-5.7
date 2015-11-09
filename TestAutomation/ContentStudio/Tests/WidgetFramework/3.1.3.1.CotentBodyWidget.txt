@@ -25,9 +25,9 @@ Create a content Body Widget displaying "inline content" and "whole body content
 
 	### Relate a content Body widget with article page ###
 	### a content need to be created which has body fields with 5 paragraphs, 1 inline content(story/image), 1 dateline###
-	Create Image In Section  NewArticles  Image created for content body widget test
+	Create Image In Section  ContentNewArticles  0  10  Image created for content body widget test
 	Switch To Content Studio
-	Create Content In Section  NewArticles  Article created for content body widget test
+	Create Content In Section  ContentNewArticles  0  10  Article created for content body widget test
 	Switch To Content Studio
 	Click Element  BodyField
 	Type Key  ENTER

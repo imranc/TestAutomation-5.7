@@ -14,10 +14,12 @@ Create a Teaser Widget with Data source query by tag
 	###Create a content and tag it###
 		Switch To Content Studio
 		Close Allopen Tabs
-		Create Image In Section  NewArticles  Image for Datasource by tag
+		Create Image In Section  ContentNewArticles  0  10  Image for Datasource by tag
 		Switch To Content Studio
 		Tag Content  widget
+		
 		Wait For  2
+		
 		Check If Exists  widgetTagAssertion
 		Save And Publish
 
