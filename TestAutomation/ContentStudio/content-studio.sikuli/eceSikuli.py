@@ -68,6 +68,8 @@ class eceSikuli(object):
                         type(Key.TAB)
                 elif args[0] == 'SPACE':
                         type(Key.SPACE)
+                elif args[0] == 'CTRL' and args[1] == 'E':
+                        type('e', KeyModifier.CTRL)
                 elif args[0] == 'f' and args[1] == 'ALT':
                         type('f',KeyModifier.ALT)
                 elif args[0] == 'CTRL' and args[1] == '7':
