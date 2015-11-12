@@ -27,3 +27,16 @@ Publish submitted entry
 	Open live center publication event page
 	Wait Until Page Contains Element  xpath=//h2[text()='First test entry of Escenic event']
 	Page Should Contain Element  xpath=//h2[text()='First test entry of Escenic event']
+
+
+Create milestone entry and check if it is tagged correctly
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Create Entry  This is a milestone entry
+	Click Element  css=input[class="ng-pristine ng-untouched ng-valid ng-scope"]
+	Publish Entry
+	Page Should Contain Element  xpath=//div/p[text()=' This is a milestone entry']
+	Page Should Contain Element  xpath=//*[text()=' This is a milestone entry']/../../../../../..//ul/li[contains(text(),'Milestone')]
+	Open live center publication event page
+	Page Should Contain Element  xpath=//h2[text()='This is a milestone entry']
