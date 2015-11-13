@@ -16,8 +16,10 @@ Create an entry with EmbedURL
 	Publish Entry
 	Wait For  2
 	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with EmbedURL']
+	Page Should Contain Element  xpath=//*[text()=' Test entry of Escenic event with EmbedURL']/../../../../../..//ul/li[contains(text(),'Vine')]
 	Open live center publication event page
 	Wait Until Page Contains Element  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
 	Select Frame  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
 	Click Element  css=div[class="play-button"]
 	Page Should Contain Element  css=video[poster^="https://v.cdn.vine.co/"]
+	
