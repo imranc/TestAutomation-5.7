@@ -262,5 +262,5 @@ Add EmbedURL to an Entry  [Arguments]  ${embedUrl}
 
 Open live center publication event page
 	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
-	Open Browser  ${prsentationLink}
+	Open Browser  ${prsentationLink}  ${BROWSER}
 	Wait For  10
