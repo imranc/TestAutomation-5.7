@@ -16,4 +16,4 @@ Delete an Entry
 	Publish Entry
 	Delete an Entry
 	Open live center publication event page
-	Page Should Not Contain Element  xpath=//h2[text()='Deleting an entry']
+	Page Should Not Contain Element  xpath=//h2[contains(text(),'Deleting an entry')]

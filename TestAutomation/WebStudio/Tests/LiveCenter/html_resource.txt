@@ -205,15 +205,15 @@ Create Entry  [Arguments]  ${inputText}
 Submit Entry
         Click Element  xpath=//div/a[text()='Submit']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
 
 Open an Event
 	Wait Until Page Contains Element  xpath=//div/h3[text()='Escenic Live Event Test']  10
 	Click Element  xpath=//div/h3[text()='Escenic Live Event Test']
 
 Publish the Submitted Entry
-	Wait Until Page Contains Element  xpath=//div/p[text()=' First test entry of Escenic event']
-	Mouse Over  xpath=//div/p[text()=' First test entry of Escenic event']
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
+	Mouse Over  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
         Click Element  css=span[class="approve ng-scope"]
 	Wait For  2
         Page Should Not Contain Element  css=span[class="approve ng-scope"]
