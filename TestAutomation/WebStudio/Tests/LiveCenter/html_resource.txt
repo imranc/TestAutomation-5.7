@@ -222,9 +222,10 @@ Make Entry Sticky
 	Click Element  css=input[class="ng-pristine ng-untouched ng-valid"]
 
 Select Author  [Arguments]  ${inputText}
-	Click Element  css=div[class="selections"]
+	#Click Element  css=div[class="selections"]
 	Wait For  5
-	Click Element  css=input[id="s2id_autogen2_search"]
+	Click Element  css=a[href="javascript:void(0)"]
+	#Click Element  css=span[class="select2-arrow"]
 	Input Text  css=input[id="s2id_autogen2_search"]  ${inputText}
 	Wait Until Page Contains Element  css=ul[class="select2-results"]
 	Wait For  2
@@ -242,7 +243,7 @@ Update an Entry  [Arguments]  ${inputText}
 	Wait For  5
 	
 Delete an Entry
-	Mouse Over  xpath=//div/p[text()=' Deleting an entry']
+	Mouse Over  xpath=//div/p[contains(text(), 'Deleting an entry')]
         Wait For  5
         Click Element  css=span[class="remove"] 
         Click Element  xpath=//div/a[text()='OK']

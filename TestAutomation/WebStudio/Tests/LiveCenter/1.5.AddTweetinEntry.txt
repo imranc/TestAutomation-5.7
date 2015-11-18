@@ -15,8 +15,8 @@ Create an entry with a tweet
         Add Tweet to an Entry
 	Publish Entry
 	Wait For  2
-	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a tweet']
-	Page Should Contain Element  xpath=//*[text()=' Test entry of Escenic event with a tweet']/../../../../../..//ul/li[contains(text(),'Twitter')]
+	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with a tweet')]
+	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with a tweet')]/../../../../../..//ul/li[contains(text(),'Twitter')]
 	Open live center publication event page
 	Select Frame  css=iframe[class="twitter-tweet twitter-tweet-rendered"]
 	Page Should Contain Element  css=a[href^="https://twitter.com/"]

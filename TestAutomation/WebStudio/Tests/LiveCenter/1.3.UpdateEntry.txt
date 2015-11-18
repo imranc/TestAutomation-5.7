@@ -13,6 +13,6 @@ Update an Entry
 	Open an Event
 	Wait For  5
 	Update an Entry  Updated entry  
-	Page Should Contain Element  xpath=//div/p[text()=' Updated entry']
+	Page Should Contain Element  xpath=//div/p[contains(text(), 'Updated entry')]
 	Open live center publication event page
 	Page Should Contain Element  xpath=//h2[text()='Updated entry']
