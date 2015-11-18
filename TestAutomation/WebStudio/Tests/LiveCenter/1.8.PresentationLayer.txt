@@ -12,5 +12,5 @@ Check live-center publication
 	Login To Escenic Live Center
 	Open an Event
 	Open live center publication event page
-	Page Should Contain Element  xpath=//h2[text()='Test entry of Escenic event with EmbedURL']
+	Page Should Contain Element  xpath=//h2[contains(text(), 'Test entry of Escenic event with EmbedURL')]
 	
