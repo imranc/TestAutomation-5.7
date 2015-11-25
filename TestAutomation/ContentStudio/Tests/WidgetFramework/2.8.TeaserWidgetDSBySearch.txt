@@ -55,7 +55,7 @@ Create a Teaser Widget with Data source query by search
 
 	###Assertion###
 		Wait For  5
-		Open Browser To Publication    sports
+		Open Browser To Publication    sports/
 		Check If Exists  DSAssertion
 		Close Browser
 
