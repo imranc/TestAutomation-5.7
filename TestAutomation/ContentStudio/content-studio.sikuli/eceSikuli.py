@@ -118,6 +118,19 @@ class eceSikuli(object):
 
                 wait(2)
 
+        def type_key_if_exists(self, *args):
+                
+                checkElementExists = args[0]
+                checkElementExistsImageName = checkElementExists+'.png'
+                if exists(Pattern(checkElementExistsImageName).similar(0.95)):
+                        if len(args) == 2:
+                                eceSikuli.type_key(self, args[1])
+                        elif len(args) == 3:
+                                eceSikuli.type_key(self, args[1], args[2])
+                        
+                        else:
+                                raise AssertionError("Image name and keys must be passed as argument.")
+                wait(2)
         def drag_and_drop_element(self, *args):
                 dragSource = args[0]
                 dragSourceImageName = dragSource+'.png'
