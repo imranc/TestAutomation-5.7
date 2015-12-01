@@ -28,7 +28,7 @@ Create an External Data source By Section Page Group
 
 	Open Section In Content Studio  News
 	Search And Select Without Waiting  ImageCreatedForDSBySectionPageGroupTest
-	Drag And Drop Element  InboxItemSelected  TopStoriesGroup
+	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
 	Wait For  2
 
 	Search And Select Without Waiting  DuplicateVEWSFTYImageCreatedForDSBySectionPageGroupTest
