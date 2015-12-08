@@ -113,7 +113,7 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  ${TagStructure}
 	Click Element  AddSubTags
 	Type Text  ${TagName}
-	Type Key If Exists  tagAlreadyExist  ESC
+	Type Key If Exists  tagAlreadyExist  ESC edited
 	Type Key  ENTER 
 	Type Key  ENTER
 	Type Key  ESC
