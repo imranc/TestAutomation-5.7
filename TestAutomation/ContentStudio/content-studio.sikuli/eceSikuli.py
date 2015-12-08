@@ -122,7 +122,7 @@ class eceSikuli(object):
                 
                 checkElementExists = args[0]
                 checkElementExistsImageName = checkElementExists+'.png'
-                if exists(Pattern(checkElementExistsImageName).similar(0.95)):
+                if exists(Pattern(checkElementExistsImageName).similar(0.99)):
                         if len(args) == 2:
                                 eceSikuli.type_key(self, args[1])
                         elif len(args) == 3:
