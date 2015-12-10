@@ -13,7 +13,10 @@ Create an event in CS
 	Type Text  Generic
 	Type Key  ENTER
 	Click Element  LiveCenterSubscriptions  -15  20
-	Click Element  Twitter
+	Click Element  Source
+	Click Element  Source  210  5
+	Type Text  Twitter
+	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  escenic
 	Save And Publish
