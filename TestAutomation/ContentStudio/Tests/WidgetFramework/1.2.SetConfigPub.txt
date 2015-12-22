@@ -14,7 +14,7 @@ Set config publication to render template
 	Switch To Content Studio
 	Close Allopen Tabs
 	Click Element If Exists  SectionsTab  SectionsTab
-	Click Element  HomeSection
+	Click Element  FrontPageNotSelected
 	Wait For  2
 	Type Key  CTRL  E
 	Wait For  2
