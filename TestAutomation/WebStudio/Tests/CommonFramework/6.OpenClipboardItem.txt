@@ -5,13 +5,14 @@ Documentation  A test case to Login to Escenic Mobile Studio
 Resource       common_resource.txt
 
 
-*** Test Cases ***
+*** Comment ***
 
 Login to CUE
     Login To CUE
     Wait For  15
     
 Open Section Panel
+    Set Tags  non-critical
     Click Element  css=div[title="Clipboard"]
     Wait Until Page Contains Element  xpath=//*[@id="cf-clipboard-sidepanel-loader"]
     Wait For  10

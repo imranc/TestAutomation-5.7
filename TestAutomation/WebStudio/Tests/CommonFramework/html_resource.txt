@@ -39,6 +39,7 @@ Login To CUE
     Input Environment Variable  username  ECE_CF_UserName
     Input Environment Variable  password  ECE_CF_Password
     Click Button  css=input[id="login"]
+    Wait Until Angular Ready   15s
 
 Log Off From CUE
     Wait Until Page Contains Element  css=a[ng-click='vm.logout()']
@@ -213,18 +214,21 @@ Delete User  [Arguments]  ${userName}
 
 
 Create Story  [Arguments]  ${inputText}
-	Mouse Down On Link  css=a[title="File"]
-	Wait Until Page Contains Element  css=a[title="New"]
-	Click Element  css=a[title="New"] >span.ng-scope
+	Mouse Over  css=a[title="File"]
+        Wait Until Angular Ready   15s
+        Mouse OVer  css=a[title="New"]
 	Wait Until Page Contains Element  css=a[title="Story"]
 	Click Element  css=a[title="Story"]
-	#Click Element  xpath=//*[@id="fileMenu"]/li[1]/ul/li/ul/li[3]/a
-	Wait Until Page Contains Element  css=div[title="story: New Story"]
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]
 	Input Text  css=textarea[placeholder="Title"]  ${inputText}
-	Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
+	#Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
+	Input Text  css=textarea[placeholder="Summary"]  ${inputText}
 	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
 	Click Button  css=input[id="save"]
-	Wait For  10
+	Wait Until Angular Ready   15s
 
+Publish Story
+	Click Button  css=input[id="publish"]
+	Wait Until Angular Ready   15s
 	
 

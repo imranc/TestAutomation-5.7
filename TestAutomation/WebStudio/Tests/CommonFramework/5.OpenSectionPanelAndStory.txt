@@ -5,18 +5,19 @@ Documentation  A test case to Login to Escenic Mobile Studio
 Resource       common_resource.txt
 
 
-*** Test Cases ***
+*** Comment ***
 
 Login to CUE
     Login To CUE
-    Wait For  15
     
 Open Section Panel
+    Set Tags  non-critical
+    Set Tags  disabled
     Click Element  css=div[title="Sections"]
     Wait Until Page Contains Element  xpath=//*[@id="cf-sections-sidepanel-loader"]
-    Wait For  10
+    #Wait For  10
     Click Link  xpath=//a[contains(text(),'New Articles')]
-    Wait For  10
+    #Wait For  10
     Click Element  xpath=//div[@id='Inbox']/div/div/div/div/div
     Wait Until Page Contains Element  css=div[class="tab story active"]
     Wait For  10

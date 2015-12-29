@@ -9,7 +9,6 @@ Resource       common_resource.txt
 
 Login to CUE
     Login To CUE
-    Wait For  15
     
 Create Story
     Create Story  This is an Automated story For Common Framework

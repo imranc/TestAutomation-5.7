@@ -36,6 +36,7 @@ import sys
 from tempfile import TemporaryFile
 from subprocess import Popen, call, STDOUT
 import os, sys, inspect
+import ExtendedSelenium2Library
 
 try:
     import Selenium2Library
@@ -45,7 +46,7 @@ except ImportError:
     sys.exit(1)
 
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+#ROOT = os.path.dirname(os.path.abspath(__file__))
 #DEMOAPP = os.path.join(ROOT, 'demoapp', 'server.py')
 
 
