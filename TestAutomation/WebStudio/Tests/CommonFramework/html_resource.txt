@@ -219,6 +219,7 @@ Create Story  [Arguments]  ${inputText}
         Mouse OVer  css=a[title="New"]
 	Wait Until Page Contains Element  css=a[title="Story"]
 	Click Element  css=a[title="Story"]
+	Wait Until Angular Ready   15s
 	Wait Until Page Contains Element  css=div[title="new-story: New Story"]
 	Input Text  css=textarea[placeholder="Title"]  ${inputText}
 	#Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
