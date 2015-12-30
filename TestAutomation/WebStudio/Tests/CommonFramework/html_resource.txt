@@ -224,7 +224,7 @@ Create Story  [Arguments]  ${inputText}
 	Input Text  css=textarea[placeholder="Title"]  ${inputText}
 	#Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
 	Input Text  css=textarea[placeholder="Summary"]  ${inputText}
-	Wait Until Page Contains Element  css=div[data-placeholder="Body"]  15
+	Wait Until Element Is Visible  css=div[data-placeholder="Body"]  15
 	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
 	Click Button  css=input[id="save"]
 	Wait Until Angular Ready   15s
