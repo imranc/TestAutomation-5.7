@@ -230,6 +230,7 @@ Create Story  [Arguments]  ${inputText}
 	Wait Until Angular Ready   15s
 
 Publish Story
+	Wait Until Element Is Visible  css=input[id="publish"]  15
 	Click Button  css=input[id="publish"]
 	Wait Until Angular Ready   15s
 	
