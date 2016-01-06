@@ -1,0 +1,2973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.1 (Jython 2.5.3 on java1.7.0_79)" generated="20151210 19:44:25.831">
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine" id="s1" name="ContentEngine">
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.1.Login.txt" id="s1-s1" name="1.1.Login">
+<test id="s1-s1-t1" name="Start content studio and log in">
+<kw type="kw" name="Start Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:26.311" level="FAIL">No keyword with name 'Start Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.311" starttime="20151210 19:44:26.310"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.313" starttime="20151210 19:44:26.305">No keyword with name 'Start Content Studio' found.</status>
+</test>
+<doc>A test case for Start and Logging into ContentStudio</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:26.316" starttime="20151210 19:44:26.168"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.1.AddRemoveContent.txt" id="s1-s2" name="1.2.1.AddRemoveContent">
+<test id="s1-s2-t1" name="Add a content to different/multiple sections">
+<kw type="kw" name="Create Content In Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:26.441" level="FAIL">No keyword with name 'Create Content In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.442" starttime="20151210 19:44:26.439"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.445" starttime="20151210 19:44:26.433">No keyword with name 'Create Content In Section' found.</status>
+</test>
+<test id="s1-s2-t2" name="Remove content from a section">
+<kw type="kw" name="Remove Content From Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:26.456" level="FAIL">No keyword with name 'Remove Content From Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.457" starttime="20151210 19:44:26.455"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.459" starttime="20151210 19:44:26.449">No keyword with name 'Remove Content From Section' found.</status>
+</test>
+<doc>A test case for Adding a content to different/multiple sections</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:26.465" starttime="20151210 19:44:26.323"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.2.SelectUnselectInbox.txt" id="s1-s3" name="1.2.2.SelectUnselectInbox">
+<test id="s1-s3-t1" name="Select / Unselect the content's inbox">
+<kw type="kw" name="Clean Up Inbox">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:26.627" level="FAIL">No keyword with name 'Clean Up Inbox' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.627" starttime="20151210 19:44:26.626"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.628" starttime="20151210 19:44:26.621">No keyword with name 'Clean Up Inbox' found.</status>
+</test>
+<doc>A test case for Selecting/Unselecting Content's inbox</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:26.630" starttime="20151210 19:44:26.480"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.3.SelectUnselectList.txt" id="s1-s4" name="1.2.3.SelectUnselectList">
+<test id="s1-s4-t1" name="Select / Unselect the content's List">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:26.722" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.722" starttime="20151210 19:44:26.721"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.723" starttime="20151210 19:44:26.716">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<doc>A test case for Selecting/Unselecting Content's List</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:26.725" starttime="20151210 19:44:26.635"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.4.PreviewContent.txt" id="s1-s5" name="1.2.4.PreviewContent">
+<test id="s1-s5-t1" name="Preview all types of contents">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:26.829" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.830" starttime="20151210 19:44:26.828"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.832" starttime="20151210 19:44:26.819">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<doc>A test case for Previewing all types of contents</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:26.836" starttime="20151210 19:44:26.732"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.5.PreviewAllContent.txt" id="s1-s6" name="1.2.5.PreviewAllContent">
+<test id="s1-s6-t1" name="'Preview All' all types of contents">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:26.923" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:26.923" starttime="20151210 19:44:26.922"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:26.926" starttime="20151210 19:44:26.919">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<doc>A test case for Preview All</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:26.930" starttime="20151210 19:44:26.849"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.3.ResearchPanels.txt" id="s1-s7" name="1.3.ResearchPanels">
+<test id="s1-s7-t1" name="Configure and review RSS Feed panel">
+<kw type="kw" name="Remove Research Panel">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.001" level="FAIL">No keyword with name 'Remove Research Panel' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.001" starttime="20151210 19:44:27.000"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.002" starttime="20151210 19:44:26.996">No keyword with name 'Remove Research Panel' found.</status>
+</test>
+<test id="s1-s7-t2" name="Configure and review Search Panel">
+<kw type="kw" name="Create Search Panel">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.007" level="FAIL">No keyword with name 'Create Search Panel' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.008" starttime="20151210 19:44:27.007"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.010" starttime="20151210 19:44:27.003">No keyword with name 'Create Search Panel' found.</status>
+</test>
+<doc>A test case for Configuring and reviewing Research Panels</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.018" starttime="20151210 19:44:26.934"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.4.Clipboard.txt" id="s1-s8" name="1.4.Clipboard">
+<test id="s1-s8-t1" name="Create A content and check if it's available on clipboard">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.142" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.142" starttime="20151210 19:44:27.140"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.143" starttime="20151210 19:44:27.137">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<test id="s1-s8-t2" name="Drag a story/picture to the list from Clipboard">
+<kw type="kw" name="Delete List">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+<arg>NewsList</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.148" level="FAIL">No keyword with name 'Delete List' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.148" starttime="20151210 19:44:27.147"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.149" starttime="20151210 19:44:27.144">No keyword with name 'Delete List' found.</status>
+</test>
+<test id="s1-s8-t3" name="Drag a story/picture from the list to the Clipboard.">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.154" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.155" starttime="20151210 19:44:27.154"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.156" starttime="20151210 19:44:27.151">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<test id="s1-s8-t4" name="Double click on a content of the clipboard">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.164" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.164" starttime="20151210 19:44:27.163"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.165" starttime="20151210 19:44:27.157">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<test id="s1-s8-t5" name="Remove content from the clipboard">
+<kw type="kw" name="Create Content In Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.173" level="FAIL">No keyword with name 'Create Content In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.174" starttime="20151210 19:44:27.172"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.176" starttime="20151210 19:44:27.167">No keyword with name 'Create Content In Section' found.</status>
+</test>
+<test id="s1-s8-t6" name="Delete List">
+<kw type="kw" name="Delete List">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+<arg>NewsList</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.183" level="FAIL">No keyword with name 'Delete List' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.184" starttime="20151210 19:44:27.182"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.185" starttime="20151210 19:44:27.179">No keyword with name 'Delete List' found.</status>
+</test>
+<doc>Content Studio Clipboard Test cases</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.189" starttime="20151210 19:44:27.028"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.5.SearchContent.txt" id="s1-s9" name="1.5.SearchContent">
+<test id="s1-s9-t1" name="Search for all content">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.264" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.264" starttime="20151210 19:44:27.263"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.265" starttime="20151210 19:44:27.260">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<doc>Search for all content</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.267" starttime="20151210 19:44:27.195"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.6.UpdateContent.txt" id="s1-s10" name="1.6.UpdateContent">
+<test id="s1-s10-t1" name="Update Article Content">
+<kw type="kw" name="Create Content In Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.360" level="FAIL">No keyword with name 'Create Content In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.361" starttime="20151210 19:44:27.356"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.362" starttime="20151210 19:44:27.354">No keyword with name 'Create Content In Section' found.</status>
+</test>
+<test id="s1-s10-t2" name="Update Image Content">
+<kw type="kw" name="Create Image In Section">
+<doc></doc>
+<arguments>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.369" level="FAIL">No keyword with name 'Create Image In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.369" starttime="20151210 19:44:27.368"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.370" starttime="20151210 19:44:27.365">No keyword with name 'Create Image In Section' found.</status>
+</test>
+<doc>Update all types of contents</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.371" starttime="20151210 19:44:27.270"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.7.DeleteContent.txt" id="s1-s11" name="1.7.DeleteContent">
+<test id="s1-s11-t1" name="Delete Article Contents">
+<kw type="kw" name="Create Content In Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.467" level="FAIL">No keyword with name 'Create Content In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.467" starttime="20151210 19:44:27.466"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.469" starttime="20151210 19:44:27.457">No keyword with name 'Create Content In Section' found.</status>
+</test>
+<test id="s1-s11-t2" name="Delete Image Content">
+<kw type="kw" name="Create Image In Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:27.473" level="FAIL">No keyword with name 'Create Image In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.474" starttime="20151210 19:44:27.473"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.474" starttime="20151210 19:44:27.471">No keyword with name 'Create Image In Section' found.</status>
+</test>
+<doc>Delete all types of contents</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.477" starttime="20151210 19:44:27.377"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.8.MoreClipboard.txt" id="s1-s12" name="1.8.MoreClipboard">
+<test id="s1-s12-t1" name="Drag article into clipboard">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.554" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.554" starttime="20151210 19:44:27.553"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.555" starttime="20151210 19:44:27.550">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<test id="s1-s12-t2" name="Use Open Selected">
+<kw type="kw" name="Clean Up Clipboard">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.562" level="FAIL">No keyword with name 'Clean Up Clipboard' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.563" starttime="20151210 19:44:27.561"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.564" starttime="20151210 19:44:27.556">No keyword with name 'Clean Up Clipboard' found.</status>
+</test>
+<test id="s1-s12-t3" name="Undo and Redo">
+<kw type="kw" name="Clean Up Clipboard">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.569" level="FAIL">No keyword with name 'Clean Up Clipboard' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.569" starttime="20151210 19:44:27.568"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.570" starttime="20151210 19:44:27.566">No keyword with name 'Clean Up Clipboard' found.</status>
+</test>
+<test id="s1-s12-t4" name="Copy, Paste, Cut">
+<kw type="kw" name="Clean Up Clipboard">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.573" level="FAIL">No keyword with name 'Clean Up Clipboard' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.574" starttime="20151210 19:44:27.573"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.575" starttime="20151210 19:44:27.571">No keyword with name 'Clean Up Clipboard' found.</status>
+</test>
+<doc>More Clipboard TC from ET</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.578" starttime="20151210 19:44:27.481"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.0.VF-5864-OpenSearch.txt" id="s1-s13" name="1.9.1.0.VF-5864-OpenSearch">
+<test id="s1-s13-t1" name="Testcase for custom search link provided by opensearch">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:27.953" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:27.955" starttime="20151210 19:44:27.953"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:27.956" starttime="20151210 19:44:27.945">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<doc>Testcase for custom search link provided by opensearch</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:27.960" starttime="20151210 19:44:27.581"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.1.Locking.txt" id="s1-s14" name="1.9.1.1.Locking">
+<test id="s1-s14-t1" name="Locking">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:28.185" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:28.185" starttime="20151210 19:44:28.184"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:28.186" starttime="20151210 19:44:28.180">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<doc>Check locking mechanism where two users try to edit the same content.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:28.189" starttime="20151210 19:44:27.965"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.2.NewUser.txt" id="s1-s15" name="1.9.2.NewUser">
+<test id="s1-s15-t1" name="Create a content with a new user">
+<kw type="kw" name="Create Content In Section">
+<doc></doc>
+<arguments>
+<arg>NewArticles</arg>
+</arguments>
+<msg timestamp="20151210 19:44:28.294" level="FAIL">No keyword with name 'Create Content In Section' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:28.295" starttime="20151210 19:44:28.292"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:28.297" starttime="20151210 19:44:28.286">No keyword with name 'Create Content In Section' found.</status>
+</test>
+<doc>This test suite checks content studio events with a newly created user</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:28.300" starttime="20151210 19:44:28.193"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.3.UTF-8.txt" id="s1-s16" name="1.9.3.UTF-8">
+<test id="s1-s16-t1" name="Create a content with UTF-8 characters">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:28.597" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:28.599" starttime="20151210 19:44:28.593"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:28.601" starttime="20151210 19:44:28.588">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<test id="s1-s16-t2" name="Change input keyboard">
+<kw type="kw" name="BuiltIn.Set Tags">
+<doc>Adds given `tags` for the current test or all tests in a suite.</doc>
+<arguments>
+<arg>non-critical</arg>
+</arguments>
+<msg timestamp="20151210 19:44:28.618" level="INFO">Set tag 'non-critical'.</msg>
+<status status="PASS" endtime="20151210 19:44:28.619" starttime="20151210 19:44:28.616"></status>
+</kw>
+<kw type="kw" name="Change Input Language">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:28.621" level="FAIL">No keyword with name 'Change Input Language' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:28.621" starttime="20151210 19:44:28.620"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>non-critical</tag>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:28.622" starttime="20151210 19:44:28.608">No keyword with name 'Change Input Language' found.</status>
+</test>
+<doc>Create a content with UTF-8 characters</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:28.627" starttime="20151210 19:44:28.303"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.4.LanguageNO.txt" id="s1-s17" name="1.9.4.LanguageNO">
+<test id="s1-s17-t1" name="Open a content studio with Norwegian language">
+<kw type="kw" name="Open Browser To Studio">
+<doc></doc>
+<arguments>
+<arg>user.country=NO&amp;user.language=nb</arg>
+</arguments>
+<msg timestamp="20151210 19:44:28.952" level="FAIL">No keyword with name 'Open Browser To Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:28.953" starttime="20151210 19:44:28.951"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:28.954" starttime="20151210 19:44:28.946">No keyword with name 'Open Browser To Studio' found.</status>
+</test>
+<doc>Open a content studio with Norwegian language</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:28.958" starttime="20151210 19:44:28.633"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.5.VF-5854.txt" id="s1-s18" name="1.9.5.VF-5854">
+<test id="s1-s18-t1" name="Checks field value of one memcached item">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:29.264" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:29.265" starttime="20151210 19:44:29.264"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:29.266" starttime="20151210 19:44:29.260">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<doc>Checks field value of one memcached item</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:29.268" starttime="20151210 19:44:28.969"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.8.CreateTag.txt" id="s1-s19" name="1.9.8.CreateTag">
+<test id="s1-s19-t1" name="Create a Tag and check if that can be used">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:29.711" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:29.712" starttime="20151210 19:44:29.711"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:29.713" starttime="20151210 19:44:29.704">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<doc>Create a Tag and check if that can be used.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:29.715" starttime="20151210 19:44:29.271"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.1.CreateSectionCS.txt" id="s1-s20" name="1.9.9.1.CreateSectionCS">
+<test id="s1-s20-t1" name="Create a new section in CS">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:30.113" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:30.113" starttime="20151210 19:44:30.112"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:30.116" starttime="20151210 19:44:30.109">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<test id="s1-s20-t2" name="Modify an existing section in CS">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:30.136" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:30.136" starttime="20151210 19:44:30.135"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:30.138" starttime="20151210 19:44:30.130">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<test id="s1-s20-t3" name="Move a section in CS">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:30.147" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:30.147" starttime="20151210 19:44:30.146"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:30.149" starttime="20151210 19:44:30.143">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<test id="s1-s20-t4" name="Delete a section in CS">
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:30.156" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:30.157" starttime="20151210 19:44:30.155"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:30.160" starttime="20151210 19:44:30.151">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<doc>Create/Modify/Move/Delete a Section</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:30.172" starttime="20151210 19:44:29.718"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.SectionPages.txt" id="s1-s21" name="1.9.9.SectionPages">
+<test id="s1-s21-t1" name="Create/Delete new section pages">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:30.517" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:30.517" starttime="20151210 19:44:30.515"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:30.518" starttime="20151210 19:44:30.512">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<doc>Create/Delete new section pages. Regression VF-6023</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:30.520" starttime="20151210 19:44:30.184"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.0.CreateArticle.txt" id="s1-s22" name="2.1.0.CreateArticle">
+<test id="s1-s22-t1" name="Creates 1000 articles in parallel threads">
+<kw type="kw" name="BuiltIn.Set Tags">
+<doc>Adds given `tags` for the current test or all tests in a suite.</doc>
+<arguments>
+<arg>non-critical</arg>
+</arguments>
+<msg timestamp="20151210 19:44:30.776" level="INFO">Set tag 'non-critical'.</msg>
+<status status="PASS" endtime="20151210 19:44:30.776" starttime="20151210 19:44:30.774"></status>
+</kw>
+<kw type="kw" name="Open Browser To Publication">
+<doc></doc>
+<arguments>
+<arg>template/qa/createArticle.jsp</arg>
+</arguments>
+<msg timestamp="20151210 19:44:30.778" level="FAIL">No keyword with name 'Open Browser To Publication' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:30.778" starttime="20151210 19:44:30.777"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>non-critical</tag>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:30.779" starttime="20151210 19:44:30.771">No keyword with name 'Open Browser To Publication' found.</status>
+</test>
+<doc>Creates 1000 articles in parallel threads</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:30.781" starttime="20151210 19:44:30.522"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.3.TeaserWidgetDSBySection.txt" id="s1-s23" name="2.3.TeaserWidgetDSBySection">
+<test id="s1-s23-t1" name="Create a Teaser Widget with Data source query by section">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:31.063" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:31.063" starttime="20151210 19:44:31.062"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:31.064" starttime="20151210 19:44:31.059">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<test id="s1-s23-t2" name="Remove teaser widget">
+<kw type="kw" name="BuiltIn.Set Tags">
+<doc>Adds given `tags` for the current test or all tests in a suite.</doc>
+<arguments>
+<arg>non-critical</arg>
+</arguments>
+<msg timestamp="20151210 19:44:31.069" level="INFO">Set tag 'non-critical'.</msg>
+<status status="PASS" endtime="20151210 19:44:31.069" starttime="20151210 19:44:31.068"></status>
+</kw>
+<kw type="kw" name="Close All Open Tabs">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:31.071" level="FAIL">No keyword with name 'Close All Open Tabs' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:31.071" starttime="20151210 19:44:31.070"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>non-critical</tag>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:31.072" starttime="20151210 19:44:31.065">No keyword with name 'Close All Open Tabs' found.</status>
+</test>
+<doc>Create a Teaser Widget with Data source query by section</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:31.074" starttime="20151210 19:44:30.785"></status>
+</suite>
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.4.UrlRedirection.txt" id="s1-s24" name="2.4.UrlRedirection">
+<test id="s1-s24-t1" name="Check if section url redirection works properly">
+<kw type="kw" name="Open Browser To Publication">
+<doc></doc>
+<arguments>
+<arg>sports</arg>
+</arguments>
+<msg timestamp="20151210 19:44:31.317" level="FAIL">No keyword with name 'Open Browser To Publication' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:31.318" starttime="20151210 19:44:31.317"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:31.319" starttime="20151210 19:44:31.314">No keyword with name 'Open Browser To Publication' found.</status>
+</test>
+<test id="s1-s24-t2" name="Check if redirection works with special character in pretty url">
+<kw type="kw" name="Switch To Content Studio">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20151210 19:44:31.323" level="FAIL">No keyword with name 'Switch To Content Studio' found.</msg>
+<status status="FAIL" endtime="20151210 19:44:31.323" starttime="20151210 19:44:31.322"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" critical="yes" endtime="20151210 19:44:31.324" starttime="20151210 19:44:31.320">No keyword with name 'Switch To Content Studio' found.</status>
+</test>
+<doc>Check if url redirection works properly</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:31.328" starttime="20151210 19:44:31.077"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20151210 19:44:31.339" starttime="20151210 19:44:25.838"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="42">Critical Tests</stat>
+<stat pass="0" fail="42">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" info="" doc="" combined="" fail="3" links="">non-critical</stat>
+</tag>
+<suite>
+<stat pass="0" id="s1" fail="42" name="ContentEngine">ContentEngine</stat>
+<stat pass="0" id="s1-s1" fail="1" name="1.1.Login">ContentEngine.1.1.Login</stat>
+<stat pass="0" id="s1-s2" fail="2" name="1.2.1.AddRemoveContent">ContentEngine.1.2.1.AddRemoveContent</stat>
+<stat pass="0" id="s1-s3" fail="1" name="1.2.2.SelectUnselectInbox">ContentEngine.1.2.2.SelectUnselectInbox</stat>
+<stat pass="0" id="s1-s4" fail="1" name="1.2.3.SelectUnselectList">ContentEngine.1.2.3.SelectUnselectList</stat>
+<stat pass="0" id="s1-s5" fail="1" name="1.2.4.PreviewContent">ContentEngine.1.2.4.PreviewContent</stat>
+<stat pass="0" id="s1-s6" fail="1" name="1.2.5.PreviewAllContent">ContentEngine.1.2.5.PreviewAllContent</stat>
+<stat pass="0" id="s1-s7" fail="2" name="1.3.ResearchPanels">ContentEngine.1.3.ResearchPanels</stat>
+<stat pass="0" id="s1-s8" fail="6" name="1.4.Clipboard">ContentEngine.1.4.Clipboard</stat>
+<stat pass="0" id="s1-s9" fail="1" name="1.5.SearchContent">ContentEngine.1.5.SearchContent</stat>
+<stat pass="0" id="s1-s10" fail="2" name="1.6.UpdateContent">ContentEngine.1.6.UpdateContent</stat>
+<stat pass="0" id="s1-s11" fail="2" name="1.7.DeleteContent">ContentEngine.1.7.DeleteContent</stat>
+<stat pass="0" id="s1-s12" fail="4" name="1.8.MoreClipboard">ContentEngine.1.8.MoreClipboard</stat>
+<stat pass="0" id="s1-s13" fail="1" name="1.9.1.0.VF-5864-OpenSearch">ContentEngine.1.9.1.0.VF-5864-OpenSearch</stat>
+<stat pass="0" id="s1-s14" fail="1" name="1.9.1.1.Locking">ContentEngine.1.9.1.1.Locking</stat>
+<stat pass="0" id="s1-s15" fail="1" name="1.9.2.NewUser">ContentEngine.1.9.2.NewUser</stat>
+<stat pass="0" id="s1-s16" fail="2" name="1.9.3.UTF-8">ContentEngine.1.9.3.UTF-8</stat>
+<stat pass="0" id="s1-s17" fail="1" name="1.9.4.LanguageNO">ContentEngine.1.9.4.LanguageNO</stat>
+<stat pass="0" id="s1-s18" fail="1" name="1.9.5.VF-5854">ContentEngine.1.9.5.VF-5854</stat>
+<stat pass="0" id="s1-s19" fail="1" name="1.9.8.CreateTag">ContentEngine.1.9.8.CreateTag</stat>
+<stat pass="0" id="s1-s20" fail="4" name="1.9.9.1.CreateSectionCS">ContentEngine.1.9.9.1.CreateSectionCS</stat>
+<stat pass="0" id="s1-s21" fail="1" name="1.9.9.SectionPages">ContentEngine.1.9.9.SectionPages</stat>
+<stat pass="0" id="s1-s22" fail="1" name="2.1.0.CreateArticle">ContentEngine.2.1.0.CreateArticle</stat>
+<stat pass="0" id="s1-s23" fail="2" name="2.3.TeaserWidgetDSBySection">ContentEngine.2.3.TeaserWidgetDSBySection</stat>
+<stat pass="0" id="s1-s24" fail="2" name="2.4.UrlRedirection">ContentEngine.2.4.UrlRedirection</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20151210 19:44:26.281" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.1.Login.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.300" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.1.Login.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.365" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.1.AddRemoveContent.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.425" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.1.AddRemoveContent.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.564" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.2.SelectUnselectInbox.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.615" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.2.SelectUnselectInbox.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.677" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.3.SelectUnselectList.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.710" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.3.SelectUnselectList.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.774" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.4.PreviewContent.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.808" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.4.PreviewContent.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.916" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.2.5.PreviewAllContent.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:26.991" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.3.ResearchPanels.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.082" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.4.Clipboard.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.133" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.4.Clipboard.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.239" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.5.SearchContent.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.257" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.5.SearchContent.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.311" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.6.UpdateContent.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.346" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.6.UpdateContent.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.422" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.7.DeleteContent.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.454" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.7.DeleteContent.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.516" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.8.MoreClipboard.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.547" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.8.MoreClipboard.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.618" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.0.VF-5864-OpenSearch.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.653" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.0.VF-5864-OpenSearch.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.674" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.0.VF-5864-OpenSearch.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.687" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.0.VF-5864-OpenSearch.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.729" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.0.VF-5864-OpenSearch.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.819" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.868" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.886" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.907" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:27.939" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.086" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.1.Locking.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.109" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.1.Locking.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.146" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.1.Locking.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.176" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.1.1.Locking.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.243" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.2.NewUser.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.264" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.2.NewUser.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.282" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.2.NewUser.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.339" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.3.UTF-8.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.370" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.3.UTF-8.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.389" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.3.UTF-8.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.401" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.3.UTF-8.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.430" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.3.UTF-8.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.463" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.509" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.535" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.558" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.584" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.688" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.4.LanguageNO.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.737" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.4.LanguageNO.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.754" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.4.LanguageNO.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.769" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.4.LanguageNO.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.793" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.4.LanguageNO.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.835" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.874" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.898" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.912" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:28.942" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.003" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.5.VF-5854.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.035" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.5.VF-5854.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.057" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.5.VF-5854.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.070" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.5.VF-5854.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.092" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.5.VF-5854.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.124" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.158" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.177" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.193" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.250" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.305" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.8.CreateTag.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.345" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.8.CreateTag.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.406" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.8.CreateTag.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.421" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.8.CreateTag.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.460" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.8.CreateTag.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.516" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.585" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.610" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.660" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.694" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.771" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.1.CreateSectionCS.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.839" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.1.CreateSectionCS.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.861" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.1.CreateSectionCS.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.873" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.1.CreateSectionCS.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.912" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.1.CreateSectionCS.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:29.969" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.023" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.053" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.080" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.104" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.241" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.SectionPages.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.306" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.SectionPages.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.336" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.SectionPages.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.355" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.SectionPages.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.382" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/1.9.9.SectionPages.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.419" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.451" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.472" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.484" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.507" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.556" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.0.CreateArticle.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.590" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.0.CreateArticle.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.607" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.0.CreateArticle.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.621" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.0.CreateArticle.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.650" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.0.CreateArticle.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.679" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.713" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.731" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.741" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.767" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.832" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.3.TeaserWidgetDSBySection.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.870" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.3.TeaserWidgetDSBySection.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.888" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.3.TeaserWidgetDSBySection.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.901" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.3.TeaserWidgetDSBySection.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.925" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.3.TeaserWidgetDSBySection.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.956" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:30.993" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.011" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.024" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.055" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.111" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.4.UrlRedirection.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.140" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.4.UrlRedirection.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.158" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.4.UrlRedirection.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.170" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.4.UrlRedirection.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.195" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.4.UrlRedirection.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.224" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudioClipboard.ContentStudioClipboard' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudioClipboard.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.262" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'ContentStudio.ContentStudio' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/ContentStudio.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.277" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SearchContent.SearchContent' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SearchContent.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.288" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'SikuliCS' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/SikuliCS.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+<msg timestamp="20151210 19:44:31.311" level="ERROR">Error in file '/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/Tests/ContentEngine/2.1.1.WFKeywordResource.txt': Importing test library 'eceSikuli.eceSikuli' failed: ImportError: No module named sikuli
+Traceback (most recent call last):
+  File "/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli/eceSikuli.py", line 1, in &lt;module&gt;
+    from sikuli.Sikuli import *
+PYTHONPATH:
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio/content-studio.sikuli
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib/robot/libraries
+  /Library/Java/Extensions/robotframework-2.8.1.jar/Lib
+  /Library/Java/Extensions/Lib
+  __classpath__
+  __pyclasspath__/
+  .
+  /Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/ContentStudio
+CLASSPATH:
+  sikuli-script.jar
+  sikulixlibsmac-1.1.0.jar
+  robotframework-2.8.1.jar</msg>
+</errors>
+</robot>

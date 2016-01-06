@@ -13,7 +13,7 @@ Open a content studio with Norwegian language
 	Open Browser To Studio  user.country=NO&user.language=nb
 	Wait For  2
 	Type Key  ENTER
-	Wait For  login_content_studio  500
+	Wait For  login_content_studio  700
 	Switch To Content Studio
 	Maximize Content Studio Window
 	Wait For  5
