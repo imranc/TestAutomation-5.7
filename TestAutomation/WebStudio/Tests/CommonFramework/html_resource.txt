@@ -241,7 +241,7 @@ Create Picture Content  [Arguments]  ${inputText}
 	#Wait Until Element is Visible  css=div[class="splash-button new-picture ng-scope"]
 	#Choose File  css=div[class="splash-button new-picture ng-scope"]  'C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg'
 	Type Key  ENTER
-	Wait Until Page Contains Element  css=textarea[placeholder="Name"]
+	Wait Until Page Contains Element  css=textarea[placeholder="Name"]  30
 	Input Text  css=textarea[placeholder="Name"]  ${inputText}
 	Input Text  css=textarea[placeholder="Description"]  ${inputText}
 	Input Text  css=textarea[placeholder="Alternative text"]  ${inputText}
