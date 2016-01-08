@@ -235,12 +235,13 @@ Create Picture Content  [Arguments]  ${inputText}
         Mouse OVer  css=a[title="New"]
 	Wait Until Page Contains Element  css=a[title="Picture"]
 	Click Element  css=a[title="Picture"]
-	Wait For  5
+	Wait For  10
 	Type Text  C:\\Users\\Public\\Pictures\\Sample Pictures\\Lighthouse.jpg
 	#Click Element  css=div[class="splash-button new-picture ng-scope"]
 	#Wait Until Element is Visible  css=div[class="splash-button new-picture ng-scope"]
 	#Choose File  css=div[class="splash-button new-picture ng-scope"]  'C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg'
 	Type Key  ENTER
+	Wait Until Page Contains Element  css=textarea[placeholder="Name"]
 	Input Text  css=textarea[placeholder="Name"]  ${inputText}
 	Input Text  css=textarea[placeholder="Description"]  ${inputText}
 	Input Text  css=textarea[placeholder="Alternative text"]  ${inputText}
