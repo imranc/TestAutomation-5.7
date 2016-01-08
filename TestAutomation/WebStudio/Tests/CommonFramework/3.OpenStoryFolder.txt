@@ -26,3 +26,4 @@ Search Story Folder And Open
 
 Log off
     Log Off From CUE
+    Close Browser

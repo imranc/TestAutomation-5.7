@@ -1,6 +1,7 @@
 *** Settings ***
 
-Documentation  A test case to Create story and relate content in CUE
+Documentation  A test case to Create content in CUE
+
 
 Resource       common_resource.txt
 
@@ -10,15 +11,11 @@ Resource       common_resource.txt
 Login to CUE
     Login To CUE
     
-Create Story
+Create Picture
     Switch To CUE
     Create Picture Content  Image content created by automated tests
     Publish Story
-    Create Story  This is an Automated story For Common Framework
-    Drag And Drop With Sikuli  ImageContentTab  RelatedPicturesDropZone
-    Click Element  css=div.tab.new-story
-    Publish Story Content
-    Click Element  css=div.tab.image>div.close
+    Wait Until Angular Ready   15s
     Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
     ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
     Log Off From CUE
@@ -27,10 +24,5 @@ Create Story
     Maximize Browser Window
     Wait Until Element Is Visible  css=img[src*="ALTERNATES"]
     Page Should Contain Element  css=img[src*="ALTERNATES"]
-    Close Browser
-    
-
-Log off
-    Log Off From CUE
     Close Browser
 

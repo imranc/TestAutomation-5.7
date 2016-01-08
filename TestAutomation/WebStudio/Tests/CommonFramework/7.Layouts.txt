@@ -55,6 +55,7 @@ Open 2-Columns Window -- Dual Vertical
     Click Element  css=div[id="editors"] > div[class="area ng-scope"]
     Create Story  Story on Left Editor Column
     Publish Story
+    Wait For  5
     Page Should Contain Element  css=div[title="new-story: Story on Left Editor Column"]
     Element Should Not Be Visible  css=div[ng-click="vm.newDefaultContent()"]
     
@@ -116,3 +117,4 @@ Open Duel Layout(Horizonally) Window
 
 Log off
     Log Off From CUE
+    Close Browser

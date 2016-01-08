@@ -1,0 +1,19 @@
+*** Settings ***
+
+Documentation  a
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+    
+Create Picture
+    Open Browser    http://www.elated.com/res/File/articles/development/javascript/jquery/drag-and-drop-with-jquery-your-essential-guide/droppable.html    gc
+
+    sleep  .2
+
+    Drag And Drop    id=makeMeDraggable    id=makeMeDroppable
+
+    #Mouse Down    id=makeMeDraggable
+
+    #Mouse Up    id=makeMeDroppable

@@ -6,6 +6,7 @@ Documentation  A resource file with variables common to both HTML and Flex
 ...            imported here so that no other file needs to import it.
 Resource       ${SUT}_resource.txt
 Library        ExtendedSelenium2Library
+Library  Remote  http://localhost:8270
 
 
 *** Variables ***

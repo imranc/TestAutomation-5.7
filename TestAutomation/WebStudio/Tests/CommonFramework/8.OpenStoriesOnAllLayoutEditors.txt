@@ -154,3 +154,4 @@ Checking All Stories In Single TabGroup
 
 Log off
     Log Off From CUE
+    Close Browser

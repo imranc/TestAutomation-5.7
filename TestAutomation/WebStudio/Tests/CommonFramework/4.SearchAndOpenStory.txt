@@ -22,3 +22,4 @@ Search Story
 
 Log off
     Log Off From CUE
+    Close Browser

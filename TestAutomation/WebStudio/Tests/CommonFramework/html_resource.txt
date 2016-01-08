@@ -226,12 +226,38 @@ Create Story  [Arguments]  ${inputText}
 	Input Text  css=textarea[placeholder="Summary"]  ${inputText}
 	Wait Until Element Is Visible  css=div[data-placeholder="Body"]  15
 	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
-	Click Button  css=input[id="save"]
+	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../div[@class="editor-actions"]//input[@id="save"]
+	Wait Until Angular Ready   15s
+
+Create Picture Content  [Arguments]  ${inputText}
+	Mouse Over  css=a[title="File"]
+        Wait Until Angular Ready   15s
+        Mouse OVer  css=a[title="New"]
+	Wait Until Page Contains Element  css=a[title="Picture"]
+	Click Element  css=a[title="Picture"]
+	Wait For  5
+	Type Text  C:\\Users\\Public\\Pictures\\Sample Pictures\\Lighthouse.jpg
+	#Click Element  css=div[class="splash-button new-picture ng-scope"]
+	#Wait Until Element is Visible  css=div[class="splash-button new-picture ng-scope"]
+	#Choose File  css=div[class="splash-button new-picture ng-scope"]  'C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg'
+	Type Key  ENTER
+	Input Text  css=textarea[placeholder="Name"]  ${inputText}
+	Input Text  css=textarea[placeholder="Description"]  ${inputText}
+	Input Text  css=textarea[placeholder="Alternative text"]  ${inputText}
+	Click Button  css=input#save
 	Wait Until Angular Ready   15s
 
 Publish Story
 	Wait Until Element Is Visible  css=input[id="publish"]  15
 	Click Button  css=input[id="publish"]
 	Wait Until Angular Ready   15s
+	Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
+
+
+Publish Story Content
+	Wait Until Element Is Visible  xpath=//div[@title="Story"]/../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]  15
+	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]
+	Wait Until Angular Ready   15s
+	Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
 	
 
