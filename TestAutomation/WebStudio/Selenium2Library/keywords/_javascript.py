@@ -24,6 +24,21 @@ class _JavaScriptKeywords(KeywordGroup):
             raise AssertionError("Alert text should have been '%s' but was '%s'"
                                   % (text, alert_text))
 
+    def alert_should_not_be_present(self, text=''):
+        """Verifies an alert is present and dismisses it.
+
+        If `text` is a non-empty string, then it is also verified that the
+        message of the alert equals to `text`.
+
+        Will fail if no alert is present. Note that following keywords
+        will fail unless the alert is dismissed by this
+        keyword or another like `Get Alert Message`.
+        """
+
+        alert_text = self.close_alert_if_exists()
+        if alert_text is not None :
+            raise AssertionError(alert_text)
+
     def choose_cancel_on_next_confirmation(self):
         """Cancel will be selected the next time `Confirm Action` is used."""
         self._cancel_on_next_confirmation = True
@@ -151,6 +166,16 @@ class _JavaScriptKeywords(KeywordGroup):
             return text
         except WebDriverException:
             raise RuntimeError('There were no alerts')
+
+    def close_alert_if_exists(self, confirm=False):
+        alert = None
+        try:
+            alert = self._current_browser().switch_to_alert()
+            text = ' '.join(alert.text.splitlines())
+            alert.accept()
+            return text
+        except:
+            return None
 
     def _read_alert(self):
         alert = None
