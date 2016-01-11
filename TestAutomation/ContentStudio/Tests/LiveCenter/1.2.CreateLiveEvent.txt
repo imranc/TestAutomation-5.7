@@ -8,7 +8,7 @@ Documentation  A test case for creating live-center event
 **Test cases**
 Create an event in CS
 	Create Content Type  NewArticles  Event
-	Type Text  Escenic Live Event Test123
+	Type Text  Escenic Live Event Test
 	Click Element  LiveCenterEntryType  10  25
 	Type Text  Generic
 	Type Key  ENTER
