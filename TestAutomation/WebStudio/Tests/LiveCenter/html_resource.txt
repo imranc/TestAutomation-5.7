@@ -19,17 +19,16 @@ ${JENKINS URL}   http://172.24.201.221:8089
 
 
 Login To Escenic Live Center
-    Open Browser To Escenic LiveCenter
-    Input Environment Variable  userName  ELIVE_UserName
-    Input Environment Variable  password  ELIVE_Password
+    Open Browser To Escenic LiveCenter  
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
     Submit Credentials
     Wait Until Page Contains Element  css=h1[class="title events-title ng-binding"]
     Page Should Contain Element  css=h1[class="title events-title ng-binding"]
 
 Log Off From Escenic Live Center
     Click Element  css=div[class='logo']
-    Wait Until Page Contains Element  xpath=//a[text()='Logout']
-    Click Element  xpath=//a[text()='Logout']
+    Click Element  css=a[href="#/logout"]
     Page Should Contain Button  css=button[class="login"]
 
 Open New Editor
@@ -197,7 +196,6 @@ Delete User  [Arguments]  ${userName}
 
 
 Create Entry  [Arguments]  ${inputText}
-	Wait Until Page Contains Element  css=textarea[id="field-basic-"]
 	Input Text  css=textarea[id="field-basic-"]  ${inputText}
 	Input Text  css=div[id="field-xhtml-"]  ${inputText}
 	
@@ -205,63 +203,97 @@ Create Entry  [Arguments]  ${inputText}
 Submit Entry
         Click Element  xpath=//div/a[text()='Submit']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
+    	Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
 
 Open an Event
-	Wait Until Page Contains Element  xpath=//div/h3[text()='Escenic Live Event Test']  10
 	Click Element  xpath=//div/h3[text()='Escenic Live Event Test']
 
 Publish the Submitted Entry
-	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
-	Mouse Over  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
-        Click Element  css=span[class="approve ng-scope"]
-	Wait For  2
+	Mouse Over  xpath=//div/p[text()=' First test entry of Escenic event']
+        Wait For  5
+        Click Element  css=span[class="approve ng-scope"] 
         Page Should Not Contain Element  css=span[class="approve ng-scope"]
 
 Make Entry Sticky
-	Click Element  css=input[class="ng-pristine ng-untouched ng-valid"]
+	Click Element  css=input[class="ng-pristine ng-valid"]
 
 Select Author  [Arguments]  ${inputText}
-	#Click Element  css=div[class="selections"]
+	Click Element  css=span[class="select2-arrow"]
 	Wait For  5
-	Click Element  css=a[href="javascript:void(0)"]
-	#Click Element  css=span[class="select2-arrow"]
-	Input Text  css=input[id="s2id_autogen2_search"]  ${inputText}
-	Wait Until Page Contains Element  css=ul[class="select2-results"]
-	Wait For  2
-	Click Element  css=span[class="select2-match"]
+	Click Element  xpath=//*[@id="s2id_autogen2_search"]
+	Input Text  xpath=//*[@id="s2id_autogen2_search"]  ${inputText}
+	Click Element  css=ul[class="select2-results"]
 
 Add Tweet to an Entry
         Click Element  css=#t1
-        Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(4)
+        Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(2)
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a tweet']
+
+
+Add Tag to an Entry  [Arguments]  ${inputText}
+	Input Text  css=input[class="select2-input select2-default"]  ${inputText}
+	Click Element  css=div[id$='select2-drop']
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+	Page Should Contain Element  css=li[class="select2-search-choice ng-binding ng-scope"]
+
+Add youtube link to an Entry
+        Click Element  css=#t2
+        Click Element  css=#subscription-panel > div:nth-child(2) > youtube > div.t2.tab.open > div:nth-child(3)
+	Wait For  5
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a youtube link']
+
+Add rss to an Entry
+        Click Element  css=#t3
+        Click Element  css=#subscription-panel > div:nth-child(3) > rss > div.t3.tab.open > div:nth-child(2)
+	Wait For  5
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a rss']
+
+
+Filter events by section
+	Click Element  css=#select2-chosen-1
+	Input Text  css=#s2id_autogen1_search  Sports
+	Click Element  css=ul[class="select2-results"]
+        Wait For  5
+	Page Should Contain Element  xpath=//p[text()='Boxing live!!!! ..']
+
+
+
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  css=span[class="edit"]
-	Input Text  xpath=//a[@data-ng-click="update(entry)"]/ancestor::div[4]//textarea   ${inputText}
-	Input Text  xpath=//a[@data-ng-click="update(entry)"]/ancestor::div[4]//div[@data-placeholder="Body"]  ${inputText}
+	Input Text  css=textarea[id$='live-center-editorial-entry-1']   ${inputText}
+	Input Text  css=div[id$='live-center-editorial-entry-1']  ${inputText}
 	Click Element  xpath=//div/a[text()='Update']
 	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Updated entry']
 	
 Delete an Entry
-	Mouse Over  xpath=//div/p[contains(text(), 'Deleting an entry')]
+	Mouse Over  xpath=//div/p[text()=' Deleting an entry']
         Wait For  5
         Click Element  css=span[class="remove"] 
         Click Element  xpath=//div/a[text()='OK']
+        Page Should Not Contain Element  xpath=//div/p[text()=' Deleting an entry']
 
-Publish Entry
+Publish Entry for deleting
         Click Element  xpath=//div/a[text()='Publish']
-	Wait For  1
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Deleting an entry']
 
-Add EmbedURL to an Entry  [Arguments]  ${embedUrl}
+Add EmbedURL to an Entry
 	Click Element  css=button[class="embed-url"]
-	Wait Until Page Contains Element  css=label[class="ng-binding"]
-	Click Element  css=label[class="ng-binding"]
-	#Click Element  css=input[class="ng-pristine ng-valid ng-touched"]
-	Input Text  css=input[type="text"]  ${embedUrl}
+	Click Element  css=input[class='ng-pristine ng-valid']
+	Input Text  css=input[class='ng-pristine ng-valid']  https://vine.co/v/ebDKuAUm56a
 	Click Element  xpath=//div/a[text()='OK']
-	Wait For  1
+	Wait For  5
+        Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with EmbedURL']
 
-Open live center publication event page
-	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
-	Open Browser  ${prsentationLink}  ${BROWSER}
-	Wait For  10
+
