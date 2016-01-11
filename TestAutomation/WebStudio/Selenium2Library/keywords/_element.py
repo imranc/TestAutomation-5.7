@@ -343,6 +343,17 @@ class _ElementKeywords(KeywordGroup):
         self._info("Clicking element '%s'." % locator)
         self._element_find(locator, True, True).click()
 
+    def click_element_if_exists(self, locator):
+        """Click element identified by `locator`.
+
+        Key attributes for arbitrary elements are `id` and `name`. See
+        `introduction` for details about locating elements.
+        """
+        visible = self._is_visible(locator)
+        if visible:
+            self._info("Clicking element '%s'." % locator)
+            self._element_find(locator, True, True).click()
+    
     def click_element_at_coordinates(self, locator, xoffset, yoffset):
         """Click element identified by `locator` at x/y coordinates of the element.
         Cursor is moved and the center of the element and x/y coordinates are
