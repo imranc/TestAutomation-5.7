@@ -520,6 +520,18 @@ return !element.dispatchEvent(evt);
         link = self._element_find(locator, True, True, tag='a')
         link.click()
 
+    def click_link_if_exists(self, locator):
+        """Clicks a link identified by locator.
+
+        Key attributes for links are `id`, `name`, `href` and link text. See
+        `introduction` for details about locating elements.
+        """
+        visible = self._is_visible(locator)
+        if visible:
+            self._info("Clicking link '%s'." % locator)
+            link = self._element_find(locator, True, True, tag='a')
+            link.click()
+
     def get_all_links(self):
         """Returns a list containing ids of all links found in current page.
 
