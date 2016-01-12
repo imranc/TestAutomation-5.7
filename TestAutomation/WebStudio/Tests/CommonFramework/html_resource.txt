@@ -226,7 +226,7 @@ Create Story  [Arguments]  ${inputText}
 	Input Text  css=textarea[placeholder="Summary"]  ${inputText}
 	Wait Until Element Is Visible  css=div[data-placeholder="Body"]  15
 	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
-	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../div[@class="editor-actions"]//input[@id="save"]
+	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../../div[@class="editor-actions"]//input[@id="save"]
 	Wait Until Angular Ready   15s
 
 Create Picture Content  [Arguments]  ${inputText}
@@ -256,8 +256,8 @@ Publish Story
 
 
 Publish Story Content
-	Wait Until Element Is Visible  xpath=//div[@title="Story"]/../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]  15
-	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]
+	Wait Until Element Is Visible  xpath=//div[@title="Story"]/../../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]  15
+	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]
 	Wait Until Angular Ready   15s
 	Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
 	
