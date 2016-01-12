@@ -3,14 +3,14 @@ Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudio
 Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
 Resource          common_resource.txt
 
-Documentation  A test case for creating live-center event
+Documentation  A test case for creating live-center event in Sports section
 
 **Test cases**
-Create an event in CS
-	Create Content Type  NewArticles  Event
-	Type Text  Escenic Live Event Test
+Create an event in Sports Section in CS
+	Create Content Type  Sports  Event
+	Type Text  Boxing live!!!
 	Click Element  LiveCenterEntryType  10  25
-	Type Text  Generic
+	Type Text  Boxingo
 	Type Key  ENTER
 	Click Element  AddPlus
 	Click Element  Source
@@ -18,20 +18,20 @@ Create an event in CS
 	Type Text  Twitter
 	Type Key  ENTER
 	Click Element  Query  200  0
-	Type Text  escenic
+	Type Text  boxing
 	Click Element  AddPlus
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Youtube
 	Type Key  ENTER
 	Click Element  Query  200  0
-	Type Text  animation
+	Type Text  boxing
 	Click Element  AddPlus
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  RSS
 	Type Key  ENTER
 	Click Element  Query  200  0
-	Type Text  http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk
+	Type Text  http://newsrss.bbc.co.uk/rss/sportonline_world_edition/boxing/rss.xml
 	Save And Publish
 	Wait For  120

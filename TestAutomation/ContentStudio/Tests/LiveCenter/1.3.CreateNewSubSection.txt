@@ -1,0 +1,11 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Resource          common_resource.txt
+
+Documentation  A test case for creating a new subsection
+
+**Test cases**
+Create new subsection in CS
+	Create Sub Section  Home  Sports
+	Wait For  60
