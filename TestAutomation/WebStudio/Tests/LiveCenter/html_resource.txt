@@ -20,8 +20,8 @@ ${JENKINS URL}   http://172.24.201.221:8089
 
 Login To Escenic Live Center
     Open Browser To Escenic LiveCenter  
-    Input Environment Variable  userName  ELIVE_UserName
-    Input Environment Variable  password  ELIVE_Password
+    Input Environment Variable  userName  ECE_UserName
+    Input Environment Variable  password  ECE_Password
     Submit Credentials
     Wait Until Page Contains Element  css=h1[class="title events-title ng-binding"]
     Page Should Contain Element  css=h1[class="title events-title ng-binding"]
