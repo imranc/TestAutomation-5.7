@@ -236,7 +236,7 @@ Add Tweet to an Entry
         Click Element  css=#page > section > div.panel.ng-scope.open > div > twitter > div.t1.tab.open > div:nth-child(4)
 	Click Element  xpath=//div/a[text()='Publish']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a tweet']
+    	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with a tweet')]
 
 
 Add Tag to an Entry  [Arguments]  ${inputText}
