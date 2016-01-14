@@ -28,9 +28,4 @@ Create Story
     Wait Until Element Is Visible  css=img[src*="ALTERNATES"]
     Page Should Contain Element  css=img[src*="ALTERNATES"]
     Close Browser
-    
-
-Log off
-    Log Off From CUE
-    Close Browser
 
