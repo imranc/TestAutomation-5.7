@@ -19,7 +19,9 @@ Create Sub Section  [Arguments]  ${SectionName}  ${SubSectionName}
 	Right Click Section  ${SectionName}
 	Click Element  NewSubSection
 	Type Text  ${SubSectionName}
-	Click Element  SaveButton
+	Click Element  StateInSection
+        Click Element  PublishedContent
+        Click Element  SaveButton
 
 Save And Publish
 	Wait For  2

@@ -8,4 +8,5 @@ Documentation  A test case for creating a new subsection
 **Test cases**
 Create new subsection in CS
 	Create Sub Section  Home  Sports
+        Click Element If Exists  FailedToCreate  OkButtonForLayout
 	Wait For  60
