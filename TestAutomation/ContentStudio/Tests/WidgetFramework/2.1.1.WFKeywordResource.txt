@@ -15,6 +15,12 @@ Create New Other Content Type  [Arguments]  ${ContentType}
 	Click Element  ${ContentType}
 	Wait For  2
 
+Create Datasource In Config
+    Right Click Section  Config
+	Click Element  NewContent  100  0
+	Click Element  ${ContentType}
+	Wait For  2
+
 Create Widget Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
@@ -113,6 +119,7 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  ${TagStructure}
 	Click Element  AddSubTags
 	Type Text  ${TagName}
+	Type Key If Exists  tagAlreadyExist  ESC
 	Type Key  ENTER 
 	Type Key  ENTER
 	Type Key  ESC

@@ -14,8 +14,8 @@ Relate a Teaser View With Search Component Widget for Displaying Iterate With Re
 	Close Allopen Tabs
 	Search And Select Without Waiting  TestAutomation Widget (Search Config widget)
 	Double Click Element  InboxItemSelected
-	Click Element  SearchQuerySettingsLabel  65  50
-	Click Element  SearchQuerySettingsLabel  65  50
+	Click Element  ContentTypesLabel  120  25
+	Click Element  ContentTypesLabel  120  25
 	Select Second Item From Dropdown  Story
 	Save And Publish
 

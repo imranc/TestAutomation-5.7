@@ -16,8 +16,8 @@ Create a Search Config widget for fetching the search result
 	Close Allopen Tabs
 	Create Widget Content Type  SearchConfigWidget
 	Type Text  TestAutomation Widget (Search Config widget)
-	Click Element  ContentTypesLabel  65  0
-	Click Element  ContentTypesLabel  80  0
+	Click Element  ContentTypesLabel  120  0
+	Click Element  ContentTypesLabel  120  0
 	Type Text  Picture
 	Wait For  2
 	Type Key  DOWN

@@ -12,7 +12,7 @@ Documentation  Create a Data source
 **Test cases**
 Create an External Data source
 	Type Key  ESC
-	Create New Other Content Type  DataSourceContent
+	Create Datasource In Config
 	Type Text  DataSource by section created by automated test
 	Click Element If Exists  Related  RelatedContent
 	Click Element  AddQuery

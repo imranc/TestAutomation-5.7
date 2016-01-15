@@ -13,7 +13,7 @@ Relate a content "Title" widget with article page
 Create a content "Title" widget
 	Switch To Content Studio
 	Close Allopen Tabs
-	Create Content In Section  NewArticles  Article created for content field widget test
+	Create Content In Section  ContentNewArticles  0  10  Article created for content field widget test
 	Create Widget Content Type  ContentFieldWidget
 	Type Text  TestAutomation Widget (Title Widget)
 	Click Element  DefaultTab

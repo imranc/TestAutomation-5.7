@@ -50,7 +50,7 @@ Create an External Data source By Section Page Group
 	Click Element  PublishButtonSimple
 
 
-	Create New Other Content Type  DataSourceContent
+	Create Datasource In Config
 	Type Text  DataSource by section page group created by automated test
 	Click Element If Exists  Related  RelatedContent
 	Click Element  AddQuery
