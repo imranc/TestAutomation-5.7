@@ -1,0 +1,18 @@
+*** Settings ***
+
+Documentation  A test case to add an instagram link in an entry 
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create an entry with an instagram link
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Create Entry  Test entry of Escenic event with an instagram link
+        Add instagram link to an Entry
+
+Log off
+    Log Off From Escenic Live Center

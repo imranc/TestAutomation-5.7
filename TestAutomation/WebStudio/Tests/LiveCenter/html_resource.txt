@@ -262,6 +262,13 @@ Add rss to an Entry
 	Wait For  5
     	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a rss']
 
+Add instagram link to an Entry
+        Click Element  css=#t4
+        Click Element  css=#subscription-panel > div:nth-child(4) > instagram > div.t4.tab.open > div:nth-child(2)
+	Wait For  5
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait For  5
+    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with an instagram link']
 
 Filter events by section
 	Click Element  css=#select2-chosen-1
