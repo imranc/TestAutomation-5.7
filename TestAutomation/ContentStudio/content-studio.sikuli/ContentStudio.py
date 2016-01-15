@@ -239,16 +239,23 @@ class ContentStudio(object):
                 if exists(Pattern("HomeSection.png").similar(1.00)):
                         click(Pattern("HomeSection.png").similar(1.00))
                         
-        def right_click_section(self, SectionName):
+        def right_click_section(self, *args):
                 ContentStudio.open_section_panel(self)
-                SectionImageName=SectionName+'Section.png'
+                SectionImageName=args[0]+'Section.png'
                 #if exists(Pattern("SectionTab.png")):
                       #  click("SectionTab.png")
                       #  if exists("HomeSection.png"):
                       #          click("HomeSection.png")
                 #ContentStudio.close_allopen_tabs(self)
                 
-                        
+                if len(args) == 3:
+                    offset_x = int(args[1])
+                    offset_y = int(args[2])
+                if exists(Pattern(SectionImageName).similar(0.95)):
+                    if len(args) == 1:
+                        rightClick(Pattern(SectionImageName).similar(0.95))
+                    elif len(args) == 3:
+                        rightClick(Pattern(SectionImageName).targetOffset(offset_x,offset_y))
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         rightClick(Pattern(SectionImageName).similar(0.95))
                 else:
@@ -262,7 +269,12 @@ class ContentStudio(object):
                                 click("ExpansionIcon.png")
                         
                         if exists(Pattern(SectionImageName).similar(0.95)):
-                                rightClick(Pattern(SectionImageName).similar(0.95))
+                                if len(args) == 1:
+                                    rightClick(Pattern(SectionImageName).similar(0.95))
+                                    rightClick(Pattern(SectionImageName).similar(0.95))
+                                elif len(args) == 3:
+                                    rightClick(Pattern(SectionImageName).targetOffset(offset_x,offset_y))
+
                         else:
                                 ImageName=capture_CS_screenshot()
                                 raise AssertionError(SectionName+' Section does not exist. Screenshot: '+ImageName)
@@ -391,6 +403,8 @@ class ContentStudio(object):
 
                 if len(args) == 4:
                         type(args[3])
+                elif len(args) == 2:
+                        type(args[1])
                 else:
                         type("This image is created by automated smoke test BOT")
                         
