@@ -33,7 +33,8 @@ Create an event in CS
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk
-	Click Element  LiveCenterSubscriptions  -15  240
+	Wait For  5
+	Click Element  LiveCenterSubscriptions  -15  230
 	Click Element  LiveCenterSubscriptions  -15  240
 	Click Element  Source
 	Click Element  Source  210  5
