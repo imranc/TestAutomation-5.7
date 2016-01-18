@@ -39,9 +39,11 @@ class ContentStudio(object):
                 dragDestination = args[1]
                 dragDestinationImageName = dragDestination+'.png'
                 if len(args) == 2:
-                        if exists(Pattern(dragSourceImageName).similar(0.80)) and exists(Pattern(dragDestinationImageName).similar(0.80)):
-                                drop_point = find(Pattern(dragDestinationImageName).similar(0.80))
-                                dragDrop(dragSourceImageName, drop_point)
+                    if exists(Pattern(dragSourceImageName).similar(0.80)) and exists(Pattern(dragDestinationImageName).similar(0.80)):
+                            drop_point = find(Pattern(dragDestinationImageName).similar(0.80))
+                            dragDrop(dragSourceImageName, drop_point)
+                    else:
+                            raise AssertionError("Either drag source or drop destination images showing some problems..")
                 elif len(args) == 4:
                         offset_x = int(args[2])
                         offset_y = int(args[3])
@@ -51,7 +53,7 @@ class ContentStudio(object):
                                 dragDrop(corner, drop_point)                         
                 else:
                         ScreenShot=capture_CS_screenshot()
-                        raise AssertionError("Either drag source or drop destination images showing some problems..")
+                        raise AssertionError("Check number of arguments")
 
         def switch_to_cue(self):
                 #***This Keyword switches focus to Escenic Content Studio***#
