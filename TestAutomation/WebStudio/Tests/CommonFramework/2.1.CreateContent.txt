@@ -13,8 +13,8 @@ Login to CUE
     
 Create Picture
     Switch To CUE
-    Create Picture Content  Image content created by automated tests
-    Publish Story
+    Create Story  This is an Automated story For Common Framework
+    Publish Story Content
     Wait Until Angular Ready   15s
     Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
     ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
@@ -22,7 +22,7 @@ Create Picture
     Close Browser
     Open Browser  ${previewUrl}  ${BROWSER}
     Maximize Browser Window
-    Wait Until Element Is Visible  css=img[src*="ALTERNATES"]
-    Page Should Contain Element  css=img[src*="ALTERNATES"]
+    Wait Until Element Is Visible  css=h1[class="title"]
+    Page Should Contain   This is an Automated story For Common Framework
     Close Browser
 

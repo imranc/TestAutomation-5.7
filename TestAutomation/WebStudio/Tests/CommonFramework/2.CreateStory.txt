@@ -15,17 +15,17 @@ Create Story
     Create Picture Content  Image content created by automated tests
     Publish Story
     Create Story  This is an Automated story For Common Framework
-    Drag And Drop With Sikuli  ImageContentTab  RelatedPicturesDropZone
+    Drag And Drop With Sikuli  ImageContentTab  RelatedContentDropZone
     Click Element  css=div.tab.new-story
     Publish Story Content
-    Click Element  css=div.tab.image>div.close
+    Click Element  css=div.tab.picture>div.close
     Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
     ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
     Log Off From CUE
     Close Browser
     Open Browser  ${previewUrl}  ${BROWSER}
     Maximize Browser Window
-    Wait Until Element Is Visible  css=img[src*="ALTERNATES"]
-    Page Should Contain Element  css=img[src*="ALTERNATES"]
+    Wait Until Element Is Visible  css=img[src*="Image-content-created-by-automated-tests"]
+    Page Should Contain Element  css=img[src*="Image-content-created-by-automated-tests"]
     Close Browser
 
