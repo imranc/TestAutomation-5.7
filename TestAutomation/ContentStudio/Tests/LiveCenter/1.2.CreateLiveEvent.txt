@@ -12,34 +12,34 @@ Create an event in CS
 	Click Element  LiveCenterEntryType  10  25
 	Type Text  Generic
 	Type Key  ENTER
-	Click Element  AddPlus
+	Click Element  LiveCenterSubscriptions  -15  20
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Twitter
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  escenic
-	Click Element  AddPlus
+	Click Element  LiveCenterSubscriptions  -15  80
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Youtube
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  animation
-	Click Element  AddPlus
+	Click Element  LiveCenterSubscriptions  -15  140
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  RSS
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk
-	Wait For  5
-	Click Element  AddPlus
+	Click Element  LiveCenterSubscriptions  -15  230
+	Scroll Element  ScrollBar  0  1400
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Instagram
 	Type Key  ENTER
-	Click Element  Query  200  0
+	Click Element  Instagram  0  30
 	Type Text  natgeo
 	Save And Publish
 	Wait For  120
