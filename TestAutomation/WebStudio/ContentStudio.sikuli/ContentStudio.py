@@ -6,7 +6,7 @@ from org.sikuli.script.natives import Vision
 from sikuli.Sikuli import *
 
 
-addImagePath("ContentStudio.sikuli\gfx")
+addImagePath("ContentStudio.sikuli/gfx")
 
 class ContentStudio(object):
         def type_text(self, stringToType):

@@ -14,9 +14,9 @@ Login to CUE
 Create Picture
     Switch To CUE
     Create Story  This is an Automated story For Common Framework
-    Publish Story Content
+    Publish Story
     Wait Until Angular Ready   15s
-    Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+    Wait Until Element Is Visible  css=cf-metadata-row[ng-if="vm.content.links && vm.content.links['alternate']"]  15
     ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
     Log Off From CUE
     Close Browser

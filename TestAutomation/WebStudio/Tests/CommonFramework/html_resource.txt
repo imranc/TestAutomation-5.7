@@ -226,7 +226,7 @@ Create Story  [Arguments]  ${inputText}
 	#Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
 	Wait Until Element Is Visible  css=div[data-placeholder="Body"]  15
 	Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  ${inputText}
-	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../../div[@class="editor-actions"]//input[@id="save"]
+	Click Button  css=div[class*="new-story"] >div>div>div>div:nth-child(2)>input#save
 	Wait Until Angular Ready   15s
 
 Create Picture Content  [Arguments]  ${inputText}
@@ -246,19 +246,19 @@ Create Picture Content  [Arguments]  ${inputText}
 	Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
 	Input Text  css=textarea[placeholder="Caption"]  ${inputText}
 	Input Text  css=textarea[placeholder="Alternative text"]  ${inputText}
-	Click Button  css=input#save
+	Click Button  css=div[class*="picture"] >div>div>div>div:nth-child(2)>input#save
 	Wait Until Angular Ready   15s
 
 Publish Story
-	Wait Until Element Is Visible  css=input[id="publish"]  15
-	Click Button  css=input[id="publish"]
+	Wait Until Element Is Visible  css=div[class*="new-story"] >div>div>div>div:nth-child(2)>input#publish  15
+	Click Button  css=div[class*="new-story"]>div>div>div>div:nth-child(2)>input#publish
 	Wait Until Angular Ready   15s
 	Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
 
 
-Publish Story Content
-	Wait Until Element Is Visible  xpath=//div[@title="Story"]/../../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]  15
-	Click Button  xpath=//div[@title="Story"]/../../../../../../../../../../../../div[@class="editor-actions"]//input[@id="publish"]
+Publish Picture
+	Wait Until Element Is Visible  css=div[class*="picture"] >div>div>div>div:nth-child(2)>input#publish  15
+	Click Button  css=div[class*="picture"]>div>div>div>div:nth-child(2)>input#publish
 	Wait Until Angular Ready   15s
 	Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
 	

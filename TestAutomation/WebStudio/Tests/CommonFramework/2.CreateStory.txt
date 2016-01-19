@@ -13,13 +13,13 @@ Login to CUE
 Create Story
     Switch To CUE
     Create Picture Content  Image content created by automated tests
-    Publish Story
+    Publish Picture
     Create Story  This is an Automated story For Common Framework
     Drag And Drop With Sikuli  ImageContentTab  RelatedContentDropZone
     Click Element  css=div.tab.new-story
-    Publish Story Content
+    Publish Story
     Click Element  css=div.tab.picture>div.close
-    Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+    Wait Until Element Is Visible  css=cf-metadata-row[ng-if="vm.content.links && vm.content.links['alternate']"]  15
     ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
     Log Off From CUE
     Close Browser
