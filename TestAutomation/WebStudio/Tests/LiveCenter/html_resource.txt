@@ -252,7 +252,7 @@ Add youtube link to an Entry
 	Wait For  5
 	Click Element  xpath=//div/a[text()='Publish']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a youtube link']
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a youtube link')]
 
 Add rss to an Entry
         Click Element  css=#t3
@@ -260,7 +260,7 @@ Add rss to an Entry
 	Wait For  5
 	Click Element  xpath=//div/a[text()='Publish']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a rss']
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
 
 Add instagram link to an Entry
         Click Element  css=#t4
@@ -268,7 +268,7 @@ Add instagram link to an Entry
 	Wait For  5
 	Click Element  xpath=//div/a[text()='Publish']
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with an instagram link']
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with an instagram link')]
 
 Filter events by section
 	Click Element  css=#select2-chosen-1
