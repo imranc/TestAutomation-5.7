@@ -18,6 +18,6 @@ Create an entry with EmbedURL
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]
 	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with Flickr content')]/../../../../../..//ul/li[contains(text(),'Flickr')]
 	Open live center publication event page
-	Wait Until Page Contains Element  css=iframe[class="flickr-embed-frame"]
+	Wait Until Page Contains Element  css=iframe[class="flickr-embed-frame"]  30
 	Select Frame  css=iframe[class="flickr-embed-frame"]
 	Page Should Contain Element  css=a[href="https://www.flickr.com/photos/102916444@N04/15494322140"]
