@@ -18,6 +18,7 @@ Create an entry with a tweet
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with a tweet')]
 	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with a tweet')]/../../../../../..//ul/li[contains(text(),'Twitter')]
 	Open live center publication event page
+	Wait Until Page Contains Element  css=iframe[class="twitter-tweet twitter-tweet-rendered"]  30
 	Select Frame  css=iframe[class="twitter-tweet twitter-tweet-rendered"]
 	Page Should Contain Element  css=a[href^="https://twitter.com/"]
 	Page Should Contain Element  css=a[class="FollowButton follow-button profile"]
