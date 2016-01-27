@@ -256,8 +256,6 @@ class ContentStudio(object):
                         rightClick(Pattern(SectionImageName).similar(0.95))
                     elif len(args) == 3:
                         rightClick(Pattern(SectionImageName).targetOffset(offset_x,offset_y))
-                if exists(Pattern(SectionImageName).similar(0.95)):
-                        rightClick(Pattern(SectionImageName).similar(0.95))
                 else:
                         click(Pattern("ListsTab.png").targetOffset(0,-12))
                         wait(2)
