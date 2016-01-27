@@ -18,7 +18,7 @@ Create New Other Content Type  [Arguments]  ${ContentType}
 Create Datasource In Config
     Right Click Section  Config
 	Click Element  NewContent  100  0
-	Click Element  ${ContentType}
+	Click Element  DataSourceContent
 	Wait For  2
 
 Create Widget Content Type  [Arguments]  ${ContentType}
