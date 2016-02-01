@@ -227,9 +227,10 @@ class eceSikuli(object):
                 #***This keyword scroll a element to specified target axis***#
                 click(Pattern("ListsTab.png").targetOffset(0,-12))
                 wait(2)
-                corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
-                drop_point = corner.getTarget().offset(50, 250)
-                dragDrop(corner, drop_point)
+                if exists(Pattern("ListsTab.png").similar(0.90)):
+						corner=find(Pattern("ListsTab.png").targetOffset(0,-23))
+						drop_point = corner.getTarget().offset(50, 250)
+						dragDrop(corner, drop_point)
                 ScrollImageName = args[0]+'.png'
                                 
                 offset_x = int(args[1])
