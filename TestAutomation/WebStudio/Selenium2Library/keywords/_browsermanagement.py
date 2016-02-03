@@ -159,7 +159,7 @@ class _BrowserManagementKeywords(KeywordGroup):
                 desired_capabilities=None,ff_profile_dir=None):
         ece_host= os.environ['ECE_CF_HOST']
         ece_port= os.environ['ECE_CF_PORT']
-        ece_cf_address= 'http://'+ece_host+':'+ece_port+'/cf/develop'
+        ece_cf_address= 'http://'+ece_host+':'+ece_port+'/cue-web'
         url=ece_cf_address
         if remote_url:
             self._info("Opening browser '%s' to base url '%s' through remote server at '%s'"
