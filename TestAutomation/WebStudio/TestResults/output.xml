@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160121 19:56:37.291" generator="Robot 2.8.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/WebStudio/Tests/CommonFramework/2.1.CreateContent.txt" id="s1" name="2.1.CreateContent">
+<test id="s1-t1" name="Login to CUE">
+<kw type="kw" name="html_resource.Login To CUE">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="ExtendedSelenium2Library.Open Browser To Escenic Common Framework">
+<doc></doc>
+<arguments>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160121 19:56:37.754" level="INFO">Opening browser 'firefox' to base url 'http://qa-oberon:8080/cf/develop'</msg>
+<status status="PASS" endtime="20160121 19:56:41.510" starttime="20160121 19:56:37.754"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:41.978" starttime="20160121 19:56:41.510"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=input[id="username"]</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:42.061" starttime="20160121 19:56:41.978"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Environment Variable">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>ECE_CF_UserName</arg>
+</arguments>
+<msg timestamp="20160121 19:56:42.062" level="INFO">Typing text 'ECE_CF_UserName' into text field 'username'</msg>
+<status status="PASS" endtime="20160121 19:56:42.724" starttime="20160121 19:56:42.061"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Environment Variable">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>ECE_CF_Password</arg>
+</arguments>
+<msg timestamp="20160121 19:56:42.724" level="INFO">Typing text 'ECE_CF_Password' into text field 'password'</msg>
+<status status="PASS" endtime="20160121 19:56:43.372" starttime="20160121 19:56:42.724"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=input[id="login"]</arg>
+</arguments>
+<msg timestamp="20160121 19:56:43.372" level="INFO">Clicking button 'css=input[id="login"]'.</msg>
+<status status="PASS" endtime="20160121 19:56:48.344" starttime="20160121 19:56:43.372"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:48.362" starttime="20160121 19:56:48.344"></status>
+</kw>
+<status status="PASS" endtime="20160121 19:56:48.363" starttime="20160121 19:56:37.753"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20160121 19:56:48.363" critical="yes" starttime="20160121 19:56:37.752"></status>
+</test>
+<test id="s1-t2" name="Create Picture">
+<kw type="kw" name="Remote.Switch To Cue">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:48.380" starttime="20160121 19:56:48.365"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Set Window Size">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>1800</arg>
+<arg>1600</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:49.151" starttime="20160121 19:56:48.381"></status>
+</kw>
+<kw type="kw" name="html_resource.Create Story">
+<doc></doc>
+<arguments>
+<arg>This is an Automated story For Common Framework</arg>
+</arguments>
+<kw type="kw" name="ExtendedSelenium2Library.Mouse Over">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>css=a[title="File"]</arg>
+</arguments>
+<msg timestamp="20160121 19:56:49.152" level="INFO">Simulating Mouse Over on element 'css=a[title="File"]'</msg>
+<status status="PASS" endtime="20160121 19:56:49.188" starttime="20160121 19:56:49.151"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:49.298" starttime="20160121 19:56:49.189"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Mouse Over">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>css=a[title="New"]</arg>
+</arguments>
+<msg timestamp="20160121 19:56:49.299" level="INFO">Simulating Mouse Over on element 'css=a[title="New"]'</msg>
+<status status="PASS" endtime="20160121 19:56:49.437" starttime="20160121 19:56:49.299"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=a[title="Story"]</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:49.624" starttime="20160121 19:56:49.437"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=a[title="Story"]</arg>
+</arguments>
+<msg timestamp="20160121 19:56:49.625" level="INFO">Clicking element 'css=a[title="Story"]'.</msg>
+<status status="PASS" endtime="20160121 19:56:55.932" starttime="20160121 19:56:49.625"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:55.969" starttime="20160121 19:56:55.932"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=div[title="new-story: New Story"]</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:56:55.975" starttime="20160121 19:56:55.970"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=textarea[placeholder="Title"]</arg>
+<arg>${inputText}</arg>
+</arguments>
+<msg timestamp="20160121 19:56:55.976" level="INFO">Typing text 'This is an Automated story For Common Framework' into text field 'css=textarea[placeholder="Title"]'</msg>
+<status status="PASS" endtime="20160121 19:56:59.654" starttime="20160121 19:56:55.975"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=textarea[placeholder="Subtitle"]</arg>
+<arg>${inputText}</arg>
+</arguments>
+<msg timestamp="20160121 19:56:59.654" level="INFO">Typing text 'This is an Automated story For Common Framework' into text field 'css=textarea[placeholder="Subtitle"]'</msg>
+<status status="PASS" endtime="20160121 19:57:03.084" starttime="20160121 19:56:59.654"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div[data-placeholder="Body"]</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:03.100" starttime="20160121 19:57:03.084"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text Into Rich Text Editor">
+<doc>Types the given `text` into rich text field identified by `locator`.</doc>
+<arguments>
+<arg>css=div[data-placeholder="Body"]</arg>
+<arg>${inputText}</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:12.337" starttime="20160121 19:57:03.100"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=div[class*="new-story"] &gt;div&gt;div&gt;div&gt;div:nth-child(2)&gt;input#save</arg>
+</arguments>
+<msg timestamp="20160121 19:57:12.337" level="INFO">Clicking button 'css=div[class*="new-story"] &gt;div&gt;div&gt;div&gt;div:nth-child(2)&gt;input#save'.</msg>
+<status status="PASS" endtime="20160121 19:57:14.503" starttime="20160121 19:57:12.337"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:14.542" starttime="20160121 19:57:14.503"></status>
+</kw>
+<status status="PASS" endtime="20160121 19:57:14.542" starttime="20160121 19:56:49.151"></status>
+</kw>
+<kw type="kw" name="html_resource.Publish Story">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div[class*="new-story"] &gt;div&gt;div&gt;div&gt;div:nth-child(2)&gt;input#publish</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:14.564" starttime="20160121 19:57:14.543"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=div[class*="new-story"]&gt;div&gt;div&gt;div&gt;div:nth-child(2)&gt;input#publish</arg>
+</arguments>
+<msg timestamp="20160121 19:57:14.564" level="INFO">Clicking button 'css=div[class*="new-story"]&gt;div&gt;div&gt;div&gt;div:nth-child(2)&gt;input#publish'.</msg>
+<status status="PASS" endtime="20160121 19:57:17.599" starttime="20160121 19:57:14.564"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:17.639" starttime="20160121 19:57:17.600"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//div//span[contains(text(), 'Published')]</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:17.655" starttime="20160121 19:57:17.639"></status>
+</kw>
+<status status="PASS" endtime="20160121 19:57:17.655" starttime="20160121 19:57:14.542"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:17.674" starttime="20160121 19:57:17.655"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div[ng-if="vm.content.links &amp;&amp; vm.content.links['alternate']"]&gt;div[class="right"]</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:17.711" starttime="20160121 19:57:17.675"></status>
+</kw>
+<kw type="kw" name="${previewUrl} = ExtendedSelenium2Library.Get Element Attribute">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>css=a[ng-href*="http"]@ng-href</arg>
+</arguments>
+<msg timestamp="20160121 19:57:17.724" level="INFO">${previewUrl} = http://oberon.qa.local/incoming/article305.ece</msg>
+<status status="PASS" endtime="20160121 19:57:17.724" starttime="20160121 19:57:17.711"></status>
+</kw>
+<kw type="kw" name="html_resource.Log Off From CUE">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=a[ng-click='vm.logout()']</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:17.731" starttime="20160121 19:57:17.725"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=a[ng-click='vm.logout()']</arg>
+</arguments>
+<msg timestamp="20160121 19:57:17.732" level="INFO">Clicking element 'css=a[ng-click='vm.logout()']'.</msg>
+<status status="PASS" endtime="20160121 19:57:18.572" starttime="20160121 19:57:17.732"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=input[value='Login']</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:18.579" starttime="20160121 19:57:18.573"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>css=input[value='Login']</arg>
+</arguments>
+<msg timestamp="20160121 19:57:18.586" level="INFO">Current page contains element 'css=input[value='Login']'.</msg>
+<status status="PASS" endtime="20160121 19:57:18.586" starttime="20160121 19:57:18.580"></status>
+</kw>
+<status status="PASS" endtime="20160121 19:57:18.587" starttime="20160121 19:57:17.724"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:18.718" starttime="20160121 19:57:18.587"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${previewUrl}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160121 19:57:18.719" level="INFO">Opening browser 'firefox' to base url 'http://oberon.qa.local/incoming/article305.ece'</msg>
+<status status="PASS" endtime="20160121 19:57:26.159" starttime="20160121 19:57:18.718"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:26.610" starttime="20160121 19:57:26.159"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=h1[class="title"]</arg>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:26.815" starttime="20160121 19:57:26.610"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>This is an Automated story For Common Framework</arg>
+</arguments>
+<msg timestamp="20160121 19:57:26.840" level="INFO">Current page contains text 'This is an Automated story For Common Framework'.</msg>
+<status status="PASS" endtime="20160121 19:57:26.840" starttime="20160121 19:57:26.816"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160121 19:57:26.917" starttime="20160121 19:57:26.840"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20160121 19:57:26.918" critical="yes" starttime="20160121 19:56:48.364"></status>
+</test>
+<doc>A test case to Create content in CUE</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20160121 19:57:26.919" starttime="20160121 19:56:37.291"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="2" id="s1" name="2.1.CreateContent">2.1.CreateContent</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

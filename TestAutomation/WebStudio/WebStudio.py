@@ -40,6 +40,7 @@ import ExtendedSelenium2Library
 
 try:
     import Selenium2Library
+    from selenium import webdriver
 except ImportError:
     print 'Importing Selenium2Library module failed.'
     print 'Please make sure you have Selenium2Library installed.'
