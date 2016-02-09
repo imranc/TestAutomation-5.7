@@ -214,12 +214,10 @@ Delete User  [Arguments]  ${userName}
 
 
 Create Story  [Arguments]  ${inputText}
-	Mouse Over  css=a[title="File"]
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Wait Until Page Contains Element  css=div.story
+	Click Element  css=div.story
         Wait Until Angular Ready   15s
-        Mouse OVer  css=a[title="New"]
-	Wait Until Page Contains Element  css=a[title="Story"]
-	Click Element  css=a[title="Story"]
-	Wait Until Angular Ready   15s
 	Wait Until Page Contains Element  css=div[title="new-story: New Story"]
 	Input Text  css=textarea[placeholder="Title"]  ${inputText}
 	Input Text  css=textarea[placeholder="Subtitle"]  ${inputText}
@@ -230,16 +228,11 @@ Create Story  [Arguments]  ${inputText}
 	Wait Until Angular Ready   15s
 
 Create Picture Content  [Arguments]  ${inputText}
-	Mouse Over  css=a[title="File"]
-        Wait Until Angular Ready   15s
-        Mouse OVer  css=a[title="New"]
-	Wait Until Page Contains Element  css=a[title="Picture"]
-	Click Element  css=a[title="Picture"]
-	Wait For  10
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Wait Until Page Contains Element  css=div.picture
+	Click Element  css=div.picture
+	Wait For  5
 	Type Text  C:\\Users\\Public\\Pictures\\Sample Pictures\\Lighthouse.jpg
-	#Click Element  css=div[class="splash-button new-picture ng-scope"]
-	#Wait Until Element is Visible  css=div[class="splash-button new-picture ng-scope"]
-	#Choose File  css=div[class="splash-button new-picture ng-scope"]  'C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg'
 	Type Key  ENTER
 	Wait Until Page Contains Element  css=textarea[placeholder="File Name"]  30
 	Input Text  css=textarea[placeholder="File Name"]  ${inputText}

@@ -15,6 +15,8 @@ Create Story
     Create Picture Content  Image content created by automated tests
     Publish Picture
     Create Story  This is an Automated story For Common Framework
+    Click Element  xpath=//div[contains(@class, "new-story")]//span[text()="Section"]
+    Click Element  xpath=//div[contains(@class, "new-story")]//span[text()="Authors"]
     Drag And Drop With Sikuli  ImageContentTab  RelatedContentDropZone
     Click Element  css=div.tab.new-story
     Publish Story
