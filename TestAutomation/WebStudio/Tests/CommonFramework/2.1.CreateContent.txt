@@ -13,6 +13,7 @@ Login to CUE
     
 Create Story content
     Switch To CUE
+    Set Window Size  1800  1600
     Create Story  This is an Automated story For Common Framework
     Publish Story
     Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
