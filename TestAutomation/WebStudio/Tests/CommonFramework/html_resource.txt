@@ -232,7 +232,7 @@ Create Picture Content  [Arguments]  ${inputText}
 	Wait Until Page Contains Element  css=div.picture
 	Click Element  css=div.picture
 	Wait For  5
-	Type Text  *jpg
+	Type Text  C:\\Users\\Public\\Pictures\\Sample Pictures\\Lighthouse.jpg
 	#Click Element  css=div[class="splash-button new-picture ng-scope"]
 	#Wait Until Element is Visible  css=div[class="splash-button new-picture ng-scope"]
 	#Choose File  css=div[class="splash-button new-picture ng-scope"]  'C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg'
