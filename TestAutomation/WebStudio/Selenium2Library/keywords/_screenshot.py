@@ -99,7 +99,7 @@ class _ScreenshotKeywords(KeywordGroup):
         else:
             filename = filename.replace('/', os.sep)
         logdir = self._get_log_dir()
-        logdir = logdir + '\Screenshots'
+        logdir = logdir + '/Screenshots'
         path = os.path.join(logdir, filename)
         link = robot.utils.get_link_path(path, logdir)
         return path, link
