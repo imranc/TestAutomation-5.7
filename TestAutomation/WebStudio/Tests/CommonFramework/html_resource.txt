@@ -34,6 +34,7 @@ Login To Escenic Mobile Studio
 
 Login To CUE
     Open Browser To Escenic Common Framework  ${BROWSER}
+    Switch To CUE
     Maximize Browser Window
     Wait Until Page Contains Element  css=input[id="username"]
     Input Environment Variable  username  ECE_CF_UserName

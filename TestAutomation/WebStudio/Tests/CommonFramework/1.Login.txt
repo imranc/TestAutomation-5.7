@@ -9,7 +9,6 @@ Resource       common_resource.txt
 
 Login to CUE
     Close All Browsers
-    Switch To CUE
     Login To CUE
     Page Should Contain Element  css=a[ng-click='vm.logout()']
 
