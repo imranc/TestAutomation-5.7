@@ -55,18 +55,23 @@ class ContentStudio(object):
                         ScreenShot=capture_CS_screenshot()
                         raise AssertionError("Check number of arguments")
 
-        def switch_to_cue(self):
+        def switch_to_cue(self, *args):
                 #***This Keyword switches focus to Escenic Content Studio***#
                 #Vision.setParameter("MinTargetSize", 6)
                 
-                eceAppName="CUE"
                 ScreenHighlighter.closeAll()
-                #eceVersion=os.environ['ECE_Version']
-                #eceAppName=eceAppName+eceVersion
+		if args[0]=='firefox':
+			eceAppName='/Applications/Firefox.app'
+                elif args[0]=='GoogleChrome':
+			eceAppName='/Applications/Google Chrome.app'
                 switchApp(eceAppName)
 
 
-                
+	def close_existing_browser_window(self, *args):
+		if args[0]=='firefox':
+                        closeApp('/Applications/Firefox.app')
+                elif args[0]=='GoogleChrome':
+                        closeApp('/Applications/Google Chrome.app')
   
 if __name__ == '__main__':  
     SRL = ContentStudio()  
