@@ -33,14 +33,16 @@ Login To Escenic Mobile Studio
     Page Should Contain Button  Draft
 
 Login To CUE
+    Close Existing Browser Window  ${BROWSER}
     Open Browser To Escenic Common Framework  ${BROWSER}
-    Switch To CUE
     Maximize Browser Window
+    Set Window Size  1600  1600
     Wait Until Page Contains Element  css=input[id="username"]
     Input Environment Variable  username  ECE_CF_UserName
     Input Environment Variable  password  ECE_CF_Password
     Click Button  css=input[id="login"]
     Wait Until Angular Ready   15s
+    Switch To CUE  ${BROWSER}
 
 Log Off From CUE
     Wait Until Page Contains Element  css=a[ng-click='vm.logout()']
