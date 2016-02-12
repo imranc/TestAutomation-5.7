@@ -10,7 +10,7 @@ Resource       common_resource.txt
 Login to CUE
     Login To CUE
     
-Create Story
+Create picture and relate that to a story
     Create Picture Content  Image content created by automated tests
     Publish Picture
     Create Story  This is an Automated story For Common Framework

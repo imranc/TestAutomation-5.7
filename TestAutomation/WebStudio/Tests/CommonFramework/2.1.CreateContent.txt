@@ -24,3 +24,26 @@ Create Story content
     Page Should Contain   This is an Automated story For Common Framework
     Close Browser
 
+Create news content from empty main area
+    Login To CUE
+    Click Element  css=div.new-story
+    Wait Until Angular Ready   15s
+    Wait Until Page Contains Element  css=div[title="new-story: New Story"]
+    Input Text  css=textarea[placeholder="Title"]  Automated story For CUE created from splash screen
+    Input Text  css=textarea[placeholder="Subtitle"]  Automated story For CUE created from splash screen
+    Input Text  css=textarea[placeholder="Lead text"]  Automated story For CUE created from splash screen
+    Wait Until Element Is Visible  css=div[data-placeholder="Body"]  15
+    Input Text Into Rich Text Editor  css=div[data-placeholder="Body"]  Automated story For CUE created from splash screen
+    Click Button  css=div[class*="new-story"] >div>div>div>div:nth-child(2)>input#save
+    Wait Until Angular Ready   15s
+    Publish Story
+    Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+    ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
+    Log Off From CUE
+    Close Browser
+    Open Browser  ${previewUrl}  ${BROWSER}
+    Maximize Browser Window
+    Wait Until Element Is Visible  css=h1[class="title"]
+    Page Should Contain   Automated story For CUE created from splash screen
+    Close Browser
+
