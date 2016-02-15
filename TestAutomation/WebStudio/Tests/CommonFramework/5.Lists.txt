@@ -1,0 +1,28 @@
+*** Settings ***
+
+Documentation  A test case to open lists and add contents to list
+
+Resource       common_resource.txt
+
+
+*** Test Cases***
+
+Login to CUE
+    Login To CUE
+    
+Open list
+    Click Element  css=#panels .tabs > .lists
+    Click Element  xpath=//li[contains(text(), "NewsList")]
+    Page Should Contain  Location: New Articles
+    Page Should Contain Element  xpath=//div[contains(text(),"NewsList")]
+
+Add content to list
+    Click Element  css=#panels .tabs > .search
+    Input Text  css=input[name="search"]  Catchy
+    Drag And Drop With Sikuli  PublishedStoryInSearchResults  NewsListDroppablePanel
+    Alert Should Not Be Present
+    Page Should Contain Element  css=div.list-item
+
+Log off
+    Log Off From CUE
+    Close Browser
