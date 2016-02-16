@@ -279,7 +279,7 @@ Filter events by section
 
 
 Update an Entry  [Arguments]  ${inputText}
-	Click Element  css=span[class="edit"]
+	Click Element  css=span.edit
 	Input Text  xpath=//a[@data-ng-click="update(entry)"]/ancestor::div[4]//textarea   ${inputText}
 	Input Text  xpath=//a[@data-ng-click="update(entry)"]/ancestor::div[4]//div[@data-placeholder="Body"]  ${inputText}
 	Click Element  xpath=//div/a[text()='Update']
@@ -288,7 +288,7 @@ Update an Entry  [Arguments]  ${inputText}
 Delete an Entry
 	Mouse Over  xpath=//div/p[contains(text(), 'Deleting an entry')]
         Wait For  5
-        Click Element  css=span[class="remove"] 
+        Click Element  css=span.remove 
         Click Element  xpath=//div/a[text()='OK']
 
 Publish Entry
