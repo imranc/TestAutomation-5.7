@@ -12,6 +12,8 @@ Create an event in CS
 	Click Element  LiveCenterEntryType  10  25
 	Type Text  Generic
 	Wait For  2
+	Type Key  DOWN
+	Type Key  DOWN
 	Type Key  ENTER
 	Click Element  ExternalContentTab
 	Click Element  LiveCenterSubscriptions  -15  20
