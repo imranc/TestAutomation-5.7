@@ -10,23 +10,25 @@ Create an event in Sports Section in CS
 	Create Content Type  Sports  Event
 	Type Text  Boxing live!!!
 	Click Element  LiveCenterEntryType  10  25
-	Type Text  Boxingo
+	Type Text  Boxing
+	Wait For  2
 	Type Key  ENTER
-	Click Element  AddPlus
+	Click Element  ExternalContentTab
+	Click Element  LiveCenterSubscriptions  -15  20
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Twitter
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  boxing
-	Click Element  AddPlus
+	Click Element  LiveCenterSubscriptions  -15  80
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Youtube
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  boxing
-	Click Element  AddPlus
+	Click Element  LiveCenterSubscriptions  -15  140
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  RSS
