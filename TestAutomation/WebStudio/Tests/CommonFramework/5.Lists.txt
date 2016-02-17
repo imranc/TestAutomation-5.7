@@ -22,6 +22,8 @@ Add content to list
     Drag And Drop With Sikuli  PublishedStoryInSearchResults  NewsListDroppablePanel
     Alert Should Not Be Present
     Page Should Contain Element  css=div.list-item
+    Click Element  css=#cf-list-editor-loader .remove
+    Page Should Not Contain Element  css=div.list-item
 
 Log off
     Log Off From CUE
