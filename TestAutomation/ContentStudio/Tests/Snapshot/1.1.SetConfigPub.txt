@@ -1,0 +1,41 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  A test case for Set config publication in section parameter
+
+Resource       common_resource.txt
+
+**Test cases**
+Set config publication to render template
+	Switch To Content Studio
+	Close Allopen Tabs
+	Click Element If Exists  SectionsTab  SectionsTab
+	Click Element  FrontPageNotSelected
+	Wait For  2
+	Type Key  CTRL  E
+	Wait For  2
+	Click Element  sectionParameter
+	Wait For  2
+	Type Key  ENTER
+	Wait For  2
+	Type Key  UP
+	Wait For  2
+	Type Text  config.publication=qa-config
+	Wait For  2
+	Click Element  Sectionsave
+	
+	###Assertion###
+		Open Browser To Publication 
+		Check If Exists  homepage
+		Close Browser
+
+
+	
+	
+
+	
+	

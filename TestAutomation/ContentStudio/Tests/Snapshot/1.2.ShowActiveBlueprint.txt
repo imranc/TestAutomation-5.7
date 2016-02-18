@@ -1,0 +1,19 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation Test Case to make sure the active blueprint list shows the blueprint properly.
+
+Resource       common_resource.txt
+
+**Test cases**
+Show active blueprint
+    Switch To Content Studio
+    Close Allopen Tabs
+    Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
+
+    ###Assertion###
+        Check If Exists  SnapShowActiveBlueprintAssertion
