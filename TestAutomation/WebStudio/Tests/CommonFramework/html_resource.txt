@@ -218,7 +218,7 @@ Delete User  [Arguments]  ${userName}
 
 Create Story  [Arguments]  ${inputText}
 	Click Element  css=#top>div.left>div.new-content-toggler
-	Wait Until Page Contains Element  css=div.story
+	Wait Until Page Contains Element  css=div.story  30
 	Click Element  css=div.story
         Wait Until Angular Ready   15s
 	Wait Until Page Contains Element  css=div[title="new-story: New Story"]
@@ -232,7 +232,7 @@ Create Story  [Arguments]  ${inputText}
 
 Create Picture Content  [Arguments]  ${inputText}
 	Click Element  css=#top>div.left>div.new-content-toggler
-	Wait Until Page Contains Element  css=div.picture
+	Wait Until Page Contains Element  css=div.picture  30
 	Click Element  css=div.picture
 	Wait For  5
 	Type Text  *jpg
