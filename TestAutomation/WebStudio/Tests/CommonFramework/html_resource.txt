@@ -248,6 +248,35 @@ Create Picture Content  [Arguments]  ${inputText}
 	Click Button  css=div[class*="picture"] >div>div>div>div:nth-child(2)>input#save
 	Wait Until Angular Ready   15s
 
+Create Video Content  [Arguments]  ${inputText}
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Input Text  css=input.new-content-search--input  Video
+	Click Element  css=a[title="Create new Video"]
+	Type Text  C:\\Users\\Public\\Videos\\Sample Videos\\Video test.mp4
+	Type Key  ENTER
+	Wait Until Page Contains  Select Pipeline  90
+	Input Text  css=textarea[placeholder="Title"]  ${inputText}
+	Input Text  css=textarea[placeholder="Lead text"]  ${inputText}
+	Click Element  css=div[class*="video"] >div>div>div>div:nth-child(2)>input#save
+	Wait Until Angular Ready   15s
+
+Publish video
+	Click Element  css=div[class*="video"]>div>div>div>div:nth-child(2)>input#publish
+	Wait Until Page Contains Element  css=div.right>span.approved  5
+
+Watch Preview
+	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+    	${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
+    	Log Off From CUE
+    	Close Browser
+    	Open Browser  ${previewUrl}  ${BROWSER}
+    	Maximize Browser Window
+
+Search in CUE  [Arguments]  ${inputText}
+	Click Element  css=#panels .tabs > .search
+    	Input Text  css=input[name="search"]  ${inputText}
+    	Wait Until Angular Ready   15s
+
 Publish Story
 	Wait Until Element Is Visible  css=div[class*="new-story"] >div>div>div>div:nth-child(2)>input#publish  15
 	Click Button  css=div[class*="new-story"]>div>div>div>div:nth-child(2)>input#publish

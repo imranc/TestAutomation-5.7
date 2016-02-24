@@ -1,0 +1,18 @@
+*** Settings ***
+
+Documentation  A test case to create video content
+
+Resource       common_resource.txt
+
+
+*** Test Cases***
+
+Login to CUE
+    Login To CUE
+
+Create video content
+    Create Video Content  Video content created from CUE
+    Publish Video
+    Close Browser
+
+  
