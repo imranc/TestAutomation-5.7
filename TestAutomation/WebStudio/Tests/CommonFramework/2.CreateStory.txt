@@ -31,4 +31,3 @@ Create picture and relate that to a story
     Wait Until Element Is Visible  css=img[src*="Image-content-created-by-automated-tests"]
     Page Should Contain Element  css=img[src*="Image-content-created-by-automated-tests"]
     Close Browser
-
