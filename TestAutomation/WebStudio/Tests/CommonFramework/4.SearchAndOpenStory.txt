@@ -14,9 +14,9 @@ Search Story
     Click Element  css=#panels .tabs > .storyFolders
     Click Element  css=#panels .tabs > .search
     Input Text  css=input[name="search"]  Automated
-    Wait For  10
-    Click Element  css=div[class="title ng-binding"]
-    Wait For  10
+    Wait Until Angular Ready   15s
+    Click Element  css=span.story
+    Wait Until Angular Ready   15s
     Page Should Contain Button  css=input[id="save"]
     ${previewUrl}=  Get Element Attribute  css=a[ng-href*="http"]@ng-href
     Log Off From CUE
@@ -24,3 +24,20 @@ Search Story
     Open Browser  ${previewUrl}  ${BROWSER}
     Maximize Browser Window
     Page Should Contain  Automated
+    Close Browser
+
+
+Search and preview video
+    Login to CUE
+    Search in CUE  Video content created from CUE
+    Click Element  css=span.video
+    Wait Until Angular Ready   15s
+    Page Should Contain Button  css=input[id="save"]
+    Page Should not Contain Element  css=div.right>span.approved
+    Page Should Contain Element  css=div.right>span.published
+    Watch Preview
+    Wait Until Element Is Visible  css=h1[class="title"]
+    Page Should Contain   Video content created from CUE
+    Wait Until Element Is Visible  css=div.jw-icon
+    Page Should Contain Element  css=div.jw-icon
+    Close Browser
