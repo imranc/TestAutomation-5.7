@@ -252,7 +252,7 @@ Create Video Content  [Arguments]  ${inputText}
 	Click Element  css=#top>div.left>div.new-content-toggler
 	Input Text  css=input.new-content-search--input  Video
 	Click Element  css=a[title="Create new Video"]
-	Type Text  C:\\Users\\Public\\Videos\\Sample Videos\\Video test.mp4
+	Type Text  Video test.mp4
 	Type Key  ENTER
 	Wait Until Page Contains  Select Pipeline  90
 	Input Text  css=textarea[placeholder="Title"]  ${inputText}
