@@ -291,3 +291,7 @@ Publish Picture
 	Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
 	
 
+CUE Should Not Show any alert
+	Page Should Not Contain Element  css=#pop.active  There was an unexpected alert found
+	
+
