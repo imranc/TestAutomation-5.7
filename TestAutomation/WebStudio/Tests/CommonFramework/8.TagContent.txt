@@ -1,0 +1,22 @@
+*** Settings ***
+
+Documentation  A test case to check removing relations and picking relations from asset picker
+
+Resource       common_resource.txt
+
+*** Test Cases ***
+
+A test case for tagging content
+    Login To CUE
+    Search in CUE  This is an Automated story For Common Framework
+    Click Element  css=span.story
+    Wait Until Angular Ready   15s
+    Page Should Contain Button  css=input[id="save"]
+    Tag Content  widget
+    Click Button  css=div[class*="story"]>div>div>div>div:nth-child(2)>input#publish
+    Wait Until Angular Ready   15s
+    Wait Until Page Contains Element  xpath=//div//span[contains(text(), 'Published')]  15
+    Watch Preview
+    Wait Until Page Contains  This is an Automated story For Common Framework
+    Page Should Contain Element  css=ul.list-inline span.label
+    Close Browser
