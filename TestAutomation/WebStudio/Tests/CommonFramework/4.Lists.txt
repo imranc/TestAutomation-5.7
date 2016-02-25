@@ -20,7 +20,7 @@ Add content to list from search panel
     Click Element  css=#panels .tabs > .search
     Input Text  css=input[name="search"]  Catchy
     Drag And Drop With Sikuli  PublishedStoryInSearchResults  NewsListDroppablePanel
-    CUE Should Not Show any alert
+    Alert Should Not Be Present
     Page Should Contain Element  css=div.list-item
     Click Element  css=#cf-list-editor-loader .remove
     Page Should Not Contain Element  css=div.list-item
@@ -33,7 +33,7 @@ Create content and add that to list
     Page Should Contain  Location: New Articles
     Page Should Contain Element  xpath=//div[contains(text(),"NewsList")]
     Drag And Drop With Sikuli  ImageContentTab  NewsListDroppablePanel
-    CUE Should Not Show any alert
+    Alert Should Not Be Present
     Page Should Contain Element  css=div.list-item
     Click Element  css=#cf-list-editor-loader .remove
     Page Should Not Contain Element  css=div.list-item
