@@ -238,9 +238,6 @@ Create Picture Content  [Arguments]  ${inputText}
 	Click Element  css=#picker div.picture
 	Wait For  5
 	Type Text  *jpg
-	#Click Element  css=div[class="splash-button new-picture ng-scope"]
-	#Wait Until Element is Visible  css=div[class="splash-button new-picture ng-scope"]
-	#Choose File  css=div[class="splash-button new-picture ng-scope"]  'C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg'
 	Type Key  ENTER
 	Wait Until Page Contains Element  css=div.picture div.field textarea[placeholder="File Name"]  30
 	Input Text  css=div.picture div.field textarea[placeholder="File Name"]  ${inputText}
@@ -296,5 +293,4 @@ Publish Picture
 
 CUE Should Not Show any alert
 	Page Should Not Contain Element  css=#pop.active  There was an unexpected alert found
-	
 
