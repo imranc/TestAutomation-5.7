@@ -294,3 +294,18 @@ Publish Picture
 
 CUE Should Not Show any alert
 	Page Should Not Contain Element  css=#pop.active  There was an unexpected alert found
+
+
+Tag Content  [Arguments]  ${tag}  
+	Click Element  xpath=//div[contains(@class, "story")]//span[text()="General info"]
+    	Click Element  xpath=//div[contains(@class, "story")]//span[text()="Section"]
+    	Click Element  xpath=//div[contains(@class, "story")]//span[text()="Authors"]
+    	Click Element  xpath=//div[contains(@class, "story")]//span[text()="Related"]
+    	Page Should Contain Element  xpath=//span[contains(text(),"Tags")]
+    	Input Text  css=div.tag-contents div.input  ${tag}
+	Press Key  css=div.tag-contents div.input  \\13
+	Click Element  xpath=//div[contains(@class, "story")]//span[text()="General info"]
+    	Click Element  xpath=//div[contains(@class, "story")]//span[text()="Section"]
+    	Click Element  xpath=//div[contains(@class, "story")]//span[text()="Authors"]
+    	Click Element  xpath=//div[contains(@class, "story")]//span[text()="Related"]
+	
