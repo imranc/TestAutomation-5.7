@@ -10,9 +10,23 @@ Resource       common_resource.txt
 Login to CUE
     Close All Browsers
     Login To CUE
+    CUE Should Not Show any alert
     Page Should Contain Element  css=a[ng-click='vm.logout()']
 
 Log off
     Log Off From CUE
     Close Browser
 
+Login open content in editor and logout
+    Login To CUE
+    Search in CUE  catchy
+    Click Element  css=span.story
+    Create Story  Story created for CUE testing
+    Create Picture Content  Image created for CUE testing
+    Log Off From CUE
+    Wait Until Page Contains Element  css=input[id="username"]
+    Input Environment Variable  username  ECE_CF_UserName
+    Input Environment Variable  password  ECE_CF_Password
+    Click Button  css=input[id="login"]
+    Wait Until Angular Ready   15s
+    CUE Should Not Show any alert
