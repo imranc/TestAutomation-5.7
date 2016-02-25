@@ -1,6 +1,6 @@
 *** Settings ***
 
-Documentation  A test case to Login to CUE and check for alert
+Documentation  A test case to Login to CUE
 
 Resource       common_resource.txt
 
