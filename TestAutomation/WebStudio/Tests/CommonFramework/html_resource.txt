@@ -274,6 +274,7 @@ Watch Preview
 
 Search in CUE  [Arguments]  ${inputText}
 	Click Element  css=#panels .tabs > .search
+	Click Element  css=#search span.reset
     	Input Text  css=input[name="search"]  ${inputText}
     	Wait Until Angular Ready   15s
 
