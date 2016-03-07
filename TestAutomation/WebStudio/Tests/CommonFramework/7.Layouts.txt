@@ -73,6 +73,7 @@ Open 2-Columns Window -- Dual Vertical
 Open Duel Layout(Horizonally) Window
     Mouse Over  css=a[title="Window"]
     Wait Until Angular Ready   15s
+    Wait Until Element is Visible  css=a[ng-click="vm.setDualHorizontal()"]
     Click Element  css=a[ng-click="vm.setDualHorizontal()"]
     Wait Until Angular Ready   15s
     Page Should Contain Element  css=div[title="new-story: Story on Right Editor Column"]
