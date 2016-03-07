@@ -47,3 +47,4 @@ Relate Content from Asset picker
     Wait Until Page Contains  This is an Automated story For Common Framework
     Page Should Contain Element  css=img[src*="Image-content-created-by-automated-tests"]
     Close Browser
+    Close All Browsers
