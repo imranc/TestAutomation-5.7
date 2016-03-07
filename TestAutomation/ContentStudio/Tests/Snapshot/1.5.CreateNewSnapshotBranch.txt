@@ -1,0 +1,23 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Test Case to Create a new snapshot branch
+
+Resource       common_resource.txt
+
+**Test cases**
+Create a new snapshot branch
+  Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+  Click Element  NewBranch  240  -4
+  Click Element  SnapTypeNewbranchName  21  1
+  Type Text  Master-Test
+  Click Element  SnapListOfAllBranch  -8  0
+  Click Element  SnapClickArrowNewBranch  50  -2
+  Click Element  MasterNewBranch
+  Click Element  SnapCreateBranch  35  -3
+
+
