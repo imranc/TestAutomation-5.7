@@ -1,0 +1,40 @@
+*** Settings ***
+
+Documentation  A test case to check sections and language
+
+Resource       common_resource.txt
+
+*** Test Cases ***
+
+Sections tab
+    Login To CUE
+    Search in CUE  This is an Automated story For Common Framework
+    Click Element  css=#panels .tabs > .sections
+    Wait Until Angular Ready   15s
+    Element Should Not Be Visible  xpath=//cf-section-sidepanel-tree-item/a[text()="International"]
+    Click Element  xpath=//cf-section-sidepanel-tree-item/a[text()="News"]/../../div
+    Element Should Be Visible  xpath=//cf-section-sidepanel-tree-item/a[text()="International"]
+    Click Element  xpath=//cf-section-sidepanel-tree-item/a[text()="News"]/../../div
+    Element Should Not Be Visible  xpath=//cf-section-sidepanel-tree-item/a[text()="International"]
+    Close Browser
+
+
+Language, if passes, CCIEFL-1439 will pass too
+    Login To CUE
+    Mouse Over  css=li.topmenu a[title="Language"]
+    Click Element  xpath=//li/a[text()='Norwegian']
+    Wait Until Angular Ready   15s
+    Page Should Contain Element  xpath=//li/a/span[text()='Vindu']
+    Page Should Not Contain Element  xpath=//li/a/span[text()='Window']
+    Log Off From CUE
+    Wait Until Page Contains Element  css=input[id="username"]
+    Page Should Contain Element  xpath=//div[text()='Norwegian']
+    Page Should Not Contain Element  xpath=//div[text()='English']
+    Input Environment Variable  username  ECE_CF_UserName
+    Input Environment Variable  password  ECE_CF_Password
+    Click Button  css=input[id="login"]
+    Wait Until Angular Ready   15s
+    Page Should Contain Element  xpath=//li/a/span[text()='Vindu']
+    Page Should Not Contain Element  xpath=//li/a/span[text()='Window']
+    CUE Should Not Show any alert
+    Close Browser
