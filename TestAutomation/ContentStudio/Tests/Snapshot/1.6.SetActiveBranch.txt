@@ -1,0 +1,18 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Test Case to Set active branch of blueprint
+
+Resource       common_resource.txt
+
+**Test cases**
+Set active branch of blueprint
+   Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+   Click Element  SnapEditChangeBranch  111  -1
+   Click Element If Exists  SnapClickArrow  SnapClickArrow
+   Click Element  SelectMaster-Test
+   Click Element If Exists  SnapClickApplyBranch  SnapClickApplyBranch
