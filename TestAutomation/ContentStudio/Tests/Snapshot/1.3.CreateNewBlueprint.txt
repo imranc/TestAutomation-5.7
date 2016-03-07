@@ -1,0 +1,31 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Test Case to Create New blueprint.
+
+Resource       common_resource.txt
+
+**Test cases**
+Create Blueprint 
+    Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+    Wait For  2
+    Click Element  Snap-NewBlueprint
+    Click Element  SnapClonefrombluprint  75  0
+    Click Element  SnapClickClonefrom  -18  -1
+    Click Element  SnapClickqaConfig
+    Click Element If Exists  close  45  2
+    Click Element  SnapChangeUsingBranch  42  -1
+    Click Element  SnapClickArrowUsingBranch  75  -4
+    Click Element  SnapSelectMasterBranch
+    Click Element  SnapTypeblueprintname  -26  -2
+    Type Text  qa-config-2
+    Click Element If Exists  SnapSaveblueprint  SnapSaveblueprint
+    
+
+    ###Assertion###
+    
+    Check If Exists  SnapBluprintAssertion
