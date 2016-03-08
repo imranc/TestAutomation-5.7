@@ -1,0 +1,58 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Test Case to change the active blueprint of any site publication from snapshot Dashboard 
+
+Resource       common_resource.txt
+
+**Test cases**
+Set active blueprint of site publication from Dashboard
+        Switch To Content Studio
+	Close Allopen Tabs
+### Create a Heading Widget from Qa-Config-2 ###
+	Click Element  FileMenu
+        Type Text  new
+        Click Element  contentCreateForqaConfig2  51  -3
+        Click Element  WidgetsContent  60  0
+        Mouse Over  WidgetsContent  100  0
+        Click Element  HeadingWidget
+        Type Text  TestAutomation Widget
+	Click Element  DefaultTab
+	Type Text  section
+	Wait For  2
+        Click Element  SnapsectionHeading  67  4
+	Type Text  international 
+        Click Element  international
+	Click Element  Advanced
+	Type Text  h3
+	Save And Publish
+### Add Heading widget into the fronpage of Qa-Config-2 ###
+
+        Click Element  TemplateSetq  -78  0
+        Click Element If Exists  ClickConfig  ClickConfig  -30  -2
+        Click Element If Exists  ClickDefault  ClickDefault  -30  1
+        Click Element If Exists  ClickSection  ClickSection  -58  0
+        Double Click Element  FrontpageTemplateSection
+        Wait For  5
+	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+
+###Change bluprint for site ###
+       Click Element  view
+       Click Element If Exists  snapdash  snapdash
+       Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
+       Wait For  2
+       Click Element  SnapClickArrowActivePub  208  -2
+       Wait For  2
+       Click Element  SnapSetqa-config2
+  
+    ###Assertion###
+          Open Browser To Publication 
+	  Check If Exists  homepage
+	  Close Browser
