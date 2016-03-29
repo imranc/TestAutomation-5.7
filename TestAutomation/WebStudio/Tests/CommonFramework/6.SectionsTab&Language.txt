@@ -22,6 +22,7 @@ Sections tab
 Language, if passes, CCIEFL-1439 will pass too
     Login To CUE
     Mouse Over  css=li.topmenu a[title="Language"]
+    Wait Until Element is Visible  xpath=//li/a[text()='Norwegian']
     Click Element  xpath=//li/a[text()='Norwegian']
     Wait Until Angular Ready   15s
     Page Should Contain Element  xpath=//li/a/span[text()='Vindu']

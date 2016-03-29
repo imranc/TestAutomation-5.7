@@ -44,7 +44,7 @@ Login to CUE
 Open 2-Columns Window -- Dual Vertical
     Click Element  css=div[id="editors"] div.area
     Mouse Over  css=a[title="Window"]
-    Wait Until Angular Ready   15s
+    Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
     Click Element  css=a[ng-click="vm.setDualVertical()"]
     Wait Until Angular Ready   15s
     Click Element  css=div[id="editors"] div.area
@@ -72,7 +72,7 @@ Open 2-Columns Window -- Dual Vertical
 
 Open Duel Layout(Horizonally) Window
     Mouse Over  css=a[title="Window"]
-    Wait Until Angular Ready   15s
+    Wait Until Element Is Visible  css=a[ng-click="vm.setDualHorizontal()"]
     Wait Until Element is Visible  css=a[ng-click="vm.setDualHorizontal()"]
     Click Element  css=a[ng-click="vm.setDualHorizontal()"]
     Wait Until Angular Ready   15s
@@ -117,4 +117,4 @@ Open Duel Layout(Horizonally) Window
 
 Log off
     Log Off From CUE
-    Close Browser
+    Close All Browsers
