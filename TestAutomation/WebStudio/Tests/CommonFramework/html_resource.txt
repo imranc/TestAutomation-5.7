@@ -229,6 +229,24 @@ Create Story  [Arguments]  ${inputText}
 	Click Button  css=div[class*="new-story"] >div>div>div>div:nth-child(2)>input#save
 	Wait Until Angular Ready   15s
 
+Create and Publish Story  [Arguments]  ${inputText}
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Wait Until Angular Ready   15s
+	Wait Until Page Contains Element  css=#picker div.story  30
+	Click Element  css=#picker div.story
+        Wait Until Angular Ready   15s
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]
+	Click Element  xpath=//div[@title="new-story: New Story"]/../..//textarea[@placeholder="Title"]
+	Type Text  ${inputText}
+	Input Text  xpath=//div[@title="new-story: ${inputText}"]/../..//textarea[@placeholder="Subtitle"]  ${inputText}
+	Input Text  xpath=//div[@title="new-story: ${inputText}"]/../..//textarea[@placeholder="Lead text"]  ${inputText}
+	Wait Until Element Is Visible  xpath=//div[@title="new-story: ${inputText}"]/../..//div[@data-placeholder="Body"]  15
+	Input Text Into Rich Text Editor  xpath=//div[@title="new-story: ${inputText}"]/../..//div[@data-placeholder="Body"]  ${inputText}
+	Click Button  xpath=//div[@title="new-story: ${inputText}"]/../..//input[@id="save"]
+	Wait Until Angular Ready   15s
+	Click Button  xpath=//div[@title="new-story: ${inputText}"]/../..//input[@id="publish"]
+	Wait Until Angular Ready   15s
+
 Create Picture Content  [Arguments]  ${inputText}
 	Click Element  css=#top>div.left>div.new-content-toggler
 	Wait Until Angular Ready   15s
