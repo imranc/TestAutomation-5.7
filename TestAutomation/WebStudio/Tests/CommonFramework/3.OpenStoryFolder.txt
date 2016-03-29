@@ -5,7 +5,7 @@ Documentation  A test case to open story folder
 Resource       common_resource.txt
 
 
-*** Test Cases ***
+*** Comment ***
 
 Login to CUE
     Login To CUE
