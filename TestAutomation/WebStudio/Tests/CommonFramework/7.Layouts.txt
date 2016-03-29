@@ -42,19 +42,19 @@ Login to CUE
 #    Page Should Contain Element  css=div[class="area ng-scope active"]
 
 Open 2-Columns Window -- Dual Vertical
+    Click Element  css=div[id="editors"] div.area
     Mouse Over  css=a[title="Window"]
     Wait Until Angular Ready   15s
     Click Element  css=a[ng-click="vm.setDualVertical()"]
     Wait Until Angular Ready   15s
-    Click Element  css=div[id="editors"] > div[class="area ng-scope"]
+    Click Element  css=div[id="editors"] div.area
     Element Should Be Visible  css=div[ng-click="vm.newDefaultContent()"]
     Create Story  Story on Right Editor Column
     Publish Story
     Page Should Contain Element  css=div[title="new-story: Story on Right Editor Column"]
     Page Should Not Contain Element  css=div[title="new-story: Story on Left Editor Column"]
-    Click Element  css=div[id="editors"] > div[class="area ng-scope"]
-    Create Story  Story on Left Editor Column
-    Publish Story
+    Click Element  xpath=//div[@class="content ng-hide"]/..
+    Create and publish story  Story on Left Editor Column
     Wait For  5
     Page Should Contain Element  css=div[title="new-story: Story on Left Editor Column"]
     Element Should Not Be Visible  css=div[ng-click="vm.newDefaultContent()"]
@@ -81,18 +81,17 @@ Open Duel Layout(Horizonally) Window
     Click Element  css=div.close
     Wait Until Angular Ready   15s
     Element Should Be Visible  css=div[ng-click="vm.newDefaultContent()"]
-    Page Should Not Contain Element  css=div[title="new-story: Story on Left Editor Column"]
-    Click Element  css=div[title="new-story: Story on Right Editor Column"]
-    Click Element  css=div.close
     Page Should Not Contain Element  css=div[title="new-story: Story on Right Editor Column"]
+    Click Element  css=div[title="new-story: Story on Left Editor Column"]
+    Click Element  css=div.close
+    Page Should Not Contain Element  css=div[title="new-story: Story on Left Editor Column"]
     Create Story  Story on Bottom Editor Row
     Publish Story
     Element Should Be Visible  css=div[ng-click="vm.newDefaultContent()"]
     Page Should Contain Element  css=div[title="new-story: Story on Bottom Editor Row"]
     Page Should Not Contain Element  css=div[title="new-story: Story on Top Editor Row"]
-    Click Element  css=div[id="editors"] > div[class="area ng-scope"]
-    Create Story  Story on Top Editor Row
-    Publish Story 
+    Click Element  xpath=//div[@class="content ng-hide"]/..
+    Create and Publish Story  Story on Top Editor Row
     Page Should Contain Element  css=div[title="new-story: Story on Top Editor Row"]
     Element Should Not Be Visible  css=div[ng-click="vm.newDefaultContent()"]
     

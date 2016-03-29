@@ -30,3 +30,4 @@ Login open content in editor and logout
     Click Button  css=input[id="login"]
     Wait Until Angular Ready   15s
     CUE Should Not Show any alert
+    Close Browser
