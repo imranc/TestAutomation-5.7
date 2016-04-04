@@ -382,7 +382,7 @@ class ContentStudio(object):
 
                 if not exists(Pattern("InboxesTab.png").similar(0.60)):
                         click("SectionsTab.png")
-                if len(args) == 3:
+                if len(args) >= 3:
                         offset_x = int(args[1])
                         offset_y = int(args[2])
                         ContentStudio.right_click_section(self, SectionName, offset_x, offset_y)
