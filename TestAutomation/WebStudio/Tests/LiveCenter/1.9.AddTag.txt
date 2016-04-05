@@ -12,7 +12,7 @@ Create an entry with a tag
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  Test entry of Escenic event with a tag
-        Add Tag to an Entry  AutomatedTest
+        Add Tag to an Entry  external
 
 Log off
     Log Off From Escenic Live Center

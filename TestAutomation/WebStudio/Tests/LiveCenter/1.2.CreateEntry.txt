@@ -38,6 +38,6 @@ Create milestone entry and check if it is tagged correctly
 	Click Element  css=input[class="ng-pristine ng-untouched ng-valid ng-scope"]
 	Publish Entry
 	Page Should Contain Element  xpath=//div/p[contains(text(),'This is a milestone entry')]
-	Page Should Contain Element  xpath=//*[contains(text(), 'This is a milestone entry’)]/../../../../../..//label[contains(text(),'Milestone')]
+	Page Should Contain Element  xpath=//*[contains(text(), 'This is a milestone entry')]/../../../../../..//ul/li[contains(text(),'Milestone')]
 	Open live center publication event page
 	Page Should Contain Element  xpath=//h2[contains(text(),'This is a milestone entry')]
