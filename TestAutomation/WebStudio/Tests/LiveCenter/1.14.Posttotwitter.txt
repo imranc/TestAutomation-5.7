@@ -1,0 +1,20 @@
+*** Settings ***
+
+Documentation  A test case to create an entry and post it to twitter
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create an entry and post it to twitter
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Create Entry  This is an entry for twitter
+	Click Element  css=#field-twitter-post-
+	Publish Entry
+	Page Should Contain Element  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]
+	Wait For  20
+	Open live center publication event page
+	Page Should Contain Element  xpath=//h2[contains(text(),'This is an entry for twitter')]

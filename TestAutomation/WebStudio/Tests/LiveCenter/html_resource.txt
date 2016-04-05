@@ -304,6 +304,17 @@ Add EmbedURL to an Entry  [Arguments]  ${embedUrl}
 	Click Element  xpath=//div/a[text()='OK']
 	Wait For  1
 
+Add CSimageContent to an Entry
+	Click Element  css=button[class="ece-binary-content"]
+	Wait Until Page Contains Element  css=label[class="ng-binding"]
+	Click Element  css=label[class="ng-binding"] 
+	Choose File  css=input[type="file"]  C:\\Users\\Public\\Pictures\\Sample Pictures\\Desert.jpg
+        Wait For  5
+	Input Text  css=input[type="text"]  Desert
+        Wait For  5
+	Click Element  xpath=//div/a[text()='OK']
+	Wait For  5
+
 Open live center publication event page
 	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
 	Open Browser  ${prsentationLink}  ${BROWSER}
