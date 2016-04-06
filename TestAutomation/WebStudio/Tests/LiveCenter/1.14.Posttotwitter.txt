@@ -15,6 +15,7 @@ Create an entry and post it to twitter
 	Create Entry  Entry with post to twitter from ${BROWSER} in ${time}
 	Click Element  css=#field-twitter-post-
 	Publish Entry
+	Wait Until Page Contains Element  css=input[class="ng-valid ng-scope ng-dirty ng-touched"]  60
 	Wait Until Page Contains Element  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  30
 	Page Should Contain Element  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]
 	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href

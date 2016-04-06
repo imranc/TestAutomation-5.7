@@ -248,11 +248,9 @@ Add Tag to an Entry  [Arguments]  ${inputText}
 
 Add youtube link to an Entry
         Click Element  css=#t2
+	 Wait Until Element is Visible  css=#subscription-panel > div:nth-child(2) > youtube > div.t2.tab.open > div:nth-child(3)  30
         Click Element  css=#subscription-panel > div:nth-child(2) > youtube > div.t2.tab.open > div:nth-child(3)
-	Wait For  5
-	Click Element  xpath=//div/a[text()='Publish']
-	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a youtube link')]
+	Wait Until Page Contains Element  css=iframe[src*="youtube"]  30
 
 Add rss to an Entry
         Click Element  css=#t3
