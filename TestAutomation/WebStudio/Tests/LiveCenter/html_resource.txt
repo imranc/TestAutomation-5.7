@@ -248,7 +248,7 @@ Add Tag to an Entry  [Arguments]  ${inputText}
 
 Add youtube link to an Entry
         Click Element  css=#t2
-	 Wait Until Element is Visible  css=#subscription-panel > div:nth-child(2) > youtube > div.t2.tab.open > div:nth-child(3)  30
+	 Wait Until Page Contains Element  css=#subscription-panel > div:nth-child(2) > youtube > div.t2.tab.open > div:nth-child(3)  30
         Click Element  css=#subscription-panel > div:nth-child(2) > youtube > div.t2.tab.open > div:nth-child(3)
 	Wait Until Page Contains Element  css=iframe[src*="youtube"]  30
 
