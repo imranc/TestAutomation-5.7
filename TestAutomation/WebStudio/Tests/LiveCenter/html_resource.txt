@@ -265,7 +265,7 @@ Add rss to an Entry
 Add instagram link to an Entry
         Click Element  css=#t4
         Click Element  css=#subscription-panel > div:nth-child(4) > instagram > div.t4.tab.open > div:nth-child(2)
-	Wait Until Page Contains Element  css=script[src*="instagram"]  10
+	Wait Until Page Contains Element  css=script[src*="instagram"]  30
 
 Filter events by section
 	Click Element  css=#select2-chosen-1
