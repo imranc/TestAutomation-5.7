@@ -11,13 +11,15 @@ Create an entry and post it to twitter
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
-	Create Entry  This is an entry for twitter
+	${time} = 	Get Time
+	Create Entry  Entry with post to twitter from ${BROWSER} in ${time}
 	Click Element  css=#field-twitter-post-
 	Publish Entry
+	Wait Until Page Contains Element  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  30
 	Page Should Contain Element  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]
 	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
-	Wait Until Element Contains  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  This is an entry for twitter ${prsentationLink}  30
-	Element Should Contain    xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  This is an entry for twitter ${prsentationLink}
+	Wait Until Element Contains  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  Entry with post to twitter from ${BROWSER}  50
+	Element Should Contain    xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  Entry with post to twitter from ${BROWSER}
 	Open live center publication event page
-	Wait Until Page Contains Element  xpath=//h2[contains(text(),'This is an entry for twitter')]  20
-	Page Should Contain Element  xpath=//h2[contains(text(),'This is an entry for twitter')]
+	Wait Until Page Contains Element  xpath=//h2[contains(text(),'Entry with post to twitter from ${BROWSER}')]  20
+	Page Should Contain Element  xpath=//h2[contains(text(),'Entry with post to twitter from ${BROWSER}')]
