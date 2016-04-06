@@ -14,7 +14,7 @@ Create an entry with EmbedURL
 	Create Entry  Test entry of Escenic event with Flickr content
         Add EmbedURL to an Entry  https://www.flickr.com/photos/102916444@N04/15494322140/in/dateposted-public/
 	Publish Entry
-	Wait For  2
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]  30
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]
 	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with Flickr content')]/../../../../../..//ul/li[contains(text(),'Flickr')]
 	Open live center publication event page
