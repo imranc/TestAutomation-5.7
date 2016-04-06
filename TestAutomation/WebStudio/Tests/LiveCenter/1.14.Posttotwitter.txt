@@ -16,6 +16,7 @@ Create an entry and post it to twitter
 	Publish Entry
 	Page Should Contain Element  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]
 	${prsentationLink}=  Get Element Attribute  css=a[href^="http"]@href
+	Wait Until Element Contains  xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  This is an entry for twitter ${prsentationLink}  30
 	Element Should Contain    xpath=//*[@id="event-container"]/div/div[4]/div[2]/div[1]/div[6]  This is an entry for twitter ${prsentationLink}
 	Open live center publication event page
 	Wait Until Page Contains Element  xpath=//h2[contains(text(),'This is an entry for twitter')]  20
