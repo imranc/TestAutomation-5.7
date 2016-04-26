@@ -25,7 +25,7 @@ Login To Web Studio
     	Click For Multiple Cookies
 
 Login To Escenic Mobile Studio
-    Open Browser To Escenic MobileStudio  ${BROWSER}
+    Open Browser To Escenic MobileStudio
     Input Environment Variable  userName  ECE_UserName
     Input Environment Variable  password  ECE_Password
     Submit Credentials
@@ -48,7 +48,7 @@ Open Browser To Login Page
     Title Should Be  Escenic Web Studio
 
 Open Browser To Escenic MobileStudio
-    Open Browser MobileStudio
+    Open Browser MobileStudio  ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed  ${DELAY}
     	Title Should Be  Mobile Studio
