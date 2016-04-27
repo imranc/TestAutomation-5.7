@@ -1,0 +1,117 @@
+*** Settings ***
+
+Library  AppiumLibrary
+Documentation  A resource file containing the application specific keywords
+...            that create our own domain specific language. This resource
+...            implements keywords for testing HTML version of the test
+...            application. Keywords for Flex version are in flex_resource.txt
+...            and common_resource.txt is used to select which one to use.
+
+
+*** Variables ***
+
+
+*** Keywords ***
+
+Open Browser To Escenic Common Framework  [Arguments]  ${BROWSER}
+	Open Application  http://localhost:${appiumPort}/wd/hub  platformName=${platformName}  platformVersion=${platformVersion}  deviceName=${deviceName}  browserName=${BROWSER}  appPackage=${appPackage}  automationName=${automationName}
+	Go To Cue
+
+Login to CUE with mobile
+	Wait Until Page Contains Element  css=#username  300
+	Input Environment Variable  css=#username  ECE_CF_UserName
+	Input Environment Variable  css=#password  ECE_CF_Password
+	Click Element  css=#login
+	Wait Until Page Contains Element  css=div.sh_menu  30
+	Click Element  css=div.sh_menu
+	Page Should Contain Element  css=div.logout span
+	Click Element  css=div.sh_menu
+
+Login To CUE
+	Wait Until Page Contains Element  css=#username  300
+	Input Environment Variable  css=#username  ECE_CF_UserName
+	Input Environment Variable  css=#password  ECE_CF_Password
+	Click Element  css=#login
+	Wait Until Page Contains Element  css=#search span.reset  30
+	Wait Until Page Contains Element  css=div.logout a  30
+	Page Should Contain Element  css=div.logout a
+	
+Create Story in mobile  [Arguments]  ${inputText}
+	Click Element  css=div.sh_menu
+	Page Should Contain Element  css=div.logout span
+	Click Element  css=div.m-menu div.m-new
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
+	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
+	Click Element  css=div.left
+	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
+	Click Element  css=div.left
+	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
+	Click Element  css=div.new-story div.field div[data-placeholder="Body"]
+	Input Text  css=div.new-story div.field div[data-placeholder="Body"]  ${inputText}
+	Click Element  css=div.new-story li.active
+	Wait Until Page Contains Element  css=div.new-story input#save
+	Click Element  css=div.new-story input#save
+	Wait Until Element Is Visible  css=div.new-story input#publish  30
+
+Create Story in mobile iOS  [Arguments]  ${inputText}
+	Click Element  css=div.sh_menu
+	Page Should Contain Element  css=div.logout span
+	Click Element  css=div.m-menu div.m-new
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
+	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
+	Click Element  css=div.left
+	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
+	Click Element  css=div.left
+	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
+	Click Element  css=div.new-story li.active
+	Wait Until Page Contains Element  css=div.new-story input#save
+	Click Element  css=div.new-story input#save
+	Wait Until Element Is Visible  css=div.new-story input#publish  30
+
+Create Story in ios tab  [Arguments]  ${inputText}
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Wait Until Page Contains Element  css=#picker div.story  30
+	Wait Until Page Contains Element  css=#picker div.picture  30
+	Wait Until Page Contains Element  css=input.new-content-search--input  30
+	Click Element  css=#picker div.story div.name
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
+	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
+	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
+	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
+	Click Element  css=div.new-story li.active
+	Wait Until Page Contains Element  css=div.new-story input#save
+	Click Element  css=div.new-story input#save
+	Wait Until Element Is Visible  css=div.right span.draft  30
+
+Create Story in android tab  [Arguments]  ${inputText}
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Wait Until Page Contains Element  css=#picker div.story  30
+	Wait Until Page Contains Element  css=#picker div.picture  30
+	Wait Until Page Contains Element  css=input.new-content-search--input  30
+	Click Element  css=#picker div.story div.name
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
+	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
+	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
+	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
+	Input Text  css=div.new-story div.field div[data-placeholder="Body"]  ${inputText}
+	Click Element  css=div.new-story li.active
+	Wait Until Page Contains Element  css=div.new-story input#save
+	Click Element  css=div.new-story input#save
+	Wait Until Element Is Visible  css=div.right span.draft  30
+	
+Publish Story
+	Wait Until Element Is Visible  css=div.new-story input#publish
+	Click Element  css=div.new-story input#publish
+	Wait Until Element Is Visible  css=div.right span.published  45	
+
+Publish Story in Mobile
+	Wait Until Element Is Visible  css=div.new-story input#publish
+	Click Element  css=div.new-story input#publish
+	Wait Until Element Is Visible  css=span[rel='published']  30
+	
+
+	

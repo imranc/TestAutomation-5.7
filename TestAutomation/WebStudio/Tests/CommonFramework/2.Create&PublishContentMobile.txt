@@ -1,0 +1,62 @@
+*** Settings ***
+
+Documentation  Create publish a content in android phone
+
+Library  AppiumLibrary
+
+Resource       mobile_resource.txt
+
+
+*** Test Cases ***
+
+Create publish a content in android phone
+	[tags]  mobile-android
+	Open Browser To Escenic Common Framework  ${BROWSER}
+	Login to CUE with mobile
+	Create Story in mobile  CUE content created from android phone
+	Publish Story in Mobile
+	Wait Until Element Is Visible  css=span[rel='published']  45
+	Click Element  css=div.sh_menu
+	Page Should Contain Element  //div/span[contains(text(),"CUE content created from android phone")]
+	Click Element  css=span.close
+	Click Element  css=div.logout span
+	Close Application
+
+Create publish preview a content in android tab
+	[tags]  tab-android
+	Open Browser To Escenic Common Framework  ${BROWSER}
+	Login To CUE
+	Wait Until Page Contains Element  css=#panels .tabs > .search  300
+	Create Story in android tab  Story created for CUE testing
+	Publish Story
+	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+	${previewUrl} =  Get Element Attribute  css=a[ng-href*="http"]  ng-href
+	Click Element  css=div.tab.new-story div.close
+	Go To Url  ${previewUrl}
+	Page Should Contain Text  Story created for CUE testing
+
+Create publish preview a content in iOS tab
+	[tags]  tab-ios
+	Open Browser To Escenic Common Framework  ${BROWSER}
+	Login To CUE
+	Wait Until Page Contains Element  css=#panels .tabs > .search  300
+	Create Story in ios tab  Story created for CUE testing
+	Publish Story
+	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+	${previewUrl} = Get Element Attribute  css=a[ng-href*="http"]  ng-href
+	Click Element  css=div.tab.new-story div.close
+	Go To Url  ${previewUrl}
+	Page Should Contain Text  Story created for CUE testing
+
+Create publish a content in iOS phone
+	[tags]  mobile-ios
+	Open Browser To Escenic Common Framework  ${BROWSER}
+	Login to CUE with mobile
+	Create Story in mobile iOS  CUE content created from iPhone
+	Publish Story in Mobile
+	Wait Until Element Is Visible  css=span[rel='published']  45
+	Click Element  css=div.sh_menu
+	Page Should Contain Element  //div/span[contains(text(),"CUE content created from iPhone")]
+	Click Element  css=span.close
+	Click Element  css=div.logout span
+	Close Application
