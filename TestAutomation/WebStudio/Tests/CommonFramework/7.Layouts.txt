@@ -43,7 +43,8 @@ Login to CUE
 
 Open 2-Columns Window -- Dual Vertical
     Sleep  5
-    Open Context Menu  css=a[title="Window"] span
+    Open Context Menu  css=li.topmenu a[title="Window"]
+    Mouse Over  css=li.topmenu a[title="Window"]
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
     Click Element  css=a[ng-click="vm.setDualVertical()"]
     Wait Until Angular Ready   15s
@@ -72,7 +73,8 @@ Open 2-Columns Window -- Dual Vertical
 
 Open Duel Layout(Horizonally) Window
     Sleep  5
-    Open Context Menu  css=a[title="Window"] span
+    Open Context Menu  css=li.topmenu a[title="Window"]
+    Mouse Over  css=li.topmenu a[title="Window"]
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualHorizontal()"]
     Click Element  css=a[ng-click="vm.setDualHorizontal()"]
     Wait Until Angular Ready   15s
