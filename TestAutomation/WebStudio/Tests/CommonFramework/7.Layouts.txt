@@ -43,7 +43,6 @@ Login to CUE
 
 Open 2-Columns Window -- Dual Vertical
     Sleep  5
-    #Open Context Menu  css=li.topmenu a[title="Window"]
     Open Context Menu  css=li.topmenu a[title="Window"]
     Mouse Over  css=li.topmenu a[title="Window"]
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
@@ -57,6 +56,7 @@ Open 2-Columns Window -- Dual Vertical
     Page Should Contain Element  css=div[title="new-story: Story on Right Editor Column"]
     Page Should Not Contain Element  css=div[title="new-story: Story on Left Editor Column"]
     Click Element  xpath=//div[@class="content ng-hide"]/..
+    Open Context Menu  css=li.topmenu a[title="Window"]
     Create and publish story  Story on Left Editor Column
     Wait For  5
     Page Should Contain Element  css=div[title="new-story: Story on Left Editor Column"]
