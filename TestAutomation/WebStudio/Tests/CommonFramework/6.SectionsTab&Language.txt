@@ -24,7 +24,8 @@ Language, if passes, CCIEFL-1439 will pass too
     Click Element  css=#panels .tabs > .sections
     Wait Until Angular Ready   15s
     Mouse Over  css=li.topmenu a[title="Offline Mode"]
-    Click Element  xpath=//span[text()="Language"]
+    Click Element  css=div.sh_menu
+    Mouse Over  xpath=//span[text()="Language"]
     Wait Until Element is Visible  xpath=//li/a[text()='Norwegian']
     Click Element  xpath=//li/a[text()='Norwegian']
     Wait Until Angular Ready   15s
