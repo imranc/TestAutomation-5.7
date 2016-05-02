@@ -48,6 +48,7 @@ Open 2-Columns Window -- Dual Vertical
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
     Click Element  css=a[ng-click="vm.setDualVertical()"]
     Wait Until Angular Ready   15s
+    Click Element  css=div.sh_menu
     Click Element  css=div[id="editors"] div.area
     Element Should Be Visible  css=div[ng-click="vm.newDefaultContent()"]
     Create Story  Story on Right Editor Column
