@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160429 18:29:18.152" generator="Robot 2.8.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/WebStudio/Tests/CommonFramework/2.Create&amp;PublishContentMobile.txt" id="s1" name="2.Create&amp;PublishContentMobile">
+<test id="s1-t1" name="Create publish a content in iOS phone">
+<kw type="kw" name="mobile_resource.Open Browser To Escenic Common Framework">
+<doc></doc>
+<arguments>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw type="kw" name="AppiumLibrary.Open Application">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>http://localhost:${appiumPort}/wd/hub</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>browserName=${BROWSER}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>automationName=${automationName}</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:29:57.140" starttime="20160429 18:29:18.243"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Go To Cue">
+<doc>Opens URL in default web browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160429 18:29:59.693" starttime="20160429 18:29:57.140"></status>
+</kw>
+<status status="PASS" endtime="20160429 18:29:59.693" starttime="20160429 18:29:18.243"></status>
+</kw>
+<kw type="kw" name="mobile_resource.Login to CUE with mobile">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="AppiumLibrary.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=#username</arg>
+<arg>300</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:29:59.736" starttime="20160429 18:29:59.694"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Input Environment Variable">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=#username</arg>
+<arg>ECE_CF_UserName</arg>
+</arguments>
+<msg timestamp="20160429 18:29:59.737" level="INFO">Typing text 'ECE_CF_UserName' into text field 'css=#username'</msg>
+<status status="PASS" endtime="20160429 18:30:00.030" starttime="20160429 18:29:59.737"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Input Environment Variable">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=#password</arg>
+<arg>ECE_CF_Password</arg>
+</arguments>
+<msg timestamp="20160429 18:30:00.030" level="INFO">Typing text 'ECE_CF_Password' into text field 'css=#password'</msg>
+<status status="PASS" endtime="20160429 18:30:00.321" starttime="20160429 18:30:00.030"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#login</arg>
+</arguments>
+<msg timestamp="20160429 18:30:00.322" level="INFO">Clicking element 'css=#login'.</msg>
+<status status="PASS" endtime="20160429 18:30:00.550" starttime="20160429 18:30:00.321"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=div.sh_menu</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:01.967" starttime="20160429 18:30:00.551"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.sh_menu</arg>
+</arguments>
+<msg timestamp="20160429 18:30:01.969" level="INFO">Clicking element 'css=div.sh_menu'.</msg>
+<status status="PASS" endtime="20160429 18:30:02.224" starttime="20160429 18:30:01.968"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Page Should Contain Element">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>css=div.logout span</arg>
+</arguments>
+<msg timestamp="20160429 18:30:02.294" level="INFO">Current page contains element 'css=div.logout span'.</msg>
+<status status="PASS" endtime="20160429 18:30:02.294" starttime="20160429 18:30:02.225"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.sh_menu</arg>
+</arguments>
+<msg timestamp="20160429 18:30:02.294" level="INFO">Clicking element 'css=div.sh_menu'.</msg>
+<status status="PASS" endtime="20160429 18:30:03.093" starttime="20160429 18:30:02.294"></status>
+</kw>
+<status status="PASS" endtime="20160429 18:30:03.094" starttime="20160429 18:29:59.694"></status>
+</kw>
+<kw type="kw" name="mobile_resource.Create Story in mobile iOS">
+<doc></doc>
+<arguments>
+<arg>CUE content created from iPhone</arg>
+</arguments>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.sh_menu</arg>
+</arguments>
+<msg timestamp="20160429 18:30:03.097" level="INFO">Clicking element 'css=div.sh_menu'.</msg>
+<status status="PASS" endtime="20160429 18:30:03.242" starttime="20160429 18:30:03.096"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Page Should Contain Element">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>css=div.logout span</arg>
+</arguments>
+<msg timestamp="20160429 18:30:03.284" level="INFO">Current page contains element 'css=div.logout span'.</msg>
+<status status="PASS" endtime="20160429 18:30:03.284" starttime="20160429 18:30:03.242"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.m-menu div.m-new</arg>
+</arguments>
+<msg timestamp="20160429 18:30:03.285" level="INFO">Clicking element 'css=div.m-menu div.m-new'.</msg>
+<status status="PASS" endtime="20160429 18:30:03.466" starttime="20160429 18:30:03.285"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=div[title="new-story: New Story"]</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:05.810" starttime="20160429 18:30:03.467"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=div.new-story div.field textarea[placeholder="Title"]</arg>
+<arg>${inputText}</arg>
+</arguments>
+<msg timestamp="20160429 18:30:05.812" level="INFO">Typing text 'CUE content created from iPhone' into text field 'css=div.new-story div.field textarea[placeholder="Title"]'</msg>
+<status status="PASS" endtime="20160429 18:30:07.346" starttime="20160429 18:30:05.811"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=div.new-story div.field textarea[placeholder="Subtitle"]</arg>
+<arg>${inputText}</arg>
+</arguments>
+<msg timestamp="20160429 18:30:07.346" level="INFO">Typing text 'CUE content created from iPhone' into text field 'css=div.new-story div.field textarea[placeholder="Subtitle"]'</msg>
+<status status="PASS" endtime="20160429 18:30:08.591" starttime="20160429 18:30:07.346"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.left</arg>
+</arguments>
+<msg timestamp="20160429 18:30:08.591" level="INFO">Clicking element 'css=div.left'.</msg>
+<status status="PASS" endtime="20160429 18:30:08.742" starttime="20160429 18:30:08.591"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=div.new-story div.field textarea[placeholder="Lead text"]</arg>
+<arg>${inputText}</arg>
+</arguments>
+<msg timestamp="20160429 18:30:08.742" level="INFO">Typing text 'CUE content created from iPhone' into text field 'css=div.new-story div.field textarea[placeholder="Lead text"]'</msg>
+<status status="PASS" endtime="20160429 18:30:09.760" starttime="20160429 18:30:08.742"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.left</arg>
+</arguments>
+<msg timestamp="20160429 18:30:09.761" level="INFO">Clicking element 'css=div.left'.</msg>
+<status status="PASS" endtime="20160429 18:30:09.906" starttime="20160429 18:30:09.760"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div.new-story div.field div[data-placeholder="Body"]</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:10.010" starttime="20160429 18:30:09.906"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.new-story li.active</arg>
+</arguments>
+<msg timestamp="20160429 18:30:10.011" level="INFO">Clicking element 'css=div.new-story li.active'.</msg>
+<status status="PASS" endtime="20160429 18:30:10.135" starttime="20160429 18:30:10.011"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=div.new-story input#save</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:10.173" starttime="20160429 18:30:10.136"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.new-story input#save</arg>
+</arguments>
+<msg timestamp="20160429 18:30:10.174" level="INFO">Clicking element 'css=div.new-story input#save'.</msg>
+<status status="PASS" endtime="20160429 18:30:10.361" starttime="20160429 18:30:10.173"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div.new-story input#publish</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:13.797" starttime="20160429 18:30:10.361"></status>
+</kw>
+<status status="PASS" endtime="20160429 18:30:13.798" starttime="20160429 18:30:03.095"></status>
+</kw>
+<kw type="kw" name="mobile_resource.Publish Story in Mobile">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="AppiumLibrary.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div.new-story input#publish</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:13.920" starttime="20160429 18:30:13.798"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.new-story input#publish</arg>
+</arguments>
+<msg timestamp="20160429 18:30:13.921" level="INFO">Clicking element 'css=div.new-story input#publish'.</msg>
+<status status="PASS" endtime="20160429 18:30:14.242" starttime="20160429 18:30:13.920"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=span[rel='published']</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:15.908" starttime="20160429 18:30:14.243"></status>
+</kw>
+<status status="PASS" endtime="20160429 18:30:15.908" starttime="20160429 18:30:13.798"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=span[rel='published']</arg>
+<arg>45</arg>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:16.003" starttime="20160429 18:30:15.909"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.sh_menu</arg>
+</arguments>
+<msg timestamp="20160429 18:30:16.004" level="INFO">Clicking element 'css=div.sh_menu'.</msg>
+<status status="PASS" endtime="20160429 18:30:16.184" starttime="20160429 18:30:16.003"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Page Should Contain Element">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>//div/span[contains(text(),"CUE content created from iPhone")]</arg>
+</arguments>
+<msg timestamp="20160429 18:30:16.267" level="INFO">Current page contains element '//div/span[contains(text(),"CUE content created from iPhone")]'.</msg>
+<status status="PASS" endtime="20160429 18:30:16.268" starttime="20160429 18:30:16.184"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=span.close</arg>
+</arguments>
+<msg timestamp="20160429 18:30:16.269" level="INFO">Clicking element 'css=span.close'.</msg>
+<status status="PASS" endtime="20160429 18:30:16.518" starttime="20160429 18:30:16.269"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.logout span</arg>
+</arguments>
+<msg timestamp="20160429 18:30:16.519" level="INFO">Clicking element 'css=div.logout span'.</msg>
+<status status="PASS" endtime="20160429 18:30:16.785" starttime="20160429 18:30:16.519"></status>
+</kw>
+<kw type="kw" name="AppiumLibrary.Close Application">
+<doc>Closes the current application.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20160429 18:30:16.820" starttime="20160429 18:30:16.785"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>mobile-ios</tag>
+</tags>
+<status status="PASS" endtime="20160429 18:30:16.820" critical="yes" starttime="20160429 18:29:18.242"></status>
+</test>
+<doc>Create publish a content in android phone</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20160429 18:30:16.821" starttime="20160429 18:29:18.152"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">mobile-ios</stat>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="2.Create&amp;PublishContentMobile">2.Create&amp;PublishContentMobile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
