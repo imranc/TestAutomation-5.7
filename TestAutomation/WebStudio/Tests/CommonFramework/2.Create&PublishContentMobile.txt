@@ -43,7 +43,7 @@ Create publish preview a content in iOS tab
 	Create Story in ios tab  Story created for CUE testing
 	Publish Story
 	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
-	${previewUrl} = Get Element Attribute  css=a[ng-href*="http"]  ng-href
+	${previewUrl} =  Get Element Attribute  css=a[ng-href*="http"]  ng-href
 	Click Element  css=div.tab.new-story div.close
 	Go To Url  ${previewUrl}
 	Page Should Contain Text  Story created for CUE testing
