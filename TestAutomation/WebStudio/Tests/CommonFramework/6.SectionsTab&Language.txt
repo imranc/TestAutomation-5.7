@@ -25,8 +25,8 @@ Language, if passes, CCIEFL-1439 will pass too
     Wait Until Angular Ready   15s
     Sleep  10
     Click Element  css=div#top
-    Mouse Over  css=li.topmenu a[title="Offline Mode"]
-    Mouse Over  css=li.topmenu a[title="Language"]
+    Mouse Over  css=li.topmenu a[title="Offline Mode"] span
+    Mouse Over  css=li.topmenu a[title="Language"] span
     Wait Until Element is Visible  xpath=//li/a[text()='Norwegian']
     Click Element  xpath=//li/a[text()='Norwegian']
     Wait Until Angular Ready   15s
