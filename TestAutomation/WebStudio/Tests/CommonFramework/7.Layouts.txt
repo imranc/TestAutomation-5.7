@@ -42,6 +42,7 @@ Login to CUE
 #    Page Should Contain Element  css=div[class="area ng-scope active"]
 
 Open 2-Columns Window -- Dual Vertical
+    Sleep  5
     Open Context Menu  css=a[title="Window"] span
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
     Click Element  css=a[ng-click="vm.setDualVertical()"]
@@ -70,6 +71,7 @@ Open 2-Columns Window -- Dual Vertical
 #    Page Should Contain Element  css=div[class="area ng-scope active"]
 
 Open Duel Layout(Horizonally) Window
+    Sleep  5
     Open Context Menu  css=a[title="Window"] span
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualHorizontal()"]
     Click Element  css=a[ng-click="vm.setDualHorizontal()"]
