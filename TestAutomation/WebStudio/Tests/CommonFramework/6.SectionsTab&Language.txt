@@ -21,8 +21,6 @@ Sections tab
 
 Language, if passes, CCIEFL-1439 will pass too
     Login To CUE
-    Click Element  css=#panels .tabs > .sections
-    Wait Until Angular Ready   15s
     Sleep  5
     Open Context Menu  css=li.topmenu a[title="Language"]
     Wait Until Element is Visible  xpath=//li/a[text()='Norwegian']
