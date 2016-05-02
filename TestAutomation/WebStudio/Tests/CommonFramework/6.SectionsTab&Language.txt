@@ -24,6 +24,7 @@ Language, if passes, CCIEFL-1439 will pass too
     Click Element  css=#panels .tabs > .sections
     Wait Until Angular Ready   15s
     ${orig wait} = 	Set Selenium Speed 	10 seconds
+    Click Element  css=div#top
     Mouse Over  css=li.topmenu a[title="Offline Mode"]
     Mouse Over  css=li.topmenu a[title="Language"] span
     Wait Until Element is Visible  xpath=//li/a[text()='Norwegian']
