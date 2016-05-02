@@ -22,7 +22,7 @@ Sections tab
 Language, if passes, CCIEFL-1439 will pass too
     Login To CUE
     Sleep  5
-    Mouse Over  css=li.topmenu a[title="Language"]
+    Open Context Menu  css=li.topmenu a[title="Language"]
     Wait Until Element is Visible  xpath=//li/a[text()='Norwegian']
     Click Element  xpath=//li/a[text()='Norwegian']
     Wait Until Angular Ready   15s
