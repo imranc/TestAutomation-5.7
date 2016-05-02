@@ -255,7 +255,7 @@ Create Picture Content  [Arguments]  ${inputText}
 	Wait Until Page Contains Element  css=#picker div.picture  30
 	Click Element  css=#picker div.picture
 	Wait For  5
-	Type Text  *jpg
+	Type Text  Test.jpg
 	Type Key  ENTER
 	Wait Until Page Contains Element  css=div.picture div.field textarea[placeholder="File Name"]  30
 	Input Text  css=div.picture div.field textarea[placeholder="File Name"]  ${inputText}
