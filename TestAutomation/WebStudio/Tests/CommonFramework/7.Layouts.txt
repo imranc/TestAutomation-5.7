@@ -42,13 +42,7 @@ Login to CUE
 #    Page Should Contain Element  css=div[class="area ng-scope active"]
 
 Open 2-Columns Window -- Dual Vertical
-    Click Element  css=div[id="editors"] div.area
-    Click Element  css=div.area-placeholder
-    ${orig wait} = 	Set Selenium Speed 	10 seconds
-    Click Element  css=div#top
-    Mouse Over  css=li.topmenu a[title="Offline Mode"]
-    Mouse Over  css=a[title="Window"] span
-    Set Selenium Speed 	${orig wait}
+    Open Context Menu  css=a[title="Window"] span
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
     Click Element  css=a[ng-click="vm.setDualVertical()"]
     Wait Until Angular Ready   15s
@@ -76,11 +70,7 @@ Open 2-Columns Window -- Dual Vertical
 #    Page Should Contain Element  css=div[class="area ng-scope active"]
 
 Open Duel Layout(Horizonally) Window
-    ${orig wait} = 	Set Selenium Speed 	10 seconds
-    Click Element  css=div#top
-    Mouse Over  css=li.topmenu a[title="Offline Mode"]
-    Mouse Over  css=a[title="Window"] span
-    Set Selenium Speed 	${orig wait}
+    Open Context Menu  css=a[title="Window"] span
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualHorizontal()"]
     Click Element  css=a[ng-click="vm.setDualHorizontal()"]
     Wait Until Angular Ready   15s
