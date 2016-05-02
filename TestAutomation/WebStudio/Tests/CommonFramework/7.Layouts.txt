@@ -44,7 +44,8 @@ Login to CUE
 Open 2-Columns Window -- Dual Vertical
     Click Element  css=div[id="editors"] div.area
     Click Element  css=div.area-placeholder
-    Sleep  10
+    Sleep  10    
+    Click Element  css=div#top
     Mouse Over  css=li.topmenu a[title="Offline Mode"]
     Mouse Over  css=a[title="Window"] span
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualVertical()"]
@@ -75,6 +76,7 @@ Open 2-Columns Window -- Dual Vertical
 
 Open Duel Layout(Horizonally) Window
     Sleep  10
+    Click Element  css=div#top
     Mouse Over  css=li.topmenu a[title="Offline Mode"]
     Mouse Over  css=a[title="Window"] span
     Wait Until Element Is Visible  css=a[ng-click="vm.setDualHorizontal()"]
