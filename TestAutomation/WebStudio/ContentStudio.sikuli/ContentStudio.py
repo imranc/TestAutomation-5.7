@@ -42,6 +42,10 @@ class ContentStudio(object):
                     if exists(Pattern(dragSourceImageName).similar(0.80)) and exists(Pattern(dragDestinationImageName).similar(0.80)):
                             drop_point = find(Pattern(dragDestinationImageName).similar(0.80))
                             dragDrop(dragSourceImageName, drop_point)
+                    elif exists(Pattern(dragSourceImageName).similar(0.80)):
+                            raise AssertionError("Destination Problem")
+                    elif exists(Pattern(dragDestinationImageName).similar(0.80)):
+                            raise AssertionError("Source Problem")
                     else:
                             raise AssertionError("Either drag source or drop destination images showing some problems..")
                 elif len(args) == 4:
