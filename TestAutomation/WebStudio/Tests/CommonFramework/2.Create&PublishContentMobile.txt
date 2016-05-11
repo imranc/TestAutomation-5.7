@@ -65,5 +65,8 @@ Create publish a content in iOS phone
 
 Logout from CUE
 	[tags]  tab
-	Click Element  css=div.logout
+	Go To Cue
+	Wait Until Page Contains Element  css=div.logout span
+	Click Element  css=div.logout span
+	Wait Until Page Contains Element  css=input#login
 	Page Should Contain Element  css=input#login
