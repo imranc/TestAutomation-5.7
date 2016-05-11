@@ -33,7 +33,8 @@ Create publish preview a content in android tab
 	${previewUrl} =  Get Element Attribute  css=a[ng-href*="http"]  ng-href
 	Click Element  css=div.tab.new-story div.close
 	Go To Url  ${previewUrl}
-	Page Should Contain Text  Story created for CUE testing
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"Story created for CUE testing")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"Story created for CUE testing")]
 
 Create publish preview a content in iOS tab
 	[tags]  tab-ios
@@ -46,7 +47,8 @@ Create publish preview a content in iOS tab
 	${previewUrl} =  Get Element Attribute  css=a[ng-href*="http"]  ng-href
 	Click Element  css=div.tab.new-story div.close
 	Go To Url  ${previewUrl}
-	Page Should Contain Text  Story created for CUE testing
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"Story created for CUE testing")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"Story created for CUE testing")]
 
 Create publish a content in iOS phone
 	[tags]  mobile-ios
@@ -60,3 +62,8 @@ Create publish a content in iOS phone
 	Click Element  css=span.close
 	Click Element  css=div.logout span
 	Close Application
+
+Logout from CUE
+	[tags]  tab
+	Click Element  css=div.logout
+	Page Should Contain Element  css=input#login
