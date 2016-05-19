@@ -18,6 +18,8 @@ Create a Tag and check if that can be used
 		Switch To Content Studio
 		Create Tag  widget  Widget
 		Wait For  60
+		Type Key  ESC
+		Type Key  ESC
 		Tag Content  widget
 		Save And Publish
 		Close Browser
