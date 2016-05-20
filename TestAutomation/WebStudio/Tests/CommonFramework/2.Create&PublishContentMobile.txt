@@ -6,67 +6,73 @@ Library  AppiumLibrary
 
 Resource       mobile_resource.txt
 
+Test Setup  Open Browser To Escenic Common Framework  ${BROWSER}
 
+Test Teardown  Run Keywords  Go To CUE  AND  Run Keyword And Ignore Error  Click Element  css=div.sh_menu  AND  Run Keyword And Ignore Error  Click Element  css=span.close  AND  Run Keyword And Ignore Error  Click Element  css=span.close  AND  Run Keyword And Ignore Error  Click Element  css=div.close  AND  Run Keyword And Ignore Error  Click Element  css=div.close  AND  Run Keyword And Ignore Error  Logout Of CUE
 *** Test Cases ***
 
-Create publish a content in android phone
+Create publish a content in android phone and preview
 	[tags]  mobile-android
-	Open Browser To Escenic Common Framework  ${BROWSER}
 	Login to CUE with mobile
 	Create Story in mobile  CUE content created from android phone
-	Publish Story in Mobile
+	Publish New Story in Mobile
 	Wait Until Element Is Visible  css=span[rel='published']  45
+	Click Element  css=button.sidebar.icon
+	${previewUrl}=  Get Preview Url
 	Click Element  css=div.sh_menu
 	Page Should Contain Element  //div/span[contains(text(),"CUE content created from android phone")]
 	Click Element  css=span.close
-	Click Element  css=div.logout span
-	Close Application
+	Run Keyword And Continue On Failure  Logout Of CUE
+	Go To Url  ${previewUrl}
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"CUE content created from android phone")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"CUE content created from android phone")]
 
-Create publish preview a content in android tab
+Create publish preview a content in android tab and preview
 	[tags]  tab-android
-	Open Browser To Escenic Common Framework  ${BROWSER}
 	Login To CUE
 	Wait Until Page Contains Element  css=#panels .tabs > .search  300
-	Create Story in android tab  Story created for CUE testing
+	Create Story in android tab  CUE content created from android tab
 	Publish Story
-	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
-	${previewUrl} =  Get Element Attribute  css=a[ng-href*="http"]  ng-href
+	${previewUrl}=  Get Preview Url
 	Click Element  css=div.tab.new-story div.close
+	Run Keyword And Continue On Failure  Logout of CUE
 	Go To Url  ${previewUrl}
-	Wait Until Page Contains Element  xpath=//h1[contains(text(),"Story created for CUE testing")]  30
-	Page Should Contain Element  xpath=//h1[contains(text(),"Story created for CUE testing")]
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"CUE content created from android tab")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"CUE content created from android tab")]
 
-Create publish preview a content in iOS tab
+Create publish preview a content in iOS tab and preview
 	[tags]  tab-ios
-	Open Browser To Escenic Common Framework  ${BROWSER}
 	Login To CUE
 	Wait Until Page Contains Element  css=#panels .tabs > .search  300
-	Create Story in ios tab  Story created for CUE testing
+	Create Story in ios tab  CUE content created from iPad
 	Publish Story
-	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
-	${previewUrl} =  Get Element Attribute  css=a[ng-href*="http"]  ng-href
+	${previewUrl}=  Get Preview Url
 	Click Element  css=div.tab.new-story div.close
+	Run Keyword And Continue On Failure  Logout of CUE
 	Go To Url  ${previewUrl}
-	Wait Until Page Contains Element  xpath=//h1[contains(text(),"Story created for CUE testing")]  30
-	Page Should Contain Element  xpath=//h1[contains(text(),"Story created for CUE testing")]
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"CUE content created from iPad")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"CUE content created from iPad")]
 
-Create publish a content in iOS phone
+Create publish a content in iOS phone and preview
 	[tags]  mobile-ios
-	Open Browser To Escenic Common Framework  ${BROWSER}
 	Login to CUE with mobile
 	Create Story in mobile iOS  CUE content created from iPhone
-	Publish Story in Mobile
+	Publish New Story in Mobile
 	Wait Until Element Is Visible  css=span[rel='published']  45
+	Click Element  css=button.sidebar.icon
+	${previewUrl}=  Get Preview Url
+	Click Element  css=button.sidebar.icon
 	Click Element  css=div.sh_menu
+	Wait Until Page Contains Element  //div/span[contains(text(),"CUE content created from iPhone")]
 	Page Should Contain Element  //div/span[contains(text(),"CUE content created from iPhone")]
 	Click Element  css=span.close
-	Click Element  css=div.logout span
-	Close Application
+	Logout Of CUE
+	Go To Url  ${previewUrl}
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"CUE content created from iPhone")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"CUE content created from iPhone")]
 
-Logout from CUE
-	[tags]  tab
-	Go To Cue
-	Wait Until Page Contains Element  css=div.logout span
-	Click Element  css=div.logout span
-	Wait Until Page Contains Element  css=input#login
-	Page Should Contain Element  css=input#login
+#Logout from CUE
+#	[tags]  tab
+#	Go To Cue
+#	Wait Until Page Contains Element  css=div.logout span
+#	Logout Of CUE

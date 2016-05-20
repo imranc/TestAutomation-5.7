@@ -24,6 +24,7 @@ Login to CUE with mobile
 	Click Element  css=#login
 	Wait Until Page Contains Element  css=div.sh_menu  30
 	Click Element  css=div.sh_menu
+	Wait Until Page Contains Element  css=div.logout span
 	Page Should Contain Element  css=div.logout span
 	Click Element  css=div.sh_menu
 
@@ -41,11 +42,14 @@ Create Story in mobile  [Arguments]  ${inputText}
 	Page Should Contain Element  css=div.logout span
 	Click Element  css=div.m-menu div.m-new
 	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input text in fields for android  ${inputText}
+	
+Input text in fields for android  [Arguments]  ${inputText}
 	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
 	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
-	Click Element  css=div.left
+	#Click Element  css=div.left
 	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
-	Click Element  css=div.left
+	#Click Element  css=div.left
 	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
 	Click Element  css=div.new-story div.field div[data-placeholder="Body"]
 	Input Text  css=div.new-story div.field div[data-placeholder="Body"]  ${inputText}
@@ -54,11 +58,23 @@ Create Story in mobile  [Arguments]  ${inputText}
 	Click Element  css=div.new-story input#save
 	Wait Until Element Is Visible  css=div.new-story input#publish  30
 
+Create Story in android tab  [Arguments]  ${inputText}
+	Click Element  css=#top>div.left>div.new-content-toggler
+	Wait Until Page Contains Element  css=#picker div.story  30
+	Wait Until Page Contains Element  css=input.new-content-search--input  30
+	Click Element  css=#picker div.story div.name
+	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input text in fields for android  ${inputText}
+
 Create Story in mobile iOS  [Arguments]  ${inputText}
 	Click Element  css=div.sh_menu
 	Page Should Contain Element  css=div.logout span
 	Click Element  css=div.m-menu div.m-new
 	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
+	Input text in fields for iOS  ${inputText}
+
+
+Input text in fields for iOS  [Arguments]  ${inputText}
 	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
 	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
 	Click Element  css=div.left
@@ -77,41 +93,29 @@ Create Story in ios tab  [Arguments]  ${inputText}
 	Wait Until Page Contains Element  css=input.new-content-search--input  30
 	Click Element  css=#picker div.story div.name
 	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
-	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
-	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
-	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
-	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
-	Click Element  css=div.new-story li.active
-	Wait Until Page Contains Element  css=div.new-story input#save
-	Click Element  css=div.new-story input#save
-	Wait Until Element Is Visible  css=div.right span.draft  30
-
-Create Story in android tab  [Arguments]  ${inputText}
-	Click Element  css=#top>div.left>div.new-content-toggler
-	Wait Until Page Contains Element  css=#picker div.story  30
-	Wait Until Page Contains Element  css=#picker div.picture  30
-	Wait Until Page Contains Element  css=input.new-content-search--input  30
-	Click Element  css=#picker div.story div.name
-	Wait Until Page Contains Element  css=div[title="new-story: New Story"]  30
-	Input Text  css=div.new-story div.field textarea[placeholder="Title"]  ${inputText}
-	Input Text  css=div.new-story div.field textarea[placeholder="Subtitle"]  ${inputText}
-	Input Text  css=div.new-story div.field textarea[placeholder="Lead text"]  ${inputText}
-	Wait Until Element Is Visible  css=div.new-story div.field div[data-placeholder="Body"]  15
-	Input Text  css=div.new-story div.field div[data-placeholder="Body"]  ${inputText}
-	Click Element  css=div.new-story li.active
-	Wait Until Page Contains Element  css=div.new-story input#save
-	Click Element  css=div.new-story input#save
-	Wait Until Element Is Visible  css=div.right span.draft  30
+	Input text in fields for iOS  ${inputText}
 	
 Publish Story
 	Wait Until Element Is Visible  css=div.new-story input#publish
 	Click Element  css=div.new-story input#publish
 	Wait Until Element Is Visible  css=div.right span.published  45	
 
-Publish Story in Mobile
+Publish New Story in Mobile
 	Wait Until Element Is Visible  css=div.new-story input#publish
 	Click Element  css=div.new-story input#publish
 	Wait Until Element Is Visible  css=span[rel='published']  30
+
+Get Preview Url
+	Wait Until Element Is Visible  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]  15
+	${previewUrl} =  Get Element Attribute  css=div[ng-if="vm.content.links && vm.content.links['alternate']"]>div[class="right"]>a   ng-href
+	[return]  ${previewUrl}
+
+Logout of CUE
+	Click Element  css=div.logout span
+	Wait Until Page Contains Element  css=input#login
+	Page Should Contain Element  css=input#login
+
+Go 
 	
 
 	

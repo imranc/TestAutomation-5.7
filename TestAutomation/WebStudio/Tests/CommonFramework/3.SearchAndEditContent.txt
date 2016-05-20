@@ -1,0 +1,73 @@
+*** Settings ***
+
+Documentation  Search and edit content from phone
+
+Library  AppiumLibrary
+Library  DateTime
+
+Resource       mobile_resource.txt
+
+Test Setup  Go To CUE
+
+Test Teardown  Run Keywords  Go To CUE  AND  Run Keyword And Ignore Error  Click Element  css=div.sh_menu  AND  Run Keyword And Ignore Error  Click Element  css=span.close  AND  Run Keyword And Ignore Error  Click Element  css=span.close  AND  Run Keyword And Ignore Error  Click Element  css=div.close  AND  Run Keyword And Ignore Error  Click Element  css=div.close  AND  Run Keyword And Ignore Error  Logout Of CUE  AND  Close Application
+*** Test Cases ***
+
+Search and edit content from phone
+	[tags]  mobile
+	Login to CUE with mobile
+	Click Element  css=div.search
+	Input Text   css=input[name="search"]   CUE content created
+	Sleep  2
+	Wait Until Page Contains Element   css=span.story
+	Click Element   css=span.story
+	Wait Until Page Contains Element   css=div.field.text.title
+	Wait Until Page Contains Element   css=div.story div.field textarea[placeholder="Title"]
+	Wait Until Page Contains Element   	css=div.story input#publish
+	Sleep  2
+	Wait Until Page Contains  CUE content created
+	${date} = 	Get Current Date
+	Input Text   css=div.story div.field textarea[placeholder="Title"]  : Updated at - ${date}
+	Wait Until Page Contains  : Updated at - ${date}
+	Click Element  css=div.story input#save
+	Wait Until Element Is Visible   css=span[rel='draft-published']   45
+	Click Element  css=div.story input#publish
+	Wait Until Element Is Visible   css=span[rel='published']   45
+	Click Element  css=button.sidebar.icon
+	${previewUrl}=  Get Preview Url
+	Wait Until Page Contains Element  css=div.sh_menu
+	Click Element  css=div.sh_menu
+	Page Should Contain Element   xpath=//div/span[contains(text(),"${date}")]
+	Click Element  css=span.close
+	Logout Of CUE
+	Go To Url  ${previewUrl}
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"${date}")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"${date}")]
+
+Search and edit content from tab
+	[tags]  tab
+	Login to CUE 
+	Click Element  css=#panels .tabs > .search
+    	Input Text  css=input[name="search"]  CUE content created
+	Sleep  2
+	Wait Until Page Contains Element   css=span.story
+	Click Element   css=span.story
+	Wait Until Page Contains Element   css=div.field.text.title
+	Wait Until Page Contains Element   css=div.story div.field textarea[placeholder="Title"]
+	Wait Until Page Contains Element   	css=div.story input#publish
+	Sleep  2
+	Wait Until Page Contains  CUE content created
+	${date} = 	Get Current Date
+	Input Text   css=div.story div.field textarea[placeholder="Title"]  : Updated at - ${date}
+	Click Element  css=div.story input#save
+	Wait Until Element Is Visible   css=span[rel='draft-published']   45
+	Click Element  css=div.story input#publish
+	Wait Until Element Is Visible   css=span[rel='published']   45
+	${previewUrl}=  Get Preview Url
+	Click Element  css=div.tab.story>div.close
+	Logout Of CUE
+	Sleep  2
+	Go To Url  ${previewUrl}
+	Wait Until Page Contains Element  xpath=//h1[contains(text(),"${date}")]  30
+	Page Should Contain Element  xpath=//h1[contains(text(),"${date}")]
+
+
