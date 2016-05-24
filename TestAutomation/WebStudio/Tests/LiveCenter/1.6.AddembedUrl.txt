@@ -14,14 +14,11 @@ Create an entry with EmbedURL
 	Create Entry  Test entry of Escenic event with EmbedURL
         Add EmbedURL to an Entry  https://vine.co/v/ebDKuAUm56a
 	Publish Entry
-	Wait Until Page Contains Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with EmbedURL')]  30
+	Wait For  2
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with EmbedURL')]
-	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with EmbedURL')]/../../../../../..//ul/li[contains(text(),'Vine')]
+	Page Should Contain Element  xpath=//*[contains(text(),'Test entry of Escenic event with EmbedURL')]/../../../..//div[contains(text(),'Vine')]
 	Open live center publication event page
-	Wait For  10
 	Wait Until Page Contains Element  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
 	Select Frame  css=iframe[src^="https://vine.co/v/ebDKuAUm56a/embed/simple"]
-	Wait Until Page Contains Element  css=div[class="play-button"]
 	Click Element  css=div[class="play-button"]
 	Page Should Contain Element  css=video[poster^="https://v.cdn.vine.co/"]
-	

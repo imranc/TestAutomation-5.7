@@ -13,6 +13,5 @@ Create an entry with a rss
 	Open an Event
 	Create Entry  Test entry of Escenic event with a rss
         Add rss to an Entry
-
-Log off
-    Log Off From Escenic Live Center
+	Wait Until Page Contains Element  css=a[href^="http://www.bbc.co.uk/news/"]
+	Page Should Contain Element  css=a[href^="http://www.bbc.co.uk/news/"]

@@ -12,11 +12,6 @@ Create an entry with an instagram link
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  Test entry of Escenic event with an instagram link
-	Add instagram link to an Entry
-	Click Element  xpath=//div/a[text()='Publish']
-	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with an instagram link')]  10
-    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with an instagram link')]
+        Add instagram link to an Entry
 	Open live center publication event page
-	Wait Until Page Contains Element  xpath=//h2[contains(text(),'Test entry of Escenic event with an instagram link')]  30
-	Page Should Contain Element  xpath=//h2[contains(text(),'Test entry of Escenic event with an instagram link')]
-	Close All Browsers
+	Page Should Contain Element  xpath=//div[@class="tag ng-scope tag-instagram"]

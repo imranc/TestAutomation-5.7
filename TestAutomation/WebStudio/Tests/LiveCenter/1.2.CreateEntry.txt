@@ -13,10 +13,8 @@ Create an entry and submit it
 	Open an Event
 	Create Entry  First test entry of Escenic event
 	Make Entry Sticky
-	Select Author  elive	
+	Select Author  elive Adminis	
 	Submit Entry
-	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
-        #Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
 	Open live center publication event page
 	Page Should not Contain Element  xpath=//h2[contains(text(),'First test entry of Escenic event')]
 
@@ -35,9 +33,10 @@ Create milestone entry and check if it is tagged correctly
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  This is a milestone entry
-	Click Element  css=input[class="ng-pristine ng-untouched ng-valid ng-scope"]
+	Click Element  css=i[class="moreoptions_icon"]
+	Click Element  css=#field-boolean- > i
 	Publish Entry
 	Page Should Contain Element  xpath=//div/p[contains(text(),'This is a milestone entry')]
-	Page Should Contain Element  xpath=//*[contains(text(), 'This is a milestone entry')]/../../../../../..//ul/li[contains(text(),'Milestone')]
+	Page Should Contain Element  xpath=//*[contains(text(),'milestone')]/../../../..//div[contains(text(),'Milestone')]
 	Open live center publication event page
 	Page Should Contain Element  xpath=//h2[contains(text(),'This is a milestone entry')]

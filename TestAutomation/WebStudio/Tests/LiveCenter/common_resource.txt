@@ -8,11 +8,11 @@ Resource       ${SUT}_resource.txt
 Library        Selenium2Library
 
 
+
 *** Variables ***
 
 ${SUT}           html
 ${SERVER}        localhost:7272
-${BROWSER}       Firefox
 ${DELAY}         1
 ${VALID USER}    demo-temp-dev_admin
 ${VALID PASSWD}  escenic

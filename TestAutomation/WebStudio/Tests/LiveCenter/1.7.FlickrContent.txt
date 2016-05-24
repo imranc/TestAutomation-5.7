@@ -1,23 +1,23 @@
 *** Settings ***
 
-Documentation  A test case to add EmbedURL in an entry 
+Documentation  A test case to add Flickr Content in an entry 
 
 Resource       common_resource.txt
 
 
 *** Test Cases ***
 
-Create an entry with EmbedURL
+Create an entry with Flickr Content
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  Test entry of Escenic event with Flickr content
         Add EmbedURL to an Entry  https://www.flickr.com/photos/102916444@N04/15494322140/in/dateposted-public/
 	Publish Entry
-	Wait Until Page Contains Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]  30
+	Wait For  2
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]
-	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with Flickr content')]/../../../../../..//ul/li[contains(text(),'Flickr')]
+	Page Should Contain Element  xpath=//*[contains(text(),'Test entry of Escenic event with Flickr content')]/../../../..//div[contains(text(),'Flickr')]
 	Open live center publication event page
-	Wait Until Page Contains Element  css=iframe[class="flickr-embed-frame"]  30
+	Wait Until Page Contains Element  css=iframe[class="flickr-embed-frame"]
 	Select Frame  css=iframe[class="flickr-embed-frame"]
 	Page Should Contain Element  css=a[href="https://www.flickr.com/photos/102916444@N04/15494322140"]

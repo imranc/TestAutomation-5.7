@@ -12,6 +12,9 @@ Update an Entry
 	Login To Escenic Live Center
 	Open an Event
 	Wait For  5
+	Create Entry  This is an entry for update
+	Publish Entry
+	Page Should Contain Element  xpath=//div/p[contains(text(),'This is an entry for update')]
 	Update an Entry  Updated entry  
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Updated entry')]
 	Open live center publication event page
