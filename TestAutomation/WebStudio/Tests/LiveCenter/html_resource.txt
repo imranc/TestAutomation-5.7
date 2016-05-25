@@ -235,7 +235,7 @@ Add Tweet to an Entry
         Click Element  css=#social_twitter1 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div > div.textColl
 	Click Element  css=input[value="Publish"]
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a tweet']
+    	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with a tweet')]
 
 
 Add Tag to an Entry  [Arguments]  ${inputText}
@@ -252,7 +252,7 @@ Add youtube link to an Entry
 	Wait For  5
 	Click Element  css=input[value="Publish"]
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a youtube link']
+    	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
 	Page Should Contain Element  xpath=//*[contains(text(),'Test entry of Escenic event with a youtube link')]/../../../..//div[contains(text(),'YouTube')]
 
 Add instagram link to an Entry
@@ -261,7 +261,7 @@ Add instagram link to an Entry
 	Wait For  5
 	Click Element  css=input[value="Publish"]
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with an instagram link']
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with an instagram link')]
 
 Add rss to an Entry
         Click Element  css=div[class="verticalTab vTab_rss"]
@@ -269,7 +269,7 @@ Add rss to an Entry
 	Wait For  5
 	Click Element  css=input[value="Publish"]
 	Wait For  5
-    	Page Should Contain Element  xpath=//div/p[text()=' Test entry of Escenic event with a rss']
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
 
 
 Filter events by section

@@ -16,7 +16,7 @@ Create an entry and submit it
 	Select Author  elive Adminis	
 	Submit Entry
 	Open live center publication event page
-	Page Should not Contain Element  xpath=//h2[contains(text(),'First test entry of Escenic event')]
+	Page Should not Contain Element  xpath=//p[contains(text(),'First test entry of Escenic event')]
 
 Publish submitted entry
 	Close All Browsers
@@ -24,8 +24,8 @@ Publish submitted entry
 	Open an Event
 	Publish the Submitted Entry
 	Open live center publication event page
-	Wait Until Page Contains Element  xpath=//h2[contains(text(),'First test entry of Escenic event')]
-	Page Should Contain Element  xpath=//h2[contains(text(),'First test entry of Escenic event')]
+	Wait Until Page Contains Element  xpath=//p[contains(text(),'First test entry of Escenic event')]
+	Page Should Contain Element  xpath=//p[contains(text(),'First test entry of Escenic event')]
 
 
 Create milestone entry and check if it is tagged correctly
@@ -39,4 +39,4 @@ Create milestone entry and check if it is tagged correctly
 	Page Should Contain Element  xpath=//div/p[contains(text(),'This is a milestone entry')]
 	Page Should Contain Element  xpath=//*[contains(text(),'milestone')]/../../../..//div[contains(text(),'Milestone')]
 	Open live center publication event page
-	Page Should Contain Element  xpath=//h2[contains(text(),'This is a milestone entry')]
+	Page Should Contain Element  xpath=//p[contains(text(),'This is a milestone entry')]

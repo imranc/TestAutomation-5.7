@@ -21,6 +21,6 @@ Create CSimage inside an entry
 	Page Should Contain Element  css=img[title="Desert"]
 	Wait For  10
 	Open live center publication event page
-	Page Should Contain Element  xpath=//h2[contains(text(),'Test entry of Escenic event with CS image content')]
+	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with CS image content')]
 	
 

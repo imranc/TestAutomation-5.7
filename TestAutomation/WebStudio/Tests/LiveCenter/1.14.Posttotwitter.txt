@@ -19,4 +19,4 @@ Create an entry and post it to twitter
 	Page Should Contain Element  xpath=//i[@class="info_icon"]
 	Wait For  20
 	Open live center publication event page
-	Page Should Contain Element  xpath=//h2[contains(text(),'This is an entry for twitter')]
+	Page Should Contain Element  xpath=//p[contains(text(),'This is an entry for twitter')]
