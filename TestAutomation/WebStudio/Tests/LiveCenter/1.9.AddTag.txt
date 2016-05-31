@@ -12,6 +12,6 @@ Create an entry with a tag
 	Login To Escenic Live Center
 	Open an Event
 	Create Entry  Test entry of Escenic event with a tag
-        Add Tag to an Entry  external
+        Add Tag to an Entry  Automated
 	Open live center publication event page
-	Page Should Contain Element  xpath=//a[contains(text(),'external')]
+	Page Should Contain Element  xpath=//a[contains(text(),'Automated')]

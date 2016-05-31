@@ -14,6 +14,6 @@ Create an entry with a youtube link
 	Create Entry  Test entry of Escenic event with a youtube link
         Add youtube link to an Entry
 	Open live center publication event page
-	Wait Until Page Contains Element  css=iframe[src^="https://www.youtube.com/embed"]
+	Wait Until Page Contains Element  css=iframe[src^="https://www.youtube.com/embed"]  20
 	Page Should Contain Element  css=iframe[src^="https://www.youtube.com/embed"]
 
