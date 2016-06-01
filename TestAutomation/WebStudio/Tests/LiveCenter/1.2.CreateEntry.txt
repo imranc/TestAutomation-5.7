@@ -1,5 +1,7 @@
 *** Settings ***
 
+Library  DateTime
+
 Documentation  A test case to create an entry and publish it
 
 Resource       common_resource.txt
@@ -11,33 +13,35 @@ Create an entry and submit it
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
-	Create Entry  First test entry of Escenic event
+	${date} = 	Get Current Date
+	Set Suite Variable  ${creationDate}  ${date}
+	Create Entry  First test entry of Escenic event at ${date}
 	Make Entry Sticky
 	Select Author  elive administrator 	
 	Submit Entry
-    	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
+    	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
 
 Check submitted entry filter
 	Click Element  css=i.filter_icon
 	Click Element  css=div.filterControl
 	Wait Until Element is Visible  xpath=//div[@class="checkBox inline"]
 	Click Element  xpath=(//div[@class="checkBox inline"])[2]
-	Wait Until Page Does Not Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
-	Page Should Not Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
+	Wait Until Page Does Not Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
+	Page Should Not Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
 	Click Element  xpath=(//div[@class="checkBox inline"])[2]
-	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
-	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
+	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
 	Open live center publication event page
-	Page Should Not Contain Element  xpath=//p[contains(text(),'First test entry of Escenic event')]
+	Page Should Not Contain Element  xpath=//p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
 
 Publish submitted entry
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
-	Publish the Submitted Entry  First test entry of Escenic event
+	Publish the Submitted Entry  First test entry of Escenic event at ${creationDate}
 	Open live center publication event page
-	Wait Until Page Contains Element  xpath=//p[contains(text(),'First test entry of Escenic event')]
-	Page Should Contain Element  xpath=//p[contains(text(),'First test entry of Escenic event')]
+	Wait Until Page Contains Element  xpath=//p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
+	Page Should Contain Element  xpath=//p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
 
 
 Create milestone entry and check if it is tagged correctly
