@@ -15,7 +15,8 @@ Update an Entry
 	Create Entry  This is an entry for update
 	Publish Entry
 	Page Should Contain Element  xpath=//div/p[contains(text(),'This is an entry for update')]
-	Update an Entry  Updated entry  
+	Update an Entry  Updated entry
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(), 'Updated entry')]  
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Updated entry')]
 	Open live center publication event page
 	Page Should Contain Element  xpath=//p[contains(text(), 'Updated entry')]

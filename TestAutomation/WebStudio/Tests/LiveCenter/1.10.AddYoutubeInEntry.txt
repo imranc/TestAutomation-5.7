@@ -16,7 +16,7 @@ Create an entry with a youtube link
 	Click Element  css=input[value="Publish"]
 	Wait Until Page Contains Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
     	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
-	Page Should Contain Element  xpath=//*[contains(text(),'Test entry of Escenic event with a youtube link')]/../../../..//div[contains(text(),'YouTube')]
+	Wait Until Page Contains Element  xpath=//*[contains(text(),'Test entry of Escenic event with a youtube link')]/../../../..//div[contains(text(),'YouTube')]
 	Open live center publication event page
 	Wait Until Page Contains Element  css=iframe[src^="https://www.youtube.com/embed"]  20
 	Page Should Contain Element  css=iframe[src^="https://www.youtube.com/embed"]
@@ -27,5 +27,7 @@ Check multiple embed warning
 	Open an Event
 	Create Entry  Test entry of Escenic event with a youtube link
 	Click Element  css=div[class="verticalTab vTab_youtube"]
+	Wait Until Page Contains Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
         Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
+	Wait until Page Contains Element  xpath=//h1[contains(text(),'Warning: Posting duplicate')]
 	Page Should Contain Element  xpath=//h1[contains(text(),'Warning: Posting duplicate')]

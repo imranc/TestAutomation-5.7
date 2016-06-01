@@ -30,7 +30,7 @@ Log Off From Escenic Live Center
     Click Element  css=i[class="menu_icon"]
     Wait Until Page Contains Element  css=i[class="lock_icon"]
     Click Element  css=i[class="lock_icon"]
-    Page Should Contain Button  xpath=//input[@value="LOGIN"]
+    Wait Until Page Contains Element  xpath=//input[@value="LOGIN"]
 
 
 Open New Editor
@@ -251,12 +251,14 @@ Add Tag to an Entry  [Arguments]  ${inputText}
 
 Add youtube link to an Entry
         Click Element  css=div[class="verticalTab vTab_youtube"]
+	Wait Until Page Contains Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
         Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
 	Confirm If duplicate post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
 	
 Add instagram link to an Entry
         Click Element  css=div[class="verticalTab vTab_instagram"]
+	Wait until Page Contains Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
         Click Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
 	Confirm If duplicate post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
@@ -266,6 +268,7 @@ Add instagram link to an Entry
 
 Add rss to an Entry
         Click Element  css=div[class="verticalTab vTab_rss"]
+	Wait Until Page Contains Element  css=#social_rss3 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
         Click Element  css=#social_rss3 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
 	Confirm If duplicate post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
