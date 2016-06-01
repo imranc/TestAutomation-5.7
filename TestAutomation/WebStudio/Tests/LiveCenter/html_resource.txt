@@ -274,9 +274,10 @@ Add rss to an Entry
     	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
 
 Confirm If duplicate post
+	${previous kw}= 	Register Keyword To Run On Failure 	Nothing
 	Run Keyword And Ignore Error  Wait Until Page Contains Element  css=input[value="CONFIRM"]
 	Run Keyword And Ignore Error  Click Element  css=input[value="CONFIRM"]
-
+	Register Keyword To Run On Failure 	${previous kw}
 
 Filter events by section
 	Click Element  css=#select2-chosen-1
