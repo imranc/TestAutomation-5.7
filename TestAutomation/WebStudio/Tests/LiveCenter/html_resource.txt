@@ -234,6 +234,7 @@ Add Tweet to an Entry  [Arguments]  ${inputText}
         Click Element  css=div[class="verticalTab vTab_twitter"]
 	Wait until Page Contains Element  css=#social_twitter1 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div > div.textColl
         Click Element  css=#social_twitter1 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div > div.textColl
+	Confirm If duplicate post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
 	Click Element  css=input[value="Publish"]
     	Wait Until Page Contains Element  xpath=//p[contains(text(),'${inputText}')]
@@ -251,27 +252,30 @@ Add Tag to an Entry  [Arguments]  ${inputText}
 Add youtube link to an Entry
         Click Element  css=div[class="verticalTab vTab_youtube"]
         Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
-	Wait For  5
-	Click Element  css=input[value="Publish"]
-	Wait For  5
-    	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
-	Page Should Contain Element  xpath=//*[contains(text(),'Test entry of Escenic event with a youtube link')]/../../../..//div[contains(text(),'YouTube')]
-
+	Confirm If duplicate post
+	Wait Until Page Contains Element  css=div.socialCard.inline  20
+	
 Add instagram link to an Entry
         Click Element  css=div[class="verticalTab vTab_instagram"]
         Click Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
-	Wait For  5
+	Confirm If duplicate post
+	Wait Until Page Contains Element  css=div.socialCard.inline  20
 	Click Element  css=input[value="Publish"]
-	Wait For  5
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with an instagram link')]
     	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with an instagram link')]
 
 Add rss to an Entry
         Click Element  css=div[class="verticalTab vTab_rss"]
         Click Element  css=#social_rss3 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
-	Wait For  5
+	Confirm If duplicate post
+	Wait Until Page Contains Element  css=div.socialCard.inline  20
 	Click Element  css=input[value="Publish"]
-	Wait For  5
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
     	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
+
+Confirm If duplicate post
+	Run Keyword And Ignore Error  Wait Until Page Contains Element  css=input[value="CONFIRM"]
+	Run Keyword And Ignore Error  Click Element  css=input[value="CONFIRM"]
 
 
 Filter events by section
@@ -305,6 +309,7 @@ Add EmbedURL to an Entry  [Arguments]  ${embedUrl}
 	Click Element  css=input[placeholder="URL: "]
 	Input Text  css=input[placeholder="URL: "]  ${embedUrl}
 	Click Element  css=input[value="OK"]
+	Confirm If Duplicate Post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
 
 
