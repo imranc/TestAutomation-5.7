@@ -330,6 +330,7 @@ Add CSimage Content to an Entry
 	Wait Until Page Contains Element  css=div.textArea img.esc-content
 
 Open live center publication event page
+	Wait Until Page Contains Element  xpath=//a[contains(text(),'escenic-live-event-test')]
 	${prsentationLink}=  Get Element Attribute  xpath=//a[contains(text(),'escenic-live-event-test')]@href
 	Open Browser  ${prsentationLink}  ${BROWSER}
 	Wait For  10
