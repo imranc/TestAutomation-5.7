@@ -200,6 +200,7 @@ Delete User  [Arguments]  ${userName}
 Create Entry  [Arguments]  ${inputText}
 	Wait Until Page Contains Element  css=textarea[id="field-basic-"]
 	Input Text  css=textarea[id="field-basic-"]  ${inputText}
+	Wait Until Page Contains Element  css=div.textArea[contenteditable="true"]  20
 	Input Text  css=div[id="field-xhtml-"]  ${inputText}
 	Sleep  1
 	
@@ -277,8 +278,10 @@ Add rss to an Entry
     	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
 
 Confirm If duplicate post
+	${previous kw}=         Register Keyword To Run On Failure      Nothing
 	${status}  ${value} =  Run Keyword And Ignore Error  Wait Until Page Contains Element  css=input[value="CONFIRM"]
 	Run Keyword If  '${status}' == 'PASS'  Click Element  css=input[value="CONFIRM"]
+	Register Keyword To Run On Failure      ${previous kw}
 
 Filter events by section
 	Click Element  css=#select2-chosen-1
@@ -289,7 +292,7 @@ Filter events by section
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  xpath=//div/p[contains(text(),'This is an entry for update')]/../../.././/i[@class="edit_icon"]
-	Wait Until Page Contains Area  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//textarea
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//textarea
 	Input Text  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//textarea  ${input_text}
 	Input Text  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//div[@data-placeholder="Body"]  ${input_text}
 	Sleep  1
@@ -297,6 +300,7 @@ Update an Entry  [Arguments]  ${inputText}
 	
 Delete an Entry  [Arguments]  ${entryTitle}
         Click Element  xpath=//div/p[contains(text(),'${entryTitle}')]/../../.././/i[@class="delete_icon"] 
+	Wait Until Page Contains Element  css=input[value="CONFIRM"]
         Click Element  css=input[value="CONFIRM"]
 	Wait Until Page Does Not Contain Element  xpath=//div/p[contains(text(),'${entryTitle}')]/../../.././/i[@class="delete_icon"]  5	
 	Page Should Not Contain Element  xpath=//div/p[contains(text(),'${entryTitle}')]/../../.././/i[@class="delete_icon"]
