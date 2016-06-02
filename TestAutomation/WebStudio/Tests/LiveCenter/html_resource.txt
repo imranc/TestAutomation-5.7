@@ -277,10 +277,8 @@ Add rss to an Entry
     	Page Should Contain Element  xpath=//div/p[contains(text(),'Test entry of Escenic event with a rss')]
 
 Confirm If duplicate post
-	${previous kw}= 	Register Keyword To Run On Failure 	Nothing
-	Run Keyword And Ignore Error  Wait Until Page Contains Element  css=input[value="CONFIRM"]
-	Run Keyword And Ignore Error  Click Element  css=input[value="CONFIRM"]
-	Register Keyword To Run On Failure 	${previous kw}
+	${status}  ${value} =  Run Keyword And Ignore Error  Wait Until Page Contains Element  css=input[value="CONFIRM"]
+	Run Keyword If  '${status}' == 'PASS'  Click Element  css=input[value="CONFIRM"]
 
 Filter events by section
 	Click Element  css=#select2-chosen-1
@@ -291,6 +289,7 @@ Filter events by section
 
 Update an Entry  [Arguments]  ${inputText}
 	Click Element  xpath=//div/p[contains(text(),'This is an entry for update')]/../../.././/i[@class="edit_icon"]
+	Wait Until Page Contains Area  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//textarea
 	Input Text  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//textarea  ${input_text}
 	Input Text  xpath=//div/p[contains(text(),'This is an entry for update')]/../../../..//div[@data-placeholder="Body"]  ${input_text}
 	Sleep  1
