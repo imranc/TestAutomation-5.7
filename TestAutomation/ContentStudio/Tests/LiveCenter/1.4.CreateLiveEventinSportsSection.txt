@@ -37,3 +37,4 @@ Create an event in Sports Section in CS
 	#Type Text  http://newsrss.bbc.co.uk/rss/sportonline_world_edition/boxing/rss.xml
 	Save And Publish
 	#Wait For  120
+	Close Content Studio
