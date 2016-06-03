@@ -18,7 +18,7 @@ Create an entry and post it to twitter
 	Click Element  css=i[class="moreoptions_icon"]
 	Click Element  xpath=//div[@id="field-twitter-post-"]
 	Publish Entry
-	Wait Until Page Contains Element  xpath=//*[contains(text(),'This is an entry for twitter')]/../../..//i[@class="moreoptions_icon"]  10
+	Wait Until Page Contains Element  xpath=//*[contains(text(),'This is an entry for twitter')]/../../..//i[@class="moreoptions_icon"]  30
 	Click Element  xpath=//*[contains(text(),'This is an entry for twitter')]/../../..//i[@class="moreoptions_icon"]
 	Page Should Contain Element  xpath=//i[@class="info_icon"]
 	Wait Until Page Contains Element  css=div.shareValidation.success
