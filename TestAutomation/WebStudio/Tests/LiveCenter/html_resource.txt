@@ -327,7 +327,7 @@ Add CSimage Content to an Entry
 	Choose File  css=input[type="file"]  C:\\Users\\Public\\Pictures\\Sample Pictures\\Desert.jpg
 	Input Text  css=input[type="text"]  Desert
 	Click Element  css=input[value="OK"]
-	Wait Until Page Contains Element  css=div.textArea img.esc-content
+	Wait Until Page Contains Element  css=div.textArea img.esc-content  20
 
 Open live center publication event page
 	Wait Until Page Contains Element  xpath=//a[contains(text(),'escenic-live-event-test')]
