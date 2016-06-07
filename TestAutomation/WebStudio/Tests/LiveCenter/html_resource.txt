@@ -68,8 +68,8 @@ Go To WebStudio HomePage
 Input Username  [Arguments]  ${username}
     Input Text  username_field  ${username}
 
-Input Password  [Arguments]  ${password}
-    Input Text  password_field  ${password}
+#Input Password  [Arguments]  ${password}
+#    Input Text  password_field  ${password}
 
 Submit Credentials
     Click Button  LOGIN
@@ -334,3 +334,32 @@ Open live center publication event page
 	${prsentationLink}=  Get Element Attribute  xpath=//a[contains(text(),'escenic-live-event-test')]@href
 	Open Browser  ${prsentationLink}  ${BROWSER}
 	Wait For  10
+
+Login To Twitter
+	Open Browser  https://twitter.com/login
+	Input Text  css=input.js-username-field  ecetester
+	Input Password  css=input.js-password-field  AllBugsBeware
+	Unselect Checkbox  css=label.remember input
+	Click Button  css=button.submit
+
+Logout of Twitter
+	Click Element  css=a.settings
+	Wait Until Page Contains Element  css=li.js-signout-button
+	Click Element  css=li.js-signout-button
+
+Post Tweet  [Arguments]  ${tweet}
+	Wait Until Page Contains Element  css=div.tweet-box div.rich-editor  20
+	Click Element  css=div.tweet-box div.rich-editor
+	Input Text  css=div.tweet-box div.rich-editor  ${tweet}
+	Click Button  css=button.tweet-action
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'${tweet}')]
+
+Delete Tweet  [Arguments]  ${tweet}
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'${tweet}')]/../..//span[@class="Icon Icon--dots"]  20
+	Click Element  xpath=//div/p[contains(text(),'${tweet}')]/../..//span[@class="Icon Icon--dots"]
+	Wait Until Element Is Visible  xpath=//div/p[contains(text(),'${tweet}')]/../..//li[@class="js-actionDelete"]
+	Click Element  xpath=//div/p[contains(text(),'${tweet}')]/../..//li[@class="js-actionDelete"]
+	Wait Until Page Contains Element  css=button.delete-action
+	Click Element  css=button.delete-action
+	Wait Until Page Does not Contain Element  xpath=//div/p[contains(text(),'${tweet}')]
+	
