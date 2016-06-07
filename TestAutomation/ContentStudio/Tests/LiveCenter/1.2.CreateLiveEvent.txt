@@ -15,6 +15,7 @@ Create an event in CS
 	Type Key  DOWN
 	Type Key  DOWN
 	Type Key  ENTER
+	Save and Publish
 	Click Element  ExternalContentTab
 	Click Element  LiveCenterSubscriptions  -15  20
 	Click Element  Source
@@ -37,16 +38,23 @@ Create an event in CS
 	Type Key  ENTER
 	Click Element  Query  200  0
 	Type Text  http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk
-        Click Element  Query  -4  127
-	Click Element  AddPlus
+	Click Element  Query
+	Click Element  LiveCenterSubscriptions  -15  240
+	Click Element  LiveCenterSubscriptions  -15  230
+        #Click Element  Query  -4  127
+	#Click Element  AddPlus
 	Click Element  Source
 	Click Element  Source  210  5
 	Type Text  Instagram
 	Type Key  ENTER
 	Click Element  Instagram  0  30
 	Type Text  natgeo
+	Click Element  AutomaticTwitterPublishing  0  20
+	Type Text  @ecetester
+	Type Key  TAB
+	Type Text  morning
 	Click Element  TwitterProfile
 	Type Text  Default
 	Type Key  ENTER
 	Save And Publish
-	Wait For  120
+	#Wait For  120
