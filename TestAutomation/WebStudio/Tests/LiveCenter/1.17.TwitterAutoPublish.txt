@@ -46,14 +46,3 @@ Post tweets for testing auto publish
 
 	
 	
-	
-	
-	
-	#Select Frame  css=div.mobilewrapper
-	#Wait Until Page contains Element  xpath=//twitterwidget
-	#Wait Until Page Contains Element  xpath=//twitterwidget[@data-tweet-id="${tweetId}"]  30
-	#Add Location Strategy    custom    Custom Locator Strategy
-	#Wait Until Page Contains Element  xpath=//twitterwidget[@data-tweet-id="${tweetId}"]  30
-	#Page Should Contain Element  css=::shadow div[data-click-to-open-target="https://twitter.com/ecetester/status/${tweetId}"]
-	
-	
