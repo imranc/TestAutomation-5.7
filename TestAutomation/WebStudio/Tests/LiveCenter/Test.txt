@@ -1,0 +1,87 @@
+*** Settings ***
+
+Documentation  A test case to create an entry and publish it
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Create an entry and submit it
+	Set Selenium Timeout 	15 seconds
+	Close All Browsers
+	Login To Escenic Live Center
+	Open an Event
+	Create Entry  First test entry of Escenic event
+	Make Entry Sticky
+	Select Author  elive	
+	Submit Entry
+	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
+        #Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
+
+	#publish entry
+	Publish the Submitted Entry  First test entry of Escenic event
+
+	#create milestone entry 
+	Create Entry  This is a milestone entry
+	Click Element  css=input[class="ng-pristine ng-untouched ng-valid ng-scope"]
+	Publish Entry
+	Page Should Contain Element  xpath=//div/p[contains(text(),'This is a milestone entry')]
+	Page Should Contain Element  xpath=//*[contains(text(), 'This is a milestone entry')]/../../../../../../..//label[contains(text(),'Milestone')]
+
+	#Create entry with tweet
+	Create Entry  Test entry of Escenic event with a tweet
+        Add Tweet to an Entry  Test entry of Escenic event with a tweet
+	Publish Entry
+	Wait For  2
+	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with a tweet')]
+	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with a tweet')]/../../../../../../..//label[contains(text(),'Twitter')]
+
+	#create entry with embed
+	Create Entry  Test entry of Escenic event with EmbedURL
+        Add EmbedURL to an Entry  https://vine.co/v/ebDKuAUm56a
+	Publish Entry
+	Wait For  2
+	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with EmbedURL')]
+	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with EmbedURL')]/../../../../../../..//li[contains(text(),'Vine')]
+
+	#create entry with youtube content
+	Create Entry  Test entry of Escenic event with a youtube link
+        Add youtube link to an Entry
+	Click Element  xpath=//div/a[text()='Publish']
+	Wait Until Page Contains Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
+    	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
+	Wait Until Page Contains Element  xpath=//*[contains(text(),'Test entry of Escenic event with a youtube link')]/../../../../../../..//li[contains(text(),'YouTube')]
+
+	#create entry with flickr content
+	Create Entry  Test entry of Escenic event with Flickr content
+        Add EmbedURL to an Entry  https://www.flickr.com/photos/102916444@N04/15494322140/in/dateposted-public/
+	Publish Entry
+	Wait For  2
+	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]
+	#Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with Flickr content')]/../../../../../../..//li[contains(text(),'Flickr')]
+
+	#create entry with rss content
+	Create Entry  Test entry of Escenic event with a rss
+        Add rss to an Entry
+	Wait Until Page Contains Element  css=a[href^="http://www.bbc.co.uk/news/"]
+	Page Should Contain Element  css=a[href^="http://www.bbc.co.uk/"]	
+
+	#create entry with escenic image
+	Create Entry  Test entry of Escenic event with CS image content
+        Add CSimage Content to an Entry
+	Sleep  1
+	Publish Entry
+	Wait Until Page Contains Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with CS image content')]
+	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with CS image content')]
+	Page Should Contain Element  css=img[title="Desert"]
+	Page Should Contain Element  css=div.ng-binding img.esc-content
+
+	
+
+	
+	
+
+	
+
+	
