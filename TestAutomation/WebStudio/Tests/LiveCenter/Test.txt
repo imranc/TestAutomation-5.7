@@ -18,7 +18,6 @@ Create an entry and submit it
 	Submit Entry
 	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
         #Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
-	Sleep  60
 
 	#publish entry
 	Publish the Submitted Entry  First test entry of Escenic event

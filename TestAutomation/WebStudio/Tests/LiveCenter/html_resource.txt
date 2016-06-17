@@ -219,7 +219,7 @@ Open an Event
 Publish the Submitted Entry  [Arguments]  ${entryTitle}
 	Wait Until Page Contains Element  xpath=//div/p[contains(text(),'${entryTitle}')]
 	Mouse Over  xpath=//div/p[contains(text(),'${entryTitle}')]
-        Click Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]/../../../../../..//span[@class="approve ng-scope"]
+        Click Element  xpath=//div/p[contains(text(),'${entryTitle}')]/../../../../../..//span[@class="approve ng-scope"]
 	Wait For  2
         Page Should Not Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]/../../../../../..//span[@class="approve ng-scope"]
 
