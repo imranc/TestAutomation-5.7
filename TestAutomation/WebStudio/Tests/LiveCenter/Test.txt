@@ -18,9 +18,11 @@ Create an entry and submit it
 	Submit Entry
 	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event')]
         #Page Should Contain Element  xpath=//div/p[text()=' First test entry of Escenic event']
+	Sleep  60
 
 	#publish entry
 	Publish the Submitted Entry  First test entry of Escenic event
+	Sleep  60
 
 	#create milestone entry 
 	Create Entry  This is a milestone entry
@@ -28,6 +30,7 @@ Create an entry and submit it
 	Publish Entry
 	Page Should Contain Element  xpath=//div/p[contains(text(),'This is a milestone entry')]
 	Page Should Contain Element  xpath=//*[contains(text(), 'This is a milestone entry')]/../../../../../../..//label[contains(text(),'Milestone')]
+	Sleep  60
 
 	#Create entry with tweet
 	Create Entry  Test entry of Escenic event with a tweet
@@ -36,6 +39,7 @@ Create an entry and submit it
 	Wait For  2
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with a tweet')]
 	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with a tweet')]/../../../../../../..//label[contains(text(),'Twitter')]
+	Sleep  60
 
 	#create entry with embed
 	Create Entry  Test entry of Escenic event with EmbedURL
@@ -44,6 +48,7 @@ Create an entry and submit it
 	Wait For  2
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with EmbedURL')]
 	Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with EmbedURL')]/../../../../../../..//li[contains(text(),'Vine')]
+	Sleep  60
 
 	#create entry with youtube content
 	Create Entry  Test entry of Escenic event with a youtube link
@@ -52,6 +57,7 @@ Create an entry and submit it
 	Wait Until Page Contains Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
     	Page Should Contain Element  xpath=//p[contains(text(),'Test entry of Escenic event with a youtube link')]
 	Wait Until Page Contains Element  xpath=//*[contains(text(),'Test entry of Escenic event with a youtube link')]/../../../../../../..//li[contains(text(),'YouTube')]
+	Sleep  60
 
 	#create entry with flickr content
 	Create Entry  Test entry of Escenic event with Flickr content
@@ -60,12 +66,14 @@ Create an entry and submit it
 	Wait For  2
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with Flickr content')]
 	#Page Should Contain Element  xpath=//*[contains(text(), 'Test entry of Escenic event with Flickr content')]/../../../../../../..//li[contains(text(),'Flickr')]
+	Sleep  60
 
 	#create entry with rss content
 	Create Entry  Test entry of Escenic event with a rss
         Add rss to an Entry
 	Wait Until Page Contains Element  css=a[href^="http://www.bbc.co.uk/news/"]
-	Page Should Contain Element  css=a[href^="http://www.bbc.co.uk/"]	
+	Page Should Contain Element  css=a[href^="http://www.bbc.co.uk/"]
+	Sleep  60	
 
 	#create entry with escenic image
 	Create Entry  Test entry of Escenic event with CS image content
@@ -76,6 +84,7 @@ Create an entry and submit it
 	Page Should Contain Element  xpath=//div/p[contains(text(), 'Test entry of Escenic event with CS image content')]
 	Page Should Contain Element  css=img[title="Desert"]
 	Page Should Contain Element  css=div.ng-binding img.esc-content
+	Sleep  60
 
 	
 
