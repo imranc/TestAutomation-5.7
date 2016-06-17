@@ -71,7 +71,7 @@ Create an entry and submit it
 	#create entry with rss content
 	Create Entry  Test entry of Escenic event with a rss
         Add rss to an Entry
-	Wait Until Page Contains Element  css=a[href^="http://www.bbc.co.uk/news/"]
+	Wait Until Page Contains Element  css=a[href^="http://www.bbc.co.uk/"]
 	Page Should Contain Element  css=a[href^="http://www.bbc.co.uk/"]
 	Sleep  60	
 
