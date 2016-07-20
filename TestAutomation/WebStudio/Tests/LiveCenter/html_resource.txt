@@ -251,9 +251,10 @@ Add Tag to an Entry  [Arguments]  ${inputText}
 	Page Should Contain Element  xpath=//*[contains(text(),'Test entry of Escenic event with a tag')]/../../../..//div[contains(text(),'${inputText}')]
 
 Add youtube link to an Entry
+	${n} = 	Set Variable If 	'${BROWSER}' == 'GoogleChrome' 	2 	1
         Click Element  css=div[class="verticalTab vTab_youtube"]
-	Wait Until Page Contains Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)  20
-        Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
+	Wait Until Page Contains Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(${n})  20
+        Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(${n})
 	Confirm If duplicate post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
 	
