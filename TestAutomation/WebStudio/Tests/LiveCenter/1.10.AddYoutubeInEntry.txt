@@ -27,7 +27,8 @@ Check multiple embed warning
 	Open an Event
 	Create Entry  Test entry of Escenic event with a youtube link
 	Click Element  css=div[class="verticalTab vTab_youtube"]
-	Wait Until Page Contains Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
-        Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1)
+	${n} = 	Set Variable If 	'${BROWSER}' == 'GoogleChrome' 	2 	1
+	Wait Until Page Contains Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(${n})
+        Click Element  css=#social_youtube2 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(${n})
 	Wait until Page Contains Element  xpath=//h1[contains(text(),'Warning: Posting duplicate')]
 	Page Should Contain Element  xpath=//h1[contains(text(),'Warning: Posting duplicate')]
