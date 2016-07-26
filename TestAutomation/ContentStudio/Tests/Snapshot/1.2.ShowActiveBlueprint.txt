@@ -10,10 +10,11 @@ Documentation Test Case to make sure the active blueprint list shows the bluepri
 Resource       common_resource.txt
 
 **Test cases**
-Show active blueprint
+ Show active blueprint
     Switch To Content Studio
     Close Allopen Tabs
-    Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
+    Open Snapshot Dashboard
+    
 
     ###Assertion###
         Check If Exists  SnapShowActiveBlueprintAssertion

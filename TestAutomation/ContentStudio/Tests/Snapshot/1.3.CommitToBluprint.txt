@@ -1,0 +1,49 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  A Test Case for commit changes to Blueprint
+
+Resource       common_resource.txt
+
+**Test Case**
+commit changes to Blueprint
+        Switch To Content Studio
+        Close Allopen Tabs
+
+### Create a Heading Widget from Qa-Config ###
+
+	Create Widget Content Type  HeadingWidget
+        Type Text  TestAutomation 
+	Click Element  DefaultTab
+	Type Text  section
+	Wait For  2
+        Click Element  SnapsectionHeading  67  4
+	Type Text  international 
+        Type Key  DOWN
+        Type Key  ENTER
+	Click Element  Advanced
+	Type Text  h3
+	Save And Publish
+        
+
+## open Commit UI from snapshot dashboard ###
+       
+       Open Snapshot Dashboard
+       Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+       Click Element  Commit  -1  -15
+       Wait For  2
+       Click Element If Exists  ForceContinue  ForceContinue
+       Wait For  2
+       Click Element If Exists  ClickAll  ClickAll
+       Click Element If Exists  commitMessageBox  commitMessageBox
+       Type Text  Create Heading Widget
+       Click Element If Exists  ClickCommit  ClickCommit
+
+
+###Assertion###
+       Click Element  LogsTab  LogsTab
+       Check If Exist  SnapSuccessfulCommitLog
