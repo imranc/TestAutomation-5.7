@@ -28,7 +28,7 @@ Post tweets for testing auto publish
 	Close All Browsers
 	Login To Escenic Live Center
 	Open an Event
-	Wait Until Page Contains Element  xpath=//label[text()="200"]/../..//i[@class="edit_icon"]
+	Wait Until Page Contains Element  xpath=//label[text()="200"]/../..//i[@class="edit_icon"]  60
 	Click Element  xpath=//label[text()="200"]/../..//i[@class="edit_icon"]
 	Wait Until Page Contains Element  css=img[alt*='${tweetId}']
 	${date} = 	Get Current Date
