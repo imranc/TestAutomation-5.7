@@ -5,12 +5,12 @@ Library  SearchContent.SearchContent  WITH NAME  SearchContent
 Library  SikuliCS  WITH NAME  SikuliCS
 Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
-Documentation  Test Case to Set active branch of blueprint
+Documentation  Test Case for change the active branch of a snapshot enabled blueprint
 
 Resource       common_resource.txt
 
 **Test cases**
-Set active branch of blueprint
+change active branch of a blueprint
    Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
    Click Element  SnapEditChangeBranch  111  -1
    Click Element If Exists  SnapClickArrow  SnapClickArrow

@@ -5,7 +5,7 @@ Library  SearchContent.SearchContent  WITH NAME  SearchContent
 Library  SikuliCS  WITH NAME  SikuliCS
 Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
-Documentation Test Case to make sure the active blueprint list shows the blueprint properly.
+Documentation  Show active blueprints of available site publications in Snapshot Dashboard
 
 Resource       common_resource.txt
 

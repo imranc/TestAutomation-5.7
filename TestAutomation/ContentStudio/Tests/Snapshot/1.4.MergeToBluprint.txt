@@ -5,7 +5,7 @@ Library  SearchContent.SearchContent  WITH NAME  SearchContent
 Library  SikuliCS  WITH NAME  SikuliCS
 Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
 
-Documentation  A Test Case for Merge into a branch
+Documentation  A Test Case for Merge the changes from local  to remote branch
 
 Resource       common_resource.txt
 
@@ -14,39 +14,12 @@ Merge Branch
         Switch To Content Studio
         Close Allopen Tabs
 
-### Create a Heading Widget into qa-Config ###
-
-	Create Widget Content Type  HeadingWidget
-        Type Text  Heading Widget for Merge
-	Click Element  DefaultTab
-	Type Text  section
-	Wait For  2
-        Click Element  SnapsectionHeading  67  4
-	Type Text  sports 
-        Type Key  DOWN
-        Type Key  ENTER
-	Click Element  Advanced
-	Type Text  h3
-	Save And Publish
-
-
-## commit from snapshot dashboard ###
-       Open Snapshot Dashboard
-       Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
-       Click Element  Commit  -1  -15
-       Wait For  2
-       Click Element If Exists  ClickAll  ClickAll
-       Click Element If Exists  commitMessageBox  commitMessageBox
-       Type Text  Create Heading Widget to test merge funtionality 
-       Click Element If Exists  ClickCommit  ClickCommit
-       Wait For  2
-       Open Browser  https://github.com/keyaewu/qa/commits/master
 
 ## merge ###
-
+    Open Snapshot Dashboard
+    Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
     Click Element  ClickMerge  -2  1
     Click Element  Merging  -26  -2
-    Open Browser  https://github.com/keyaewu/qa/commits/master
 
 
 ###Assertion###

@@ -17,7 +17,9 @@ Create a new snapshot branch
   Type Text  Master-Test
   Click Element  SnapListOfAllBranch  -8  0
   Click Element  SnapClickArrowNewBranch  50  -2
-  Click Element  MasterNewBranch
+  Click Element  Master
   Click Element  SnapCreateBranch  35  -3
+
+###Assertion###
 
 
