@@ -848,6 +848,9 @@ class ContentStudio(object):
         def cut_from_menu(self):
                 type(Key.F10 + Key.RIGHT + Key.DOWN + Key.DOWN + Key.DOWN + Key.ENTER)
 
+        def close_active_browser(self):
+                type(Key.F4,KEY_ALT)
+
         def close_browser(self):
                 if exists("FirefoxStoppedWorking.png"):
                         switchApp("Firefox")

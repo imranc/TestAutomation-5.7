@@ -10,11 +10,11 @@ Resource       common_resource.txt
 Documentation  Creates 1000 articles in parallel threads
 **Test cases**
 Creates 1000 articles in parallel threads
-	Set Tags  non-critical
-	Open Browser To Publication  template/qa/createArticle.jsp
-	Open Browser To Publication  template/qa/createArticle.jsp
-	Wait For  90
+	Open Browser To Publication Without Varnish  template/qa/createArticle.jsp  firefox
+	Wait For  5
+	Open Browser To Publication Without Varnish  template/qa/createArticle.jsp  chrome
+	Wait For  150
+	Check If Exists  CreateArticleInThreadsAssertionChrome
+	Close Active Browser
 	Check If Exists  CreateArticleInThreadsAssertion
-	Close Browser
-	Check If Exists  CreateArticleInThreadsAssertion
-	
+	Close Active Browser

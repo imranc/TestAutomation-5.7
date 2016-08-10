@@ -178,6 +178,27 @@ class eceSikuli(object):
                         url = url+args[0]
                         eceSikuli.open_browser(self, url)
                 wait(5)
+        
+        def open_browser_to_publication_without_varnish(self, *args):
+            if len(args) == 0:
+                eceSikuli.open_browser(self, os.environ['publication'])
+            elif len(args) == 1:
+                url = os.environ['publication']
+                url=  url.replace('http://', '')
+                url=  url.replace('/','')
+                url=  url+':8040/'
+                url=  'http://'+url
+                url = url+args[0]
+                eceSikuli.open_browser(self, url)
+            elif len(args) == 2:
+                url = os.environ['publication']
+                url=  url.replace('http://', '')
+                url=  url.replace('/','')
+                url=  url+':8040/'
+                url=  'http://'+url
+                url = url+args[0]
+                eceSikuli.open_browser(self, url, args[1])
+            wait(5)
 
         def open_browser(self, *args):
                 if len(args) == 0:
@@ -186,6 +207,27 @@ class eceSikuli(object):
                         BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
                         BrowserApp=App.open(BrowserPath)
                         switchApp("Mozilla Firefox")
+                        while exists("FirefoxStoppedWorking.png"):
+                                switchApp("Firefox")
+                                click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
+                                BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
+                                BrowserApp=App.open(BrowserPath)
+                                switchApp("Mozilla Firefox")
+                        wait(10)
+                        type("l",KeyModifier.CTRL)
+                        paste(args[0])
+                        wait(5)
+                        type(Key.ENTER)
+                        wait(5)
+                        eceSikuli.maximize_browser_window(self)
+                        wait(2)
+                elif len(args) == 2:
+                        if args[1] == 'firefox':
+                                BrowserPath='C:\Program Files\Mozilla Firefox\\firefox.exe'
+                        else:
+                                BrowserPath='C:\Program Files (x86)\Google\Chrome\Application\\Chrome.exe'
+                        BrowserApp=App.open(BrowserPath)
+                        #switchApp("Mozilla Firefox")
                         while exists("FirefoxStoppedWorking.png"):
                                 switchApp("Firefox")
                                 click(Pattern("FirefoxStoppedWorking.png").targetOffset(-100,50))
