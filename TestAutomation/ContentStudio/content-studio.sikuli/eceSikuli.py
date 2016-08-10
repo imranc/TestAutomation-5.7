@@ -264,7 +264,7 @@ class eceSikuli(object):
                 wait(2)
                 if exists(Pattern(SectionImageName).similar(0.95)):
                         doubleClick(Pattern(SectionImageName).similar(0.95))
-                        wait(2)		   
+                        wait(2)            
                 else:
                        print("Do nothing")
                        
@@ -292,3 +292,16 @@ class eceSikuli(object):
                 
                         if exists("PublishButtonSimple.png"):
                                 click("PublishButtonSimple.png")
+                                
+        def should_contain_image(self, imageName):
+                """
+                :param imageName:
+                :return: :raise:
+                """
+                imageNameExist = imageName+'.png'
+                if exists(Pattern(imageNameExist).similar(0.98)):
+                        print("Image exists")
+                        return true
+                else:
+                        ImageName=capture_CS_screenshot()
+                        raise AssertionError(ScrollImageName+'Image does not exist. Screenshot: '+ImageName)
