@@ -112,7 +112,7 @@ Create Tag From Content Editor  [Arguments]  ${TagName}  ${TagStructure}
 	Select From Dropdown  ${TagStructure}
 	Wait For  1
 	Click Element  CreateInCreateNewTagPanel
-
+	
 Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  Tools
 	Click Element  ManageTags  -25  0
@@ -120,7 +120,7 @@ Create Tag  [Arguments]  ${TagName}  ${TagStructure}
 	Click Element  AddSubTags
 	Type Text  ${TagName}
 	Type Key If Exists  tagAlreadyExist  ESC
-	Type Key  ENTER 
+	Type Key  ENTER
 	Type Key  ENTER
 	Type Key  ESC
 
@@ -151,4 +151,28 @@ Duplicate Item  [Arguments]  ${DuplicateAs}  ${AppendWith}
 	Click Element  PublishButton
 	Wait For  5
 
+Duplicate Video Item  [Arguments]  ${AppendWith}
+	Wait For  2
+	Click Element  FileMenu
+	Click Element  ${DuplicateAs}
+	wait For  5
+	Type Text  ${AppendWith}
+	Type Text If Element Exists  SubtitleFieldInContent  -20  20  ${AppendWith}
+	Wait For  2
+
+	Type Text If Element Exists  LeadTextFieldInStoryContent  -25  20  ${AppendWith}
+	Wait For  2
+	
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButton
+	Wait For  5
+
+Create Video Content Type  [Arguments]  ${SectionName}
+	Right Click Section  ${SectionName}
+	Mouse Over  NewContent  100  0
+	Mouse Over  Video  50  0
+	Click Element  VideoContentType
+
+	
 	
