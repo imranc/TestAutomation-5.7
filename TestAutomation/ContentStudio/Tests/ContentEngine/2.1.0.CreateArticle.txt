@@ -15,6 +15,7 @@ Creates 1000 articles in parallel threads
 	Open Browser To Publication Without Varnish  template/qa/createArticle.jsp  chrome
 	Wait For  150
 	Check If Exists  CreateArticleInThreadsAssertionChrome
+	Click Element  CreateArticleInThreadsAssertionChrome
 	Close Active Browser
 	Check If Exists  CreateArticleInThreadsAssertion
 	Close Active Browser
