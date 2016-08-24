@@ -18,15 +18,21 @@ Merge Branch
 ## merge ###
     Open Snapshot Dashboard
     Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
-    Click Element  ClickMerge  -2  1
-    Click Element  Merging  -26  -2
-
+    Click Element  ClickMerge
+    Click Element  Merge
+    Wait For  60
+    Click Element If Exists  MergeClose  MergeClose
+   
 
 ###Assertion###
-    Click Element  LogsTab  LogsTab
-    Check If Exist  SuccessfullyMergedLog
+    Click Element If Exists  LogsTab  LogsTab
+    Check If Exists  SuccessfullyMergedLog
     Open Browser  https://github.com/keyaewu/qa/commits/master
-    Check If Exist  CheckRepo
+    Check If Exists  CheckRepo
+    Close Browser
+
+
+
 
 
 
