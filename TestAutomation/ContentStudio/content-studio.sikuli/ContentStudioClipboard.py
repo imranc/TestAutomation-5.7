@@ -120,9 +120,9 @@ class ContentStudioClipboard(object):
                         ImageName=capture_CS_screenshot()
                         raise AssertionError(uiElement+' does not exist. Screenshot: ' + ImageName)
 
-                if exists(uiElementImage):
-                        csInstance = ContentStudio()
-                        ContentStudio.switch_to_content_studio(csInstance)
+                #if exists(uiElementImage):
+                #        csInstance = ContentStudio()
+                #        ContentStudio.switch_to_content_studio(csInstance)
 
         def check_if_not_exists(self, uiElement):
                 uiElementImage=uiElement+'.png'
