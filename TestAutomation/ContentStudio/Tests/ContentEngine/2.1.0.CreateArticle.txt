@@ -10,6 +10,7 @@ Resource       common_resource.txt
 Documentation  Creates 1000 articles in parallel threads
 **Test cases**
 Creates 1000 articles in parallel threads
+	Set Tags  non-critical
 	Open Browser To Publication Without Varnish  template/qa/createArticle.jsp  firefox
 	Wait For  5
 	Open Browser To Publication Without Varnish  template/qa/createArticle.jsp  chrome

@@ -11,6 +11,7 @@ Documentation  Create/Modify/Move/Delete a Section
 **Test cases**
 Create a new section in CS
 	Switch To Content Studio
+	Type Key  ESC
 	Close Allopen Tabs
 	Create Sub Section  News  SouthAsia
 	Close Allopen Tabs
