@@ -11,8 +11,15 @@ Resource       common_resource.txt
 
 **Test cases**
 change active branch of a blueprint
-   Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
-   Click Element  SnapEditChangeBranch  111  -1
-   Click Element If Exists  SnapClickArrow  SnapClickArrow
-   Click Element  SelectMaster-Test
-   Click Element If Exists  SnapClickApplyBranch  SnapClickApplyBranch
+     Switch To Content Studio
+     Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
+     Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+     Click Element  SnapEditChangeBranch  111  -1
+     Wait For  30
+     Click Element  SnapClickArrow
+     Click Element  SelectMaster-Test
+     Click Element  SnapClickApplyBranch
+     Wait For  180
+
+###Assertion###
+     Check If Exists  AssertionChangeBranch

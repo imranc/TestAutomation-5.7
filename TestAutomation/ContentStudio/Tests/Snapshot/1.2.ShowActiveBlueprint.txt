@@ -10,11 +10,10 @@ Documentation  Show active blueprints of available site publications in Snapshot
 Resource       common_resource.txt
 
 **Test cases**
- Show active blueprint
-    Switch To Content Studio
-    Close Allopen Tabs
-    Open Snapshot Dashboard
-    
+Show active blueprint
+       Switch To Content Studio
+       Open Snapshot Dashboard
+       Wait For  5
 
-    ###Assertion###
-        Check If Exists  SnapShowActiveBlueprintAssertion
+###Assertion###
+       Check If Exists  SnapShowActiveBlueprintAssertion

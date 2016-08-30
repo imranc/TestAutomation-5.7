@@ -11,22 +11,24 @@ Resource       common_resource.txt
 
 **Test cases**
 Create a new snapshot branch
-  Switch To Content Studio
-  Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
-  Click Element  ClickNewBranch
-  Click Element  SnapTypeNewbranchName  21  1
-  Type Text  Master-Test
-  Click Element  SnapListOfAllBranch  -8  0
-  Wait For  30
-  Click Element  SnapClickArrowNewBranch  50  -2
-  Click Element  Master
-  Click Element  SnapCreateBranch  35  -3
-  Wait For  120
+    Switch To Content Studio
+    Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
+    Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+    Click Element  ClickNewBranch
+    Click Element  SnapTypeNewbranchName  21  1
+    Type Text  Master-Test
+    Click Element  SnapListOfAllBranch  -8  0
+    Wait For  30
+    Click Element  ClickArrow
+    Click Element  MasterNewBranch
+    Click Element  CreateBranch
+    Wait For  150
 
 
 
 ###Assertion###
-Click Element If Exists  LogsTab  LogsTab
-Check If Exists  AssertionCreateBranch
+
+   Click Element If Exists  LogsTab  LogsTab
+   Check If Exists  AssertionCreateBranch
 
 

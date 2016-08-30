@@ -15,7 +15,6 @@ commit changes to Blueprint
         Close Allopen Tabs
 
 ### Create a Heading Widget from Qa-Config ###
-
 	Create Widget Content Type  HeadingWidget
         Type Text  TestAutomation 
 	Click Element  DefaultTab
@@ -30,20 +29,19 @@ commit changes to Blueprint
 	Save And Publish
         
 
-## open Commit UI from snapshot dashboard ###
-       
-       Open Snapshot Dashboard
-       Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
-       Click Element  Commit  -1  -15
-       Wait For  2
-       Click Element If Exists  ForceContinue  ForceContinue
-       Wait For  2
-       Click Element If Exists  ClickAll  ClickAll
-       Click Element If Exists  commitMessageBox  commitMessageBox
-       Type Text  Create Heading Widget
-       Click Element If Exists  ClickCommit  ClickCommit
+### open Commit UI from snapshot dashboard ###       
+        Open Snapshot Dashboard
+        Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+        Click Element  Commit  -1  -15
+        Wait For  2
+        Click Element If Exists  ForceContinue  ForceContinue
+        Wait For  2
+        Click Element If Exists  ClickAll  ClickAll
+        Click Element If Exists  commitMessageBox  commitMessageBox
+        Type Text  Create Heading Widget
+        Click Element If Exists  ClickCommit  ClickCommit
 
 
 ###Assertion###
-       Click Element  LogsTab  LogsTab
-       Check If Exist  SnapSuccessfulCommitLog
+       Click Element If Exists  LogsTab  LogsTab
+       Check If Exists  SnapSuccessfulCommitLog

@@ -15,8 +15,8 @@ Merge Branch
         Close Allopen Tabs
 
 
-## merge ###
-    Open Snapshot Dashboard
+### merge ###
+    Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
     Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
     Click Element  ClickMerge
     Click Element  Merge
@@ -30,11 +30,6 @@ Merge Branch
     Open Browser  https://github.com/keyaewu/qa/commits/master
     Check If Exists  CheckRepo
     Close Browser
-
-
-
-
-
 
 
 

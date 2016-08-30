@@ -1,0 +1,75 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Test Case to Sync blueprint in user local repository with the remote repo
+
+Resource       common_resource.txt
+
+**Test cases**
+Sync Blueprint
+
+### Login into Create-Blueprint publication ###
+        Close content studio
+        start content studio  Create-Blueprint_admin  admin
+	Close Allopen Tabs
+
+
+### Create a Heading Widget from Create Blueprint ###
+        Create Widget Content Type  HeadingWidget
+        Type Text  TestAutomation Widget for Sync
+	Click Element  DefaultTab
+	Type Text  section
+	Wait For  2
+        Click Element  SnapsectionHeading  67  4
+	Type Text  international 
+        Type Key  DOWN
+        Type Key  ENTER
+	Click Element  Advanced
+	Type Text  h3
+	Save And Publish
+
+### Drop Heading widget into the fronpage ###
+	Open Section In Content Studio  FrontPageTemplate
+	Wait For  5
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
+	Drag And Drop Element  TestAutomationWidget  TopContentArea
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButtonSimple
+        
+
+### open Commit UI from snapshot dashboard ###     
+        Open Snapshot Dashboard
+        Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+        Click Element  Commit  -1  -15
+        Wait For  2
+        Click Element If Exists  ForceContinue  ForceContinue
+        Wait For  2
+        Click Element If Exists  ClickAll  ClickAll
+        Click Element If Exists  commitMessageBox  commitMessageBox
+        Type Text  Creat and Drop a Heading Widget into Frontpage
+        Click Element If Exists  ClickCommit  ClickCommit
+
+### merge ###
+        Click Element  ClickMerge
+        Click Element  Merge
+        Wait For  60
+        Click Element If Exists  MergeClose  MergeClose
+        Close content studio
+
+### sync qa-config ###
+      start content studio
+      Open Snapshot Dashboard
+      Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+      Click Element  SyncQaConfig  259  -2
+      Click Element If Exists  ForceContinue  ForceContinue
+      Wait For  180
+
+##Assertion##
+     Click Element If Exists  LogsTab  LogsTab
+     Check If Exists  AssertionBranchSync
+

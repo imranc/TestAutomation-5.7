@@ -11,21 +11,19 @@ Resource       common_resource.txt
 
 **Test cases**
 Create Blueprint 
+    Switch To Content Studio
+    Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
     Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
-    Wait For  2
     Click Element  Snap-NewBlueprint
-    Click Element  SnapClonefrombluprint  67  1
-    Click Element  PubSelectArrow  0  1
-    Click Element  SnapClickqaConfig
     Click Element  SnapChangeUsingBranch  39  1
-    Wait For  10
-    Click Element  BranchSelect  91  -2
+    Wait For  30
+    Click Element  ClickArrow
     Click Element  SnapSelectMasterBranch
     Click Element  SnapTypeblueprintname  -26  -2
-    Type Text  qa-config-2
+    Type Text  Create-Blueprint
     Click Element If Exists  SnapSaveblueprint  SnapSaveblueprint
-    Wait For 
+    Wait For  180
 
-    ###Assertion###
+###Assertion###
     
-    Check If Exists  SnapBluprintAssertion
+    Check If Exists  AssertionCreateNewBlueprint

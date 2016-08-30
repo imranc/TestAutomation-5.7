@@ -1,0 +1,23 @@
+***Settings***
+Library  ContentStudioClipboard.ContentStudioClipboard  WITH NAME  ContentStudioClipboard
+Library  ContentStudio.ContentStudio  WITH NAME  ContentStudio
+Library  SearchContent.SearchContent  WITH NAME  SearchContent
+Library  SikuliCS  WITH NAME  SikuliCS
+Library  eceSikuli.eceSikuli  WITH NAME  eceSikuli
+
+Documentation  Delete a blueprints from Snapshot Dashboard
+
+Resource       common_resource.txt
+
+**Test cases**
+Delete blueprints
+     Switch To Content Studio
+     Click Element If Exists  SnapshotDashboardNotSelected  SnapshotDashboardNotSelected
+     Click Element If Exists  SnapBlueprintsTab  SnapBlueprintsTab
+     Click Element  ClickDeleteIcon  363  4
+     Click Element  ClickYes
+     Wait For  30
+
+###Assertion###
+     Click Element If Exists  LogsTab  LogsTab
+     Check If Exists  AssertionDeletedblueprint
