@@ -38,10 +38,11 @@ Create Content Type  [Arguments]  ${SectionName}  ${ContentType}
 Create View Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
-	Click Element  ViewInFileMenu
-	Mouse Over  ViewInFileMenu  100  2
-	Click Element  ${ContentType}
-	Wait For  2
+	Wait For 2
+	Mouse Over ViewInFileMenu 100 2		
+        #Click Element ViewInFileMenu
+	#Wait For 2
+	Mouse Over ViewInFileMenu 37 1
 
 Save And Publish
 	Wait For  2
@@ -131,8 +132,7 @@ Insert Group  [Arguments]  ${Area}  ${InsertGroupName}
 	Wait For  2
 	Click Element  ${InsertGroupName}
 	Wait For  2
-	Click Element  PublishButtonSimple
-	Wait For  5
+	Click Element If Exists UntitledGroupName UntitledGroupName -50 0
 
 Duplicate Item  [Arguments]  ${DuplicateAs}  ${AppendWith}
 	Wait For  2
@@ -151,22 +151,36 @@ Duplicate Item  [Arguments]  ${DuplicateAs}  ${AppendWith}
 	Click Element  PublishButton
 	Wait For  5
 
-Duplicate Video Item  [Arguments]  ${AppendWith}
-	Wait For  2
-	Click Element  FileMenu
-	Click Element  ${DuplicateAs}
-	wait For  5
-	Type Text  ${AppendWith}
-	Type Text If Element Exists  SubtitleFieldInContent  -20  20  ${AppendWith}
-	Wait For  2
-
-	Type Text If Element Exists  LeadTextFieldInStoryContent  -25  20  ${AppendWith}
-	Wait For  2
-	
-	Click Element  SaveButton
-	Wait For  5
-	Click Element  PublishButton
-	Wait For  5
+Duplicate Video Item [Arguments]
+	Wait For 2		
+        Wait For 2
+	Click Element FileMenu		
+        Type Key CTRL SHIFT n
+	Click Element ${DuplicateAs}		
+	wait For 5		
+        wait For 5
+	Type Text ${AppendWith}		
+	Type Text If Element Exists SubtitleFieldInContent -20 20 ${AppendWith}		
+	Wait For 2		
+			
+	Type Text If Element Exists LeadTextFieldInStoryContent -25 20 ${AppendWith}		
+	Wait For 2		
+			
+	${AppendWith} = Generate Random String 12 [LOWER]
+	Type Text ${AppendWith}
+	Click Element SaveButton		
+        Click Element SaveButton
+	Wait For 5		
+        Wait For 50
+	Click Element If Exists StatusNotTranscoded MediaStatusPanel
+	Wait For 2
+	Click Element MediaStatusPanel
+	Check If Exists StatusNotTranscoded .80
+	Click Element PublishButton		
+        Click Element PublishButton
+	Wait For 5		
+        Wait Until Keyword Succeeds 20 5 sec Should Contain Image Status-Started
+	Wait Until Keyword Succeeds 250 sec 50 sec Should Contain Image Status-Published
 
 Create Video Content Type  [Arguments]  ${SectionName}
 	Right Click Section  ${SectionName}

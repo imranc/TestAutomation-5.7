@@ -10,13 +10,13 @@ Resource       common_resource.txt
 Documentation  Create a Gallery group which shows playlist of videos
 **Test cases**
 Create a Gallery group which shows playlist of videos
-	Set Tags  non-critical
+	
 	Switch To Content Studio
 	
 	### Create a video contents ###
 	
 	Close Allopen Tabs
-	Create Video Content Type  NewArticles
+	Create Video Content Type  News
 	Type Text  Video test.mp4
 	Type Key  ENTER
 	Wait For  PublishButton  500
@@ -27,31 +27,171 @@ Create a Gallery group which shows playlist of videos
 	Click Element If Exists  StatusNotTranscoded  MediaStatusPanel
 	Wait For  2
 	Click Element  MediaStatusPanel
-	Wait For  StatusNotTranscoded  200
 	Check If Exists  StatusNotTranscoded  .80
 	Click Element  PublishButton
-        Wait Until Keyword Succeeds  200 sec  5 sec  Should Contain Image  Status-Started
-        #Wait Until Keyword Succeeds  200 sec  5 sec  Should Contain Image  Status-Transcoding
-        #Wait Until Keyword Succeeds  200 sec  5 sec  Should Contain Image  Status-Publishing
-	#Check If Not Exists  ApprovedState
-	#Click Element If Exists  KeyFrameImages  RelatedContent
-	#Click Element  RelatedContent
-	#Click Element  KeyFrameImages
-	#Double Click Element  KeyFrameImages  5  20
-	#Wait For  ContentUrl  100
-	#Wait For  10
-	#Check If Exists  KeyFrameAssertion
+        Wait Until Keyword Succeeds  2x  5 sec  Should Contain Image  Status-Started 
+	Wait Until Keyword Succeeds  250 sec  50 sec  Should Contain Image  Status-Published
+        
+	Check If Not Exists  ApprovedState
+	Duplicate Video Item
+	Wait For  5
+	Duplicate Video Item
+	Wait for  5
 
-	#Wait For  Status-Started  200
-	#Wait For  Status-Transcoding  500
-	#Wait For  Status-Publishing  500
-	#Wait For  45
-	#Wait For  Status-Published  100
+# Create datasource which pulls the videos
+
+	Search And Select First Item  DataSourcebysectioncreatedbyautomatedtest
+	Double Click Element  InboxItemSelected
+	Click Element  DataSourceSectionBox  121  20
+	Type Text  News
+	Type Key  ENTER
+	Click Element If Exists  DataSourceContentTypes  DatasourceBySectionInQueryBox
+	Click Element If Exists  DatasourceBySectionInQueryBox  DatasourceBySectionInQueryBox
+	Wait Until Keyword Succeeds  100  20 sec  Click Element  DataSourceContentTypes  200  15
+	Type Key  BACKSPACE
+	Wait For  2
+	Type Key  BACKSPACE
+	Wait For  2
+	Type Key  BACKSPACE
+	Wait For  2
+	Type Key  BACKSPACE
+	Wait For  2
+	Type Key  BACKSPACE
+	Wait For  2
+	Select From Dropdown  video
+	Wait For  5
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButton
+	Wait For  5
+
+#media widget
+	Create Widget Content Type  MediaWidget
+	Type Text  TestAutomationwidgetmediawidget
+	Click Element  SaveButton
+	Wait For  5
+	Click Element  PublishButton
+	Wait For  5
+
+#Teaser view
+
+	Create View Content Type  TeaserView
+	Type Text  TestAutomation-TeaserViewforVideoInfo
+	
+
+	Click Element  DefaultTab
+	Click Element  WidgetTopElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Title
+	Type Key  ENTER
+
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  leadtext
+	Type Key  ENTER
+	Wait For  5
+
+	Save And Publish
+	
+#Teaser widget
+	Click Element  HomeSection
+	Create Widget Content Type  TeaserWidgetContent
+	Type Text  TestAutomation-Teaserwidgetforplaylist
+	Click Element    DataSourceTab
+        Click Element    Use    0    20
+        Type Key  DOWN
+	Type Key  DOWN
+	Type Key  ENTER
+	Click Element  DefaultTab
+	Click Element  WidgetTopElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Title
+	Type Key  ENTER
+
+
+	Click Element  WidgetBodyElementSettings  -30  40
+	Click Element  WidgetSpecifyElements
+	Type Text  Media
+	Type Key  ENTER
+
+	Scroll Element  TeaserViewScroll  50  200
+		
+	
+	Click Element  WidgetMediaContentTypeSettings  -35  10
+	Click Element  WidgetMediaContentTypeSpecify  95  0
+	Type Text  video
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  DOWN
+	Wait For  2
+	Type Key  ENTER
+
+	Click Element  WidgetMediaImageWidthSettings
+	Type Text  50%
+	Type Key  ENTER
+
+	Click Element  WidgetMediaPlayMode  85  0
+	Type Text  Embeddedmediaplayer
+	Wait For  2
+	Type Key  ENTER
+
+	Save And Publish
+
+#relate datasource and widgets in frontpage template
+
+	Open Section In Content Studio  FrontpageTemplate
+	Wait for  5
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
+	Insert Group  TopContentArea  InsertNewGalleryGroup
+
+	Search And Select First Item  DataSourcebysectioncreatedbyautomatedtest
+	Drag And Drop Element  InboxItemSelected  DatasourceAreaInGallery
+
+	Insert Group  ViewAreaInGallery  InsertNewTwoColumnGroup
+	Click Element If Exists  UntitledGroupName  UntitledGroupName  -50  0
+	Click Element  UntitledGroupName 
+	Type Text  twocolumnarea
+	Type Key  ENTER
+        Click Element  TwoColumnArea  -60  3
+	
+
+	Search And Select First Item  TestautomationteaserViewforvideoinfo
+	Drag And Drop Element  InboxItemSelected  TwoColumnArea  0  30
+	Click Element  TwoColumnAreaNotSelected  -43  32
+
+	Search And Select First Item  TestAutomationwidgetmediawidget
+	Drag And Drop Element  InboxItemSelected  TwoColumnAreaNotSelected  0  30
+	Click Element  TwoColumnAreaNotSelected  -43  32
+
+	Search And Select First Item  Testautomationteaserwidgetforplaylist
+	Drag And Drop Element  InboxItemSelected  TwoColumnAreaNotSelected  0  60
+
+	Click Element    SaveButton
+    	Wait For    5
+    	Click Element    PublishButtonSimple
+
+	####Assertions####
+
+	Open Browser To Publication
+	Wait For  5
+	Check If Exists  MediaPanel
+	Check If Exists  PlaylistPanel
+	Close Browser
+
+Remove widget from front page template
+
+	Set Tags  non-critical
+	Close Allopen Tabs
+	Open Section In Content Studio  FrontPageTemplate
+	Wait for  5
+	Click Element If Exists  GalleryGroupInFrontPage  GalleryGroupInFrontPage
+
+	Type Key  DELETE
+	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
+	Click Element  PublishButtonSimple
+	
     
-	
-
-	
-
-	
-
 	
