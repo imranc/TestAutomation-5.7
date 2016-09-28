@@ -54,7 +54,7 @@ Create a Teaser Widget with Data source query by section
 
 	Save And Publish
 
-	Open Section In Content Studio  FrontpageTemplate
+	Open Section In Content Studio  SportsPageTemplate
 	Wait for  5
 	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
@@ -63,13 +63,13 @@ Create a Teaser Widget with Data source query by section
 	Click Element  PublishButtonSimple
 
 	###Assertion###
-		Open Browser To Publication 
+		Open Browser To Publication  sports/
 		Check If Exists  DSBySectionAssertion
 		Close Browser
 
 Remove teaser widget
 	Set Tags  non-critical
-	Open Section In Content Studio  FrontPageTemplate
+	Open Section In Content Studio  SportsPageTemplate
 	Wait for  5
 	Click Element If Exists  WidgetListView  WidgetListView
 	Type Key  DELETE
