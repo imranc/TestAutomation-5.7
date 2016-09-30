@@ -16,7 +16,7 @@ Create a View picker widget displaying Deligating related view For Odd Even inde
 	### Create a Teaser View small for odd indexed contents ###
 	
 	Close Allopen Tabs
-	Create Content Type  Config  TeaserView
+	Create View Content Type  TeaserView
 	Type Text  TestAutomation (TeaserViewsmall) - odd
 
 
@@ -70,7 +70,7 @@ Create a View picker widget displaying Deligating related view For Odd Even inde
 
 	### Create a Teaser View small for odd indexed contents ###
 	Close Allopen Tabs
-	Create Content Type  Config  TeaserView
+	Create View Content Type  TeaserView
 	Type Text  TestAutomation (TeaserViewBig) - Even
 
 
