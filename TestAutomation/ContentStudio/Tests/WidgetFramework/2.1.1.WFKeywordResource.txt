@@ -39,10 +39,11 @@ Create View Content Type  [Arguments]  ${ContentType}
 	Right Click Section  Config
 	Click Element  NewContent  100  0
 	Wait For  2
-	Mouse Over  ViewInFileMenu  100  2		
-        #Click Element ViewInFileMenu
-	#Wait For 2
+	#Click Element  ViewInFileMenu
+	#Wait For  2
 	Mouse Over  ViewInFileMenu  37  1
+	Click Element  ${ContentType}
+	Wait For  2
 
 Save And Publish
 	Wait For  2
