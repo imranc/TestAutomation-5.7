@@ -15,7 +15,7 @@ Create a Teaser Widget with Data source query by section page group with data so
 	Close Allopen Tabs
 	
 	Open Section In Content Studio  News
-	Search And Select Without Waiting  DataSource by section created by automated test
+	Search And Select Without Waiting  DataSource by section created by automated test BOT
 	Wait For  3
 	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
 	Click Element  PublishButtonSimple
