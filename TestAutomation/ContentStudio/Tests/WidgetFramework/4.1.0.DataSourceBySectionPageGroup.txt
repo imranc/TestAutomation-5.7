@@ -23,6 +23,9 @@ Create an External Data source By Section Page Group
 	Switch To Content Studio
 	Duplicate Item  DuplicateAsStory  DuplicateWSDFTYU
 	Search And Select First Item  StoryCreatedForDSBySectionPageGroupTest
+        Wait For   2
+ 	Type Key   DOWN
+        Wait For   2
 	Double Click Element  InboxItemSelected
 	Duplicate Item  DuplicateAsStory  DuplicateQAWSGYH 
 
@@ -36,6 +39,11 @@ Create an External Data source By Section Page Group
 	Wait For  2
 
 	Search And Select Without Waiting  StoryCreatedForDSBySectionPageGroupTest
+        Wait For   2
+ 	Type Key   DOWN
+        Wait For   2
+        Type Key   DOWN
+        Wait For   2
 	Drag And Drop Element  InboxItemSelected  TopStoriesGroupNotSelected
 	Wait For  2
 
