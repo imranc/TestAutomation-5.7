@@ -17,7 +17,7 @@ Create an entry and submit it
 	Set Suite Variable  ${creationDate}  ${date}
 	Create Entry  First test entry of Escenic event at ${date}
 	Make Entry Sticky
-	Select Author  elive administrator 	
+	Select Author  elive administ
 	Submit Entry
     	Page Should Contain Element  xpath=//div/p[contains(text(),'First test entry of Escenic event at ${creationDate}')]
 
