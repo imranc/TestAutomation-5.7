@@ -227,6 +227,7 @@ Select Author  [Arguments]  ${inputText}
 	Click Element  css=i[class="moreoptions_icon"]
 	Wait Until Element is Visible  css=input[placeholder="Author..."]
 	Input Text  css=input[placeholder="Author..."]  ${inputText}
+	Input Text  css=input[placeholder="Author..."]  ${inputText}
 	Wait Until Element is Visible  css=li.ui-menu-item a
 	Click Element  css=li.ui-menu-item a
 	Wait Until Element is Visible  css=div[data-id*="person"]
