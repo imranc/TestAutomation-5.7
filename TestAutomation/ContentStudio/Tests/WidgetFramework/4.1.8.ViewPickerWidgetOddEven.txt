@@ -140,6 +140,9 @@ Create a View picker widget displaying Deligating related view For Odd Even inde
 	Wait For  10
 
 	Search And Select Without Waiting  DataSource by section page group created by automated test
+	Wait For  3
+	Type Key  DOWN
+	Wait For  2
 	Drag And Drop Element  InboxItemSelected  RelatedDatasource
 	Click Element If Exists    RelatedContent    RelatedContent
 
