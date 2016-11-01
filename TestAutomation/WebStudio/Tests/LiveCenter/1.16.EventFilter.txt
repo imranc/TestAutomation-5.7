@@ -12,6 +12,8 @@ Resource       common_resource.txt
 Event filter
 	Close All Browsers
 	Login To Escenic Live Center
+	${delay}=  Get Selenium Speed
+	Set Selenium Speed  1
 	Click Element  css=div.filterControl
 	Wait Until Element is Visible  xpath=//div[@class="checkBox "]
 	Click Element  xpath=(//div[@class="checkBox "])[2]
@@ -27,7 +29,7 @@ Event filter
 	Wait Until Page Contains Element  css=li.ui-menu-item a
 	Click Element  css=li.ui-menu-item a
 	Click Button  Save
-	Wait Until Page contains Element  xpath=//div/h1[text()='Boxing live!!!']
+	Wait Until Page contains Element  xpath=//div/h1[text()='Boxing live!!!']  20
 	Page Should Contain Element  xpath=//div/h1[text()='Boxing live!!!']
 	Click Element  css=div.filterControl
 	Wait Until Element is Visible  xpath=//div[@class="checkBox "]
@@ -35,5 +37,6 @@ Event filter
 	Click Button  Save
 	Wait Until Page does not contain Element  xpath=//div/h1[text()='Boxing live!!!']  20
 	Page Should Not Contain Element  xpath=//div/h1[text()='Boxing live!!!']
+	Set Selenium Speed  ${delay}
 	
 	
