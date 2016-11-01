@@ -33,7 +33,7 @@ Event filter
 	Wait Until Element is Visible  xpath=//div[@class="checkBox "]
 	Input Text  css=input[placeholder="Search"]  Escenic live
 	Click Button  Save
-	Wait Until Page does not contain Element  xpath=//div/h1[text()='Boxing live!!!']
+	Wait Until Page does not contain Element  xpath=//div/h1[text()='Boxing live!!!']  20
 	Page Should Not Contain Element  xpath=//div/h1[text()='Boxing live!!!']
 	
 	
