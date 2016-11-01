@@ -17,7 +17,7 @@ Event filter
 	Click Element  xpath=(//div[@class="checkBox "])[2]
 	Click Element  xpath=(//div[@class="checkBox "])[3]
 	Click Button  Save
-	Wait Until Page does not contain Element  xpath=//div/h1[text()='Boxing live!!!']
+	Wait Until Page does not contain Element  xpath=//div/h1[text()='Boxing live!!!']  20
 	Page Should Not Contain Element  xpath=//div/h1[text()='Boxing live!!!']
 	Click Element  css=div.filterControl
 	Wait Until Element is Visible  xpath=//div[@class="checkBox "]
