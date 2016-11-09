@@ -21,6 +21,7 @@ Post tweets for testing auto publish
 	Wait until Page Contains Element  xpath=//div/p[contains(text(),'Good Morning')]/../../../../..//span[@class="Icon Icon--close Icon--large"]
 	Click Element  xpath=//div/p[contains(text(),'Good Morning')]/../../../../..//span[@class="Icon Icon--close Icon--large"]
 	Wait Until Element Is Visible  css=div.tweet-box div.rich-editor
+	Sleep  2
 	Post Tweet  Good Afternoon
 	Logout of Twitter
 
