@@ -762,7 +762,11 @@ class ContentStudio(object):
                 #elif exists(Pattern("PreviewButton.png").similar(0.60)):
                 #        click(Pattern("PreviewButton.png").similar(0.60))
                 ContentStudio.switch_to_content_studio(self)
-                click("PreviewTab.png")
+                if exists("PreviewTab.png"):
+                    click("PreviewTab.png")
+                else:
+                    ImageName=capture_CS_screenshot()
+                    raise AssertionError('Login Failed! Screenshot: '+ImageName)
                 wait(10)
                 wait_for("OpenInBrowser.png", 10)
                 wait_for("PreviewAll.png", 10)
