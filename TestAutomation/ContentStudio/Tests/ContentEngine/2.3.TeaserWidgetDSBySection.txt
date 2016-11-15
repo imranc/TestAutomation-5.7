@@ -18,7 +18,7 @@ Create a Teaser Widget with Data source query by section
 	Click Element  DataSourceTab
 	Click Element If Exists    RelatedDatasource    RelatedContent
 	Close Allopen Tabs
-	Click Element  HomeSection
+	Click Element  NewArticlesSection
 	Create Widget Content Type  TeaserWidgetContent
 	Type Text  TestAutomation Widget (TeaserWidget_DS_by_Section)
 	Click Element  DataSourceTab
