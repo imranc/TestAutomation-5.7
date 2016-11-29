@@ -259,8 +259,17 @@ Add youtube link to an Entry
 	Confirm If duplicate post
 	Wait Until Page Contains Element  css=div.socialCard.inline  20
 	
+Login to Instagram
+	Go To  https://www.instagram.com/accounts/login/
+	Input Text  css=input[name="username"]  ecetesterqa
+	Input Password  css=input[name="password"]  AllBugsBeware
+	Click Button  Log in
+	Wait Until Page Contains Element  css=a[href="/ecetesterqa/"]  30
+
 Add instagram link to an Entry
         Click Element  css=div[class="verticalTab vTab_instagram"]
+	Wait Until Element Is Visible   css=a[data-ng-click="doAuthentication('instagram')"]  30
+	Click Element  css=a[data-ng-click="doAuthentication('instagram')"]
 	Wait until Page Contains Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div  20
         Click Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
 	Confirm If duplicate post
