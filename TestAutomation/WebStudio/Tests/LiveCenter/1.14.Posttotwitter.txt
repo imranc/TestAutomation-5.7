@@ -24,4 +24,4 @@ Create an entry and post it to twitter
 	Page Should Contain Element  xpath=//i[@class="info_icon"]
 	Wait Until Page Contains Element  css=div.shareValidation.success
 	Open live center publication event page
-	Page Should Contain Element  xpath=//p[contains(text(),’Tweet ${date}')]
+	Page Should Contain Element  xpath=//p[contains(text(),'Tweet ${date}')]
