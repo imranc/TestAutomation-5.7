@@ -261,6 +261,7 @@ Add youtube link to an Entry
 	
 Login to Instagram
 	Go To  https://www.instagram.com/accounts/login/
+	Wait Until Page Contains Element  css=input[name="username"]  30
 	Input Text  css=input[name="username"]  ecetesterqa
 	Input Password  css=input[name="password"]  AllBugsBeware
 	Click Button  Log in
