@@ -323,7 +323,8 @@ Publish Entry
 	Wait For  5
 
 Add EmbedURL to an Entry  [Arguments]  ${embedUrl}
-	Click Element  css=i[class="embedurl_scribe"]
+	Wait Until Element is Visible  css=button.scribeTool i.embedurl_scribe  30
+	Click Element  css=button.scribeTool i.embedurl_scribe
 	Wait Until Page Contains Element  css=#popup > h1
 	Click Element  css=input[placeholder="URL: "]
 	Input Text  css=input[placeholder="URL: "]  ${embedUrl}
