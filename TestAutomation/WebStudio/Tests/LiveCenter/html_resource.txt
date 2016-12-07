@@ -270,6 +270,7 @@ Login to Instagram
 Add instagram link to an Entry
         Click Element  css=div[class="verticalTab vTab_instagram"]
 	Wait Until Element Is Visible   css=a[data-ng-click="doAuthentication('instagram')"]  30
+	Mouse Over  css=a[data-ng-click="doAuthentication('instagram')"]
 	Click Element  css=a[data-ng-click="doAuthentication('instagram')"]
 	Wait until Page Contains Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div  20
         Click Element  css=#social_instagram4 > div.scroll-wrapper.scrollbar-dynamic > div.scrollbar-dynamic.scroll-content.scroll-scrolly_visible > div:nth-child(1) > div
