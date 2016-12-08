@@ -20,7 +20,7 @@ Relate an External Data source with teaser widget
     Click Element If Exists    RelatedDatasource    RelatedContent
     Click Element If Exists    RelatedContent    RelatedContent
     Wait For    10
-    Search And Select First Item    DataSourcebysectioncreatedbyautomatedtest
+    Search And Select First Item    DataSource by section created by automated test
     Drag And Drop Element    InboxItemSelected    RelatedDatasource
     Click Element If Exists    RelatedContent    RelatedContent
     Wait For  2
@@ -31,7 +31,7 @@ Relate an External Data source with teaser widget
     Type Text    Media
     Type Key    ENTER
     Save And Publish
-    Open Section In Content Studio    SportsPageTemplate
+    Open Section In Content Studio    FrontpageTemplate
     Wait for    5
     Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
     Drag And Drop Element    TestAutomationWidgetTab  TopContentArea
@@ -40,7 +40,7 @@ Relate an External Data source with teaser widget
     Click Element    PublishButtonSimple
 
     ###Assertion###
-    Open Browser To Publication  sports/
+    Open Browser To Publication
     Wait For  10
     Check If Exists    DSAssertion
     Close Browser
@@ -48,7 +48,7 @@ Relate an External Data source with teaser widget
 Remove widget from front page template
     Set Tags  non-critical
     Close Allopen Tabs
-    Open Section In Content Studio    SportsPageTemplate
+    Open Section In Content Studio    FrontPageTemplate
     Wait for    5
     Click Element    TopContentArea
     Type Key    DOWN
