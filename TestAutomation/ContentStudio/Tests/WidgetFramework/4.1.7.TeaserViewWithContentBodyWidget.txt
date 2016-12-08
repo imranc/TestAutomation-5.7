@@ -16,11 +16,6 @@ Relate all Teaser View With Content Body Widget for Displaying all teaser Relate
 	### Add 3 stories 2 image Contents to the Content body ###
 	
 	Search And Select Without Waiting  StoryCreatedForDSBySectionPageGroupTest
-        Wait For   2
- 	Type Key   DOWN
-        Wait For   2
-        Type Key   DOWN
-        Wait For   2
 	Double Click Element  InboxItemSelected
 	Click Element  BodyField  280  25
 	Type Key  ENTER
@@ -127,11 +122,6 @@ Relate all Teaser View With Content Body Widget for Displaying all teaser Relate
 
 	###Assertion###
 	Search And Select Without Waiting  StoryCreatedForDSBySectionPageGroupTest
-        Wait For   2
- 	Type Key   DOWN
-        Wait For   2
-        Type Key   DOWN
-        Wait For   2
 	Type Key  ENTER
 	Wait For  5
 	Click Element   ContentUrl  12  10

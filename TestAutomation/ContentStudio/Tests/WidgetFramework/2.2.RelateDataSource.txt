@@ -20,7 +20,7 @@ Relate an External Data source with teaser widget
     Click Element If Exists    RelatedDatasource    RelatedContent
     Click Element If Exists    RelatedContent    RelatedContent
     Wait For    10
-    Search And Select First Item    DataSource by section created by automated test BOT
+    Search And Select First Item    DataSourcebysectioncreatedbyautomatedtest
     Drag And Drop Element    InboxItemSelected    RelatedDatasource
     Click Element If Exists    RelatedContent    RelatedContent
     Wait For  2

@@ -10,7 +10,7 @@ Resource       common_resource.txt
 Documentation  Create a Gallery group which shows playlist of videos
 **Test cases**
 Create a Gallery group which shows playlist of videos
-	Set Tags  non-critical
+	
 	Switch To Content Studio
 	
 	### Create a video contents ###
