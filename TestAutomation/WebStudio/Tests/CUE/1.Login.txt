@@ -1,0 +1,18 @@
+*** Settings ***
+
+Documentation  TC0001: Test if user is able to login successfully
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to CUE
+    Close All Browsers
+    Login To CUE
+
+Log off
+    Click Element  css=button.logout
+    Wait Until Page Contains Element  css=input#login
+    Page Should Contain Element  css=input#login
+

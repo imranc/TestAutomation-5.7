@@ -1,0 +1,28 @@
+*** Settings ***
+
+Documentation  A resource file containing the application specific keywords
+...            that create our own domain specific language. This resource
+...            implements keywords for testing HTML version of the test
+...            application. Keywords for Flex version are in flex_resource.txt
+...            and common_resource.txt is used to select which one to use.
+
+
+*** Variables ***
+
+${LOGIN URL}     http://172.24.201.221:8080/escenic
+${WELCOME URL}   http://${SERVER}/html/welcome.html
+${ERROR URL}     http://${SERVER}/html/error.html
+${JENKINS URL}   http://172.24.201.221:8089
+
+
+*** Keywords ***
+
+Login To CUE
+    Open Browser To CUE  ${BROWSER}
+    Wait Until Page Contains Element  css=input#username  30
+    Input Text  css=input#username  qa_admin
+    Input Password  css=input#password  admin
+    Click Element  css=input#login
+    Wait Until Page contains Element  css=input.inputSearch  30
+    Page Should Contain Element  css=input.inputSearch
+
