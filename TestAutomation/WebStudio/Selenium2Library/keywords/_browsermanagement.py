@@ -167,7 +167,7 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
-        def open_browser_to_cue(self, browser='firefox', alias=None,remote_url=False,
+    def open_browser_to_cue(self, browser='firefox', alias=None,remote_url=False,
                 desired_capabilities=None,ff_profile_dir=None):
         ece_host= os.environ['CUE_HOST']
         ece_port= os.environ['CUE_PORT']
