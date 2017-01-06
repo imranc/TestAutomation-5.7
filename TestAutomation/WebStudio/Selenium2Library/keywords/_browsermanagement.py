@@ -167,6 +167,25 @@ class _BrowserManagementKeywords(KeywordGroup):
                     % browser.session_id)
         return self._cache.register(browser, alias)
 
+        def open_browser_to_cue(self, browser='firefox', alias=None,remote_url=False,
+                desired_capabilities=None,ff_profile_dir=None):
+        ece_host= os.environ['CUE_HOST']
+        ece_port= os.environ['CUE_PORT']
+        ece_cf_address= 'http://'+ece_host+':'+ece_port+'/cue-web'
+        url=ece_cf_address
+        if remote_url:
+            self._info("Opening browser '%s' to base url '%s' through remote server at '%s'"
+                    % (browser, url, remote_url))
+        else:
+            self._info("Opening browser '%s' to base url '%s'" % (browser, url))
+        
+        browser_name = browser
+        browser = self._make_browser(browser_name,desired_capabilities,ff_profile_dir,remote_url)
+        browser.get(url)
+        self._debug('Opened browser with session id %s'
+                    % browser.session_id)
+        return self._cache.register(browser, alias)
+
     def open_browser_livecenter(self, browser='firefox', alias=None,remote_url=False,
                 desired_capabilities=None,ff_profile_dir=None):
         url=_BrowserManagementKeywords.getLcAddress(self)
