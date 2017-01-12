@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170110 12:24:16.662" generator="Robot 2.8.7 (Python 2.7.10 on darwin)">
+<suite source="/Users/ImranChowdhury/Github/TestAutomation-5.7/TestAutomation/WebStudio/Tests/CUE/2.CreateContent.txt" id="s1" name="2.CreateContent">
+<test id="s1-t1" name="Login to CUE">
+<kw type="kw" name="ExtendedSelenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:16.793" starttime="20170110 12:24:16.793"></status>
+</kw>
+<kw type="kw" name="html_resource.Login To CUE">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="ExtendedSelenium2Library.Open Browser To Cue">
+<doc></doc>
+<arguments>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170110 12:24:16.795" level="INFO">Opening browser 'GoogleChrome' to base url 'http://beta.qa.local:8080/cue-web'</msg>
+<status status="PASS" endtime="20170110 12:24:33.798" starttime="20170110 12:24:16.794"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=input#username</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:33.957" starttime="20170110 12:24:33.800"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=input#username</arg>
+<arg>qa_admin</arg>
+</arguments>
+<msg timestamp="20170110 12:24:33.958" level="INFO">Typing text 'qa_admin' into text field 'css=input#username'</msg>
+<status status="PASS" endtime="20170110 12:24:34.258" starttime="20170110 12:24:33.957"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Password">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=input#password</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20170110 12:24:34.259" level="INFO">Typing password into text field 'css=input#password'</msg>
+<status status="PASS" endtime="20170110 12:24:34.597" starttime="20170110 12:24:34.259"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>css=input#login</arg>
+</arguments>
+<msg timestamp="20170110 12:24:34.597" level="INFO">Clicking element 'css=input#login'.</msg>
+<status status="PASS" endtime="20170110 12:24:39.776" starttime="20170110 12:24:34.597"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=input.inputSearch</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:46.915" starttime="20170110 12:24:39.776"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>css=input.inputSearch</arg>
+</arguments>
+<msg timestamp="20170110 12:24:46.935" level="INFO">Current page contains element 'css=input.inputSearch'.</msg>
+<status status="PASS" endtime="20170110 12:24:46.935" starttime="20170110 12:24:46.916"></status>
+</kw>
+<status status="PASS" endtime="20170110 12:24:46.935" starttime="20170110 12:24:16.794"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:49.528" starttime="20170110 12:24:46.935"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=button.icon.add</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:49.546" starttime="20170110 12:24:49.528"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.icon.add</arg>
+</arguments>
+<msg timestamp="20170110 12:24:49.547" level="INFO">Clicking element 'css=button.icon.add'.</msg>
+<status status="PASS" endtime="20170110 12:24:50.170" starttime="20170110 12:24:49.546"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Angular Ready">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:50.179" starttime="20170110 12:24:50.170"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//div[contains(text(),'Story')]</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:50.218" starttime="20170110 12:24:50.179"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Mouse Over">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>xpath=//div[text()='Story']/../div</arg>
+</arguments>
+<msg timestamp="20170110 12:24:50.218" level="INFO">Simulating Mouse Over on element 'xpath=//div[text()='Story']/../div'</msg>
+<status status="PASS" endtime="20170110 12:24:50.256" starttime="20170110 12:24:50.218"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[text()='Story']/../div</arg>
+</arguments>
+<msg timestamp="20170110 12:24:50.256" level="INFO">Clicking element 'xpath=//div[text()='Story']/../div'.</msg>
+<status status="PASS" endtime="20170110 12:24:50.910" starttime="20170110 12:24:50.256"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170110 12:24:55.915" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170110 12:24:55.915" starttime="20170110 12:24:50.910"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Select Window">
+<doc>Selects the window found with `locator` as the context of actions.</doc>
+<arguments>
+<arg>locator=New Story</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:55.975" starttime="20170110 12:24:55.915"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=div[data-placeholder="Body"]</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:24:55.994" starttime="20170110 12:24:55.976"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=textarea[placeholder^="Title"]</arg>
+<arg>Story content title created by automated smoke tests</arg>
+</arguments>
+<msg timestamp="20170110 12:24:55.995" level="INFO">Typing text 'Story content title created by automated smoke tests' into text field 'css=textarea[placeholder^="Title"]'</msg>
+<status status="PASS" endtime="20170110 12:24:58.011" starttime="20170110 12:24:55.994"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=textarea[placeholder^="Subtitle"]</arg>
+<arg>Story content subtitle created by automated smoke tests</arg>
+</arguments>
+<msg timestamp="20170110 12:24:58.011" level="INFO">Typing text 'Story content subtitle created by automated smoke tests' into text field 'css=textarea[placeholder^="Subtitle"]'</msg>
+<status status="PASS" endtime="20170110 12:24:58.571" starttime="20170110 12:24:58.011"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=textarea[placeholder^="Lead text"]</arg>
+<arg>Story content leadtext created by automated smoke tests</arg>
+</arguments>
+<msg timestamp="20170110 12:24:58.571" level="INFO">Typing text 'Story content leadtext created by automated smoke tests' into text field 'css=textarea[placeholder^="Lead text"]'</msg>
+<status status="PASS" endtime="20170110 12:24:59.130" starttime="20170110 12:24:58.571"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=div[data-placeholder="Body"]</arg>
+<arg>Story content body created by automated smoke tests</arg>
+</arguments>
+<msg timestamp="20170110 12:24:59.130" level="INFO">Typing text 'Story content body created by automated smoke tests' into text field 'css=div[data-placeholder="Body"]'</msg>
+<status status="PASS" endtime="20170110 12:25:00.026" starttime="20170110 12:24:59.130"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>css=input#save</arg>
+</arguments>
+<msg timestamp="20170110 12:25:00.029" level="INFO">Clicking element 'css=input#save'.</msg>
+<status status="PASS" endtime="20170110 12:25:04.488" starttime="20170110 12:25:00.027"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=input#published</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:25:04.506" starttime="20170110 12:25:04.488"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>css=input#published</arg>
+</arguments>
+<msg timestamp="20170110 12:25:04.507" level="INFO">Clicking element 'css=input#published'.</msg>
+<status status="PASS" endtime="20170110 12:25:08.312" starttime="20170110 12:25:04.507"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>css=li.general-info</arg>
+</arguments>
+<msg timestamp="20170110 12:25:08.312" level="INFO">Clicking element 'css=li.general-info'.</msg>
+<status status="PASS" endtime="20170110 12:25:09.376" starttime="20170110 12:25:08.312"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>css=div.right[title="Published"]</arg>
+</arguments>
+<msg timestamp="20170110 12:25:09.394" level="INFO">Current page contains element 'css=div.right[title="Published"]'.</msg>
+<status status="PASS" endtime="20170110 12:25:09.394" starttime="20170110 12:25:09.376"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20170110 12:25:09.395" critical="yes" starttime="20170110 12:24:16.791"></status>
+</test>
+<test id="s1-t2" name="Log off">
+<kw type="kw" name="ExtendedSelenium2Library.Click Element">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.logout</arg>
+</arguments>
+<msg timestamp="20170110 12:25:09.396" level="INFO">Clicking element 'css=button.logout'.</msg>
+<status status="PASS" endtime="20170110 12:25:10.687" starttime="20170110 12:25:09.396"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>css=input#login</arg>
+</arguments>
+<status status="PASS" endtime="20170110 12:25:10.710" starttime="20170110 12:25:10.687"></status>
+</kw>
+<kw type="kw" name="ExtendedSelenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>css=input#login</arg>
+</arguments>
+<msg timestamp="20170110 12:25:10.719" level="INFO">Current page contains element 'css=input#login'.</msg>
+<status status="PASS" endtime="20170110 12:25:10.719" starttime="20170110 12:25:10.711"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20170110 12:25:10.719" critical="yes" starttime="20170110 12:25:09.395"></status>
+</test>
+<doc>TC0003: Create a story content and preview that in the publication AND search that content from home page</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20170110 12:25:10.720" starttime="20170110 12:24:16.663"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="2" id="s1" name="2.CreateContent">2.CreateContent</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
