@@ -10,9 +10,9 @@ Resource       common_resource.txt
 Create an entry with an instagram link
 	Close All Browsers
 	Open Browser To Escenic LiveCenter
+	${url}=   Get Location
 	Login to Instagram
-	Go Back
-	Go Back
+	Go To  ${url}
 	Wait Until Page Contains Element  css=input#userName  20
     	Input Environment Variable  userName  ELIVE_UserName
     	Input Environment Variable  password  ELIVE_Password
