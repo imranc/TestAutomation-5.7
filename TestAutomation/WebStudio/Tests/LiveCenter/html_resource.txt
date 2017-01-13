@@ -266,6 +266,7 @@ Login to Instagram
 	Input Password  css=input[name="password"]  AllBugsBeware
 	Click Button  Log in
 	Wait Until Page Contains Element  css=a[href="/ecetesterqa/"]  30
+	Run Keyword and Ignore Error  Click Element  xpath=//p[text()="Experience the best version of Instagram by getting the app."]/../button[text()="Close"]
 
 Add instagram link to an Entry
         Click Element  css=div[class="verticalTab vTab_instagram"]
