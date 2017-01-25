@@ -23,6 +23,33 @@ Login To CUE
     Input Text  css=input#username  qa_admin
     Input Password  css=input#password  admin
     Click Element  css=input#login
+    Maximize Browser Window
     Wait Until Page contains Element  css=input.inputSearch  30
     Page Should Contain Element  css=input.inputSearch
+
+Create Content  [Arguments]  ${content-type-label}
+    Wait Until Page Contains Element  css=button.icon.add
+    Click Element  css=button.icon.add
+    Wait Until Angular Ready   15s
+    Wait Until Element is Visible  xpath=//div[contains(text(),'${content-type-label}')]
+    Mouse Over  xpath=//div[text()='${content-type-label}']/../div
+    Click Element  xpath=//div[text()='${content-type-label}']/../div
+    Sleep  5
+    Select Window   locator=New ${content-type-label}
+    Wait Until Page Contains Element  css=li.general-info
+    Input Text  css=textarea[placeholder^="Title"]   ${content-type-label} content title created by automated smoke tests
+    Input Text  css=textarea[placeholder^="Subtitle"]   ${content-type-label} content subtitle created by automated smoke tests
+    Input Text  css=textarea[placeholder^="Lead text"]   ${content-type-label} content leadtext created by automated smoke tests
+    Input Text  css=div[data-placeholder="Body"]   ${content-type-label} content body created by automated smoke tests
+    Click Element  css=input#save
+
+Change State To  [Arguments]  ${state}
+    Mouse Over  css=span.selector
+    Click Element  css=span.selector
+    Click Element  xpath=//span[contains(@class,'label') and text()='${state}']
+
+Check On Search Panel  [Arguments]  ${locator}
+    Sleep  10
+    Click Element  xpath=//button[@class='icon searchButton']
+    Page Should Contain Element  ${locator}
 

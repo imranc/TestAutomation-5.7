@@ -1,0 +1,70 @@
+*** Settings ***
+
+Documentation  TC0003: Create a story content and check it's state on search panel and story page
+
+Resource       common_resource.txt
+
+
+*** Test Cases ***
+
+Login to CUE
+    Close All Browsers
+    Login To CUE
+    Wait Until Angular Ready   30s
+    Create Content  Story
+
+Check State
+    Wait Until Angular Ready   15s
+    Page Should Contain Element  xpath=//span[@rel='draft']
+    Page Should Contain Element  xpath=//span[contains(@class,'label') and text()='Draft']
+    Mouse Over   xpath=//div[@title="Search"]
+    Click Element  xpath=//div[@title="Search"]
+    Wait Until Element Is Visible  xpath=//div[@class="hs-content-wrapper"]
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state draft']
+    Click Element  css=li.general-info
+    Page Should Contain Element  css=div.right[title="Draft"]
+
+    Change State To  Submit
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state submitted']
+    Page Should Contain Element  css=div.right[title="Submitted"]
+
+    Change State To  Approve
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state approved']
+    Page Should Contain Element  css=div.right[title="Approved"]
+
+    Click Element  css=input#published
+    Page Should Contain Element  css=div.right[title="Published"]
+
+    Change State To  Draft
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state draft-published']
+    Page Should Contain Element  css=div.right[title="Draft (with published)"]
+
+    Change State To  Submit
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state submitted-published']
+    Page Should Contain Element  css=div.right[title="Submitted (with published)"]
+
+    Change State To  Approve
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state approved-published']
+    Page Should Contain Element  css=div.right[title="Approved (with published)"]
+
+    Change State To  Revert
+    Wait Until Page Contains Element   xpath=//div[@id='pop']/div[@class='buttons']/button[1]
+    Click Element  xpath=//div[@id='pop']/div[@class='buttons']/button[1]
+    Check On Search Panel  xpath=//div[@class='search-item'][1]//div[@class='state published']
+    Page Should Contain Element  css=div.right[title="Published"]
+
+    Change State To  Delete
+    Wait Until Page Contains Element   xpath=//div[@id='pop']/div[@class='buttons']/button[1]
+    Click Element  xpath=//div[@id='pop']/div[@class='buttons']/button[1]
+    Page Should Contain Element  css=div.right[title="Deleted"]
+    Wait For  10
+    Click Element  xpath=//button[@class='icon searchButton']
+    Page Should Not Contain Element  xpath=//div[@class='search-item'][1]//div[@class='state deleted']
+
+Log off
+	Click Element  css=button.logout
+	Wait Until Page Contains Element  css=input#login
+	Page Should Contain Element  css=input#login
+
+
+
