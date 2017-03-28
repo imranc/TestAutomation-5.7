@@ -28,7 +28,7 @@ Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
 	Check If Exists  InboxItemSelected
 
 	###Relate a Menu Widget showing "Dropdown" with frontpage under navbar area###
-	Open Section In Content Studio  FrontPageTemplate
+	Open Section In Content Studio  SportsPageTemplate
 	Wait for  5
 	Click Element If Exists  NavbarAreaOpen  NavbarAreaOpen  -11  -21
 	Drag And Drop Element  TestAutomationWidgetTab  TopContentArea
@@ -37,7 +37,7 @@ Create a Menu Widget showing "Dropdown" and with frontpage under navbar area
 	Click Element  PublishButtonSimple
 	
 	###Assertion###
-	Open Browser To Publication
+	Open Browser To Publication  sports/
 	Check If Exists  MenuWidgetAssertion
 	Close Browser
 
