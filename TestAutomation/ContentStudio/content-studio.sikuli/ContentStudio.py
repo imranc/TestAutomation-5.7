@@ -346,7 +346,8 @@ class ContentStudio(object):
                         
                 wait(3)
                 click("SaveButton.png")
-                wait(Pattern("ContentUrl.png").similar(0.90), 1000)
+                #wait(Pattern("ContentUrl.png").similar(0.90), 1000)
+                wait(Pattern("DraftState.png").similar(0.90), 1000)
                 #wait_for("ContentUrl.png",30)
                 
                 if exists("PublishButton.png"):
@@ -420,7 +421,8 @@ class ContentStudio(object):
                         
                 wait(2)
                 wait(Pattern("SaveButton.png").similar(0.65),20)
-                wait(Pattern("ContentUrl.png").similar(0.90), 1000)
+                #wait(Pattern("ContentUrl.png").similar(0.90), 1000)
+                wait(Pattern("DraftState.png").similar(0.90), 1000)
                 
                 if exists("PublishButton.png"):
                         click("PublishButton.png")
